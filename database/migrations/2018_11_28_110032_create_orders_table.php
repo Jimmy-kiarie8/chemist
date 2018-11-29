@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('buyer_id');
             $table->string('product_id');
             $table->text('cart');
-            $table->integer('address');
+            $table->string('address');
             $table->string('name');
             $table->text('paypal');
             $table->timestamps();

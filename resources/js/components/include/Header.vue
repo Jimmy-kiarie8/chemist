@@ -19,7 +19,7 @@
                 <template>
                     <v-card>
                         <!-- <v-card style="background: url('storage/ps/landS.jpg')"> -->
-                        <router-link to="/" class="v-list__tile v-list__tile--link">
+                        <router-link to="/dashboard" class="v-list__tile v-list__tile--link">
                             <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">dashboard</i></div>
                             <div class="v-list__tile__content">
                                 <div class="v-list__tile__title">
@@ -196,8 +196,8 @@
         <v-toolbar dark app :color="color" :clipped-left="$vuetify.breakpoint.lgAndUp" fixed>
             <v-toolbar-title style="width: 600px" class="ml-0 pl-3">
                 <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-                SpeedBall Courier
-                <img src="storage/logo1.jpg" alt="" style="width: 60px; height: 60px; border-radius: 25%;">
+                 Healthwise Pharmacy
+                <!-- <img src="storage/logo1.jpg" alt="" style="width: 60px; height: 60px; border-radius: 25%;"> -->
             </v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-tooltip bottom style="margin-right: 10px;">

@@ -13,6 +13,7 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <!-- <v-divider vertical></v-divider> -->
+            <a href="/admin#/dashboard">Admin</a>
             <v-tooltip bottom>
                 <v-btn icon class="mx-0" @click.stop="right = !right" slot="activator">
                     <v-badge color="orange" left>
@@ -53,9 +54,9 @@ export default {
     },
     mounted() {
         axios.get('getCart')
-        .then((response) => {
-            this.cartItems = response.data
-        })
+            .then((response) => {
+                this.cartItems = response.data
+            })
     },
 }
 </script>

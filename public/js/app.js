@@ -104535,7 +104535,7 @@ module.exports = {
       this.renderChart({
         labels: this.label,
         datasets: [{
-          label: 'Shipments',
+          label: 'Products',
           backgroundColor: '#566c86',
           data: this.rows
         }]
@@ -105218,7 +105218,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -105231,6 +105231,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_Cart__ = __webpack_require__(277);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_Cart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cart_Cart__);
+//
 //
 //
 //
@@ -105381,7 +105382,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -105447,6 +105448,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -105455,6 +105461,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
+            csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             carts: [],
             newCart: [],
             cartAdd: false,
@@ -105476,7 +105483,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         subtructCart: function subtructCart(cart) {
             var _this2 = this;
 
-            axios.post("subToCart/" + cart).then(function (response) {
+            axios.post('subToCart/' + cart).then(function (response) {
                 eventBus.$emit("cartEvent", response.data);
                 // this.cart = response.data
                 // this.message = "added";
@@ -105602,8 +105609,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_c("v-icon", [_vm._v("-")])],
-                            1
+                            [_c("i", { staticClass: "fas fa-minus" })]
                           ),
                           _vm._v(
                             "\r\n                        " +
@@ -105695,12 +105701,21 @@ var render = function() {
                 _c("v-spacer"),
                 _vm._v(" "),
                 _c(
-                  "v-btn",
-                  {
-                    attrs: { flat: "", color: "success" },
-                    on: { click: _vm.checkout }
-                  },
-                  [_vm._v("Checkout")]
+                  "form",
+                  { attrs: { action: "/createpayment", method: "post" } },
+                  [
+                    _c("input", {
+                      attrs: { type: "hidden", name: "_token" },
+                      domProps: { value: _vm.csrf }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "v-btn",
+                      { attrs: { color: "Success", flat: "", type: "submit" } },
+                      [_vm._v("Checkout")]
+                    )
+                  ],
+                  1
                 )
               ],
               1
@@ -105777,6 +105792,10 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("v-spacer"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "/admin#/dashboard" } }, [
+                _vm._v("Admin")
+              ]),
               _vm._v(" "),
               _c(
                 "v-tooltip",
@@ -106329,7 +106348,7 @@ var render = function() {
                           "router-link",
                           {
                             staticClass: "v-list__tile v-list__tile--link",
-                            attrs: { to: "/" }
+                            attrs: { to: "/dashboard" }
                           },
                           [
                             _c("div", { staticClass: "v-list__tile__action" }, [
@@ -106396,16 +106415,8 @@ var render = function() {
                     }
                   }),
                   _vm._v(
-                    "\n                SpeedBall Courier\n                "
-                  ),
-                  _c("img", {
-                    staticStyle: {
-                      width: "60px",
-                      height: "60px",
-                      "border-radius": "25%"
-                    },
-                    attrs: { src: "storage/logo1.jpg", alt: "" }
-                  })
+                    "\n                 Healthwise Pharmacy\n                "
+                  )
                 ],
                 1
               ),
@@ -106833,7 +106844,7 @@ var render = function() {
                                                   small: ""
                                                 }
                                               },
-                                              [_vm._v("cloud")]
+                                              [_vm._v("favorite")]
                                             )
                                           ],
                                           1

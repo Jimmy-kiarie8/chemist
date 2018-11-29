@@ -24,7 +24,7 @@
                                     </v-tooltip>
                                     <v-tooltip bottom class="" data-wow-delay="0.8s">
                                         <v-btn icon class="mx-0" slot="activator" @click="wishList(product)" style="margin-top: 100px;">
-                                            <v-icon color="success darken-2" small>cloud</v-icon>
+                                            <v-icon color="success darken-2" small>favorite</v-icon>
                                         </v-btn>
                                         <span>Wish list</span>
                                     </v-tooltip>

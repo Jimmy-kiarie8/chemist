@@ -29,7 +29,7 @@
         labels: this.label,
         datasets: [
           {
-            label: 'Shipments',
+            label: 'Products',
             backgroundColor: '#566c86',
             data: this.rows
           }

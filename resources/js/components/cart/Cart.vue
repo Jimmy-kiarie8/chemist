@@ -17,7 +17,8 @@
                         <!-- <v-divider></v-divider> -->
                         {{ cart.qty }} X {{ cart.item.price }} <br>
                         <v-btn icon small color="primary" @click="subtructCart(cart.item.id)">
-                            <v-icon>-</v-icon>
+                            <!-- <v-icon>minimize</v-icon> -->
+                            <i class="fas fa-minus"></i>
                         </v-btn>
                         {{ cart.qty }}
                         <v-btn icon small color="primary" @click="addToCart(cart.item.id)">
@@ -44,7 +45,11 @@
             <v-card-actions>
                 <v-btn flat color="primary">Continue Shopping</v-btn>
                 <v-spacer></v-spacer>
-                <v-btn flat color="success" @click="checkout">Checkout</v-btn>
+                <!-- <v-btn flat color="success" @click="checkout">Checkout</v-btn> -->
+                <form action="/createpayment" method="post">
+                    <input type="hidden" name="_token" :value="csrf">
+                    <v-btn color='Success' flat type="submit">Checkout</v-btn>
+                </form>
             </v-card-actions>
         </v-card>
     </div>
@@ -59,6 +64,7 @@ export default {
     },
     data() {
         return {
+            csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             carts: [],
             newCart: [],
             cartAdd: false,

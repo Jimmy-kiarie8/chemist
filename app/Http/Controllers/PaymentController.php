@@ -12,6 +12,10 @@ use PayPal\Api\Item;
 use PayPal\Api\ItemList;
 use PayPal\Api\Payer;
 use PayPal\Api\RedirectUrls;
+use App\Order;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
+use App\Cart;
 
 class PaymentController extends Controller
 {
@@ -55,7 +59,7 @@ class PaymentController extends Controller
         // $baseUrl = getBaseUrl();
         $redirectUrls = new RedirectUrls();
         $redirectUrls->setReturnUrl("http://chemist.dev/execute-payment")
-            ->setCancelUrl("http://chemist.dev/cancel");
+            ->setCancelUrl("http://chemist.dev/paypal");
         $payment = new Payment();
         $payment->setIntent("sale")
             ->setPayer($payer)
@@ -103,7 +107,25 @@ class PaymentController extends Controller
         $transaction->setAmount($amount);
         $execution->addTransaction($transaction);
         $result = $payment->execute($execution, $apiContext);
-        return $payment;  
+
+        // Create Orders
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart = $cart->getCart($oldCart);
+        $order = new Order;
+        $order->buyer_id = Auth::id();
+        $order->product_id = $payment->id;
+        $order->address = 'Nairobi';
+        $order->name = Auth::user()->name;
+        $order->cart = 'cart';
+        $order->paypal = 'test';
+        // $orderSave = Auth::user()->orders()->save();
+        $order->save();
+        // if ($orderSave) {
+        //     $request->session()->forget('cart');
+        // }
+        return $order;
+        // return $payment;  
         // return $request('paymentId');
     }
 
