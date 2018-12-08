@@ -13,7 +13,7 @@
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <!-- <v-divider vertical></v-divider> -->
-            <a href="/admin#/dashboard">Admin</a>
+            <a href="/admin#/dashboard" class="v-btn v-btn--flat theme--dark white--text">Admin</a>
             <v-tooltip bottom>
                 <v-btn icon class="mx-0" @click.stop="right = !right" slot="activator">
                     <v-badge color="orange" left>
@@ -27,6 +27,7 @@
             <!-- <chattyNoty :user="user"></chattyNoty> -->
             <!-- <v-icon @click.stop="right = !right" style="cursor: pointer">apps</v-icon> -->
             <form action="/logout" method="post">
+                <input type="hidden" name="_token" :value="csrf">
                 <v-btn flat color="white" type="submit">Logout</v-btn>
             </form>
         </v-toolbar>
@@ -42,6 +43,7 @@ export default {
     },
     data() {
         return {
+            csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
             drawer: true,
             right: null,
             cartItems: [],
@@ -53,7 +55,7 @@ export default {
         });
     },
     mounted() {
-        axios.get('getCart')
+        axios.get('/getCart')
             .then((response) => {
                 this.cartItems = response.data
             })

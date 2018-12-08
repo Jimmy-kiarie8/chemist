@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UsersRequest;
 use App\Notifications\SignupActivate;
 // use App\Role_user;
-use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Str;
+use App\User;
 
 class UserController extends Controller
 {

@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Branch;
-use App\Shipment;
 use Auth;
 use DB;
-use App\Country;
 
 class DashboardController extends Controller
 {
@@ -105,9 +102,9 @@ class DashboardController extends Controller
         $countries = ['name' => 'Kenya', 'name' => 'Uganda', 'name' => 'Tanzania'];
         foreach ($countries as $country) {
             // return $country;
-            $tanzania = Shipment::where('country', 'Tanzania')->count();
-            $uganda = Shipment::where('country', 'Uganda')->count();
-            $kenya = Shipment::where('country', 'Kenya')->count();
+            // $tanzania = Shipment::where('country', 'Tanzania')->count();
+            // $uganda = Shipment::where('country', 'Uganda')->count();
+            // $kenya = Shipment::where('country', 'Kenya')->count();
         }
         return $country = array(
             'Kenya' => $kenya,
@@ -127,7 +124,7 @@ class DashboardController extends Controller
             $branch_count[] = array(
                 'name' => $branch->branch_name,
                 'id' => $key,
-                'count' => Shipment::where('branch_id', $branch->id)->count(),
+                // 'count' => Shipment::where('branch_id', $branch->id)->count(),
             );
         }
         return $branch_count;
@@ -209,7 +206,7 @@ class DashboardController extends Controller
             $country_count[] = array(
                 'name' => $country->country_name,
                 'id' => $key,
-                'count' => Shipment::where('country_id', $country->id)->count(),
+                // 'count' => Shipment::where('country_id', $country->id)->count(),
             );
         }
         return $country_count;
@@ -240,17 +237,17 @@ class DashboardController extends Controller
 
     public function countDelivered()
     {
-        return Shipment::where('status', 'Delivered')->count();
+        // return Shipment::where('status', 'Delivered')->count();
     }
 
     public function countPending()
     {
         // return Shipment::count();
-        return Shipment::where('status', '!=', 'Delivered')->where('status', '!=', 'Cancelled')->count();
+        // return Shipment::where('status', '!=', 'Delivered')->where('status', '!=', 'Cancelled')->count();
     }
 
     public function countOrders()
     {
-        return Shipment::count();
+        // return Shipment::count();
     }
 }

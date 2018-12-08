@@ -13,7 +13,7 @@
             <v-card-text>
                 <v-layout wrap>
                     <v-flex sm6>
-                        <img :src="productD.image" alt="" style="height: 500px; width: 400px;">
+                        <img :src="'/storage/products/'+productD.image" alt="" style="height: 300px; width: 300px;">
                     </v-flex>
                     <v-divider vertical></v-divider>
                     <v-flex sm4 offset-sm1>

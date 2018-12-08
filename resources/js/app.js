@@ -28,25 +28,32 @@ Vue.use(VueRouter)
 
 let exampleComponent = require('./components/ExampleComponent.vue');
 
-let myDash = require('./components/Dashboard.vue');
-let myNav = require('./components/include/Nav.vue');
 let myHeader = require('./components/include/Header.vue');
+let myFooter = require('./components/include/Footer.vue');
+let myDash = require('./components/Dashboard.vue');
+let myNav = require('./components/include/Navigation.vue');
 let myProduct = require('./components/product/Product.vue');
 let myHome = require('./components/home/Home.vue');
-let myPro = require('./components/product/ProductB.vue');
-let myCategory = require('./components/category/Category.vue');
-let myBrand = require('./components/brand/Brand.vue');
+let myPro = require('./components/admin/products/Products.vue');
+let myCategory = require('./components/admin/category/Category.vue');
+let mySubCat = require('./components/admin/subcategory/SubCat.vue');
+let myOrders = require('./components/admin/orders/Orders.vue');
+let myFilter = require('./components/filter/Filter.vue');
+let myPrescription = require('./components/admin/prescription/Prescription.vue');
 
 
 const routes = [
     { path: '/example', component: exampleComponent },
 
-    {path: '/', component: myHome },
-    {path: '/dashboard', component: myDash },
+    { path: '/', component: myHome },
+    { path: '/filter', component: myFilter },
+    { path: '/dashboard', component: myDash },
     { path: '/products', component: myProduct },
     { path: '/Adminproducts', component: myPro },
     { path: '/Admincategories', component: myCategory },
-    { path: '/AdminBrand', component: myBrand },
+    { path: '/AdminSubCat', component: mySubCat },
+    { path: '/AdminOrders', component: myOrders },
+    { path: '/prescriptions', component: myPrescription },
 ]
 const router = new VueRouter({
     // mode: 'history',
@@ -56,7 +63,7 @@ const app = new Vue({
     el: '#app',
     router,
     components: {
-        myProduct, myNav, myHome, exampleComponent, myPro, myCategory, myBrand, myDash, myHeader
+        myProduct, myNav, myHome, exampleComponent, myPro, myPrescription, myHeader, myFooter
     },
 });
  

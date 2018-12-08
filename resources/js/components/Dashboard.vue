@@ -6,7 +6,7 @@
                 <v-layout wrap>
                     <div class="panel-header panel-header-lg row" style="width: 120% !important">
                         <div class="column">
-                            <h3 class="text-center" style="color: #fff;">Shipments Chart</h3>
+                            <h3 class="text-center" style="color: #fff;">Products Chart</h3>
                             <my-product :height="255" :width="1200"></my-product>
                         </div>
                     </div>
@@ -251,7 +251,7 @@ export default {
     },
     methods: {
         getProducts() {
-            axios.get('getProducts')
+            axios.get('/getProducts')
                 .then((response) => {
                     this.products = response.data
                 })
@@ -260,7 +260,7 @@ export default {
                 })
         },
         getChartOrders() {
-            axios.get('orders')
+            axios.get('/orders')
                 .then((response) => {
                     this.orders = response.data
                 })
@@ -270,7 +270,7 @@ export default {
         },
 
         ref() {
-            axios.get('getChartData')
+            axios.get('/getChartData')
                 .then((response) => {
                     // console.log(response);
                     eventBus.$emit('chartEvent', response.data);
@@ -286,29 +286,29 @@ export default {
         this.getProducts()
         this.getChartOrders()
         this.loader = true
-        axios.get('getUsersCount')
+        axios.get('/getUsersCount')
             .then((response) => {
                 this.Allusers = response.data
             })
             .catch((error) => {
                 this.errors = error.response.data.errors
             })
-        axios.get('countDelivered')
+        axios.get('/countDelivered')
             .then((response) => {
                 this.AllDelivered = response.data
             })
             .catch((error) => {
                 this.errors = error.response.data.errors
             })
-        axios.get('countPending')
-            .then((response) => {
-                this.AllPending = response.data
-            })
-            .catch((error) => {
-                this.errors = error.response.data.errors
-            })
+        // axios.get('/countPending')
+        //     .then((response) => {
+        //         this.AllPending = response.data
+        //     })
+        //     .catch((error) => {
+        //         this.errors = error.response.data.errors
+        //     })
 
-        axios.get('getProducts')
+        axios.get('/getProducts')
             .then((response) => {
                 this.AllProducts = response.data
             })
@@ -316,7 +316,7 @@ export default {
                 this.errors = error.response.data.errors
             })
 
-        axios.get('brands')
+        axios.get('/brands')
             .then((response) => {
                 this.brands = response.data
             })
@@ -325,7 +325,7 @@ export default {
             })
 
         // Dashboard
-        axios.get('categories')
+        axios.get('/categories')
             .then((response) => {
                 this.categories = response.data
             })
@@ -333,33 +333,33 @@ export default {
                 this.errors = error.response.data.errors
             })
 
-        axios.get('getCanceledCount')
-            .then((response) => {
-                this.AllCanceled = response.data
-            })
-            .catch((error) => {
-                this.errors = error.response.data.errors
-            })
+        // axios.get('/getCanceledCount')
+        //     .then((response) => {
+        //         this.AllCanceled = response.data
+        //     })
+        //     .catch((error) => {
+        //         this.errors = error.response.data.errors
+        //     })
 
-        axios.get('deriveredShipmentCount')
-            .then((response) => {
-                this.AllderiveredShipment = response.data
-            })
-            .catch((error) => {
-                this.errors = error.response.data.errors
-            })
+        // axios.get('/deriveredShipmentCount')
+        //     .then((response) => {
+        //         this.AllderiveredShipment = response.data
+        //     })
+        //     .catch((error) => {
+        //         this.errors = error.response.data.errors
+        //     })
 
-        axios.get('deriveredShipmentCount')
-            .then((response) => {
-                this.loader = false
-                this.AllderiveredShipment = response.data
-            })
-            .catch((error) => {
-                this.loader = false
-                this.errors = error.response.data.errors
-            })
+        // axios.get('/deriveredShipmentCount')
+        //     .then((response) => {
+        //         this.loader = false
+        //         this.AllderiveredShipment = response.data
+        //     })
+        //     .catch((error) => {
+        //         this.loader = false
+        //         this.errors = error.response.data.errors
+        //     })
 
-        // axios.get('getCountryhipments')
+        // axios.get('/getCountryhipments')
         //     .then((response) => {
         //         this.products = response.data
         //     })

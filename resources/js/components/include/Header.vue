@@ -2,8 +2,7 @@
 <div>
     <v-app id="inspire">
         <!-- temporary -->
-        <v-navigation-drawer right temporary v-model="right" fixed>
-        </v-navigation-drawer>
+        <v-navigation-drawer right temporary v-model="right" fixed></v-navigation-drawer>
         <!-- temporary -->
         <v-navigation-drawer fixed :color="color" :clipped="$vuetify.breakpoint.lgAndUp" app v-model="drawer">
             <v-list dense id="navigation">
@@ -15,54 +14,54 @@
                             <div class="body-1">{{ user.email }}</div>
                         </v-flex>
                     </v-layout>
-                </v-img> -->
+                </v-img> --> 
                 <template>
                     <v-card>
                         <!-- <v-card style="background: url('storage/ps/landS.jpg')"> -->
                         <router-link to="/dashboard" class="v-list__tile v-list__tile--link">
-                            <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">dashboard</i></div>
+                            <div class="v-list__tile__action">
+                                <i aria-hidden="true" class="icon material-icons">dashboard</i>
+                            </div>
                             <div class="v-list__tile__content">
-                                <div class="v-list__tile__title">
-                                    Dashboard
-                                </div>
+                                <div class="v-list__tile__title">Dashboard</div>
                             </div>
                         </router-link>
 
-                        <!-- <router-link to="/rinders" class="v-list__tile v-list__tile--link" v-for="roleR in user.roles" :key="roleR.id" v-if="roleR.name === 'Rider'">
-                            <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">local_shipping</i></div>
+                        <router-link to="/Adminproducts" class="v-list__tile v-list__tile--link">
+                            <div class="v-list__tile__action">
+                                <i aria-hidden="true" class="icon material-icons">dialpad</i>
+                            </div>
                             <div class="v-list__tile__content">
-                                <div class="v-list__tile__title">
-                                    My Shipments
-                                </div>
+                                <div class="v-list__tile__title">My Products</div>
                             </div>
                         </router-link>
-                        <router-link to="/Shipments" class="v-list__tile v-list__tile--link" v-if="user.can['view shipments']">
-                            <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">local_shipping</i></div>
+                        <router-link to="/Admincategories" class="v-list__tile v-list__tile--link">
+                            <div class="v-list__tile__action">
+                                <i aria-hidden="true" class="icon material-icons">settings</i>
+                            </div>
                             <div class="v-list__tile__content">
-                                <div class="v-list__tile__title">
-                                    Manage Shipments
-                                </div>
+                                <div class="v-list__tile__title">Manage Categories</div>
                             </div>
                         </router-link>
-                        <router-link to="/charges" class="v-list__tile v-list__tile--link" v-if="user.can['view charges']">
-                            <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">attach_money</i></div>
-                            <div class="v-list__tile__content">
-                                <div class="v-list__tile__title">
-                                    Manage Charges
-                                </div>
+                        <router-link to="/AdminSubCat" class="v-list__tile v-list__tile--link">
+                            <div class="v-list__tile__action">
+                                <i aria-hidden="true" class="icon material-icons">account_circle</i>
                             </div>
-                        </router-link>
-
-                        <router-link to="/subscribers" class="v-list__tile v-list__tile--link" v-if="user.can['view subscribers']">
-                            <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">email</i></div>
                             <div class="v-list__tile__content">
-                                <div class="v-list__tile__title">
-                                    Subscribers
-                                </div>
+                                <div class="v-list__tile__title">Manage Subcategories</div>
                             </div>
                         </router-link>
 
-                        <router-link to="/profile" class="v-list__tile v-list__tile--link">
+                        <router-link to="/AdminOrders" class="v-list__tile v-list__tile--link">
+                            <div class="v-list__tile__action">
+                                <i aria-hidden="true" class="icon material-icons">email</i>
+                            </div>
+                            <div class="v-list__tile__content">
+                                <div class="v-list__tile__title">Manage Orders</div>
+                            </div>
+                        </router-link>
+
+                        <!--    <router-link to="/profile" class="v-list__tile v-list__tile--link">
                             <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">account_circle</i></div>
                             <div class="v-list__tile__content">
                                 <div class="v-list__tile__title">
@@ -188,36 +187,37 @@
                                 </v-list-tile-action>
                                 <v-list-tile-title>Charges</v-list-tile-title>
                             </router-link>
-                        </v-list-group> -->
+              </v-list-group>-->
                     </v-card>
                 </template>
             </v-list>
         </v-navigation-drawer>
         <v-toolbar dark app :color="color" :clipped-left="$vuetify.breakpoint.lgAndUp" fixed>
             <v-toolbar-title style="width: 600px" class="ml-0 pl-3">
-                <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-                 Healthwise Pharmacy
+                <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>Healthwise Pharmacy
                 <!-- <img src="storage/logo1.jpg" alt="" style="width: 60px; height: 60px; border-radius: 25%;"> -->
             </v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-tooltip bottom style="margin-right: 10px;">
-                    <v-btn icon class="mx-0" @click="openShipment" slot="activator">
-                        <v-icon color="white darken-2" large>add</v-icon>
-                    </v-btn>
-                    <span>Add Shipment</span>
-                </v-tooltip>
-                <v-divider vertical></v-divider>
-                <!-- <Notifications :user="user"></Notifications> -->
-                <v-divider vertical></v-divider>
-                <!-- <chattyNoty :user="user"></chattyNoty> -->
-                <!-- <v-icon @click.stop="right = !right" style="cursor: pointer">apps</v-icon> -->
-                <form action="/logout" method="post">
-                    <v-btn flat color="white" type="submit">Logout</v-btn>
-                </form>
+            <v-spacer></v-spacer>
+            <v-tooltip bottom style="margin-right: 10px;">
+                <v-btn icon class="mx-0" @click="openShipment" slot="activator">
+                    <v-icon color="white darken-2" large>mail</v-icon>
+                </v-btn>
+                <span>New Orders</span>
+            </v-tooltip>
+            <v-divider vertical></v-divider>
+            <!-- <Notifications :user="user"></Notifications> -->
+            <a href="/" class="v-btn v-btn--flat theme--dark white--text">Site</a>
+            <v-divider vertical></v-divider>
+            <!-- <chattyNoty :user="user"></chattyNoty> -->
+            <!-- <v-icon @click.stop="right = !right" style="cursor: pointer">apps</v-icon> -->
+            <form action="/logout" method="post">
+                <input type="hidden" name="_token" :value="csrf">
+                <v-btn flat color="white" type="submit">Logout</v-btn>
+            </form>
         </v-toolbar>
     </v-app>
 
-    <v-snackbar :timeout="timeout" bottom="bottom" :color="color" left="left" v-model="snackbar">
+    <v-snackbar :timeout="timeout" bottom="bottom" :color="Scolor" right="right" v-model="snackbar">
         {{ message }}
         <v-icon dark right>check_circle</v-icon>
     </v-snackbar>
@@ -229,111 +229,70 @@
 // let AddShipment = require("../shipments/AddShipment");
 // import chattyNoty from '../notification/chattyNoty'
 export default {
-  components: {
-    // Notifications,
-    // AddShipment
-    //  chattyNoty
-  },
-  props: ["user"],
-  data() {
-    return {
-      role: "",
-      color: "#132f51",
-      dialog: false,
-      drawer: true,
-      drawerRight: false,
-      right: null,
-      mode: "",
-      notifications: [],
-      company: {},
-      AllBranches: [],
-      Allcustomers: [],
-      AllDrivers: [],
-      snackbar: false,
-      timeout: 5000,
-      message: "Success"
-      // cruds: [
-      //     ['Create', 'add'],
-      //     ['Read', 'insert_drive_file'],
-      //     ['Update', 'update'],
-      //     ['Delete', 'delete']
-      // ]
-    };
-  },
-  methods: {
-    openShipment() {
-      this.dialog = true;
-      this.getBranch();
-      this.getCustomer();
-      this.getDrivers();
+    components: {
+        // Notifications,
+        // AddShipment
+        //  chattyNoty
     },
+    props: ["user"],
+    data() {
+        return {
+            csrf: document
+                .querySelector('meta[name="csrf-token"]')
+                .getAttribute("content"),
+            color: "#132f51",
+            dialog: false,
+            drawer: true,
+            right: null,
+            snackbar: false,
+            timeout: 5000,
+            Scolor: '',
+            message: "Success"
+        };
+    },
+    methods: {
+        openShipment() {
+            this.dialog = true;
+        },
+        close() {
+            this.dialog = false;
+        },
 
-    getCustomer() {
-      axios
-        .get("getCustomer")
-        .then(response => {
-          this.Allcustomers = response.data;
+        showalert() {
+            this.message = "success";
+            this.Scolor = "black";
+            this.snackbar = true;
+        }
+    },
+    created() {
+        eventBus.$on('alertRequest', data => {
+            this.showalert()
         })
-        .catch(error => {
-          this.errors = error.response.data.errors;
-        });
     },
-    getDrivers() {
-      axios
-        .get("/getDrivers")
-        .then(response => {
-          this.AllDrivers = response.data;
-        })
-        .catch(error => {
-          console.log(error);
-          this.errors = error.response.data.errors;
-        });
-    },
-    getBranch() {
-      axios
-        .get("/getBranchEger")
-        .then(response => {
-          this.AllBranches = response.data;
-        })
-        .catch(error => {
-          console.log(error);
-          this.errors = error.response.data.errors;
-        });
-    },
-    close() {
-      this.dialog = false;
-    },
-
-    showalert() {
-      this.message = "success";
-      // this.color = "indigo";
-      this.snackbar = true;
+    mounted() {
+        // axios.post('/getLogo')
+        //     .then((response) => {
+        //         this.company = response.data
+        //     })
+        //     .catch((error) => {
+        //         this.errors = error.response.data.errors
+        //     })
     }
-  },
-  mounted() {
-    // axios.post('getLogo')
-    //     .then((response) => {
-    //         this.company = response.data
-    //     })
-    //     .catch((error) => {
-    //         this.errors = error.response.data.errors
-    //     })
-  }
 };
 </script>
 
 <style scoped>
 .v-expansion-panel__container:hover {
-  border-radius: 10px !important;
-  width: 90% !important;
-  margin-left: 15px !important;
-  background: #e3edfe !important;
-  color: #1a73e8 !important;
+    border-radius: 10px !important;
+    width: 90% !important;
+    margin-left: 15px !important;
+    background: #e3edfe !important;
+    color: #1a73e8 !important;
 }
 
 .theme--light {
-  background-color: #212120 !important;
-  /* background: url('storage/logo1.jpg') !important; */
-  color: #fff !important;
+    background-color: #212120 !important;
+    /* background: url('storage/logo1.jpg') !important; */
+    color: #fff !important;
 }
 </style>

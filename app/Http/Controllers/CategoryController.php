@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Category;
 
 class CategoryController extends Controller
 {
@@ -15,7 +15,12 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return Category::with(['brands'])->get();
+        return Category::with(['subCategories'])->get();
+    }
+
+    public function show(Request $request, $id)
+    {
+        return Category::find($id);
     }
 
     /**

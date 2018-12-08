@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App\Cart;
 use App\Product;
+use App\Cart;
 
 class CartController extends Controller
 {
@@ -49,9 +49,13 @@ class CartController extends Controller
         //     $cartA[] = $itemsC;
         // }
         // return ($cartA);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        return $cart->getCart();
+        if (Session::has('cart')) {
+            $oldCart = Session::has('cart') ? Session::get('cart') : null;
+            $cart = new Cart($oldCart);
+            return $cart->getCart();
+        }else{
+            return;
+        }
 
     }
 }

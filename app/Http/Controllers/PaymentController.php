@@ -12,10 +12,10 @@ use PayPal\Api\Item;
 use PayPal\Api\ItemList;
 use PayPal\Api\Payer;
 use PayPal\Api\RedirectUrls;
-use App\Order;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use App\Cart;
+use App\Order;
 
 class PaymentController extends Controller
 {

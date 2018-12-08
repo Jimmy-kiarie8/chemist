@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function brand()
+    // public function brand()
+    // {
+    //     return $this->belongsTo('App\Brand', 'brand_id');
+    // }
+    public function subCategory()
     {
-        return $this->belongsTo('App\Brand', 'category_id');
+        return $this->belongsTo('App\SupCategory', 'subcategory_id');
     }
 }

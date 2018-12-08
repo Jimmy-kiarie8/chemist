@@ -13,11 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad atque fugiat possimus debitis enim rerum quas, dolorem consectetur nihil non, quaerat, earum quo et! Reiciendis consequuntur nam dignissimos debitis optio!
-                    You are logged in!
+                    <img src="{{ asset('storage/app/public' . str_replace('public','','')) }}" alt="{{ $ad->name }}" class="img-responsive img-thumbnail" height="200" width="200">You are logged in!
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+

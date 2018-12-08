@@ -1,23 +1,84 @@
 <template>
-<div class="card-row">
-    <div v-for="(card, index) in cards" :key="index" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)" class="card">
-
-        <img class="card-image"
-        :class="{'selected': isSelected(index)}"
-        :src="card.image">
-
-        <div class="card-footer">
-            <p class="card-text">RECIPE</p>
-            <h3 class="card-title">{{card.title}}</h3>
-            <p class="card-text">by
-                <span
-        class="card-author"
-        :class="{'selected': isSelected(index)}">
-            {{card.author}}
-    </span>
-            </p>
+<div id="bestSell" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <v-layout wrap>
+                <v-flex sm3 v-for="(pro, index) in bestSellF" :key="index">
+                    <v-card>
+                        <v-card-title>
+                            <img class="d-block w-100" :src="pro.image" alt="First slide" style="height: 400px;width:100%">
+                            </v-card-title>
+                    </v-card>
+                    <v-card-actions>
+                        <v-tooltip bottom>
+                            <v-btn icon class="mx-0" slot="activator">
+                                <v-icon color="success darken-2" small>cloud</v-icon>
+                            </v-btn>
+                            <span>Add To wishlist</span>
+                        </v-tooltip>
+                        <v-spacer></v-spacer>
+                        <v-tooltip bottom>
+                            <v-btn icon class="mx-0" slot="activator" @click="view(pro)">
+                                <v-icon color="info darken-2" small>visibility</v-icon>
+                            </v-btn>
+                            <span>See Details</span>
+                        </v-tooltip>
+                        <v-spacer></v-spacer>
+                        <v-tooltip bottom>
+                            <v-btn icon class="mx-0" slot="activator" @click="addToCart(pro.id)">
+                                <v-icon color="orange darken-2" small>shopping_cart</v-icon>
+                            </v-btn>
+                            <span>Add To Cart</span>
+                        </v-tooltip>
+                    </v-card-actions>
+                </v-flex>
+            </v-layout>
+        </div>
+        <div class="carousel-item" v-for="item in bestSellA.data" :key="item.id">
+            <v-layout wrap>
+                <v-flex sm3>
+                    <v-card>
+                        <v-card-title>
+                            <img class="d-block w-100" :src="item.image" alt="First slide" style="height: 400px;width:100%">
+                            </v-card-title>
+                    </v-card>
+                    <v-card-actions>
+                        <v-tooltip bottom>
+                            <v-btn icon class="mx-0" slot="activator">
+                                <v-icon color="success darken-2" small>cloud</v-icon>
+                            </v-btn>
+                            <span>Add To wishlist</span>
+                        </v-tooltip>
+                        <v-spacer></v-spacer>
+                        <v-tooltip bottom>
+                            <v-btn icon class="mx-0" slot="activator" @click="view(item)">
+                                <v-icon color="info darken-2" small>visibility</v-icon>
+                            </v-btn>
+                            <span>View product</span>
+                        </v-tooltip>
+                        <v-spacer></v-spacer>
+                        <v-tooltip bottom>
+                            <v-btn icon class="mx-0" slot="activator" @click="addToCart(item.id)">
+                                <v-icon color="orange darken-2" small>shopping_cart</v-icon>
+                            </v-btn>
+                            <span>Add To Cart</span>
+                        </v-tooltip>             
+                    </v-card-actions>
+                </v-flex>
+            </v-layout>
         </div>
     </div>
+    <v-btn icon class="mx-0" slot="activator" @click="addToCart(item.id)">
+        <v-icon color="orange darken-2" small>shopping_cart</v-icon>
+    </v-btn>
+    <a class="carousel-control-prev" @click="next(bestSellA.path, bestSellA.current_page, 'bestSell')">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#bestSell" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 </template>
 
@@ -25,136 +86,102 @@
 export default {
     data() {
         return {
-            // cards: cards,
-            selectedCard: -1,
-            cards: [{
-                    title: 'Gooey PBJ Brownies',
-                    author: 'John Walibur',
-                    image: 'storage/products/product1.jpg'
-                },
-                {
-                    title: 'Crisp Spanish Tortilla Matzo Brei',
-                    author: 'Colman Andrews',
-                    image: 'storage/products/product2.jpg'
-                },
-                {
-                    title: 'Grilled Shrimp with Lemon and Garlic',
-                    author: 'Celeste Mills',
-                    image: 'storage/products/product4.jpg'
-                }
-            ]
+            bestSellF: [],
+            bestSellA: [],
+            newProF: [],
+            newProA: [],
+            featuredF: [],
+            products: [],
         }
     },
     methods: {
-        hoverCard(selectedIndex) {
-            this.selectedCard = selectedIndex
-            // this.animateCards()
+        next(page, current_page, resp) {
+            // console.log(resp)
+            this.nextPage = true;
+            axios
+                .get(page + `?page=` + current_page, this.form)
+                .then(response => {
+                    this.nextPage = false;
+                    if (resp === 'featured') {
+                        // alert('featered')
+                        this.featured = response.data;
+                    } else if (resp === 'newProduct') {
+                        // alert('newProduct')
+                        this.newProduct = response.data;
+                    } else if (resp === 'bestSell') {
+                        // alert('bestSell')
+                        this.bestSellA = response.data;
+                    } else {
+                        // alert('nooop')
+                    }
+                });
         },
-        // animateCards() {
-        //     this.cards.forEach((card, index) => {
-        //         const direction = this.calculateCardDirection(index, this.selectedCard)
-        //         TweenMax.to(
-        //             this.$refs `[card_${index}]`, 0.3, {
-        //                 x: direction * 50
-        //             })
-        //     })
-        // },
-        calculateCardDirection(cardIndex, selectedIndex) {
-            if (selectedIndex === -1) {
-                return 0
-            }
-            const diff = cardIndex - selectedIndex
-            return diff === 0 ? 0 : diff / Math.abs(diff)
-        },
-        isSelected(cardIndex) {
-            return this.selectedCard === cardIndex
-        }
     },
-    // hoverCard(selectedIndex) {
-    //     this.selectedCard = selectedIndex
-    // },
+    mounted() {
+        axios
+            .get("/bestSellF")
+            .then(response => {
+                this.bestSellF = response.data;
+            })
+            .catch(error => {
+                // this.loading = false;
+                this.errors = error.response.data.errors;
+            });
+        axios
+            .get("/getProducts")
+            .then(response => {
+                this.products = response.data;
+            })
+            .catch(error => {
+                // this.loading = false;
+                this.errors = error.response.data.errors;
+            });
+        axios
+            .get("/newProF")
+            .then(response => {
+                this.newProF = response.data;
+            })
+            .catch(error => {
+                // this.loading = false;
+                this.errors = error.response.data.errors;
+            });
+
+        axios
+            .get("/bestSellA")
+            .then(response => {
+                this.bestSellA = response.data;
+            })
+            .catch(error => {
+                // this.loading = false;
+                this.errors = error.response.data.errors;
+            });
+
+        // axios
+        //     .get("/featuredA")
+        //     .then(response => {
+        //         this.featuredA = response.data;
+        //     })
+        //     .catch(error => {
+        //         // this.loading = false;
+        //         this.errors = error.response.data.errors;
+        //     });
+
+        axios
+            .get("/featuredF")
+            .then(response => {
+                this.featuredF = response.data;
+            })
+            .catch(error => {
+                // this.loading = false;
+                this.errors = error.response.data.errors;
+            });
+    }
 }
 </script>
 
 <style scoped>
-.card-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 780px;
-    width: 100%;
-    height: 500px;
-}
-
-.card {
-    position: relative;
-    background-color: #FFFFFF;
-    height: 370px;
-    width: 240px;
-    margin: 10px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-.card-image {
-    /* center horizontally overflown image */
-    position: absolute;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
-
-    height: 220px;
-    min-width: 100%;
-}
-
-.card-footer {
-    position: absolute;
-    bottom: 0;
-    height: 130px;
-    padding: 10px 15px;
-    font-family: Helvetica;
-}
-
-.card-text {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.card-title {
-    font-family: Serif;
-}
-
-.card-author {
-    font-size: 14px;
-    color: #BAB096;
-}
-
-.card {
-    /* the other rules */
-    transition: height 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    height: 410px;
-    box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
-}
-
-.card-image {
-    /* the other rules */
-    transition: height 0.3s, opacity 0.3s;
-}
-
-.card-image.selected {
-    height: 410px;
-    opacity: 0.3;
-}
-
-.card-author {
-    /* the other rules */
-    transition: color 0.3s;
-}
-
-.card-author.selected {
-    color: #6a6456;
+img {
+    height: 200px !important;
+    width: 200px !important;
 }
 </style>

@@ -11,7 +11,7 @@
       }
     },
     mounted () {
-      axios.get('getCategories')
+      axios.get('/getCategories')
               .then((response) => {
                   console.log(response);
                   this.label = response.data.data.lables
@@ -37,7 +37,7 @@
       }, {responsive: true, maintainAspectRatio: false})
     },
       ref() {
-          axios.get('getCategories')
+          axios.get('/getCategories')
               .then((response) => {
                   console.log(response);
                   this.label = response.data.lables

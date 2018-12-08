@@ -33,7 +33,7 @@ export default {
     },
     methods: {
         getCategory() {
-            axios.get('categories')
+            axios.get('/categories')
                 .then((response) => {
                     this.categories = response.data
                 })
@@ -42,7 +42,7 @@ export default {
                 })
         },
         filterItem() {
-            axios.post('filterItem', this.$data.filBrand)
+            axios.post('/filterItem', this.$data.filBrand)
                 .then((response) => {
                     eventBus.$emit("proFiltertEvent", response.data);
                     // this.categories = response.data
