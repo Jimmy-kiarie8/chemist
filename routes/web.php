@@ -37,7 +37,7 @@ Route::get('testS', function () {
 Route::resource('products', 'ProductController');
 Route::resource('prescriptions', 'PrescriptionController');
 
-Route::get('/chemist', 'HomeController@chemist')->name('chemistHome');
+Route::get('/chemist', 'HomeController@chemist')->name('chemistHome')->middleware('verified');
 
 Route::get('/getsP', 'SliderController@getsP')->name('getsP');
 Route::get('/getTP', 'SliderController@getTP')->name('getTP');
@@ -54,6 +54,7 @@ Route::get('/newProA', 'SliderController@newProA')->name('newProA');
 Route::post('/cart/{id}', 'CartController@addToCart')->name('addToCart');
 Route::get('/getCart', 'CartController@getCart')->name('getCart');
 Route::post('/subToCart/{id}', 'CartController@subToCart')->name('subToCart');
+Route::post('/cartAdd/{id}', 'CartController@cartAdd')->name('cartAdd');
 
 Route::get('/getProducts', 'ProductController@getProducts')->name('getProducts');
 Route::post('/proImg/{id}', 'ProductController@proImg')->name('proImg');
@@ -67,14 +68,23 @@ Route::post('/filterItem', 'FilterController@filterItem')->name('filterItem');
 Route::post('/preImg/{id}', 'PrescriptionController@preImg')->name('preImg');
 
 
+Route::post('/Notyshpments/{id}', 'NotificationController@Notyshpments')->name('Notyshpments');
+Route::post('/read', 'NotificationController@read')->name('read');
+Route::get('/Chattynoty', 'NotificationController@Chattynoty')->name('Chattynoty');
+Route::get('/notifications', 'NotificationController@notifications')->name('notifications');
+
+
 Route::resource('products', 'ProductController');
 Route::resource('brands', 'BrandController');
 Route::resource('categories', 'CategoryController');
+Route::resource('menus', 'MenuController');
 Auth::routes(['verify' => true]);
 
 
 
+
 // Auth::routes();
+// Route::group(['middleware' => ['verified']], function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/paypal', function () {
         return view('paypal.createPay');
@@ -91,6 +101,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/filterItem', 'FilterController@filterItem')->name('filterItem');
+
+    Route::get('/pay', 'OrderController@pay')->name('pay');
+
 
     Route::get('getBranchShipments', 'DashboardController@getBranchShipments')->name('getBranchShipments');
     Route::get('getChartOrders', 'DashboardController@getChartOrders')->name('getChartOrders');
@@ -109,3 +122,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('countPending', 'DashboardController@countPending')->name('countPending');
     Route::get('countOrders', 'DashboardController@countOrders')->name('countOrders');
 });
+// });

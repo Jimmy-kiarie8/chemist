@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 160);
+/******/ 	return __webpack_require__(__webpack_require__.s = 162);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1902,7 +1902,7 @@
             try {
                 oldLocale = globalLocale._abbr;
                 var aliasedRequire = require;
-                __webpack_require__(260)("./" + name);
+                __webpack_require__(262)("./" + name);
                 getSetGlobalLocale(oldLocale);
             } catch (e) {}
         }
@@ -4574,23 +4574,10 @@
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(17)(module)))
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(13);
-module.exports.easing = __webpack_require__(234);
-module.exports.canvas = __webpack_require__(235);
-module.exports.options = __webpack_require__(236);
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -4699,13 +4686,26 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(13);
+module.exports.easing = __webpack_require__(236);
+module.exports.canvas = __webpack_require__(237);
+module.exports.options = __webpack_require__(238);
+
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 module.exports = {
 	/**
@@ -4806,8 +4806,8 @@ function toComment(sourceMap) {
 "use strict";
 
 
-var bind = __webpack_require__(19);
-var isBuffer = __webpack_require__(167);
+var bind = __webpack_require__(20);
+var isBuffer = __webpack_require__(169);
 
 /*global toString:true*/
 
@@ -5129,7 +5129,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(214)
+var listToStyles = __webpack_require__(216)
 
 /*
 type StyleObject = {
@@ -5344,8 +5344,8 @@ function applyToTag (styleElement, obj) {
 "use strict";
 
 
-var color = __webpack_require__(30);
-var helpers = __webpack_require__(1);
+var color = __webpack_require__(31);
+var helpers = __webpack_require__(2);
 
 function interpolate(start, view, model, ease) {
 	var keys = Object.keys(model);
@@ -5467,10 +5467,10 @@ module.exports = Element;
 
 
 module.exports = {};
-module.exports.Arc = __webpack_require__(242);
-module.exports.Line = __webpack_require__(243);
-module.exports.Point = __webpack_require__(244);
-module.exports.Rectangle = __webpack_require__(245);
+module.exports.Arc = __webpack_require__(244);
+module.exports.Line = __webpack_require__(245);
+module.exports.Point = __webpack_require__(246);
+module.exports.Rectangle = __webpack_require__(247);
 
 
 /***/ }),
@@ -5507,7 +5507,7 @@ module.exports = g;
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 function filterByPosition(array, position) {
 	return helpers.where(array, function(v) {
@@ -5933,7 +5933,7 @@ module.exports = {
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 /**
  * Namespace to hold static tick generation functions
@@ -6009,8 +6009,8 @@ module.exports = {
 
 "use strict";
 /* unused harmony export VueCharts */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_index_js__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseCharts__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_index_js__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseCharts__ = __webpack_require__(233);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__BaseCharts__["a"]; });
 /* unused harmony reexport HorizontalBar */
 /* unused harmony reexport Doughnut */
@@ -6397,7 +6397,7 @@ helpers.getValueAtIndexOrDefault = helpers.valueAtIndexOrDefault;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(5);
-var normalizeHeaderName = __webpack_require__(169);
+var normalizeHeaderName = __webpack_require__(171);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -6413,10 +6413,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(21);
+    adapter = __webpack_require__(22);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(21);
+    adapter = __webpack_require__(22);
   }
   return adapter;
 }
@@ -6491,7 +6491,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)))
 
 /***/ }),
 /* 15 */
@@ -6540,7 +6540,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(194);
+var	fixUrls = __webpack_require__(196);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -6854,6 +6854,57 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(309)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(311)
+/* template */
+var __vue_template__ = __webpack_require__(312)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-27ef6a12"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/home/Show.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-27ef6a12", Component.options)
+  } else {
+    hotAPI.reload("data-v-27ef6a12", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -6881,7 +6932,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9422,7 +9473,7 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(9)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -19793,7 +19844,7 @@ return jQuery;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19811,7 +19862,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -20001,19 +20052,19 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(5);
-var settle = __webpack_require__(170);
-var buildURL = __webpack_require__(172);
-var parseHeaders = __webpack_require__(173);
-var isURLSameOrigin = __webpack_require__(174);
-var createError = __webpack_require__(22);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(175);
+var settle = __webpack_require__(172);
+var buildURL = __webpack_require__(174);
+var parseHeaders = __webpack_require__(175);
+var isURLSameOrigin = __webpack_require__(176);
+var createError = __webpack_require__(23);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(177);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -20110,7 +20161,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(176);
+      var cookies = __webpack_require__(178);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -20188,13 +20239,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(171);
+var enhanceError = __webpack_require__(173);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -20213,7 +20264,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20225,7 +20276,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20251,7 +20302,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31214,10 +31265,10 @@ Vue.compile = compileToFunctions;
 
 module.exports = Vue;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(184).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(186).setImmediate))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = function escape(url) {
@@ -31239,30 +31290,30 @@ module.exports = function escape(url) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?9b6c8da3c489424e2b3e9c9fb6314b37";
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?7422060ca379ee9939d3b687d072acad";
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?70e65a7d34902f2c350816ecfe2f6492";
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var convert = __webpack_require__(238);
-var string = __webpack_require__(240);
+var convert = __webpack_require__(240);
+var string = __webpack_require__(242);
 
 var Color = function (obj) {
 	if (obj instanceof Color) {
@@ -31748,13 +31799,13 @@ module.exports = Color;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 /**
  * Helper function to get relative position for an event
@@ -32085,15 +32136,15 @@ module.exports = {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(1);
-var basic = __webpack_require__(246);
-var dom = __webpack_require__(247);
+var helpers = __webpack_require__(2);
+var basic = __webpack_require__(248);
+var dom = __webpack_require__(249);
 
 // @TODO Make possible to select another platform at build time.
 var implementation = dom._enabled ? dom : basic;
@@ -32166,14 +32217,14 @@ module.exports = helpers.extend({
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('global', {
 	plugins: {}
@@ -32555,7 +32606,7 @@ module.exports = {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -32632,7 +32683,7 @@ module.exports = {
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -32771,7 +32822,7 @@ module.exports = {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -32834,7 +32885,7 @@ module.exports = {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -32897,7 +32948,7 @@ module.exports = {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33023,7 +33074,7 @@ module.exports = {
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33086,7 +33137,7 @@ module.exports = {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33194,7 +33245,7 @@ module.exports = {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33257,7 +33308,7 @@ module.exports = {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33366,7 +33417,7 @@ module.exports = {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33502,7 +33553,7 @@ module.exports = {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33596,7 +33647,7 @@ module.exports = {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33658,7 +33709,7 @@ module.exports = {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33781,7 +33832,7 @@ module.exports = {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -33904,7 +33955,7 @@ module.exports = {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34016,7 +34067,7 @@ module.exports = {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34171,7 +34222,7 @@ module.exports = {
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34263,7 +34314,7 @@ module.exports = {
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34446,7 +34497,7 @@ module.exports = {
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34513,7 +34564,7 @@ module.exports = {
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34597,7 +34648,7 @@ module.exports = {
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34661,7 +34712,7 @@ module.exports = {
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34741,7 +34792,7 @@ module.exports = {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34821,7 +34872,7 @@ module.exports = {
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -34901,7 +34952,7 @@ module.exports = {
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35004,7 +35055,7 @@ module.exports = {
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35108,7 +35159,7 @@ module.exports = {
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35179,7 +35230,7 @@ module.exports = {
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35246,7 +35297,7 @@ module.exports = {
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35317,7 +35368,7 @@ module.exports = {
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35388,7 +35439,7 @@ module.exports = {
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35454,7 +35505,7 @@ module.exports = {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35525,7 +35576,7 @@ module.exports = {
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35600,7 +35651,7 @@ module.exports = {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35696,7 +35747,7 @@ module.exports = {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35792,7 +35843,7 @@ module.exports = {
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35879,7 +35930,7 @@ module.exports = {
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -35963,7 +36014,7 @@ module.exports = {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36033,7 +36084,7 @@ module.exports = {
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36143,7 +36194,7 @@ module.exports = {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36256,7 +36307,7 @@ module.exports = {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36320,7 +36371,7 @@ module.exports = {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36407,7 +36458,7 @@ module.exports = {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36485,7 +36536,7 @@ module.exports = {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36567,7 +36618,7 @@ module.exports = {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36646,7 +36697,7 @@ module.exports = {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36726,7 +36777,7 @@ module.exports = {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36807,7 +36858,7 @@ module.exports = {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -36934,7 +36985,7 @@ module.exports = {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37062,7 +37113,7 @@ module.exports = {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37163,7 +37214,7 @@ module.exports = {
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37291,7 +37342,7 @@ module.exports = {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37449,7 +37500,7 @@ module.exports = {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37563,7 +37614,7 @@ module.exports = {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37662,7 +37713,7 @@ module.exports = {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37748,7 +37799,7 @@ module.exports = {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37884,7 +37935,7 @@ module.exports = {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -37957,7 +38008,7 @@ module.exports = {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38053,7 +38104,7 @@ module.exports = {
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38139,7 +38190,7 @@ module.exports = {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38232,7 +38283,7 @@ module.exports = {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38323,7 +38374,7 @@ module.exports = {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38437,7 +38488,7 @@ module.exports = {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38567,7 +38618,7 @@ module.exports = {
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38652,7 +38703,7 @@ module.exports = {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38743,7 +38794,7 @@ module.exports = {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38883,7 +38934,7 @@ module.exports = {
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -38957,7 +39008,7 @@ module.exports = {
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39079,7 +39130,7 @@ module.exports = {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39180,7 +39231,7 @@ module.exports = {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39296,7 +39347,7 @@ module.exports = {
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39364,7 +39415,7 @@ module.exports = {
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39458,7 +39509,7 @@ module.exports = {
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39543,7 +39594,7 @@ module.exports = {
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39651,7 +39702,7 @@ module.exports = {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39815,7 +39866,7 @@ module.exports = {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39901,7 +39952,7 @@ module.exports = {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -39987,7 +40038,7 @@ module.exports = {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40051,7 +40102,7 @@ module.exports = {
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40148,7 +40199,7 @@ module.exports = {
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40214,7 +40265,7 @@ module.exports = {
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40341,7 +40392,7 @@ module.exports = {
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40432,7 +40483,7 @@ module.exports = {
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40523,7 +40574,7 @@ module.exports = {
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40587,7 +40638,7 @@ module.exports = {
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40715,7 +40766,7 @@ module.exports = {
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40845,7 +40896,7 @@ module.exports = {
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40914,7 +40965,7 @@ module.exports = {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -40979,7 +41030,7 @@ module.exports = {
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41058,7 +41109,7 @@ module.exports = {
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41244,7 +41295,7 @@ module.exports = {
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41346,7 +41397,7 @@ module.exports = {
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41410,7 +41461,7 @@ module.exports = {
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41485,7 +41536,7 @@ module.exports = {
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41645,7 +41696,7 @@ module.exports = {
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41822,7 +41873,7 @@ module.exports = {
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -41894,7 +41945,7 @@ module.exports = {
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42009,7 +42060,7 @@ module.exports = {
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42124,7 +42175,7 @@ module.exports = {
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42216,7 +42267,7 @@ module.exports = {
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42289,7 +42340,7 @@ module.exports = {
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42352,7 +42403,7 @@ module.exports = {
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42485,7 +42536,7 @@ module.exports = {
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42578,7 +42629,7 @@ module.exports = {
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42649,7 +42700,7 @@ module.exports = {
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42769,7 +42820,7 @@ module.exports = {
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42840,7 +42891,7 @@ module.exports = {
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -42906,7 +42957,7 @@ module.exports = {
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43032,7 +43083,7 @@ module.exports = {
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -43130,7 +43181,7 @@ module.exports = {
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43225,7 +43276,7 @@ module.exports = {
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43287,7 +43338,7 @@ module.exports = {
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43349,7 +43400,7 @@ module.exports = {
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js language configuration
@@ -43472,7 +43523,7 @@ module.exports = {
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43627,7 +43678,7 @@ module.exports = {
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43729,7 +43780,7 @@ module.exports = {
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43791,7 +43842,7 @@ module.exports = {
 
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43853,7 +43904,7 @@ module.exports = {
 
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43936,7 +43987,7 @@ module.exports = {
 
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44008,7 +44059,7 @@ module.exports = {
 
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44072,7 +44123,7 @@ module.exports = {
 
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44186,7 +44237,7 @@ module.exports = {
 
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44293,7 +44344,7 @@ module.exports = {
 
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44400,19 +44451,19 @@ module.exports = {
 
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(299)
+  __webpack_require__(301)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(301)
+var __vue_script__ = __webpack_require__(303)
 /* template */
-var __vue_template__ = __webpack_require__(302)
+var __vue_template__ = __webpack_require__(304)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -44451,70 +44502,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 158 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(307)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(309)
-/* template */
-var __vue_template__ = __webpack_require__(310)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/home/Show.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-27ef6a12", Component.options)
-  } else {
-    hotAPI.reload("data-v-27ef6a12", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
 /* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(311)
+  __webpack_require__(313)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(313)
+var __vue_script__ = __webpack_require__(315)
 /* template */
-var __vue_template__ = __webpack_require__(314)
+var __vue_template__ = __webpack_require__(321)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -44556,24 +44556,122 @@ module.exports = Component.exports
 /* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(161);
-module.exports = __webpack_require__(367);
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(358)
+/* template */
+var __vue_template__ = __webpack_require__(359)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/orders/Create.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f2f1986a", Component.options)
+  } else {
+    hotAPI.reload("data-v-f2f1986a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
 
 
 /***/ }),
 /* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(360)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(362)
+/* template */
+var __vue_template__ = __webpack_require__(363)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-49a9f2b4"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/orders/View.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-49a9f2b4", Component.options)
+  } else {
+    hotAPI.reload("data-v-49a9f2b4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(163);
+module.exports = __webpack_require__(386);
+
+
+/***/ }),
+/* 163 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vuetify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_design_icons_iconfont_dist_material_design_icons_css__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_design_icons_iconfont_dist_material_design_icons_css__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_material_design_icons_iconfont_dist_material_design_icons_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_material_design_icons_iconfont_dist_material_design_icons_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_css_all_css__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_css_all_css__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_css_all_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__fortawesome_fontawesome_free_css_all_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuetify_dist_vuetify_min_css__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuetify_dist_vuetify_min_css__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vuetify_dist_vuetify_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vuetify_dist_vuetify_min_css__);
 
 /**
@@ -44582,9 +44680,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(162);
+__webpack_require__(164);
 
-window.Vue = __webpack_require__(25);
+window.Vue = __webpack_require__(26);
 window.eventBus = new Vue();
 
 
@@ -44602,22 +44700,25 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-var exampleComponent = __webpack_require__(211);
+var exampleComponent = __webpack_require__(213);
 
-var myHeader = __webpack_require__(217);
-var myFooter = __webpack_require__(222);
-var myDash = __webpack_require__(225);
-var myNav = __webpack_require__(283);
-var myProduct = __webpack_require__(157);
-var myHome = __webpack_require__(303);
-var myPro = __webpack_require__(319);
-var myCategory = __webpack_require__(331);
-var mySubCat = __webpack_require__(340);
-var myOrders = __webpack_require__(349);
+var myHeader = __webpack_require__(219);
+// let myHeaderpartial = require('./components/include/Headerpartial.vue');
+var myFooter = __webpack_require__(224);
+var myDash = __webpack_require__(227);
+var myNav = __webpack_require__(388);
+var myProduct = __webpack_require__(158);
+var myHome = __webpack_require__(305);
+var myPro = __webpack_require__(326);
+var myCategory = __webpack_require__(338);
+var mySubCat = __webpack_require__(347);
+var myOrders = __webpack_require__(356);
+var myPayment = __webpack_require__(365);
 var myFilter = __webpack_require__(159);
-var myPrescription = __webpack_require__(358);
+var myPrescription = __webpack_require__(368);
+var myMenu = __webpack_require__(377);
 
-var routes = [{ path: '/example', component: exampleComponent }, { path: '/', component: myHome }, { path: '/filter', component: myFilter }, { path: '/dashboard', component: myDash }, { path: '/products', component: myProduct }, { path: '/Adminproducts', component: myPro }, { path: '/Admincategories', component: myCategory }, { path: '/AdminSubCat', component: mySubCat }, { path: '/AdminOrders', component: myOrders }, { path: '/prescriptions', component: myPrescription }];
+var routes = [{ path: '/example', component: exampleComponent }, { path: '/', component: myHome }, { path: '/filter', component: myFilter }, { path: '/dashboard', component: myDash }, { path: '/products', component: myProduct }, { path: '/Adminproducts', component: myPro }, { path: '/Admincategories', component: myCategory }, { path: '/AdminSubCat', component: mySubCat }, { path: '/AdminOrders', component: myOrders }, { path: '/prescriptions', component: myPrescription }, { path: '/menu', component: myMenu }, { path: '/Adminpayments', component: myPayment }];
 var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
     // mode: 'history',
     routes: routes // short for `routes: routes`
@@ -44626,17 +44727,18 @@ var app = new Vue({
     el: '#app',
     router: router,
     components: {
-        myProduct: myProduct, myNav: myNav, myHome: myHome, exampleComponent: exampleComponent, myPro: myPro, myPrescription: myPrescription, myHeader: myHeader, myFooter: myFooter
+        myProduct: myProduct, myNav: myNav, myHome: myHome, exampleComponent: exampleComponent, myPro: myPro, myPrescription: myPrescription, myHeader: myHeader, myFooter: myFooter, myMenu: myMenu,
+        myPayment: myPayment // myHeaderpartial
     }
 });
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(163);
-window.Popper = __webpack_require__(17).default;
+window._ = __webpack_require__(165);
+window.Popper = __webpack_require__(18).default;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -44645,9 +44747,9 @@ window.Popper = __webpack_require__(17).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(18);
+  window.$ = window.jQuery = __webpack_require__(19);
 
-  __webpack_require__(164);
+  __webpack_require__(166);
 } catch (e) {}
 
 /**
@@ -44656,7 +44758,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(165);
+window.axios = __webpack_require__(167);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -44692,7 +44794,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -61802,10 +61904,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(16)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(17)(module)))
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -61814,7 +61916,7 @@ if (token) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(18), __webpack_require__(17)) :
+   true ? factory(exports, __webpack_require__(19), __webpack_require__(18)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -65755,21 +65857,21 @@ if (token) {
 
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(166);
+module.exports = __webpack_require__(168);
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(5);
-var bind = __webpack_require__(19);
-var Axios = __webpack_require__(168);
+var bind = __webpack_require__(20);
+var Axios = __webpack_require__(170);
 var defaults = __webpack_require__(14);
 
 /**
@@ -65803,15 +65905,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(24);
-axios.CancelToken = __webpack_require__(182);
-axios.isCancel = __webpack_require__(23);
+axios.Cancel = __webpack_require__(25);
+axios.CancelToken = __webpack_require__(184);
+axios.isCancel = __webpack_require__(24);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(183);
+axios.spread = __webpack_require__(185);
 
 module.exports = axios;
 
@@ -65820,7 +65922,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports) {
 
 /*!
@@ -65847,7 +65949,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65855,8 +65957,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(14);
 var utils = __webpack_require__(5);
-var InterceptorManager = __webpack_require__(177);
-var dispatchRequest = __webpack_require__(178);
+var InterceptorManager = __webpack_require__(179);
+var dispatchRequest = __webpack_require__(180);
 
 /**
  * Create a new instance of Axios
@@ -65933,7 +66035,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65952,13 +66054,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(22);
+var createError = __webpack_require__(23);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -65985,7 +66087,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66013,7 +66115,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66086,7 +66188,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66146,7 +66248,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66221,7 +66323,7 @@ module.exports = (
 
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66264,7 +66366,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66324,7 +66426,7 @@ module.exports = (
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66383,18 +66485,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(5);
-var transformData = __webpack_require__(179);
-var isCancel = __webpack_require__(23);
+var transformData = __webpack_require__(181);
+var isCancel = __webpack_require__(24);
 var defaults = __webpack_require__(14);
-var isAbsoluteURL = __webpack_require__(180);
-var combineURLs = __webpack_require__(181);
+var isAbsoluteURL = __webpack_require__(182);
+var combineURLs = __webpack_require__(183);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -66476,7 +66578,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66503,7 +66605,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66524,7 +66626,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66545,13 +66647,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(24);
+var Cancel = __webpack_require__(25);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -66609,7 +66711,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66643,7 +66745,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -66699,7 +66801,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(185);
+__webpack_require__(187);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -66713,7 +66815,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -66903,10 +67005,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(20)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(21)))
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69536,12 +69638,12 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
-		module.exports = factory(__webpack_require__(25));
+		module.exports = factory(__webpack_require__(26));
 	else if(typeof define === 'function' && define.amd)
 		define(["vue"], factory);
 	else if(typeof exports === 'object')
@@ -90669,13 +90771,13 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 //# sourceMappingURL=vuetify.js.map
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(189);
+var content = __webpack_require__(191);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -90700,46 +90802,46 @@ if(false) {
 }
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(26);
+var escape = __webpack_require__(27);
 exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(190)) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + escape(__webpack_require__(191)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(192)) + ") format(\"woff\"), url(" + escape(__webpack_require__(193)) + ") format(\"truetype\"); }\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  /* Preferred icon size */\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  font-feature-settings: 'liga'; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(192)) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + escape(__webpack_require__(193)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(194)) + ") format(\"woff\"), url(" + escape(__webpack_require__(195)) + ") format(\"truetype\"); }\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  /* Preferred icon size */\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  font-feature-settings: 'liga'; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.eot?e79bfd88537def476913f3ed52f4f4b3";
 
 /***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.woff2?570eb83859dc23dd0eec423a49e147fe";
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.woff?012cf6a10129e2275d79d6adac7f3b02";
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/material-design-icons-icondist/MaterialIcons-Regular.ttf?a37b0c01c0baf1888ca812cc0508f6e2";
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports) {
 
 
@@ -90834,13 +90936,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(196);
+var content = __webpack_require__(198);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -90865,100 +90967,100 @@ if(false) {
 }
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(26);
+var escape = __webpack_require__(27);
 exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, "/*!\n * Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com\n * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)\n */\n.fa,\n.fas,\n.far,\n.fal,\n.fab {\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  display: inline-block;\n  font-style: normal;\n  font-variant: normal;\n  text-rendering: auto;\n  line-height: 1; }\n\n.fa-lg {\n  font-size: 1.33333em;\n  line-height: 0.75em;\n  vertical-align: -.0667em; }\n\n.fa-xs {\n  font-size: .75em; }\n\n.fa-sm {\n  font-size: .875em; }\n\n.fa-1x {\n  font-size: 1em; }\n\n.fa-2x {\n  font-size: 2em; }\n\n.fa-3x {\n  font-size: 3em; }\n\n.fa-4x {\n  font-size: 4em; }\n\n.fa-5x {\n  font-size: 5em; }\n\n.fa-6x {\n  font-size: 6em; }\n\n.fa-7x {\n  font-size: 7em; }\n\n.fa-8x {\n  font-size: 8em; }\n\n.fa-9x {\n  font-size: 9em; }\n\n.fa-10x {\n  font-size: 10em; }\n\n.fa-fw {\n  text-align: center;\n  width: 1.25em; }\n\n.fa-ul {\n  list-style-type: none;\n  margin-left: 2.5em;\n  padding-left: 0; }\n  .fa-ul > li {\n    position: relative; }\n\n.fa-li {\n  left: -2em;\n  position: absolute;\n  text-align: center;\n  width: 2em;\n  line-height: inherit; }\n\n.fa-border {\n  border: solid 0.08em #eee;\n  border-radius: .1em;\n  padding: .2em .25em .15em; }\n\n.fa-pull-left {\n  float: left; }\n\n.fa-pull-right {\n  float: right; }\n\n.fa.fa-pull-left,\n.fas.fa-pull-left,\n.far.fa-pull-left,\n.fal.fa-pull-left,\n.fab.fa-pull-left {\n  margin-right: .3em; }\n\n.fa.fa-pull-right,\n.fas.fa-pull-right,\n.far.fa-pull-right,\n.fal.fa-pull-right,\n.fab.fa-pull-right {\n  margin-left: .3em; }\n\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n          animation: fa-spin 2s infinite linear; }\n\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n          animation: fa-spin 1s infinite steps(8); }\n\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg); }\n\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg); }\n\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n          transform: rotate(270deg); }\n\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n          transform: scale(-1, 1); }\n\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n          transform: scale(1, -1); }\n\n.fa-flip-horizontal.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(-1, -1);\n          transform: scale(-1, -1); }\n\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  -webkit-filter: none;\n          filter: none; }\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2em; }\n\n.fa-stack-1x,\n.fa-stack-2x {\n  left: 0;\n  position: absolute;\n  text-align: center;\n  width: 100%; }\n\n.fa-stack-1x {\n  line-height: inherit; }\n\n.fa-stack-2x {\n  font-size: 2em; }\n\n.fa-inverse {\n  color: #fff; }\n\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\nreaders do not read off random characters that represent icons */\n.fa-500px:before {\n  content: \"\\F26E\"; }\n\n.fa-accessible-icon:before {\n  content: \"\\F368\"; }\n\n.fa-accusoft:before {\n  content: \"\\F369\"; }\n\n.fa-ad:before {\n  content: \"\\F641\"; }\n\n.fa-address-book:before {\n  content: \"\\F2B9\"; }\n\n.fa-address-card:before {\n  content: \"\\F2BB\"; }\n\n.fa-adjust:before {\n  content: \"\\F042\"; }\n\n.fa-adn:before {\n  content: \"\\F170\"; }\n\n.fa-adversal:before {\n  content: \"\\F36A\"; }\n\n.fa-affiliatetheme:before {\n  content: \"\\F36B\"; }\n\n.fa-air-freshener:before {\n  content: \"\\F5D0\"; }\n\n.fa-algolia:before {\n  content: \"\\F36C\"; }\n\n.fa-align-center:before {\n  content: \"\\F037\"; }\n\n.fa-align-justify:before {\n  content: \"\\F039\"; }\n\n.fa-align-left:before {\n  content: \"\\F036\"; }\n\n.fa-align-right:before {\n  content: \"\\F038\"; }\n\n.fa-alipay:before {\n  content: \"\\F642\"; }\n\n.fa-allergies:before {\n  content: \"\\F461\"; }\n\n.fa-amazon:before {\n  content: \"\\F270\"; }\n\n.fa-amazon-pay:before {\n  content: \"\\F42C\"; }\n\n.fa-ambulance:before {\n  content: \"\\F0F9\"; }\n\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\"; }\n\n.fa-amilia:before {\n  content: \"\\F36D\"; }\n\n.fa-anchor:before {\n  content: \"\\F13D\"; }\n\n.fa-android:before {\n  content: \"\\F17B\"; }\n\n.fa-angellist:before {\n  content: \"\\F209\"; }\n\n.fa-angle-double-down:before {\n  content: \"\\F103\"; }\n\n.fa-angle-double-left:before {\n  content: \"\\F100\"; }\n\n.fa-angle-double-right:before {\n  content: \"\\F101\"; }\n\n.fa-angle-double-up:before {\n  content: \"\\F102\"; }\n\n.fa-angle-down:before {\n  content: \"\\F107\"; }\n\n.fa-angle-left:before {\n  content: \"\\F104\"; }\n\n.fa-angle-right:before {\n  content: \"\\F105\"; }\n\n.fa-angle-up:before {\n  content: \"\\F106\"; }\n\n.fa-angry:before {\n  content: \"\\F556\"; }\n\n.fa-angrycreative:before {\n  content: \"\\F36E\"; }\n\n.fa-angular:before {\n  content: \"\\F420\"; }\n\n.fa-ankh:before {\n  content: \"\\F644\"; }\n\n.fa-app-store:before {\n  content: \"\\F36F\"; }\n\n.fa-app-store-ios:before {\n  content: \"\\F370\"; }\n\n.fa-apper:before {\n  content: \"\\F371\"; }\n\n.fa-apple:before {\n  content: \"\\F179\"; }\n\n.fa-apple-alt:before {\n  content: \"\\F5D1\"; }\n\n.fa-apple-pay:before {\n  content: \"\\F415\"; }\n\n.fa-archive:before {\n  content: \"\\F187\"; }\n\n.fa-archway:before {\n  content: \"\\F557\"; }\n\n.fa-arrow-alt-circle-down:before {\n  content: \"\\F358\"; }\n\n.fa-arrow-alt-circle-left:before {\n  content: \"\\F359\"; }\n\n.fa-arrow-alt-circle-right:before {\n  content: \"\\F35A\"; }\n\n.fa-arrow-alt-circle-up:before {\n  content: \"\\F35B\"; }\n\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\"; }\n\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\"; }\n\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\"; }\n\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\"; }\n\n.fa-arrow-down:before {\n  content: \"\\F063\"; }\n\n.fa-arrow-left:before {\n  content: \"\\F060\"; }\n\n.fa-arrow-right:before {\n  content: \"\\F061\"; }\n\n.fa-arrow-up:before {\n  content: \"\\F062\"; }\n\n.fa-arrows-alt:before {\n  content: \"\\F0B2\"; }\n\n.fa-arrows-alt-h:before {\n  content: \"\\F337\"; }\n\n.fa-arrows-alt-v:before {\n  content: \"\\F338\"; }\n\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\"; }\n\n.fa-asterisk:before {\n  content: \"\\F069\"; }\n\n.fa-asymmetrik:before {\n  content: \"\\F372\"; }\n\n.fa-at:before {\n  content: \"\\F1FA\"; }\n\n.fa-atlas:before {\n  content: \"\\F558\"; }\n\n.fa-atom:before {\n  content: \"\\F5D2\"; }\n\n.fa-audible:before {\n  content: \"\\F373\"; }\n\n.fa-audio-description:before {\n  content: \"\\F29E\"; }\n\n.fa-autoprefixer:before {\n  content: \"\\F41C\"; }\n\n.fa-avianex:before {\n  content: \"\\F374\"; }\n\n.fa-aviato:before {\n  content: \"\\F421\"; }\n\n.fa-award:before {\n  content: \"\\F559\"; }\n\n.fa-aws:before {\n  content: \"\\F375\"; }\n\n.fa-backspace:before {\n  content: \"\\F55A\"; }\n\n.fa-backward:before {\n  content: \"\\F04A\"; }\n\n.fa-balance-scale:before {\n  content: \"\\F24E\"; }\n\n.fa-ban:before {\n  content: \"\\F05E\"; }\n\n.fa-band-aid:before {\n  content: \"\\F462\"; }\n\n.fa-bandcamp:before {\n  content: \"\\F2D5\"; }\n\n.fa-barcode:before {\n  content: \"\\F02A\"; }\n\n.fa-bars:before {\n  content: \"\\F0C9\"; }\n\n.fa-baseball-ball:before {\n  content: \"\\F433\"; }\n\n.fa-basketball-ball:before {\n  content: \"\\F434\"; }\n\n.fa-bath:before {\n  content: \"\\F2CD\"; }\n\n.fa-battery-empty:before {\n  content: \"\\F244\"; }\n\n.fa-battery-full:before {\n  content: \"\\F240\"; }\n\n.fa-battery-half:before {\n  content: \"\\F242\"; }\n\n.fa-battery-quarter:before {\n  content: \"\\F243\"; }\n\n.fa-battery-three-quarters:before {\n  content: \"\\F241\"; }\n\n.fa-bed:before {\n  content: \"\\F236\"; }\n\n.fa-beer:before {\n  content: \"\\F0FC\"; }\n\n.fa-behance:before {\n  content: \"\\F1B4\"; }\n\n.fa-behance-square:before {\n  content: \"\\F1B5\"; }\n\n.fa-bell:before {\n  content: \"\\F0F3\"; }\n\n.fa-bell-slash:before {\n  content: \"\\F1F6\"; }\n\n.fa-bezier-curve:before {\n  content: \"\\F55B\"; }\n\n.fa-bible:before {\n  content: \"\\F647\"; }\n\n.fa-bicycle:before {\n  content: \"\\F206\"; }\n\n.fa-bimobject:before {\n  content: \"\\F378\"; }\n\n.fa-binoculars:before {\n  content: \"\\F1E5\"; }\n\n.fa-birthday-cake:before {\n  content: \"\\F1FD\"; }\n\n.fa-bitbucket:before {\n  content: \"\\F171\"; }\n\n.fa-bitcoin:before {\n  content: \"\\F379\"; }\n\n.fa-bity:before {\n  content: \"\\F37A\"; }\n\n.fa-black-tie:before {\n  content: \"\\F27E\"; }\n\n.fa-blackberry:before {\n  content: \"\\F37B\"; }\n\n.fa-blender:before {\n  content: \"\\F517\"; }\n\n.fa-blind:before {\n  content: \"\\F29D\"; }\n\n.fa-blogger:before {\n  content: \"\\F37C\"; }\n\n.fa-blogger-b:before {\n  content: \"\\F37D\"; }\n\n.fa-bluetooth:before {\n  content: \"\\F293\"; }\n\n.fa-bluetooth-b:before {\n  content: \"\\F294\"; }\n\n.fa-bold:before {\n  content: \"\\F032\"; }\n\n.fa-bolt:before {\n  content: \"\\F0E7\"; }\n\n.fa-bomb:before {\n  content: \"\\F1E2\"; }\n\n.fa-bone:before {\n  content: \"\\F5D7\"; }\n\n.fa-bong:before {\n  content: \"\\F55C\"; }\n\n.fa-book:before {\n  content: \"\\F02D\"; }\n\n.fa-book-open:before {\n  content: \"\\F518\"; }\n\n.fa-book-reader:before {\n  content: \"\\F5DA\"; }\n\n.fa-bookmark:before {\n  content: \"\\F02E\"; }\n\n.fa-bowling-ball:before {\n  content: \"\\F436\"; }\n\n.fa-box:before {\n  content: \"\\F466\"; }\n\n.fa-box-open:before {\n  content: \"\\F49E\"; }\n\n.fa-boxes:before {\n  content: \"\\F468\"; }\n\n.fa-braille:before {\n  content: \"\\F2A1\"; }\n\n.fa-brain:before {\n  content: \"\\F5DC\"; }\n\n.fa-briefcase:before {\n  content: \"\\F0B1\"; }\n\n.fa-briefcase-medical:before {\n  content: \"\\F469\"; }\n\n.fa-broadcast-tower:before {\n  content: \"\\F519\"; }\n\n.fa-broom:before {\n  content: \"\\F51A\"; }\n\n.fa-brush:before {\n  content: \"\\F55D\"; }\n\n.fa-btc:before {\n  content: \"\\F15A\"; }\n\n.fa-bug:before {\n  content: \"\\F188\"; }\n\n.fa-building:before {\n  content: \"\\F1AD\"; }\n\n.fa-bullhorn:before {\n  content: \"\\F0A1\"; }\n\n.fa-bullseye:before {\n  content: \"\\F140\"; }\n\n.fa-burn:before {\n  content: \"\\F46A\"; }\n\n.fa-buromobelexperte:before {\n  content: \"\\F37F\"; }\n\n.fa-bus:before {\n  content: \"\\F207\"; }\n\n.fa-bus-alt:before {\n  content: \"\\F55E\"; }\n\n.fa-business-time:before {\n  content: \"\\F64A\"; }\n\n.fa-buysellads:before {\n  content: \"\\F20D\"; }\n\n.fa-calculator:before {\n  content: \"\\F1EC\"; }\n\n.fa-calendar:before {\n  content: \"\\F133\"; }\n\n.fa-calendar-alt:before {\n  content: \"\\F073\"; }\n\n.fa-calendar-check:before {\n  content: \"\\F274\"; }\n\n.fa-calendar-minus:before {\n  content: \"\\F272\"; }\n\n.fa-calendar-plus:before {\n  content: \"\\F271\"; }\n\n.fa-calendar-times:before {\n  content: \"\\F273\"; }\n\n.fa-camera:before {\n  content: \"\\F030\"; }\n\n.fa-camera-retro:before {\n  content: \"\\F083\"; }\n\n.fa-cannabis:before {\n  content: \"\\F55F\"; }\n\n.fa-capsules:before {\n  content: \"\\F46B\"; }\n\n.fa-car:before {\n  content: \"\\F1B9\"; }\n\n.fa-car-alt:before {\n  content: \"\\F5DE\"; }\n\n.fa-car-battery:before {\n  content: \"\\F5DF\"; }\n\n.fa-car-crash:before {\n  content: \"\\F5E1\"; }\n\n.fa-car-side:before {\n  content: \"\\F5E4\"; }\n\n.fa-caret-down:before {\n  content: \"\\F0D7\"; }\n\n.fa-caret-left:before {\n  content: \"\\F0D9\"; }\n\n.fa-caret-right:before {\n  content: \"\\F0DA\"; }\n\n.fa-caret-square-down:before {\n  content: \"\\F150\"; }\n\n.fa-caret-square-left:before {\n  content: \"\\F191\"; }\n\n.fa-caret-square-right:before {\n  content: \"\\F152\"; }\n\n.fa-caret-square-up:before {\n  content: \"\\F151\"; }\n\n.fa-caret-up:before {\n  content: \"\\F0D8\"; }\n\n.fa-cart-arrow-down:before {\n  content: \"\\F218\"; }\n\n.fa-cart-plus:before {\n  content: \"\\F217\"; }\n\n.fa-cc-amazon-pay:before {\n  content: \"\\F42D\"; }\n\n.fa-cc-amex:before {\n  content: \"\\F1F3\"; }\n\n.fa-cc-apple-pay:before {\n  content: \"\\F416\"; }\n\n.fa-cc-diners-club:before {\n  content: \"\\F24C\"; }\n\n.fa-cc-discover:before {\n  content: \"\\F1F2\"; }\n\n.fa-cc-jcb:before {\n  content: \"\\F24B\"; }\n\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\"; }\n\n.fa-cc-paypal:before {\n  content: \"\\F1F4\"; }\n\n.fa-cc-stripe:before {\n  content: \"\\F1F5\"; }\n\n.fa-cc-visa:before {\n  content: \"\\F1F0\"; }\n\n.fa-centercode:before {\n  content: \"\\F380\"; }\n\n.fa-certificate:before {\n  content: \"\\F0A3\"; }\n\n.fa-chalkboard:before {\n  content: \"\\F51B\"; }\n\n.fa-chalkboard-teacher:before {\n  content: \"\\F51C\"; }\n\n.fa-charging-station:before {\n  content: \"\\F5E7\"; }\n\n.fa-chart-area:before {\n  content: \"\\F1FE\"; }\n\n.fa-chart-bar:before {\n  content: \"\\F080\"; }\n\n.fa-chart-line:before {\n  content: \"\\F201\"; }\n\n.fa-chart-pie:before {\n  content: \"\\F200\"; }\n\n.fa-check:before {\n  content: \"\\F00C\"; }\n\n.fa-check-circle:before {\n  content: \"\\F058\"; }\n\n.fa-check-double:before {\n  content: \"\\F560\"; }\n\n.fa-check-square:before {\n  content: \"\\F14A\"; }\n\n.fa-chess:before {\n  content: \"\\F439\"; }\n\n.fa-chess-bishop:before {\n  content: \"\\F43A\"; }\n\n.fa-chess-board:before {\n  content: \"\\F43C\"; }\n\n.fa-chess-king:before {\n  content: \"\\F43F\"; }\n\n.fa-chess-knight:before {\n  content: \"\\F441\"; }\n\n.fa-chess-pawn:before {\n  content: \"\\F443\"; }\n\n.fa-chess-queen:before {\n  content: \"\\F445\"; }\n\n.fa-chess-rook:before {\n  content: \"\\F447\"; }\n\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\"; }\n\n.fa-chevron-circle-left:before {\n  content: \"\\F137\"; }\n\n.fa-chevron-circle-right:before {\n  content: \"\\F138\"; }\n\n.fa-chevron-circle-up:before {\n  content: \"\\F139\"; }\n\n.fa-chevron-down:before {\n  content: \"\\F078\"; }\n\n.fa-chevron-left:before {\n  content: \"\\F053\"; }\n\n.fa-chevron-right:before {\n  content: \"\\F054\"; }\n\n.fa-chevron-up:before {\n  content: \"\\F077\"; }\n\n.fa-child:before {\n  content: \"\\F1AE\"; }\n\n.fa-chrome:before {\n  content: \"\\F268\"; }\n\n.fa-church:before {\n  content: \"\\F51D\"; }\n\n.fa-circle:before {\n  content: \"\\F111\"; }\n\n.fa-circle-notch:before {\n  content: \"\\F1CE\"; }\n\n.fa-city:before {\n  content: \"\\F64F\"; }\n\n.fa-clipboard:before {\n  content: \"\\F328\"; }\n\n.fa-clipboard-check:before {\n  content: \"\\F46C\"; }\n\n.fa-clipboard-list:before {\n  content: \"\\F46D\"; }\n\n.fa-clock:before {\n  content: \"\\F017\"; }\n\n.fa-clone:before {\n  content: \"\\F24D\"; }\n\n.fa-closed-captioning:before {\n  content: \"\\F20A\"; }\n\n.fa-cloud:before {\n  content: \"\\F0C2\"; }\n\n.fa-cloud-download-alt:before {\n  content: \"\\F381\"; }\n\n.fa-cloud-upload-alt:before {\n  content: \"\\F382\"; }\n\n.fa-cloudscale:before {\n  content: \"\\F383\"; }\n\n.fa-cloudsmith:before {\n  content: \"\\F384\"; }\n\n.fa-cloudversify:before {\n  content: \"\\F385\"; }\n\n.fa-cocktail:before {\n  content: \"\\F561\"; }\n\n.fa-code:before {\n  content: \"\\F121\"; }\n\n.fa-code-branch:before {\n  content: \"\\F126\"; }\n\n.fa-codepen:before {\n  content: \"\\F1CB\"; }\n\n.fa-codiepie:before {\n  content: \"\\F284\"; }\n\n.fa-coffee:before {\n  content: \"\\F0F4\"; }\n\n.fa-cog:before {\n  content: \"\\F013\"; }\n\n.fa-cogs:before {\n  content: \"\\F085\"; }\n\n.fa-coins:before {\n  content: \"\\F51E\"; }\n\n.fa-columns:before {\n  content: \"\\F0DB\"; }\n\n.fa-comment:before {\n  content: \"\\F075\"; }\n\n.fa-comment-alt:before {\n  content: \"\\F27A\"; }\n\n.fa-comment-dollar:before {\n  content: \"\\F651\"; }\n\n.fa-comment-dots:before {\n  content: \"\\F4AD\"; }\n\n.fa-comment-slash:before {\n  content: \"\\F4B3\"; }\n\n.fa-comments:before {\n  content: \"\\F086\"; }\n\n.fa-comments-dollar:before {\n  content: \"\\F653\"; }\n\n.fa-compact-disc:before {\n  content: \"\\F51F\"; }\n\n.fa-compass:before {\n  content: \"\\F14E\"; }\n\n.fa-compress:before {\n  content: \"\\F066\"; }\n\n.fa-concierge-bell:before {\n  content: \"\\F562\"; }\n\n.fa-connectdevelop:before {\n  content: \"\\F20E\"; }\n\n.fa-contao:before {\n  content: \"\\F26D\"; }\n\n.fa-cookie:before {\n  content: \"\\F563\"; }\n\n.fa-cookie-bite:before {\n  content: \"\\F564\"; }\n\n.fa-copy:before {\n  content: \"\\F0C5\"; }\n\n.fa-copyright:before {\n  content: \"\\F1F9\"; }\n\n.fa-couch:before {\n  content: \"\\F4B8\"; }\n\n.fa-cpanel:before {\n  content: \"\\F388\"; }\n\n.fa-creative-commons:before {\n  content: \"\\F25E\"; }\n\n.fa-creative-commons-by:before {\n  content: \"\\F4E7\"; }\n\n.fa-creative-commons-nc:before {\n  content: \"\\F4E8\"; }\n\n.fa-creative-commons-nc-eu:before {\n  content: \"\\F4E9\"; }\n\n.fa-creative-commons-nc-jp:before {\n  content: \"\\F4EA\"; }\n\n.fa-creative-commons-nd:before {\n  content: \"\\F4EB\"; }\n\n.fa-creative-commons-pd:before {\n  content: \"\\F4EC\"; }\n\n.fa-creative-commons-pd-alt:before {\n  content: \"\\F4ED\"; }\n\n.fa-creative-commons-remix:before {\n  content: \"\\F4EE\"; }\n\n.fa-creative-commons-sa:before {\n  content: \"\\F4EF\"; }\n\n.fa-creative-commons-sampling:before {\n  content: \"\\F4F0\"; }\n\n.fa-creative-commons-sampling-plus:before {\n  content: \"\\F4F1\"; }\n\n.fa-creative-commons-share:before {\n  content: \"\\F4F2\"; }\n\n.fa-credit-card:before {\n  content: \"\\F09D\"; }\n\n.fa-crop:before {\n  content: \"\\F125\"; }\n\n.fa-crop-alt:before {\n  content: \"\\F565\"; }\n\n.fa-cross:before {\n  content: \"\\F654\"; }\n\n.fa-crosshairs:before {\n  content: \"\\F05B\"; }\n\n.fa-crow:before {\n  content: \"\\F520\"; }\n\n.fa-crown:before {\n  content: \"\\F521\"; }\n\n.fa-css3:before {\n  content: \"\\F13C\"; }\n\n.fa-css3-alt:before {\n  content: \"\\F38B\"; }\n\n.fa-cube:before {\n  content: \"\\F1B2\"; }\n\n.fa-cubes:before {\n  content: \"\\F1B3\"; }\n\n.fa-cut:before {\n  content: \"\\F0C4\"; }\n\n.fa-cuttlefish:before {\n  content: \"\\F38C\"; }\n\n.fa-d-and-d:before {\n  content: \"\\F38D\"; }\n\n.fa-dashcube:before {\n  content: \"\\F210\"; }\n\n.fa-database:before {\n  content: \"\\F1C0\"; }\n\n.fa-deaf:before {\n  content: \"\\F2A4\"; }\n\n.fa-delicious:before {\n  content: \"\\F1A5\"; }\n\n.fa-deploydog:before {\n  content: \"\\F38E\"; }\n\n.fa-deskpro:before {\n  content: \"\\F38F\"; }\n\n.fa-desktop:before {\n  content: \"\\F108\"; }\n\n.fa-deviantart:before {\n  content: \"\\F1BD\"; }\n\n.fa-dharmachakra:before {\n  content: \"\\F655\"; }\n\n.fa-diagnoses:before {\n  content: \"\\F470\"; }\n\n.fa-dice:before {\n  content: \"\\F522\"; }\n\n.fa-dice-five:before {\n  content: \"\\F523\"; }\n\n.fa-dice-four:before {\n  content: \"\\F524\"; }\n\n.fa-dice-one:before {\n  content: \"\\F525\"; }\n\n.fa-dice-six:before {\n  content: \"\\F526\"; }\n\n.fa-dice-three:before {\n  content: \"\\F527\"; }\n\n.fa-dice-two:before {\n  content: \"\\F528\"; }\n\n.fa-digg:before {\n  content: \"\\F1A6\"; }\n\n.fa-digital-ocean:before {\n  content: \"\\F391\"; }\n\n.fa-digital-tachograph:before {\n  content: \"\\F566\"; }\n\n.fa-directions:before {\n  content: \"\\F5EB\"; }\n\n.fa-discord:before {\n  content: \"\\F392\"; }\n\n.fa-discourse:before {\n  content: \"\\F393\"; }\n\n.fa-divide:before {\n  content: \"\\F529\"; }\n\n.fa-dizzy:before {\n  content: \"\\F567\"; }\n\n.fa-dna:before {\n  content: \"\\F471\"; }\n\n.fa-dochub:before {\n  content: \"\\F394\"; }\n\n.fa-docker:before {\n  content: \"\\F395\"; }\n\n.fa-dollar-sign:before {\n  content: \"\\F155\"; }\n\n.fa-dolly:before {\n  content: \"\\F472\"; }\n\n.fa-dolly-flatbed:before {\n  content: \"\\F474\"; }\n\n.fa-donate:before {\n  content: \"\\F4B9\"; }\n\n.fa-door-closed:before {\n  content: \"\\F52A\"; }\n\n.fa-door-open:before {\n  content: \"\\F52B\"; }\n\n.fa-dot-circle:before {\n  content: \"\\F192\"; }\n\n.fa-dove:before {\n  content: \"\\F4BA\"; }\n\n.fa-download:before {\n  content: \"\\F019\"; }\n\n.fa-draft2digital:before {\n  content: \"\\F396\"; }\n\n.fa-drafting-compass:before {\n  content: \"\\F568\"; }\n\n.fa-draw-polygon:before {\n  content: \"\\F5EE\"; }\n\n.fa-dribbble:before {\n  content: \"\\F17D\"; }\n\n.fa-dribbble-square:before {\n  content: \"\\F397\"; }\n\n.fa-dropbox:before {\n  content: \"\\F16B\"; }\n\n.fa-drum:before {\n  content: \"\\F569\"; }\n\n.fa-drum-steelpan:before {\n  content: \"\\F56A\"; }\n\n.fa-drupal:before {\n  content: \"\\F1A9\"; }\n\n.fa-dumbbell:before {\n  content: \"\\F44B\"; }\n\n.fa-dyalog:before {\n  content: \"\\F399\"; }\n\n.fa-earlybirds:before {\n  content: \"\\F39A\"; }\n\n.fa-ebay:before {\n  content: \"\\F4F4\"; }\n\n.fa-edge:before {\n  content: \"\\F282\"; }\n\n.fa-edit:before {\n  content: \"\\F044\"; }\n\n.fa-eject:before {\n  content: \"\\F052\"; }\n\n.fa-elementor:before {\n  content: \"\\F430\"; }\n\n.fa-ellipsis-h:before {\n  content: \"\\F141\"; }\n\n.fa-ellipsis-v:before {\n  content: \"\\F142\"; }\n\n.fa-ello:before {\n  content: \"\\F5F1\"; }\n\n.fa-ember:before {\n  content: \"\\F423\"; }\n\n.fa-empire:before {\n  content: \"\\F1D1\"; }\n\n.fa-envelope:before {\n  content: \"\\F0E0\"; }\n\n.fa-envelope-open:before {\n  content: \"\\F2B6\"; }\n\n.fa-envelope-open-text:before {\n  content: \"\\F658\"; }\n\n.fa-envelope-square:before {\n  content: \"\\F199\"; }\n\n.fa-envira:before {\n  content: \"\\F299\"; }\n\n.fa-equals:before {\n  content: \"\\F52C\"; }\n\n.fa-eraser:before {\n  content: \"\\F12D\"; }\n\n.fa-erlang:before {\n  content: \"\\F39D\"; }\n\n.fa-ethereum:before {\n  content: \"\\F42E\"; }\n\n.fa-etsy:before {\n  content: \"\\F2D7\"; }\n\n.fa-euro-sign:before {\n  content: \"\\F153\"; }\n\n.fa-exchange-alt:before {\n  content: \"\\F362\"; }\n\n.fa-exclamation:before {\n  content: \"\\F12A\"; }\n\n.fa-exclamation-circle:before {\n  content: \"\\F06A\"; }\n\n.fa-exclamation-triangle:before {\n  content: \"\\F071\"; }\n\n.fa-expand:before {\n  content: \"\\F065\"; }\n\n.fa-expand-arrows-alt:before {\n  content: \"\\F31E\"; }\n\n.fa-expeditedssl:before {\n  content: \"\\F23E\"; }\n\n.fa-external-link-alt:before {\n  content: \"\\F35D\"; }\n\n.fa-external-link-square-alt:before {\n  content: \"\\F360\"; }\n\n.fa-eye:before {\n  content: \"\\F06E\"; }\n\n.fa-eye-dropper:before {\n  content: \"\\F1FB\"; }\n\n.fa-eye-slash:before {\n  content: \"\\F070\"; }\n\n.fa-facebook:before {\n  content: \"\\F09A\"; }\n\n.fa-facebook-f:before {\n  content: \"\\F39E\"; }\n\n.fa-facebook-messenger:before {\n  content: \"\\F39F\"; }\n\n.fa-facebook-square:before {\n  content: \"\\F082\"; }\n\n.fa-fast-backward:before {\n  content: \"\\F049\"; }\n\n.fa-fast-forward:before {\n  content: \"\\F050\"; }\n\n.fa-fax:before {\n  content: \"\\F1AC\"; }\n\n.fa-feather:before {\n  content: \"\\F52D\"; }\n\n.fa-feather-alt:before {\n  content: \"\\F56B\"; }\n\n.fa-female:before {\n  content: \"\\F182\"; }\n\n.fa-fighter-jet:before {\n  content: \"\\F0FB\"; }\n\n.fa-file:before {\n  content: \"\\F15B\"; }\n\n.fa-file-alt:before {\n  content: \"\\F15C\"; }\n\n.fa-file-archive:before {\n  content: \"\\F1C6\"; }\n\n.fa-file-audio:before {\n  content: \"\\F1C7\"; }\n\n.fa-file-code:before {\n  content: \"\\F1C9\"; }\n\n.fa-file-contract:before {\n  content: \"\\F56C\"; }\n\n.fa-file-download:before {\n  content: \"\\F56D\"; }\n\n.fa-file-excel:before {\n  content: \"\\F1C3\"; }\n\n.fa-file-export:before {\n  content: \"\\F56E\"; }\n\n.fa-file-image:before {\n  content: \"\\F1C5\"; }\n\n.fa-file-import:before {\n  content: \"\\F56F\"; }\n\n.fa-file-invoice:before {\n  content: \"\\F570\"; }\n\n.fa-file-invoice-dollar:before {\n  content: \"\\F571\"; }\n\n.fa-file-medical:before {\n  content: \"\\F477\"; }\n\n.fa-file-medical-alt:before {\n  content: \"\\F478\"; }\n\n.fa-file-pdf:before {\n  content: \"\\F1C1\"; }\n\n.fa-file-powerpoint:before {\n  content: \"\\F1C4\"; }\n\n.fa-file-prescription:before {\n  content: \"\\F572\"; }\n\n.fa-file-signature:before {\n  content: \"\\F573\"; }\n\n.fa-file-upload:before {\n  content: \"\\F574\"; }\n\n.fa-file-video:before {\n  content: \"\\F1C8\"; }\n\n.fa-file-word:before {\n  content: \"\\F1C2\"; }\n\n.fa-fill:before {\n  content: \"\\F575\"; }\n\n.fa-fill-drip:before {\n  content: \"\\F576\"; }\n\n.fa-film:before {\n  content: \"\\F008\"; }\n\n.fa-filter:before {\n  content: \"\\F0B0\"; }\n\n.fa-fingerprint:before {\n  content: \"\\F577\"; }\n\n.fa-fire:before {\n  content: \"\\F06D\"; }\n\n.fa-fire-extinguisher:before {\n  content: \"\\F134\"; }\n\n.fa-firefox:before {\n  content: \"\\F269\"; }\n\n.fa-first-aid:before {\n  content: \"\\F479\"; }\n\n.fa-first-order:before {\n  content: \"\\F2B0\"; }\n\n.fa-first-order-alt:before {\n  content: \"\\F50A\"; }\n\n.fa-firstdraft:before {\n  content: \"\\F3A1\"; }\n\n.fa-fish:before {\n  content: \"\\F578\"; }\n\n.fa-flag:before {\n  content: \"\\F024\"; }\n\n.fa-flag-checkered:before {\n  content: \"\\F11E\"; }\n\n.fa-flask:before {\n  content: \"\\F0C3\"; }\n\n.fa-flickr:before {\n  content: \"\\F16E\"; }\n\n.fa-flipboard:before {\n  content: \"\\F44D\"; }\n\n.fa-flushed:before {\n  content: \"\\F579\"; }\n\n.fa-fly:before {\n  content: \"\\F417\"; }\n\n.fa-folder:before {\n  content: \"\\F07B\"; }\n\n.fa-folder-minus:before {\n  content: \"\\F65D\"; }\n\n.fa-folder-open:before {\n  content: \"\\F07C\"; }\n\n.fa-folder-plus:before {\n  content: \"\\F65E\"; }\n\n.fa-font:before {\n  content: \"\\F031\"; }\n\n.fa-font-awesome:before {\n  content: \"\\F2B4\"; }\n\n.fa-font-awesome-alt:before {\n  content: \"\\F35C\"; }\n\n.fa-font-awesome-flag:before {\n  content: \"\\F425\"; }\n\n.fa-font-awesome-logo-full:before {\n  content: \"\\F4E6\"; }\n\n.fa-fonticons:before {\n  content: \"\\F280\"; }\n\n.fa-fonticons-fi:before {\n  content: \"\\F3A2\"; }\n\n.fa-football-ball:before {\n  content: \"\\F44E\"; }\n\n.fa-fort-awesome:before {\n  content: \"\\F286\"; }\n\n.fa-fort-awesome-alt:before {\n  content: \"\\F3A3\"; }\n\n.fa-forumbee:before {\n  content: \"\\F211\"; }\n\n.fa-forward:before {\n  content: \"\\F04E\"; }\n\n.fa-foursquare:before {\n  content: \"\\F180\"; }\n\n.fa-free-code-camp:before {\n  content: \"\\F2C5\"; }\n\n.fa-freebsd:before {\n  content: \"\\F3A4\"; }\n\n.fa-frog:before {\n  content: \"\\F52E\"; }\n\n.fa-frown:before {\n  content: \"\\F119\"; }\n\n.fa-frown-open:before {\n  content: \"\\F57A\"; }\n\n.fa-fulcrum:before {\n  content: \"\\F50B\"; }\n\n.fa-funnel-dollar:before {\n  content: \"\\F662\"; }\n\n.fa-futbol:before {\n  content: \"\\F1E3\"; }\n\n.fa-galactic-republic:before {\n  content: \"\\F50C\"; }\n\n.fa-galactic-senate:before {\n  content: \"\\F50D\"; }\n\n.fa-gamepad:before {\n  content: \"\\F11B\"; }\n\n.fa-gas-pump:before {\n  content: \"\\F52F\"; }\n\n.fa-gavel:before {\n  content: \"\\F0E3\"; }\n\n.fa-gem:before {\n  content: \"\\F3A5\"; }\n\n.fa-genderless:before {\n  content: \"\\F22D\"; }\n\n.fa-get-pocket:before {\n  content: \"\\F265\"; }\n\n.fa-gg:before {\n  content: \"\\F260\"; }\n\n.fa-gg-circle:before {\n  content: \"\\F261\"; }\n\n.fa-gift:before {\n  content: \"\\F06B\"; }\n\n.fa-git:before {\n  content: \"\\F1D3\"; }\n\n.fa-git-square:before {\n  content: \"\\F1D2\"; }\n\n.fa-github:before {\n  content: \"\\F09B\"; }\n\n.fa-github-alt:before {\n  content: \"\\F113\"; }\n\n.fa-github-square:before {\n  content: \"\\F092\"; }\n\n.fa-gitkraken:before {\n  content: \"\\F3A6\"; }\n\n.fa-gitlab:before {\n  content: \"\\F296\"; }\n\n.fa-gitter:before {\n  content: \"\\F426\"; }\n\n.fa-glass-martini:before {\n  content: \"\\F000\"; }\n\n.fa-glass-martini-alt:before {\n  content: \"\\F57B\"; }\n\n.fa-glasses:before {\n  content: \"\\F530\"; }\n\n.fa-glide:before {\n  content: \"\\F2A5\"; }\n\n.fa-glide-g:before {\n  content: \"\\F2A6\"; }\n\n.fa-globe:before {\n  content: \"\\F0AC\"; }\n\n.fa-globe-africa:before {\n  content: \"\\F57C\"; }\n\n.fa-globe-americas:before {\n  content: \"\\F57D\"; }\n\n.fa-globe-asia:before {\n  content: \"\\F57E\"; }\n\n.fa-gofore:before {\n  content: \"\\F3A7\"; }\n\n.fa-golf-ball:before {\n  content: \"\\F450\"; }\n\n.fa-goodreads:before {\n  content: \"\\F3A8\"; }\n\n.fa-goodreads-g:before {\n  content: \"\\F3A9\"; }\n\n.fa-google:before {\n  content: \"\\F1A0\"; }\n\n.fa-google-drive:before {\n  content: \"\\F3AA\"; }\n\n.fa-google-play:before {\n  content: \"\\F3AB\"; }\n\n.fa-google-plus:before {\n  content: \"\\F2B3\"; }\n\n.fa-google-plus-g:before {\n  content: \"\\F0D5\"; }\n\n.fa-google-plus-square:before {\n  content: \"\\F0D4\"; }\n\n.fa-google-wallet:before {\n  content: \"\\F1EE\"; }\n\n.fa-gopuram:before {\n  content: \"\\F664\"; }\n\n.fa-graduation-cap:before {\n  content: \"\\F19D\"; }\n\n.fa-gratipay:before {\n  content: \"\\F184\"; }\n\n.fa-grav:before {\n  content: \"\\F2D6\"; }\n\n.fa-greater-than:before {\n  content: \"\\F531\"; }\n\n.fa-greater-than-equal:before {\n  content: \"\\F532\"; }\n\n.fa-grimace:before {\n  content: \"\\F57F\"; }\n\n.fa-grin:before {\n  content: \"\\F580\"; }\n\n.fa-grin-alt:before {\n  content: \"\\F581\"; }\n\n.fa-grin-beam:before {\n  content: \"\\F582\"; }\n\n.fa-grin-beam-sweat:before {\n  content: \"\\F583\"; }\n\n.fa-grin-hearts:before {\n  content: \"\\F584\"; }\n\n.fa-grin-squint:before {\n  content: \"\\F585\"; }\n\n.fa-grin-squint-tears:before {\n  content: \"\\F586\"; }\n\n.fa-grin-stars:before {\n  content: \"\\F587\"; }\n\n.fa-grin-tears:before {\n  content: \"\\F588\"; }\n\n.fa-grin-tongue:before {\n  content: \"\\F589\"; }\n\n.fa-grin-tongue-squint:before {\n  content: \"\\F58A\"; }\n\n.fa-grin-tongue-wink:before {\n  content: \"\\F58B\"; }\n\n.fa-grin-wink:before {\n  content: \"\\F58C\"; }\n\n.fa-grip-horizontal:before {\n  content: \"\\F58D\"; }\n\n.fa-grip-vertical:before {\n  content: \"\\F58E\"; }\n\n.fa-gripfire:before {\n  content: \"\\F3AC\"; }\n\n.fa-grunt:before {\n  content: \"\\F3AD\"; }\n\n.fa-gulp:before {\n  content: \"\\F3AE\"; }\n\n.fa-h-square:before {\n  content: \"\\F0FD\"; }\n\n.fa-hacker-news:before {\n  content: \"\\F1D4\"; }\n\n.fa-hacker-news-square:before {\n  content: \"\\F3AF\"; }\n\n.fa-hackerrank:before {\n  content: \"\\F5F7\"; }\n\n.fa-hamsa:before {\n  content: \"\\F665\"; }\n\n.fa-hand-holding:before {\n  content: \"\\F4BD\"; }\n\n.fa-hand-holding-heart:before {\n  content: \"\\F4BE\"; }\n\n.fa-hand-holding-usd:before {\n  content: \"\\F4C0\"; }\n\n.fa-hand-lizard:before {\n  content: \"\\F258\"; }\n\n.fa-hand-paper:before {\n  content: \"\\F256\"; }\n\n.fa-hand-peace:before {\n  content: \"\\F25B\"; }\n\n.fa-hand-point-down:before {\n  content: \"\\F0A7\"; }\n\n.fa-hand-point-left:before {\n  content: \"\\F0A5\"; }\n\n.fa-hand-point-right:before {\n  content: \"\\F0A4\"; }\n\n.fa-hand-point-up:before {\n  content: \"\\F0A6\"; }\n\n.fa-hand-pointer:before {\n  content: \"\\F25A\"; }\n\n.fa-hand-rock:before {\n  content: \"\\F255\"; }\n\n.fa-hand-scissors:before {\n  content: \"\\F257\"; }\n\n.fa-hand-spock:before {\n  content: \"\\F259\"; }\n\n.fa-hands:before {\n  content: \"\\F4C2\"; }\n\n.fa-hands-helping:before {\n  content: \"\\F4C4\"; }\n\n.fa-handshake:before {\n  content: \"\\F2B5\"; }\n\n.fa-hashtag:before {\n  content: \"\\F292\"; }\n\n.fa-haykal:before {\n  content: \"\\F666\"; }\n\n.fa-hdd:before {\n  content: \"\\F0A0\"; }\n\n.fa-heading:before {\n  content: \"\\F1DC\"; }\n\n.fa-headphones:before {\n  content: \"\\F025\"; }\n\n.fa-headphones-alt:before {\n  content: \"\\F58F\"; }\n\n.fa-headset:before {\n  content: \"\\F590\"; }\n\n.fa-heart:before {\n  content: \"\\F004\"; }\n\n.fa-heartbeat:before {\n  content: \"\\F21E\"; }\n\n.fa-helicopter:before {\n  content: \"\\F533\"; }\n\n.fa-highlighter:before {\n  content: \"\\F591\"; }\n\n.fa-hips:before {\n  content: \"\\F452\"; }\n\n.fa-hire-a-helper:before {\n  content: \"\\F3B0\"; }\n\n.fa-history:before {\n  content: \"\\F1DA\"; }\n\n.fa-hockey-puck:before {\n  content: \"\\F453\"; }\n\n.fa-home:before {\n  content: \"\\F015\"; }\n\n.fa-hooli:before {\n  content: \"\\F427\"; }\n\n.fa-hornbill:before {\n  content: \"\\F592\"; }\n\n.fa-hospital:before {\n  content: \"\\F0F8\"; }\n\n.fa-hospital-alt:before {\n  content: \"\\F47D\"; }\n\n.fa-hospital-symbol:before {\n  content: \"\\F47E\"; }\n\n.fa-hot-tub:before {\n  content: \"\\F593\"; }\n\n.fa-hotel:before {\n  content: \"\\F594\"; }\n\n.fa-hotjar:before {\n  content: \"\\F3B1\"; }\n\n.fa-hourglass:before {\n  content: \"\\F254\"; }\n\n.fa-hourglass-end:before {\n  content: \"\\F253\"; }\n\n.fa-hourglass-half:before {\n  content: \"\\F252\"; }\n\n.fa-hourglass-start:before {\n  content: \"\\F251\"; }\n\n.fa-houzz:before {\n  content: \"\\F27C\"; }\n\n.fa-html5:before {\n  content: \"\\F13B\"; }\n\n.fa-hubspot:before {\n  content: \"\\F3B2\"; }\n\n.fa-i-cursor:before {\n  content: \"\\F246\"; }\n\n.fa-id-badge:before {\n  content: \"\\F2C1\"; }\n\n.fa-id-card:before {\n  content: \"\\F2C2\"; }\n\n.fa-id-card-alt:before {\n  content: \"\\F47F\"; }\n\n.fa-image:before {\n  content: \"\\F03E\"; }\n\n.fa-images:before {\n  content: \"\\F302\"; }\n\n.fa-imdb:before {\n  content: \"\\F2D8\"; }\n\n.fa-inbox:before {\n  content: \"\\F01C\"; }\n\n.fa-indent:before {\n  content: \"\\F03C\"; }\n\n.fa-industry:before {\n  content: \"\\F275\"; }\n\n.fa-infinity:before {\n  content: \"\\F534\"; }\n\n.fa-info:before {\n  content: \"\\F129\"; }\n\n.fa-info-circle:before {\n  content: \"\\F05A\"; }\n\n.fa-instagram:before {\n  content: \"\\F16D\"; }\n\n.fa-internet-explorer:before {\n  content: \"\\F26B\"; }\n\n.fa-ioxhost:before {\n  content: \"\\F208\"; }\n\n.fa-italic:before {\n  content: \"\\F033\"; }\n\n.fa-itunes:before {\n  content: \"\\F3B4\"; }\n\n.fa-itunes-note:before {\n  content: \"\\F3B5\"; }\n\n.fa-java:before {\n  content: \"\\F4E4\"; }\n\n.fa-jedi:before {\n  content: \"\\F669\"; }\n\n.fa-jedi-order:before {\n  content: \"\\F50E\"; }\n\n.fa-jenkins:before {\n  content: \"\\F3B6\"; }\n\n.fa-joget:before {\n  content: \"\\F3B7\"; }\n\n.fa-joint:before {\n  content: \"\\F595\"; }\n\n.fa-joomla:before {\n  content: \"\\F1AA\"; }\n\n.fa-journal-whills:before {\n  content: \"\\F66A\"; }\n\n.fa-js:before {\n  content: \"\\F3B8\"; }\n\n.fa-js-square:before {\n  content: \"\\F3B9\"; }\n\n.fa-jsfiddle:before {\n  content: \"\\F1CC\"; }\n\n.fa-kaaba:before {\n  content: \"\\F66B\"; }\n\n.fa-kaggle:before {\n  content: \"\\F5FA\"; }\n\n.fa-key:before {\n  content: \"\\F084\"; }\n\n.fa-keybase:before {\n  content: \"\\F4F5\"; }\n\n.fa-keyboard:before {\n  content: \"\\F11C\"; }\n\n.fa-keycdn:before {\n  content: \"\\F3BA\"; }\n\n.fa-khanda:before {\n  content: \"\\F66D\"; }\n\n.fa-kickstarter:before {\n  content: \"\\F3BB\"; }\n\n.fa-kickstarter-k:before {\n  content: \"\\F3BC\"; }\n\n.fa-kiss:before {\n  content: \"\\F596\"; }\n\n.fa-kiss-beam:before {\n  content: \"\\F597\"; }\n\n.fa-kiss-wink-heart:before {\n  content: \"\\F598\"; }\n\n.fa-kiwi-bird:before {\n  content: \"\\F535\"; }\n\n.fa-korvue:before {\n  content: \"\\F42F\"; }\n\n.fa-landmark:before {\n  content: \"\\F66F\"; }\n\n.fa-language:before {\n  content: \"\\F1AB\"; }\n\n.fa-laptop:before {\n  content: \"\\F109\"; }\n\n.fa-laptop-code:before {\n  content: \"\\F5FC\"; }\n\n.fa-laravel:before {\n  content: \"\\F3BD\"; }\n\n.fa-lastfm:before {\n  content: \"\\F202\"; }\n\n.fa-lastfm-square:before {\n  content: \"\\F203\"; }\n\n.fa-laugh:before {\n  content: \"\\F599\"; }\n\n.fa-laugh-beam:before {\n  content: \"\\F59A\"; }\n\n.fa-laugh-squint:before {\n  content: \"\\F59B\"; }\n\n.fa-laugh-wink:before {\n  content: \"\\F59C\"; }\n\n.fa-layer-group:before {\n  content: \"\\F5FD\"; }\n\n.fa-leaf:before {\n  content: \"\\F06C\"; }\n\n.fa-leanpub:before {\n  content: \"\\F212\"; }\n\n.fa-lemon:before {\n  content: \"\\F094\"; }\n\n.fa-less:before {\n  content: \"\\F41D\"; }\n\n.fa-less-than:before {\n  content: \"\\F536\"; }\n\n.fa-less-than-equal:before {\n  content: \"\\F537\"; }\n\n.fa-level-down-alt:before {\n  content: \"\\F3BE\"; }\n\n.fa-level-up-alt:before {\n  content: \"\\F3BF\"; }\n\n.fa-life-ring:before {\n  content: \"\\F1CD\"; }\n\n.fa-lightbulb:before {\n  content: \"\\F0EB\"; }\n\n.fa-line:before {\n  content: \"\\F3C0\"; }\n\n.fa-link:before {\n  content: \"\\F0C1\"; }\n\n.fa-linkedin:before {\n  content: \"\\F08C\"; }\n\n.fa-linkedin-in:before {\n  content: \"\\F0E1\"; }\n\n.fa-linode:before {\n  content: \"\\F2B8\"; }\n\n.fa-linux:before {\n  content: \"\\F17C\"; }\n\n.fa-lira-sign:before {\n  content: \"\\F195\"; }\n\n.fa-list:before {\n  content: \"\\F03A\"; }\n\n.fa-list-alt:before {\n  content: \"\\F022\"; }\n\n.fa-list-ol:before {\n  content: \"\\F0CB\"; }\n\n.fa-list-ul:before {\n  content: \"\\F0CA\"; }\n\n.fa-location-arrow:before {\n  content: \"\\F124\"; }\n\n.fa-lock:before {\n  content: \"\\F023\"; }\n\n.fa-lock-open:before {\n  content: \"\\F3C1\"; }\n\n.fa-long-arrow-alt-down:before {\n  content: \"\\F309\"; }\n\n.fa-long-arrow-alt-left:before {\n  content: \"\\F30A\"; }\n\n.fa-long-arrow-alt-right:before {\n  content: \"\\F30B\"; }\n\n.fa-long-arrow-alt-up:before {\n  content: \"\\F30C\"; }\n\n.fa-low-vision:before {\n  content: \"\\F2A8\"; }\n\n.fa-luggage-cart:before {\n  content: \"\\F59D\"; }\n\n.fa-lyft:before {\n  content: \"\\F3C3\"; }\n\n.fa-magento:before {\n  content: \"\\F3C4\"; }\n\n.fa-magic:before {\n  content: \"\\F0D0\"; }\n\n.fa-magnet:before {\n  content: \"\\F076\"; }\n\n.fa-mail-bulk:before {\n  content: \"\\F674\"; }\n\n.fa-mailchimp:before {\n  content: \"\\F59E\"; }\n\n.fa-male:before {\n  content: \"\\F183\"; }\n\n.fa-mandalorian:before {\n  content: \"\\F50F\"; }\n\n.fa-map:before {\n  content: \"\\F279\"; }\n\n.fa-map-marked:before {\n  content: \"\\F59F\"; }\n\n.fa-map-marked-alt:before {\n  content: \"\\F5A0\"; }\n\n.fa-map-marker:before {\n  content: \"\\F041\"; }\n\n.fa-map-marker-alt:before {\n  content: \"\\F3C5\"; }\n\n.fa-map-pin:before {\n  content: \"\\F276\"; }\n\n.fa-map-signs:before {\n  content: \"\\F277\"; }\n\n.fa-markdown:before {\n  content: \"\\F60F\"; }\n\n.fa-marker:before {\n  content: \"\\F5A1\"; }\n\n.fa-mars:before {\n  content: \"\\F222\"; }\n\n.fa-mars-double:before {\n  content: \"\\F227\"; }\n\n.fa-mars-stroke:before {\n  content: \"\\F229\"; }\n\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\"; }\n\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\"; }\n\n.fa-mastodon:before {\n  content: \"\\F4F6\"; }\n\n.fa-maxcdn:before {\n  content: \"\\F136\"; }\n\n.fa-medal:before {\n  content: \"\\F5A2\"; }\n\n.fa-medapps:before {\n  content: \"\\F3C6\"; }\n\n.fa-medium:before {\n  content: \"\\F23A\"; }\n\n.fa-medium-m:before {\n  content: \"\\F3C7\"; }\n\n.fa-medkit:before {\n  content: \"\\F0FA\"; }\n\n.fa-medrt:before {\n  content: \"\\F3C8\"; }\n\n.fa-meetup:before {\n  content: \"\\F2E0\"; }\n\n.fa-megaport:before {\n  content: \"\\F5A3\"; }\n\n.fa-meh:before {\n  content: \"\\F11A\"; }\n\n.fa-meh-blank:before {\n  content: \"\\F5A4\"; }\n\n.fa-meh-rolling-eyes:before {\n  content: \"\\F5A5\"; }\n\n.fa-memory:before {\n  content: \"\\F538\"; }\n\n.fa-menorah:before {\n  content: \"\\F676\"; }\n\n.fa-mercury:before {\n  content: \"\\F223\"; }\n\n.fa-microchip:before {\n  content: \"\\F2DB\"; }\n\n.fa-microphone:before {\n  content: \"\\F130\"; }\n\n.fa-microphone-alt:before {\n  content: \"\\F3C9\"; }\n\n.fa-microphone-alt-slash:before {\n  content: \"\\F539\"; }\n\n.fa-microphone-slash:before {\n  content: \"\\F131\"; }\n\n.fa-microscope:before {\n  content: \"\\F610\"; }\n\n.fa-microsoft:before {\n  content: \"\\F3CA\"; }\n\n.fa-minus:before {\n  content: \"\\F068\"; }\n\n.fa-minus-circle:before {\n  content: \"\\F056\"; }\n\n.fa-minus-square:before {\n  content: \"\\F146\"; }\n\n.fa-mix:before {\n  content: \"\\F3CB\"; }\n\n.fa-mixcloud:before {\n  content: \"\\F289\"; }\n\n.fa-mizuni:before {\n  content: \"\\F3CC\"; }\n\n.fa-mobile:before {\n  content: \"\\F10B\"; }\n\n.fa-mobile-alt:before {\n  content: \"\\F3CD\"; }\n\n.fa-modx:before {\n  content: \"\\F285\"; }\n\n.fa-monero:before {\n  content: \"\\F3D0\"; }\n\n.fa-money-bill:before {\n  content: \"\\F0D6\"; }\n\n.fa-money-bill-alt:before {\n  content: \"\\F3D1\"; }\n\n.fa-money-bill-wave:before {\n  content: \"\\F53A\"; }\n\n.fa-money-bill-wave-alt:before {\n  content: \"\\F53B\"; }\n\n.fa-money-check:before {\n  content: \"\\F53C\"; }\n\n.fa-money-check-alt:before {\n  content: \"\\F53D\"; }\n\n.fa-monument:before {\n  content: \"\\F5A6\"; }\n\n.fa-moon:before {\n  content: \"\\F186\"; }\n\n.fa-mortar-pestle:before {\n  content: \"\\F5A7\"; }\n\n.fa-mosque:before {\n  content: \"\\F678\"; }\n\n.fa-motorcycle:before {\n  content: \"\\F21C\"; }\n\n.fa-mouse-pointer:before {\n  content: \"\\F245\"; }\n\n.fa-music:before {\n  content: \"\\F001\"; }\n\n.fa-napster:before {\n  content: \"\\F3D2\"; }\n\n.fa-neos:before {\n  content: \"\\F612\"; }\n\n.fa-neuter:before {\n  content: \"\\F22C\"; }\n\n.fa-newspaper:before {\n  content: \"\\F1EA\"; }\n\n.fa-nimblr:before {\n  content: \"\\F5A8\"; }\n\n.fa-nintendo-switch:before {\n  content: \"\\F418\"; }\n\n.fa-node:before {\n  content: \"\\F419\"; }\n\n.fa-node-js:before {\n  content: \"\\F3D3\"; }\n\n.fa-not-equal:before {\n  content: \"\\F53E\"; }\n\n.fa-notes-medical:before {\n  content: \"\\F481\"; }\n\n.fa-npm:before {\n  content: \"\\F3D4\"; }\n\n.fa-ns8:before {\n  content: \"\\F3D5\"; }\n\n.fa-nutritionix:before {\n  content: \"\\F3D6\"; }\n\n.fa-object-group:before {\n  content: \"\\F247\"; }\n\n.fa-object-ungroup:before {\n  content: \"\\F248\"; }\n\n.fa-odnoklassniki:before {\n  content: \"\\F263\"; }\n\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\"; }\n\n.fa-oil-can:before {\n  content: \"\\F613\"; }\n\n.fa-old-republic:before {\n  content: \"\\F510\"; }\n\n.fa-om:before {\n  content: \"\\F679\"; }\n\n.fa-opencart:before {\n  content: \"\\F23D\"; }\n\n.fa-openid:before {\n  content: \"\\F19B\"; }\n\n.fa-opera:before {\n  content: \"\\F26A\"; }\n\n.fa-optin-monster:before {\n  content: \"\\F23C\"; }\n\n.fa-osi:before {\n  content: \"\\F41A\"; }\n\n.fa-outdent:before {\n  content: \"\\F03B\"; }\n\n.fa-page4:before {\n  content: \"\\F3D7\"; }\n\n.fa-pagelines:before {\n  content: \"\\F18C\"; }\n\n.fa-paint-brush:before {\n  content: \"\\F1FC\"; }\n\n.fa-paint-roller:before {\n  content: \"\\F5AA\"; }\n\n.fa-palette:before {\n  content: \"\\F53F\"; }\n\n.fa-palfed:before {\n  content: \"\\F3D8\"; }\n\n.fa-pallet:before {\n  content: \"\\F482\"; }\n\n.fa-paper-plane:before {\n  content: \"\\F1D8\"; }\n\n.fa-paperclip:before {\n  content: \"\\F0C6\"; }\n\n.fa-parachute-box:before {\n  content: \"\\F4CD\"; }\n\n.fa-paragraph:before {\n  content: \"\\F1DD\"; }\n\n.fa-parking:before {\n  content: \"\\F540\"; }\n\n.fa-passport:before {\n  content: \"\\F5AB\"; }\n\n.fa-pastafarianism:before {\n  content: \"\\F67B\"; }\n\n.fa-paste:before {\n  content: \"\\F0EA\"; }\n\n.fa-patreon:before {\n  content: \"\\F3D9\"; }\n\n.fa-pause:before {\n  content: \"\\F04C\"; }\n\n.fa-pause-circle:before {\n  content: \"\\F28B\"; }\n\n.fa-paw:before {\n  content: \"\\F1B0\"; }\n\n.fa-paypal:before {\n  content: \"\\F1ED\"; }\n\n.fa-peace:before {\n  content: \"\\F67C\"; }\n\n.fa-pen:before {\n  content: \"\\F304\"; }\n\n.fa-pen-alt:before {\n  content: \"\\F305\"; }\n\n.fa-pen-fancy:before {\n  content: \"\\F5AC\"; }\n\n.fa-pen-nib:before {\n  content: \"\\F5AD\"; }\n\n.fa-pen-square:before {\n  content: \"\\F14B\"; }\n\n.fa-pencil-alt:before {\n  content: \"\\F303\"; }\n\n.fa-pencil-ruler:before {\n  content: \"\\F5AE\"; }\n\n.fa-people-carry:before {\n  content: \"\\F4CE\"; }\n\n.fa-percent:before {\n  content: \"\\F295\"; }\n\n.fa-percentage:before {\n  content: \"\\F541\"; }\n\n.fa-periscope:before {\n  content: \"\\F3DA\"; }\n\n.fa-phabricator:before {\n  content: \"\\F3DB\"; }\n\n.fa-phoenix-framework:before {\n  content: \"\\F3DC\"; }\n\n.fa-phoenix-squadron:before {\n  content: \"\\F511\"; }\n\n.fa-phone:before {\n  content: \"\\F095\"; }\n\n.fa-phone-slash:before {\n  content: \"\\F3DD\"; }\n\n.fa-phone-square:before {\n  content: \"\\F098\"; }\n\n.fa-phone-volume:before {\n  content: \"\\F2A0\"; }\n\n.fa-php:before {\n  content: \"\\F457\"; }\n\n.fa-pied-piper:before {\n  content: \"\\F2AE\"; }\n\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\"; }\n\n.fa-pied-piper-hat:before {\n  content: \"\\F4E5\"; }\n\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\"; }\n\n.fa-piggy-bank:before {\n  content: \"\\F4D3\"; }\n\n.fa-pills:before {\n  content: \"\\F484\"; }\n\n.fa-pinterest:before {\n  content: \"\\F0D2\"; }\n\n.fa-pinterest-p:before {\n  content: \"\\F231\"; }\n\n.fa-pinterest-square:before {\n  content: \"\\F0D3\"; }\n\n.fa-place-of-worship:before {\n  content: \"\\F67F\"; }\n\n.fa-plane:before {\n  content: \"\\F072\"; }\n\n.fa-plane-arrival:before {\n  content: \"\\F5AF\"; }\n\n.fa-plane-departure:before {\n  content: \"\\F5B0\"; }\n\n.fa-play:before {\n  content: \"\\F04B\"; }\n\n.fa-play-circle:before {\n  content: \"\\F144\"; }\n\n.fa-playstation:before {\n  content: \"\\F3DF\"; }\n\n.fa-plug:before {\n  content: \"\\F1E6\"; }\n\n.fa-plus:before {\n  content: \"\\F067\"; }\n\n.fa-plus-circle:before {\n  content: \"\\F055\"; }\n\n.fa-plus-square:before {\n  content: \"\\F0FE\"; }\n\n.fa-podcast:before {\n  content: \"\\F2CE\"; }\n\n.fa-poll:before {\n  content: \"\\F681\"; }\n\n.fa-poll-h:before {\n  content: \"\\F682\"; }\n\n.fa-poo:before {\n  content: \"\\F2FE\"; }\n\n.fa-poop:before {\n  content: \"\\F619\"; }\n\n.fa-portrait:before {\n  content: \"\\F3E0\"; }\n\n.fa-pound-sign:before {\n  content: \"\\F154\"; }\n\n.fa-power-off:before {\n  content: \"\\F011\"; }\n\n.fa-pray:before {\n  content: \"\\F683\"; }\n\n.fa-praying-hands:before {\n  content: \"\\F684\"; }\n\n.fa-prescription:before {\n  content: \"\\F5B1\"; }\n\n.fa-prescription-bottle:before {\n  content: \"\\F485\"; }\n\n.fa-prescription-bottle-alt:before {\n  content: \"\\F486\"; }\n\n.fa-print:before {\n  content: \"\\F02F\"; }\n\n.fa-procedures:before {\n  content: \"\\F487\"; }\n\n.fa-product-hunt:before {\n  content: \"\\F288\"; }\n\n.fa-project-diagram:before {\n  content: \"\\F542\"; }\n\n.fa-pushed:before {\n  content: \"\\F3E1\"; }\n\n.fa-puzzle-piece:before {\n  content: \"\\F12E\"; }\n\n.fa-python:before {\n  content: \"\\F3E2\"; }\n\n.fa-qq:before {\n  content: \"\\F1D6\"; }\n\n.fa-qrcode:before {\n  content: \"\\F029\"; }\n\n.fa-question:before {\n  content: \"\\F128\"; }\n\n.fa-question-circle:before {\n  content: \"\\F059\"; }\n\n.fa-quidditch:before {\n  content: \"\\F458\"; }\n\n.fa-quinscape:before {\n  content: \"\\F459\"; }\n\n.fa-quora:before {\n  content: \"\\F2C4\"; }\n\n.fa-quote-left:before {\n  content: \"\\F10D\"; }\n\n.fa-quote-right:before {\n  content: \"\\F10E\"; }\n\n.fa-quran:before {\n  content: \"\\F687\"; }\n\n.fa-r-project:before {\n  content: \"\\F4F7\"; }\n\n.fa-random:before {\n  content: \"\\F074\"; }\n\n.fa-ravelry:before {\n  content: \"\\F2D9\"; }\n\n.fa-react:before {\n  content: \"\\F41B\"; }\n\n.fa-readme:before {\n  content: \"\\F4D5\"; }\n\n.fa-rebel:before {\n  content: \"\\F1D0\"; }\n\n.fa-receipt:before {\n  content: \"\\F543\"; }\n\n.fa-recycle:before {\n  content: \"\\F1B8\"; }\n\n.fa-red-river:before {\n  content: \"\\F3E3\"; }\n\n.fa-reddit:before {\n  content: \"\\F1A1\"; }\n\n.fa-reddit-alien:before {\n  content: \"\\F281\"; }\n\n.fa-reddit-square:before {\n  content: \"\\F1A2\"; }\n\n.fa-redo:before {\n  content: \"\\F01E\"; }\n\n.fa-redo-alt:before {\n  content: \"\\F2F9\"; }\n\n.fa-registered:before {\n  content: \"\\F25D\"; }\n\n.fa-rendact:before {\n  content: \"\\F3E4\"; }\n\n.fa-renren:before {\n  content: \"\\F18B\"; }\n\n.fa-reply:before {\n  content: \"\\F3E5\"; }\n\n.fa-reply-all:before {\n  content: \"\\F122\"; }\n\n.fa-replyd:before {\n  content: \"\\F3E6\"; }\n\n.fa-researchgate:before {\n  content: \"\\F4F8\"; }\n\n.fa-resolving:before {\n  content: \"\\F3E7\"; }\n\n.fa-retweet:before {\n  content: \"\\F079\"; }\n\n.fa-rev:before {\n  content: \"\\F5B2\"; }\n\n.fa-ribbon:before {\n  content: \"\\F4D6\"; }\n\n.fa-road:before {\n  content: \"\\F018\"; }\n\n.fa-robot:before {\n  content: \"\\F544\"; }\n\n.fa-rocket:before {\n  content: \"\\F135\"; }\n\n.fa-rocketchat:before {\n  content: \"\\F3E8\"; }\n\n.fa-rockrms:before {\n  content: \"\\F3E9\"; }\n\n.fa-route:before {\n  content: \"\\F4D7\"; }\n\n.fa-rss:before {\n  content: \"\\F09E\"; }\n\n.fa-rss-square:before {\n  content: \"\\F143\"; }\n\n.fa-ruble-sign:before {\n  content: \"\\F158\"; }\n\n.fa-ruler:before {\n  content: \"\\F545\"; }\n\n.fa-ruler-combined:before {\n  content: \"\\F546\"; }\n\n.fa-ruler-horizontal:before {\n  content: \"\\F547\"; }\n\n.fa-ruler-vertical:before {\n  content: \"\\F548\"; }\n\n.fa-rupee-sign:before {\n  content: \"\\F156\"; }\n\n.fa-sad-cry:before {\n  content: \"\\F5B3\"; }\n\n.fa-sad-tear:before {\n  content: \"\\F5B4\"; }\n\n.fa-safari:before {\n  content: \"\\F267\"; }\n\n.fa-sass:before {\n  content: \"\\F41E\"; }\n\n.fa-save:before {\n  content: \"\\F0C7\"; }\n\n.fa-schlix:before {\n  content: \"\\F3EA\"; }\n\n.fa-school:before {\n  content: \"\\F549\"; }\n\n.fa-screwdriver:before {\n  content: \"\\F54A\"; }\n\n.fa-scribd:before {\n  content: \"\\F28A\"; }\n\n.fa-search:before {\n  content: \"\\F002\"; }\n\n.fa-search-dollar:before {\n  content: \"\\F688\"; }\n\n.fa-search-location:before {\n  content: \"\\F689\"; }\n\n.fa-search-minus:before {\n  content: \"\\F010\"; }\n\n.fa-search-plus:before {\n  content: \"\\F00E\"; }\n\n.fa-searchengin:before {\n  content: \"\\F3EB\"; }\n\n.fa-seedling:before {\n  content: \"\\F4D8\"; }\n\n.fa-sellcast:before {\n  content: \"\\F2DA\"; }\n\n.fa-sellsy:before {\n  content: \"\\F213\"; }\n\n.fa-server:before {\n  content: \"\\F233\"; }\n\n.fa-servicestack:before {\n  content: \"\\F3EC\"; }\n\n.fa-shapes:before {\n  content: \"\\F61F\"; }\n\n.fa-share:before {\n  content: \"\\F064\"; }\n\n.fa-share-alt:before {\n  content: \"\\F1E0\"; }\n\n.fa-share-alt-square:before {\n  content: \"\\F1E1\"; }\n\n.fa-share-square:before {\n  content: \"\\F14D\"; }\n\n.fa-shekel-sign:before {\n  content: \"\\F20B\"; }\n\n.fa-shield-alt:before {\n  content: \"\\F3ED\"; }\n\n.fa-ship:before {\n  content: \"\\F21A\"; }\n\n.fa-shipping-fast:before {\n  content: \"\\F48B\"; }\n\n.fa-shirtsinbulk:before {\n  content: \"\\F214\"; }\n\n.fa-shoe-prints:before {\n  content: \"\\F54B\"; }\n\n.fa-shopping-bag:before {\n  content: \"\\F290\"; }\n\n.fa-shopping-basket:before {\n  content: \"\\F291\"; }\n\n.fa-shopping-cart:before {\n  content: \"\\F07A\"; }\n\n.fa-shopware:before {\n  content: \"\\F5B5\"; }\n\n.fa-shower:before {\n  content: \"\\F2CC\"; }\n\n.fa-shuttle-van:before {\n  content: \"\\F5B6\"; }\n\n.fa-sign:before {\n  content: \"\\F4D9\"; }\n\n.fa-sign-in-alt:before {\n  content: \"\\F2F6\"; }\n\n.fa-sign-language:before {\n  content: \"\\F2A7\"; }\n\n.fa-sign-out-alt:before {\n  content: \"\\F2F5\"; }\n\n.fa-signal:before {\n  content: \"\\F012\"; }\n\n.fa-signature:before {\n  content: \"\\F5B7\"; }\n\n.fa-simplybuilt:before {\n  content: \"\\F215\"; }\n\n.fa-sistrix:before {\n  content: \"\\F3EE\"; }\n\n.fa-sitemap:before {\n  content: \"\\F0E8\"; }\n\n.fa-sith:before {\n  content: \"\\F512\"; }\n\n.fa-skull:before {\n  content: \"\\F54C\"; }\n\n.fa-skyatlas:before {\n  content: \"\\F216\"; }\n\n.fa-skype:before {\n  content: \"\\F17E\"; }\n\n.fa-slack:before {\n  content: \"\\F198\"; }\n\n.fa-slack-hash:before {\n  content: \"\\F3EF\"; }\n\n.fa-sliders-h:before {\n  content: \"\\F1DE\"; }\n\n.fa-slideshare:before {\n  content: \"\\F1E7\"; }\n\n.fa-smile:before {\n  content: \"\\F118\"; }\n\n.fa-smile-beam:before {\n  content: \"\\F5B8\"; }\n\n.fa-smile-wink:before {\n  content: \"\\F4DA\"; }\n\n.fa-smoking:before {\n  content: \"\\F48D\"; }\n\n.fa-smoking-ban:before {\n  content: \"\\F54D\"; }\n\n.fa-snapchat:before {\n  content: \"\\F2AB\"; }\n\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\"; }\n\n.fa-snapchat-square:before {\n  content: \"\\F2AD\"; }\n\n.fa-snowflake:before {\n  content: \"\\F2DC\"; }\n\n.fa-socks:before {\n  content: \"\\F696\"; }\n\n.fa-solar-panel:before {\n  content: \"\\F5BA\"; }\n\n.fa-sort:before {\n  content: \"\\F0DC\"; }\n\n.fa-sort-alpha-down:before {\n  content: \"\\F15D\"; }\n\n.fa-sort-alpha-up:before {\n  content: \"\\F15E\"; }\n\n.fa-sort-amount-down:before {\n  content: \"\\F160\"; }\n\n.fa-sort-amount-up:before {\n  content: \"\\F161\"; }\n\n.fa-sort-down:before {\n  content: \"\\F0DD\"; }\n\n.fa-sort-numeric-down:before {\n  content: \"\\F162\"; }\n\n.fa-sort-numeric-up:before {\n  content: \"\\F163\"; }\n\n.fa-sort-up:before {\n  content: \"\\F0DE\"; }\n\n.fa-soundcloud:before {\n  content: \"\\F1BE\"; }\n\n.fa-spa:before {\n  content: \"\\F5BB\"; }\n\n.fa-space-shuttle:before {\n  content: \"\\F197\"; }\n\n.fa-speakap:before {\n  content: \"\\F3F3\"; }\n\n.fa-spinner:before {\n  content: \"\\F110\"; }\n\n.fa-splotch:before {\n  content: \"\\F5BC\"; }\n\n.fa-spotify:before {\n  content: \"\\F1BC\"; }\n\n.fa-spray-can:before {\n  content: \"\\F5BD\"; }\n\n.fa-square:before {\n  content: \"\\F0C8\"; }\n\n.fa-square-full:before {\n  content: \"\\F45C\"; }\n\n.fa-square-root-alt:before {\n  content: \"\\F698\"; }\n\n.fa-squarespace:before {\n  content: \"\\F5BE\"; }\n\n.fa-stack-exchange:before {\n  content: \"\\F18D\"; }\n\n.fa-stack-overflow:before {\n  content: \"\\F16C\"; }\n\n.fa-stamp:before {\n  content: \"\\F5BF\"; }\n\n.fa-star:before {\n  content: \"\\F005\"; }\n\n.fa-star-and-crescent:before {\n  content: \"\\F699\"; }\n\n.fa-star-half:before {\n  content: \"\\F089\"; }\n\n.fa-star-half-alt:before {\n  content: \"\\F5C0\"; }\n\n.fa-star-of-david:before {\n  content: \"\\F69A\"; }\n\n.fa-star-of-life:before {\n  content: \"\\F621\"; }\n\n.fa-staylinked:before {\n  content: \"\\F3F5\"; }\n\n.fa-steam:before {\n  content: \"\\F1B6\"; }\n\n.fa-steam-square:before {\n  content: \"\\F1B7\"; }\n\n.fa-steam-symbol:before {\n  content: \"\\F3F6\"; }\n\n.fa-step-backward:before {\n  content: \"\\F048\"; }\n\n.fa-step-forward:before {\n  content: \"\\F051\"; }\n\n.fa-stethoscope:before {\n  content: \"\\F0F1\"; }\n\n.fa-sticker-mule:before {\n  content: \"\\F3F7\"; }\n\n.fa-sticky-note:before {\n  content: \"\\F249\"; }\n\n.fa-stop:before {\n  content: \"\\F04D\"; }\n\n.fa-stop-circle:before {\n  content: \"\\F28D\"; }\n\n.fa-stopwatch:before {\n  content: \"\\F2F2\"; }\n\n.fa-store:before {\n  content: \"\\F54E\"; }\n\n.fa-store-alt:before {\n  content: \"\\F54F\"; }\n\n.fa-strava:before {\n  content: \"\\F428\"; }\n\n.fa-stream:before {\n  content: \"\\F550\"; }\n\n.fa-street-view:before {\n  content: \"\\F21D\"; }\n\n.fa-strikethrough:before {\n  content: \"\\F0CC\"; }\n\n.fa-stripe:before {\n  content: \"\\F429\"; }\n\n.fa-stripe-s:before {\n  content: \"\\F42A\"; }\n\n.fa-stroopwafel:before {\n  content: \"\\F551\"; }\n\n.fa-studiovinari:before {\n  content: \"\\F3F8\"; }\n\n.fa-stumbleupon:before {\n  content: \"\\F1A4\"; }\n\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\"; }\n\n.fa-subscript:before {\n  content: \"\\F12C\"; }\n\n.fa-subway:before {\n  content: \"\\F239\"; }\n\n.fa-suitcase:before {\n  content: \"\\F0F2\"; }\n\n.fa-suitcase-rolling:before {\n  content: \"\\F5C1\"; }\n\n.fa-sun:before {\n  content: \"\\F185\"; }\n\n.fa-superpowers:before {\n  content: \"\\F2DD\"; }\n\n.fa-superscript:before {\n  content: \"\\F12B\"; }\n\n.fa-supple:before {\n  content: \"\\F3F9\"; }\n\n.fa-surprise:before {\n  content: \"\\F5C2\"; }\n\n.fa-swatchbook:before {\n  content: \"\\F5C3\"; }\n\n.fa-swimmer:before {\n  content: \"\\F5C4\"; }\n\n.fa-swimming-pool:before {\n  content: \"\\F5C5\"; }\n\n.fa-synagogue:before {\n  content: \"\\F69B\"; }\n\n.fa-sync:before {\n  content: \"\\F021\"; }\n\n.fa-sync-alt:before {\n  content: \"\\F2F1\"; }\n\n.fa-syringe:before {\n  content: \"\\F48E\"; }\n\n.fa-table:before {\n  content: \"\\F0CE\"; }\n\n.fa-table-tennis:before {\n  content: \"\\F45D\"; }\n\n.fa-tablet:before {\n  content: \"\\F10A\"; }\n\n.fa-tablet-alt:before {\n  content: \"\\F3FA\"; }\n\n.fa-tablets:before {\n  content: \"\\F490\"; }\n\n.fa-tachometer-alt:before {\n  content: \"\\F3FD\"; }\n\n.fa-tag:before {\n  content: \"\\F02B\"; }\n\n.fa-tags:before {\n  content: \"\\F02C\"; }\n\n.fa-tape:before {\n  content: \"\\F4DB\"; }\n\n.fa-tasks:before {\n  content: \"\\F0AE\"; }\n\n.fa-taxi:before {\n  content: \"\\F1BA\"; }\n\n.fa-teamspeak:before {\n  content: \"\\F4F9\"; }\n\n.fa-teeth:before {\n  content: \"\\F62E\"; }\n\n.fa-teeth-open:before {\n  content: \"\\F62F\"; }\n\n.fa-telegram:before {\n  content: \"\\F2C6\"; }\n\n.fa-telegram-plane:before {\n  content: \"\\F3FE\"; }\n\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\"; }\n\n.fa-terminal:before {\n  content: \"\\F120\"; }\n\n.fa-text-height:before {\n  content: \"\\F034\"; }\n\n.fa-text-width:before {\n  content: \"\\F035\"; }\n\n.fa-th:before {\n  content: \"\\F00A\"; }\n\n.fa-th-large:before {\n  content: \"\\F009\"; }\n\n.fa-th-list:before {\n  content: \"\\F00B\"; }\n\n.fa-the-red-yeti:before {\n  content: \"\\F69D\"; }\n\n.fa-theater-masks:before {\n  content: \"\\F630\"; }\n\n.fa-themeco:before {\n  content: \"\\F5C6\"; }\n\n.fa-themeisle:before {\n  content: \"\\F2B2\"; }\n\n.fa-thermometer:before {\n  content: \"\\F491\"; }\n\n.fa-thermometer-empty:before {\n  content: \"\\F2CB\"; }\n\n.fa-thermometer-full:before {\n  content: \"\\F2C7\"; }\n\n.fa-thermometer-half:before {\n  content: \"\\F2C9\"; }\n\n.fa-thermometer-quarter:before {\n  content: \"\\F2CA\"; }\n\n.fa-thermometer-three-quarters:before {\n  content: \"\\F2C8\"; }\n\n.fa-thumbs-down:before {\n  content: \"\\F165\"; }\n\n.fa-thumbs-up:before {\n  content: \"\\F164\"; }\n\n.fa-thumbtack:before {\n  content: \"\\F08D\"; }\n\n.fa-ticket-alt:before {\n  content: \"\\F3FF\"; }\n\n.fa-times:before {\n  content: \"\\F00D\"; }\n\n.fa-times-circle:before {\n  content: \"\\F057\"; }\n\n.fa-tint:before {\n  content: \"\\F043\"; }\n\n.fa-tint-slash:before {\n  content: \"\\F5C7\"; }\n\n.fa-tired:before {\n  content: \"\\F5C8\"; }\n\n.fa-toggle-off:before {\n  content: \"\\F204\"; }\n\n.fa-toggle-on:before {\n  content: \"\\F205\"; }\n\n.fa-toolbox:before {\n  content: \"\\F552\"; }\n\n.fa-tooth:before {\n  content: \"\\F5C9\"; }\n\n.fa-torah:before {\n  content: \"\\F6A0\"; }\n\n.fa-torii-gate:before {\n  content: \"\\F6A1\"; }\n\n.fa-trade-federation:before {\n  content: \"\\F513\"; }\n\n.fa-trademark:before {\n  content: \"\\F25C\"; }\n\n.fa-traffic-light:before {\n  content: \"\\F637\"; }\n\n.fa-train:before {\n  content: \"\\F238\"; }\n\n.fa-transgender:before {\n  content: \"\\F224\"; }\n\n.fa-transgender-alt:before {\n  content: \"\\F225\"; }\n\n.fa-trash:before {\n  content: \"\\F1F8\"; }\n\n.fa-trash-alt:before {\n  content: \"\\F2ED\"; }\n\n.fa-tree:before {\n  content: \"\\F1BB\"; }\n\n.fa-trello:before {\n  content: \"\\F181\"; }\n\n.fa-tripadvisor:before {\n  content: \"\\F262\"; }\n\n.fa-trophy:before {\n  content: \"\\F091\"; }\n\n.fa-truck:before {\n  content: \"\\F0D1\"; }\n\n.fa-truck-loading:before {\n  content: \"\\F4DE\"; }\n\n.fa-truck-monster:before {\n  content: \"\\F63B\"; }\n\n.fa-truck-moving:before {\n  content: \"\\F4DF\"; }\n\n.fa-truck-pickup:before {\n  content: \"\\F63C\"; }\n\n.fa-tshirt:before {\n  content: \"\\F553\"; }\n\n.fa-tty:before {\n  content: \"\\F1E4\"; }\n\n.fa-tumblr:before {\n  content: \"\\F173\"; }\n\n.fa-tumblr-square:before {\n  content: \"\\F174\"; }\n\n.fa-tv:before {\n  content: \"\\F26C\"; }\n\n.fa-twitch:before {\n  content: \"\\F1E8\"; }\n\n.fa-twitter:before {\n  content: \"\\F099\"; }\n\n.fa-twitter-square:before {\n  content: \"\\F081\"; }\n\n.fa-typo3:before {\n  content: \"\\F42B\"; }\n\n.fa-uber:before {\n  content: \"\\F402\"; }\n\n.fa-uikit:before {\n  content: \"\\F403\"; }\n\n.fa-umbrella:before {\n  content: \"\\F0E9\"; }\n\n.fa-umbrella-beach:before {\n  content: \"\\F5CA\"; }\n\n.fa-underline:before {\n  content: \"\\F0CD\"; }\n\n.fa-undo:before {\n  content: \"\\F0E2\"; }\n\n.fa-undo-alt:before {\n  content: \"\\F2EA\"; }\n\n.fa-uniregistry:before {\n  content: \"\\F404\"; }\n\n.fa-universal-access:before {\n  content: \"\\F29A\"; }\n\n.fa-university:before {\n  content: \"\\F19C\"; }\n\n.fa-unlink:before {\n  content: \"\\F127\"; }\n\n.fa-unlock:before {\n  content: \"\\F09C\"; }\n\n.fa-unlock-alt:before {\n  content: \"\\F13E\"; }\n\n.fa-untappd:before {\n  content: \"\\F405\"; }\n\n.fa-upload:before {\n  content: \"\\F093\"; }\n\n.fa-usb:before {\n  content: \"\\F287\"; }\n\n.fa-user:before {\n  content: \"\\F007\"; }\n\n.fa-user-alt:before {\n  content: \"\\F406\"; }\n\n.fa-user-alt-slash:before {\n  content: \"\\F4FA\"; }\n\n.fa-user-astronaut:before {\n  content: \"\\F4FB\"; }\n\n.fa-user-check:before {\n  content: \"\\F4FC\"; }\n\n.fa-user-circle:before {\n  content: \"\\F2BD\"; }\n\n.fa-user-clock:before {\n  content: \"\\F4FD\"; }\n\n.fa-user-cog:before {\n  content: \"\\F4FE\"; }\n\n.fa-user-edit:before {\n  content: \"\\F4FF\"; }\n\n.fa-user-friends:before {\n  content: \"\\F500\"; }\n\n.fa-user-graduate:before {\n  content: \"\\F501\"; }\n\n.fa-user-lock:before {\n  content: \"\\F502\"; }\n\n.fa-user-md:before {\n  content: \"\\F0F0\"; }\n\n.fa-user-minus:before {\n  content: \"\\F503\"; }\n\n.fa-user-ninja:before {\n  content: \"\\F504\"; }\n\n.fa-user-plus:before {\n  content: \"\\F234\"; }\n\n.fa-user-secret:before {\n  content: \"\\F21B\"; }\n\n.fa-user-shield:before {\n  content: \"\\F505\"; }\n\n.fa-user-slash:before {\n  content: \"\\F506\"; }\n\n.fa-user-tag:before {\n  content: \"\\F507\"; }\n\n.fa-user-tie:before {\n  content: \"\\F508\"; }\n\n.fa-user-times:before {\n  content: \"\\F235\"; }\n\n.fa-users:before {\n  content: \"\\F0C0\"; }\n\n.fa-users-cog:before {\n  content: \"\\F509\"; }\n\n.fa-ussunnah:before {\n  content: \"\\F407\"; }\n\n.fa-utensil-spoon:before {\n  content: \"\\F2E5\"; }\n\n.fa-utensils:before {\n  content: \"\\F2E7\"; }\n\n.fa-vaadin:before {\n  content: \"\\F408\"; }\n\n.fa-vector-square:before {\n  content: \"\\F5CB\"; }\n\n.fa-venus:before {\n  content: \"\\F221\"; }\n\n.fa-venus-double:before {\n  content: \"\\F226\"; }\n\n.fa-venus-mars:before {\n  content: \"\\F228\"; }\n\n.fa-viacoin:before {\n  content: \"\\F237\"; }\n\n.fa-viadeo:before {\n  content: \"\\F2A9\"; }\n\n.fa-viadeo-square:before {\n  content: \"\\F2AA\"; }\n\n.fa-vial:before {\n  content: \"\\F492\"; }\n\n.fa-vials:before {\n  content: \"\\F493\"; }\n\n.fa-viber:before {\n  content: \"\\F409\"; }\n\n.fa-video:before {\n  content: \"\\F03D\"; }\n\n.fa-video-slash:before {\n  content: \"\\F4E2\"; }\n\n.fa-vihara:before {\n  content: \"\\F6A7\"; }\n\n.fa-vimeo:before {\n  content: \"\\F40A\"; }\n\n.fa-vimeo-square:before {\n  content: \"\\F194\"; }\n\n.fa-vimeo-v:before {\n  content: \"\\F27D\"; }\n\n.fa-vine:before {\n  content: \"\\F1CA\"; }\n\n.fa-vk:before {\n  content: \"\\F189\"; }\n\n.fa-vnv:before {\n  content: \"\\F40B\"; }\n\n.fa-volleyball-ball:before {\n  content: \"\\F45F\"; }\n\n.fa-volume-down:before {\n  content: \"\\F027\"; }\n\n.fa-volume-off:before {\n  content: \"\\F026\"; }\n\n.fa-volume-up:before {\n  content: \"\\F028\"; }\n\n.fa-vuejs:before {\n  content: \"\\F41F\"; }\n\n.fa-walking:before {\n  content: \"\\F554\"; }\n\n.fa-wallet:before {\n  content: \"\\F555\"; }\n\n.fa-warehouse:before {\n  content: \"\\F494\"; }\n\n.fa-weebly:before {\n  content: \"\\F5CC\"; }\n\n.fa-weibo:before {\n  content: \"\\F18A\"; }\n\n.fa-weight:before {\n  content: \"\\F496\"; }\n\n.fa-weight-hanging:before {\n  content: \"\\F5CD\"; }\n\n.fa-weixin:before {\n  content: \"\\F1D7\"; }\n\n.fa-whatsapp:before {\n  content: \"\\F232\"; }\n\n.fa-whatsapp-square:before {\n  content: \"\\F40C\"; }\n\n.fa-wheelchair:before {\n  content: \"\\F193\"; }\n\n.fa-whmcs:before {\n  content: \"\\F40D\"; }\n\n.fa-wifi:before {\n  content: \"\\F1EB\"; }\n\n.fa-wikipedia-w:before {\n  content: \"\\F266\"; }\n\n.fa-window-close:before {\n  content: \"\\F410\"; }\n\n.fa-window-maximize:before {\n  content: \"\\F2D0\"; }\n\n.fa-window-minimize:before {\n  content: \"\\F2D1\"; }\n\n.fa-window-restore:before {\n  content: \"\\F2D2\"; }\n\n.fa-windows:before {\n  content: \"\\F17A\"; }\n\n.fa-wine-glass:before {\n  content: \"\\F4E3\"; }\n\n.fa-wine-glass-alt:before {\n  content: \"\\F5CE\"; }\n\n.fa-wix:before {\n  content: \"\\F5CF\"; }\n\n.fa-wolf-pack-battalion:before {\n  content: \"\\F514\"; }\n\n.fa-won-sign:before {\n  content: \"\\F159\"; }\n\n.fa-wordpress:before {\n  content: \"\\F19A\"; }\n\n.fa-wordpress-simple:before {\n  content: \"\\F411\"; }\n\n.fa-wpbeginner:before {\n  content: \"\\F297\"; }\n\n.fa-wpexplorer:before {\n  content: \"\\F2DE\"; }\n\n.fa-wpforms:before {\n  content: \"\\F298\"; }\n\n.fa-wrench:before {\n  content: \"\\F0AD\"; }\n\n.fa-x-ray:before {\n  content: \"\\F497\"; }\n\n.fa-xbox:before {\n  content: \"\\F412\"; }\n\n.fa-xing:before {\n  content: \"\\F168\"; }\n\n.fa-xing-square:before {\n  content: \"\\F169\"; }\n\n.fa-y-combinator:before {\n  content: \"\\F23B\"; }\n\n.fa-yahoo:before {\n  content: \"\\F19E\"; }\n\n.fa-yandex:before {\n  content: \"\\F413\"; }\n\n.fa-yandex-international:before {\n  content: \"\\F414\"; }\n\n.fa-yelp:before {\n  content: \"\\F1E9\"; }\n\n.fa-yen-sign:before {\n  content: \"\\F157\"; }\n\n.fa-yin-yang:before {\n  content: \"\\F6AD\"; }\n\n.fa-yoast:before {\n  content: \"\\F2B1\"; }\n\n.fa-youtube:before {\n  content: \"\\F167\"; }\n\n.fa-youtube-square:before {\n  content: \"\\F431\"; }\n\n.fa-zhihu:before {\n  content: \"\\F63F\"; }\n\n.sr-only {\n  border: 0;\n  clip: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n.sr-only-focusable:active, .sr-only-focusable:focus {\n  clip: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  position: static;\n  width: auto; }\n@font-face {\n  font-family: 'Font Awesome 5 Brands';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(27)) + ");\n  src: url(" + escape(__webpack_require__(27)) + "?#iefix) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(197)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(198)) + ") format(\"woff\"), url(" + escape(__webpack_require__(199)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(200)) + "#fontawesome) format(\"svg\"); }\n\n.fab {\n  font-family: 'Font Awesome 5 Brands'; }\n@font-face {\n  font-family: 'Font Awesome 5 Free';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(28)) + ");\n  src: url(" + escape(__webpack_require__(28)) + "?#iefix) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(201)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(202)) + ") format(\"woff\"), url(" + escape(__webpack_require__(203)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(204)) + "#fontawesome) format(\"svg\"); }\n\n.far {\n  font-family: 'Font Awesome 5 Free';\n  font-weight: 400; }\n@font-face {\n  font-family: 'Font Awesome 5 Free';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + escape(__webpack_require__(29)) + ");\n  src: url(" + escape(__webpack_require__(29)) + "?#iefix) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(205)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(206)) + ") format(\"woff\"), url(" + escape(__webpack_require__(207)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(208)) + "#fontawesome) format(\"svg\"); }\n\n.fa,\n.fas {\n  font-family: 'Font Awesome 5 Free';\n  font-weight: 900; }\n", ""]);
+exports.push([module.i, "/*!\n * Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com\n * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)\n */\n.fa,\n.fas,\n.far,\n.fal,\n.fab {\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  display: inline-block;\n  font-style: normal;\n  font-variant: normal;\n  text-rendering: auto;\n  line-height: 1; }\n\n.fa-lg {\n  font-size: 1.33333em;\n  line-height: 0.75em;\n  vertical-align: -.0667em; }\n\n.fa-xs {\n  font-size: .75em; }\n\n.fa-sm {\n  font-size: .875em; }\n\n.fa-1x {\n  font-size: 1em; }\n\n.fa-2x {\n  font-size: 2em; }\n\n.fa-3x {\n  font-size: 3em; }\n\n.fa-4x {\n  font-size: 4em; }\n\n.fa-5x {\n  font-size: 5em; }\n\n.fa-6x {\n  font-size: 6em; }\n\n.fa-7x {\n  font-size: 7em; }\n\n.fa-8x {\n  font-size: 8em; }\n\n.fa-9x {\n  font-size: 9em; }\n\n.fa-10x {\n  font-size: 10em; }\n\n.fa-fw {\n  text-align: center;\n  width: 1.25em; }\n\n.fa-ul {\n  list-style-type: none;\n  margin-left: 2.5em;\n  padding-left: 0; }\n  .fa-ul > li {\n    position: relative; }\n\n.fa-li {\n  left: -2em;\n  position: absolute;\n  text-align: center;\n  width: 2em;\n  line-height: inherit; }\n\n.fa-border {\n  border: solid 0.08em #eee;\n  border-radius: .1em;\n  padding: .2em .25em .15em; }\n\n.fa-pull-left {\n  float: left; }\n\n.fa-pull-right {\n  float: right; }\n\n.fa.fa-pull-left,\n.fas.fa-pull-left,\n.far.fa-pull-left,\n.fal.fa-pull-left,\n.fab.fa-pull-left {\n  margin-right: .3em; }\n\n.fa.fa-pull-right,\n.fas.fa-pull-right,\n.far.fa-pull-right,\n.fal.fa-pull-right,\n.fab.fa-pull-right {\n  margin-left: .3em; }\n\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n          animation: fa-spin 2s infinite linear; }\n\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n          animation: fa-spin 1s infinite steps(8); }\n\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg); }\n\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg); }\n\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n          transform: rotate(270deg); }\n\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n          transform: scale(-1, 1); }\n\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n          transform: scale(1, -1); }\n\n.fa-flip-horizontal.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(-1, -1);\n          transform: scale(-1, -1); }\n\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  -webkit-filter: none;\n          filter: none; }\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2em; }\n\n.fa-stack-1x,\n.fa-stack-2x {\n  left: 0;\n  position: absolute;\n  text-align: center;\n  width: 100%; }\n\n.fa-stack-1x {\n  line-height: inherit; }\n\n.fa-stack-2x {\n  font-size: 2em; }\n\n.fa-inverse {\n  color: #fff; }\n\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\nreaders do not read off random characters that represent icons */\n.fa-500px:before {\n  content: \"\\F26E\"; }\n\n.fa-accessible-icon:before {\n  content: \"\\F368\"; }\n\n.fa-accusoft:before {\n  content: \"\\F369\"; }\n\n.fa-ad:before {\n  content: \"\\F641\"; }\n\n.fa-address-book:before {\n  content: \"\\F2B9\"; }\n\n.fa-address-card:before {\n  content: \"\\F2BB\"; }\n\n.fa-adjust:before {\n  content: \"\\F042\"; }\n\n.fa-adn:before {\n  content: \"\\F170\"; }\n\n.fa-adversal:before {\n  content: \"\\F36A\"; }\n\n.fa-affiliatetheme:before {\n  content: \"\\F36B\"; }\n\n.fa-air-freshener:before {\n  content: \"\\F5D0\"; }\n\n.fa-algolia:before {\n  content: \"\\F36C\"; }\n\n.fa-align-center:before {\n  content: \"\\F037\"; }\n\n.fa-align-justify:before {\n  content: \"\\F039\"; }\n\n.fa-align-left:before {\n  content: \"\\F036\"; }\n\n.fa-align-right:before {\n  content: \"\\F038\"; }\n\n.fa-alipay:before {\n  content: \"\\F642\"; }\n\n.fa-allergies:before {\n  content: \"\\F461\"; }\n\n.fa-amazon:before {\n  content: \"\\F270\"; }\n\n.fa-amazon-pay:before {\n  content: \"\\F42C\"; }\n\n.fa-ambulance:before {\n  content: \"\\F0F9\"; }\n\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\"; }\n\n.fa-amilia:before {\n  content: \"\\F36D\"; }\n\n.fa-anchor:before {\n  content: \"\\F13D\"; }\n\n.fa-android:before {\n  content: \"\\F17B\"; }\n\n.fa-angellist:before {\n  content: \"\\F209\"; }\n\n.fa-angle-double-down:before {\n  content: \"\\F103\"; }\n\n.fa-angle-double-left:before {\n  content: \"\\F100\"; }\n\n.fa-angle-double-right:before {\n  content: \"\\F101\"; }\n\n.fa-angle-double-up:before {\n  content: \"\\F102\"; }\n\n.fa-angle-down:before {\n  content: \"\\F107\"; }\n\n.fa-angle-left:before {\n  content: \"\\F104\"; }\n\n.fa-angle-right:before {\n  content: \"\\F105\"; }\n\n.fa-angle-up:before {\n  content: \"\\F106\"; }\n\n.fa-angry:before {\n  content: \"\\F556\"; }\n\n.fa-angrycreative:before {\n  content: \"\\F36E\"; }\n\n.fa-angular:before {\n  content: \"\\F420\"; }\n\n.fa-ankh:before {\n  content: \"\\F644\"; }\n\n.fa-app-store:before {\n  content: \"\\F36F\"; }\n\n.fa-app-store-ios:before {\n  content: \"\\F370\"; }\n\n.fa-apper:before {\n  content: \"\\F371\"; }\n\n.fa-apple:before {\n  content: \"\\F179\"; }\n\n.fa-apple-alt:before {\n  content: \"\\F5D1\"; }\n\n.fa-apple-pay:before {\n  content: \"\\F415\"; }\n\n.fa-archive:before {\n  content: \"\\F187\"; }\n\n.fa-archway:before {\n  content: \"\\F557\"; }\n\n.fa-arrow-alt-circle-down:before {\n  content: \"\\F358\"; }\n\n.fa-arrow-alt-circle-left:before {\n  content: \"\\F359\"; }\n\n.fa-arrow-alt-circle-right:before {\n  content: \"\\F35A\"; }\n\n.fa-arrow-alt-circle-up:before {\n  content: \"\\F35B\"; }\n\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\"; }\n\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\"; }\n\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\"; }\n\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\"; }\n\n.fa-arrow-down:before {\n  content: \"\\F063\"; }\n\n.fa-arrow-left:before {\n  content: \"\\F060\"; }\n\n.fa-arrow-right:before {\n  content: \"\\F061\"; }\n\n.fa-arrow-up:before {\n  content: \"\\F062\"; }\n\n.fa-arrows-alt:before {\n  content: \"\\F0B2\"; }\n\n.fa-arrows-alt-h:before {\n  content: \"\\F337\"; }\n\n.fa-arrows-alt-v:before {\n  content: \"\\F338\"; }\n\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\"; }\n\n.fa-asterisk:before {\n  content: \"\\F069\"; }\n\n.fa-asymmetrik:before {\n  content: \"\\F372\"; }\n\n.fa-at:before {\n  content: \"\\F1FA\"; }\n\n.fa-atlas:before {\n  content: \"\\F558\"; }\n\n.fa-atom:before {\n  content: \"\\F5D2\"; }\n\n.fa-audible:before {\n  content: \"\\F373\"; }\n\n.fa-audio-description:before {\n  content: \"\\F29E\"; }\n\n.fa-autoprefixer:before {\n  content: \"\\F41C\"; }\n\n.fa-avianex:before {\n  content: \"\\F374\"; }\n\n.fa-aviato:before {\n  content: \"\\F421\"; }\n\n.fa-award:before {\n  content: \"\\F559\"; }\n\n.fa-aws:before {\n  content: \"\\F375\"; }\n\n.fa-backspace:before {\n  content: \"\\F55A\"; }\n\n.fa-backward:before {\n  content: \"\\F04A\"; }\n\n.fa-balance-scale:before {\n  content: \"\\F24E\"; }\n\n.fa-ban:before {\n  content: \"\\F05E\"; }\n\n.fa-band-aid:before {\n  content: \"\\F462\"; }\n\n.fa-bandcamp:before {\n  content: \"\\F2D5\"; }\n\n.fa-barcode:before {\n  content: \"\\F02A\"; }\n\n.fa-bars:before {\n  content: \"\\F0C9\"; }\n\n.fa-baseball-ball:before {\n  content: \"\\F433\"; }\n\n.fa-basketball-ball:before {\n  content: \"\\F434\"; }\n\n.fa-bath:before {\n  content: \"\\F2CD\"; }\n\n.fa-battery-empty:before {\n  content: \"\\F244\"; }\n\n.fa-battery-full:before {\n  content: \"\\F240\"; }\n\n.fa-battery-half:before {\n  content: \"\\F242\"; }\n\n.fa-battery-quarter:before {\n  content: \"\\F243\"; }\n\n.fa-battery-three-quarters:before {\n  content: \"\\F241\"; }\n\n.fa-bed:before {\n  content: \"\\F236\"; }\n\n.fa-beer:before {\n  content: \"\\F0FC\"; }\n\n.fa-behance:before {\n  content: \"\\F1B4\"; }\n\n.fa-behance-square:before {\n  content: \"\\F1B5\"; }\n\n.fa-bell:before {\n  content: \"\\F0F3\"; }\n\n.fa-bell-slash:before {\n  content: \"\\F1F6\"; }\n\n.fa-bezier-curve:before {\n  content: \"\\F55B\"; }\n\n.fa-bible:before {\n  content: \"\\F647\"; }\n\n.fa-bicycle:before {\n  content: \"\\F206\"; }\n\n.fa-bimobject:before {\n  content: \"\\F378\"; }\n\n.fa-binoculars:before {\n  content: \"\\F1E5\"; }\n\n.fa-birthday-cake:before {\n  content: \"\\F1FD\"; }\n\n.fa-bitbucket:before {\n  content: \"\\F171\"; }\n\n.fa-bitcoin:before {\n  content: \"\\F379\"; }\n\n.fa-bity:before {\n  content: \"\\F37A\"; }\n\n.fa-black-tie:before {\n  content: \"\\F27E\"; }\n\n.fa-blackberry:before {\n  content: \"\\F37B\"; }\n\n.fa-blender:before {\n  content: \"\\F517\"; }\n\n.fa-blind:before {\n  content: \"\\F29D\"; }\n\n.fa-blogger:before {\n  content: \"\\F37C\"; }\n\n.fa-blogger-b:before {\n  content: \"\\F37D\"; }\n\n.fa-bluetooth:before {\n  content: \"\\F293\"; }\n\n.fa-bluetooth-b:before {\n  content: \"\\F294\"; }\n\n.fa-bold:before {\n  content: \"\\F032\"; }\n\n.fa-bolt:before {\n  content: \"\\F0E7\"; }\n\n.fa-bomb:before {\n  content: \"\\F1E2\"; }\n\n.fa-bone:before {\n  content: \"\\F5D7\"; }\n\n.fa-bong:before {\n  content: \"\\F55C\"; }\n\n.fa-book:before {\n  content: \"\\F02D\"; }\n\n.fa-book-open:before {\n  content: \"\\F518\"; }\n\n.fa-book-reader:before {\n  content: \"\\F5DA\"; }\n\n.fa-bookmark:before {\n  content: \"\\F02E\"; }\n\n.fa-bowling-ball:before {\n  content: \"\\F436\"; }\n\n.fa-box:before {\n  content: \"\\F466\"; }\n\n.fa-box-open:before {\n  content: \"\\F49E\"; }\n\n.fa-boxes:before {\n  content: \"\\F468\"; }\n\n.fa-braille:before {\n  content: \"\\F2A1\"; }\n\n.fa-brain:before {\n  content: \"\\F5DC\"; }\n\n.fa-briefcase:before {\n  content: \"\\F0B1\"; }\n\n.fa-briefcase-medical:before {\n  content: \"\\F469\"; }\n\n.fa-broadcast-tower:before {\n  content: \"\\F519\"; }\n\n.fa-broom:before {\n  content: \"\\F51A\"; }\n\n.fa-brush:before {\n  content: \"\\F55D\"; }\n\n.fa-btc:before {\n  content: \"\\F15A\"; }\n\n.fa-bug:before {\n  content: \"\\F188\"; }\n\n.fa-building:before {\n  content: \"\\F1AD\"; }\n\n.fa-bullhorn:before {\n  content: \"\\F0A1\"; }\n\n.fa-bullseye:before {\n  content: \"\\F140\"; }\n\n.fa-burn:before {\n  content: \"\\F46A\"; }\n\n.fa-buromobelexperte:before {\n  content: \"\\F37F\"; }\n\n.fa-bus:before {\n  content: \"\\F207\"; }\n\n.fa-bus-alt:before {\n  content: \"\\F55E\"; }\n\n.fa-business-time:before {\n  content: \"\\F64A\"; }\n\n.fa-buysellads:before {\n  content: \"\\F20D\"; }\n\n.fa-calculator:before {\n  content: \"\\F1EC\"; }\n\n.fa-calendar:before {\n  content: \"\\F133\"; }\n\n.fa-calendar-alt:before {\n  content: \"\\F073\"; }\n\n.fa-calendar-check:before {\n  content: \"\\F274\"; }\n\n.fa-calendar-minus:before {\n  content: \"\\F272\"; }\n\n.fa-calendar-plus:before {\n  content: \"\\F271\"; }\n\n.fa-calendar-times:before {\n  content: \"\\F273\"; }\n\n.fa-camera:before {\n  content: \"\\F030\"; }\n\n.fa-camera-retro:before {\n  content: \"\\F083\"; }\n\n.fa-cannabis:before {\n  content: \"\\F55F\"; }\n\n.fa-capsules:before {\n  content: \"\\F46B\"; }\n\n.fa-car:before {\n  content: \"\\F1B9\"; }\n\n.fa-car-alt:before {\n  content: \"\\F5DE\"; }\n\n.fa-car-battery:before {\n  content: \"\\F5DF\"; }\n\n.fa-car-crash:before {\n  content: \"\\F5E1\"; }\n\n.fa-car-side:before {\n  content: \"\\F5E4\"; }\n\n.fa-caret-down:before {\n  content: \"\\F0D7\"; }\n\n.fa-caret-left:before {\n  content: \"\\F0D9\"; }\n\n.fa-caret-right:before {\n  content: \"\\F0DA\"; }\n\n.fa-caret-square-down:before {\n  content: \"\\F150\"; }\n\n.fa-caret-square-left:before {\n  content: \"\\F191\"; }\n\n.fa-caret-square-right:before {\n  content: \"\\F152\"; }\n\n.fa-caret-square-up:before {\n  content: \"\\F151\"; }\n\n.fa-caret-up:before {\n  content: \"\\F0D8\"; }\n\n.fa-cart-arrow-down:before {\n  content: \"\\F218\"; }\n\n.fa-cart-plus:before {\n  content: \"\\F217\"; }\n\n.fa-cc-amazon-pay:before {\n  content: \"\\F42D\"; }\n\n.fa-cc-amex:before {\n  content: \"\\F1F3\"; }\n\n.fa-cc-apple-pay:before {\n  content: \"\\F416\"; }\n\n.fa-cc-diners-club:before {\n  content: \"\\F24C\"; }\n\n.fa-cc-discover:before {\n  content: \"\\F1F2\"; }\n\n.fa-cc-jcb:before {\n  content: \"\\F24B\"; }\n\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\"; }\n\n.fa-cc-paypal:before {\n  content: \"\\F1F4\"; }\n\n.fa-cc-stripe:before {\n  content: \"\\F1F5\"; }\n\n.fa-cc-visa:before {\n  content: \"\\F1F0\"; }\n\n.fa-centercode:before {\n  content: \"\\F380\"; }\n\n.fa-certificate:before {\n  content: \"\\F0A3\"; }\n\n.fa-chalkboard:before {\n  content: \"\\F51B\"; }\n\n.fa-chalkboard-teacher:before {\n  content: \"\\F51C\"; }\n\n.fa-charging-station:before {\n  content: \"\\F5E7\"; }\n\n.fa-chart-area:before {\n  content: \"\\F1FE\"; }\n\n.fa-chart-bar:before {\n  content: \"\\F080\"; }\n\n.fa-chart-line:before {\n  content: \"\\F201\"; }\n\n.fa-chart-pie:before {\n  content: \"\\F200\"; }\n\n.fa-check:before {\n  content: \"\\F00C\"; }\n\n.fa-check-circle:before {\n  content: \"\\F058\"; }\n\n.fa-check-double:before {\n  content: \"\\F560\"; }\n\n.fa-check-square:before {\n  content: \"\\F14A\"; }\n\n.fa-chess:before {\n  content: \"\\F439\"; }\n\n.fa-chess-bishop:before {\n  content: \"\\F43A\"; }\n\n.fa-chess-board:before {\n  content: \"\\F43C\"; }\n\n.fa-chess-king:before {\n  content: \"\\F43F\"; }\n\n.fa-chess-knight:before {\n  content: \"\\F441\"; }\n\n.fa-chess-pawn:before {\n  content: \"\\F443\"; }\n\n.fa-chess-queen:before {\n  content: \"\\F445\"; }\n\n.fa-chess-rook:before {\n  content: \"\\F447\"; }\n\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\"; }\n\n.fa-chevron-circle-left:before {\n  content: \"\\F137\"; }\n\n.fa-chevron-circle-right:before {\n  content: \"\\F138\"; }\n\n.fa-chevron-circle-up:before {\n  content: \"\\F139\"; }\n\n.fa-chevron-down:before {\n  content: \"\\F078\"; }\n\n.fa-chevron-left:before {\n  content: \"\\F053\"; }\n\n.fa-chevron-right:before {\n  content: \"\\F054\"; }\n\n.fa-chevron-up:before {\n  content: \"\\F077\"; }\n\n.fa-child:before {\n  content: \"\\F1AE\"; }\n\n.fa-chrome:before {\n  content: \"\\F268\"; }\n\n.fa-church:before {\n  content: \"\\F51D\"; }\n\n.fa-circle:before {\n  content: \"\\F111\"; }\n\n.fa-circle-notch:before {\n  content: \"\\F1CE\"; }\n\n.fa-city:before {\n  content: \"\\F64F\"; }\n\n.fa-clipboard:before {\n  content: \"\\F328\"; }\n\n.fa-clipboard-check:before {\n  content: \"\\F46C\"; }\n\n.fa-clipboard-list:before {\n  content: \"\\F46D\"; }\n\n.fa-clock:before {\n  content: \"\\F017\"; }\n\n.fa-clone:before {\n  content: \"\\F24D\"; }\n\n.fa-closed-captioning:before {\n  content: \"\\F20A\"; }\n\n.fa-cloud:before {\n  content: \"\\F0C2\"; }\n\n.fa-cloud-download-alt:before {\n  content: \"\\F381\"; }\n\n.fa-cloud-upload-alt:before {\n  content: \"\\F382\"; }\n\n.fa-cloudscale:before {\n  content: \"\\F383\"; }\n\n.fa-cloudsmith:before {\n  content: \"\\F384\"; }\n\n.fa-cloudversify:before {\n  content: \"\\F385\"; }\n\n.fa-cocktail:before {\n  content: \"\\F561\"; }\n\n.fa-code:before {\n  content: \"\\F121\"; }\n\n.fa-code-branch:before {\n  content: \"\\F126\"; }\n\n.fa-codepen:before {\n  content: \"\\F1CB\"; }\n\n.fa-codiepie:before {\n  content: \"\\F284\"; }\n\n.fa-coffee:before {\n  content: \"\\F0F4\"; }\n\n.fa-cog:before {\n  content: \"\\F013\"; }\n\n.fa-cogs:before {\n  content: \"\\F085\"; }\n\n.fa-coins:before {\n  content: \"\\F51E\"; }\n\n.fa-columns:before {\n  content: \"\\F0DB\"; }\n\n.fa-comment:before {\n  content: \"\\F075\"; }\n\n.fa-comment-alt:before {\n  content: \"\\F27A\"; }\n\n.fa-comment-dollar:before {\n  content: \"\\F651\"; }\n\n.fa-comment-dots:before {\n  content: \"\\F4AD\"; }\n\n.fa-comment-slash:before {\n  content: \"\\F4B3\"; }\n\n.fa-comments:before {\n  content: \"\\F086\"; }\n\n.fa-comments-dollar:before {\n  content: \"\\F653\"; }\n\n.fa-compact-disc:before {\n  content: \"\\F51F\"; }\n\n.fa-compass:before {\n  content: \"\\F14E\"; }\n\n.fa-compress:before {\n  content: \"\\F066\"; }\n\n.fa-concierge-bell:before {\n  content: \"\\F562\"; }\n\n.fa-connectdevelop:before {\n  content: \"\\F20E\"; }\n\n.fa-contao:before {\n  content: \"\\F26D\"; }\n\n.fa-cookie:before {\n  content: \"\\F563\"; }\n\n.fa-cookie-bite:before {\n  content: \"\\F564\"; }\n\n.fa-copy:before {\n  content: \"\\F0C5\"; }\n\n.fa-copyright:before {\n  content: \"\\F1F9\"; }\n\n.fa-couch:before {\n  content: \"\\F4B8\"; }\n\n.fa-cpanel:before {\n  content: \"\\F388\"; }\n\n.fa-creative-commons:before {\n  content: \"\\F25E\"; }\n\n.fa-creative-commons-by:before {\n  content: \"\\F4E7\"; }\n\n.fa-creative-commons-nc:before {\n  content: \"\\F4E8\"; }\n\n.fa-creative-commons-nc-eu:before {\n  content: \"\\F4E9\"; }\n\n.fa-creative-commons-nc-jp:before {\n  content: \"\\F4EA\"; }\n\n.fa-creative-commons-nd:before {\n  content: \"\\F4EB\"; }\n\n.fa-creative-commons-pd:before {\n  content: \"\\F4EC\"; }\n\n.fa-creative-commons-pd-alt:before {\n  content: \"\\F4ED\"; }\n\n.fa-creative-commons-remix:before {\n  content: \"\\F4EE\"; }\n\n.fa-creative-commons-sa:before {\n  content: \"\\F4EF\"; }\n\n.fa-creative-commons-sampling:before {\n  content: \"\\F4F0\"; }\n\n.fa-creative-commons-sampling-plus:before {\n  content: \"\\F4F1\"; }\n\n.fa-creative-commons-share:before {\n  content: \"\\F4F2\"; }\n\n.fa-credit-card:before {\n  content: \"\\F09D\"; }\n\n.fa-crop:before {\n  content: \"\\F125\"; }\n\n.fa-crop-alt:before {\n  content: \"\\F565\"; }\n\n.fa-cross:before {\n  content: \"\\F654\"; }\n\n.fa-crosshairs:before {\n  content: \"\\F05B\"; }\n\n.fa-crow:before {\n  content: \"\\F520\"; }\n\n.fa-crown:before {\n  content: \"\\F521\"; }\n\n.fa-css3:before {\n  content: \"\\F13C\"; }\n\n.fa-css3-alt:before {\n  content: \"\\F38B\"; }\n\n.fa-cube:before {\n  content: \"\\F1B2\"; }\n\n.fa-cubes:before {\n  content: \"\\F1B3\"; }\n\n.fa-cut:before {\n  content: \"\\F0C4\"; }\n\n.fa-cuttlefish:before {\n  content: \"\\F38C\"; }\n\n.fa-d-and-d:before {\n  content: \"\\F38D\"; }\n\n.fa-dashcube:before {\n  content: \"\\F210\"; }\n\n.fa-database:before {\n  content: \"\\F1C0\"; }\n\n.fa-deaf:before {\n  content: \"\\F2A4\"; }\n\n.fa-delicious:before {\n  content: \"\\F1A5\"; }\n\n.fa-deploydog:before {\n  content: \"\\F38E\"; }\n\n.fa-deskpro:before {\n  content: \"\\F38F\"; }\n\n.fa-desktop:before {\n  content: \"\\F108\"; }\n\n.fa-deviantart:before {\n  content: \"\\F1BD\"; }\n\n.fa-dharmachakra:before {\n  content: \"\\F655\"; }\n\n.fa-diagnoses:before {\n  content: \"\\F470\"; }\n\n.fa-dice:before {\n  content: \"\\F522\"; }\n\n.fa-dice-five:before {\n  content: \"\\F523\"; }\n\n.fa-dice-four:before {\n  content: \"\\F524\"; }\n\n.fa-dice-one:before {\n  content: \"\\F525\"; }\n\n.fa-dice-six:before {\n  content: \"\\F526\"; }\n\n.fa-dice-three:before {\n  content: \"\\F527\"; }\n\n.fa-dice-two:before {\n  content: \"\\F528\"; }\n\n.fa-digg:before {\n  content: \"\\F1A6\"; }\n\n.fa-digital-ocean:before {\n  content: \"\\F391\"; }\n\n.fa-digital-tachograph:before {\n  content: \"\\F566\"; }\n\n.fa-directions:before {\n  content: \"\\F5EB\"; }\n\n.fa-discord:before {\n  content: \"\\F392\"; }\n\n.fa-discourse:before {\n  content: \"\\F393\"; }\n\n.fa-divide:before {\n  content: \"\\F529\"; }\n\n.fa-dizzy:before {\n  content: \"\\F567\"; }\n\n.fa-dna:before {\n  content: \"\\F471\"; }\n\n.fa-dochub:before {\n  content: \"\\F394\"; }\n\n.fa-docker:before {\n  content: \"\\F395\"; }\n\n.fa-dollar-sign:before {\n  content: \"\\F155\"; }\n\n.fa-dolly:before {\n  content: \"\\F472\"; }\n\n.fa-dolly-flatbed:before {\n  content: \"\\F474\"; }\n\n.fa-donate:before {\n  content: \"\\F4B9\"; }\n\n.fa-door-closed:before {\n  content: \"\\F52A\"; }\n\n.fa-door-open:before {\n  content: \"\\F52B\"; }\n\n.fa-dot-circle:before {\n  content: \"\\F192\"; }\n\n.fa-dove:before {\n  content: \"\\F4BA\"; }\n\n.fa-download:before {\n  content: \"\\F019\"; }\n\n.fa-draft2digital:before {\n  content: \"\\F396\"; }\n\n.fa-drafting-compass:before {\n  content: \"\\F568\"; }\n\n.fa-draw-polygon:before {\n  content: \"\\F5EE\"; }\n\n.fa-dribbble:before {\n  content: \"\\F17D\"; }\n\n.fa-dribbble-square:before {\n  content: \"\\F397\"; }\n\n.fa-dropbox:before {\n  content: \"\\F16B\"; }\n\n.fa-drum:before {\n  content: \"\\F569\"; }\n\n.fa-drum-steelpan:before {\n  content: \"\\F56A\"; }\n\n.fa-drupal:before {\n  content: \"\\F1A9\"; }\n\n.fa-dumbbell:before {\n  content: \"\\F44B\"; }\n\n.fa-dyalog:before {\n  content: \"\\F399\"; }\n\n.fa-earlybirds:before {\n  content: \"\\F39A\"; }\n\n.fa-ebay:before {\n  content: \"\\F4F4\"; }\n\n.fa-edge:before {\n  content: \"\\F282\"; }\n\n.fa-edit:before {\n  content: \"\\F044\"; }\n\n.fa-eject:before {\n  content: \"\\F052\"; }\n\n.fa-elementor:before {\n  content: \"\\F430\"; }\n\n.fa-ellipsis-h:before {\n  content: \"\\F141\"; }\n\n.fa-ellipsis-v:before {\n  content: \"\\F142\"; }\n\n.fa-ello:before {\n  content: \"\\F5F1\"; }\n\n.fa-ember:before {\n  content: \"\\F423\"; }\n\n.fa-empire:before {\n  content: \"\\F1D1\"; }\n\n.fa-envelope:before {\n  content: \"\\F0E0\"; }\n\n.fa-envelope-open:before {\n  content: \"\\F2B6\"; }\n\n.fa-envelope-open-text:before {\n  content: \"\\F658\"; }\n\n.fa-envelope-square:before {\n  content: \"\\F199\"; }\n\n.fa-envira:before {\n  content: \"\\F299\"; }\n\n.fa-equals:before {\n  content: \"\\F52C\"; }\n\n.fa-eraser:before {\n  content: \"\\F12D\"; }\n\n.fa-erlang:before {\n  content: \"\\F39D\"; }\n\n.fa-ethereum:before {\n  content: \"\\F42E\"; }\n\n.fa-etsy:before {\n  content: \"\\F2D7\"; }\n\n.fa-euro-sign:before {\n  content: \"\\F153\"; }\n\n.fa-exchange-alt:before {\n  content: \"\\F362\"; }\n\n.fa-exclamation:before {\n  content: \"\\F12A\"; }\n\n.fa-exclamation-circle:before {\n  content: \"\\F06A\"; }\n\n.fa-exclamation-triangle:before {\n  content: \"\\F071\"; }\n\n.fa-expand:before {\n  content: \"\\F065\"; }\n\n.fa-expand-arrows-alt:before {\n  content: \"\\F31E\"; }\n\n.fa-expeditedssl:before {\n  content: \"\\F23E\"; }\n\n.fa-external-link-alt:before {\n  content: \"\\F35D\"; }\n\n.fa-external-link-square-alt:before {\n  content: \"\\F360\"; }\n\n.fa-eye:before {\n  content: \"\\F06E\"; }\n\n.fa-eye-dropper:before {\n  content: \"\\F1FB\"; }\n\n.fa-eye-slash:before {\n  content: \"\\F070\"; }\n\n.fa-facebook:before {\n  content: \"\\F09A\"; }\n\n.fa-facebook-f:before {\n  content: \"\\F39E\"; }\n\n.fa-facebook-messenger:before {\n  content: \"\\F39F\"; }\n\n.fa-facebook-square:before {\n  content: \"\\F082\"; }\n\n.fa-fast-backward:before {\n  content: \"\\F049\"; }\n\n.fa-fast-forward:before {\n  content: \"\\F050\"; }\n\n.fa-fax:before {\n  content: \"\\F1AC\"; }\n\n.fa-feather:before {\n  content: \"\\F52D\"; }\n\n.fa-feather-alt:before {\n  content: \"\\F56B\"; }\n\n.fa-female:before {\n  content: \"\\F182\"; }\n\n.fa-fighter-jet:before {\n  content: \"\\F0FB\"; }\n\n.fa-file:before {\n  content: \"\\F15B\"; }\n\n.fa-file-alt:before {\n  content: \"\\F15C\"; }\n\n.fa-file-archive:before {\n  content: \"\\F1C6\"; }\n\n.fa-file-audio:before {\n  content: \"\\F1C7\"; }\n\n.fa-file-code:before {\n  content: \"\\F1C9\"; }\n\n.fa-file-contract:before {\n  content: \"\\F56C\"; }\n\n.fa-file-download:before {\n  content: \"\\F56D\"; }\n\n.fa-file-excel:before {\n  content: \"\\F1C3\"; }\n\n.fa-file-export:before {\n  content: \"\\F56E\"; }\n\n.fa-file-image:before {\n  content: \"\\F1C5\"; }\n\n.fa-file-import:before {\n  content: \"\\F56F\"; }\n\n.fa-file-invoice:before {\n  content: \"\\F570\"; }\n\n.fa-file-invoice-dollar:before {\n  content: \"\\F571\"; }\n\n.fa-file-medical:before {\n  content: \"\\F477\"; }\n\n.fa-file-medical-alt:before {\n  content: \"\\F478\"; }\n\n.fa-file-pdf:before {\n  content: \"\\F1C1\"; }\n\n.fa-file-powerpoint:before {\n  content: \"\\F1C4\"; }\n\n.fa-file-prescription:before {\n  content: \"\\F572\"; }\n\n.fa-file-signature:before {\n  content: \"\\F573\"; }\n\n.fa-file-upload:before {\n  content: \"\\F574\"; }\n\n.fa-file-video:before {\n  content: \"\\F1C8\"; }\n\n.fa-file-word:before {\n  content: \"\\F1C2\"; }\n\n.fa-fill:before {\n  content: \"\\F575\"; }\n\n.fa-fill-drip:before {\n  content: \"\\F576\"; }\n\n.fa-film:before {\n  content: \"\\F008\"; }\n\n.fa-filter:before {\n  content: \"\\F0B0\"; }\n\n.fa-fingerprint:before {\n  content: \"\\F577\"; }\n\n.fa-fire:before {\n  content: \"\\F06D\"; }\n\n.fa-fire-extinguisher:before {\n  content: \"\\F134\"; }\n\n.fa-firefox:before {\n  content: \"\\F269\"; }\n\n.fa-first-aid:before {\n  content: \"\\F479\"; }\n\n.fa-first-order:before {\n  content: \"\\F2B0\"; }\n\n.fa-first-order-alt:before {\n  content: \"\\F50A\"; }\n\n.fa-firstdraft:before {\n  content: \"\\F3A1\"; }\n\n.fa-fish:before {\n  content: \"\\F578\"; }\n\n.fa-flag:before {\n  content: \"\\F024\"; }\n\n.fa-flag-checkered:before {\n  content: \"\\F11E\"; }\n\n.fa-flask:before {\n  content: \"\\F0C3\"; }\n\n.fa-flickr:before {\n  content: \"\\F16E\"; }\n\n.fa-flipboard:before {\n  content: \"\\F44D\"; }\n\n.fa-flushed:before {\n  content: \"\\F579\"; }\n\n.fa-fly:before {\n  content: \"\\F417\"; }\n\n.fa-folder:before {\n  content: \"\\F07B\"; }\n\n.fa-folder-minus:before {\n  content: \"\\F65D\"; }\n\n.fa-folder-open:before {\n  content: \"\\F07C\"; }\n\n.fa-folder-plus:before {\n  content: \"\\F65E\"; }\n\n.fa-font:before {\n  content: \"\\F031\"; }\n\n.fa-font-awesome:before {\n  content: \"\\F2B4\"; }\n\n.fa-font-awesome-alt:before {\n  content: \"\\F35C\"; }\n\n.fa-font-awesome-flag:before {\n  content: \"\\F425\"; }\n\n.fa-font-awesome-logo-full:before {\n  content: \"\\F4E6\"; }\n\n.fa-fonticons:before {\n  content: \"\\F280\"; }\n\n.fa-fonticons-fi:before {\n  content: \"\\F3A2\"; }\n\n.fa-football-ball:before {\n  content: \"\\F44E\"; }\n\n.fa-fort-awesome:before {\n  content: \"\\F286\"; }\n\n.fa-fort-awesome-alt:before {\n  content: \"\\F3A3\"; }\n\n.fa-forumbee:before {\n  content: \"\\F211\"; }\n\n.fa-forward:before {\n  content: \"\\F04E\"; }\n\n.fa-foursquare:before {\n  content: \"\\F180\"; }\n\n.fa-free-code-camp:before {\n  content: \"\\F2C5\"; }\n\n.fa-freebsd:before {\n  content: \"\\F3A4\"; }\n\n.fa-frog:before {\n  content: \"\\F52E\"; }\n\n.fa-frown:before {\n  content: \"\\F119\"; }\n\n.fa-frown-open:before {\n  content: \"\\F57A\"; }\n\n.fa-fulcrum:before {\n  content: \"\\F50B\"; }\n\n.fa-funnel-dollar:before {\n  content: \"\\F662\"; }\n\n.fa-futbol:before {\n  content: \"\\F1E3\"; }\n\n.fa-galactic-republic:before {\n  content: \"\\F50C\"; }\n\n.fa-galactic-senate:before {\n  content: \"\\F50D\"; }\n\n.fa-gamepad:before {\n  content: \"\\F11B\"; }\n\n.fa-gas-pump:before {\n  content: \"\\F52F\"; }\n\n.fa-gavel:before {\n  content: \"\\F0E3\"; }\n\n.fa-gem:before {\n  content: \"\\F3A5\"; }\n\n.fa-genderless:before {\n  content: \"\\F22D\"; }\n\n.fa-get-pocket:before {\n  content: \"\\F265\"; }\n\n.fa-gg:before {\n  content: \"\\F260\"; }\n\n.fa-gg-circle:before {\n  content: \"\\F261\"; }\n\n.fa-gift:before {\n  content: \"\\F06B\"; }\n\n.fa-git:before {\n  content: \"\\F1D3\"; }\n\n.fa-git-square:before {\n  content: \"\\F1D2\"; }\n\n.fa-github:before {\n  content: \"\\F09B\"; }\n\n.fa-github-alt:before {\n  content: \"\\F113\"; }\n\n.fa-github-square:before {\n  content: \"\\F092\"; }\n\n.fa-gitkraken:before {\n  content: \"\\F3A6\"; }\n\n.fa-gitlab:before {\n  content: \"\\F296\"; }\n\n.fa-gitter:before {\n  content: \"\\F426\"; }\n\n.fa-glass-martini:before {\n  content: \"\\F000\"; }\n\n.fa-glass-martini-alt:before {\n  content: \"\\F57B\"; }\n\n.fa-glasses:before {\n  content: \"\\F530\"; }\n\n.fa-glide:before {\n  content: \"\\F2A5\"; }\n\n.fa-glide-g:before {\n  content: \"\\F2A6\"; }\n\n.fa-globe:before {\n  content: \"\\F0AC\"; }\n\n.fa-globe-africa:before {\n  content: \"\\F57C\"; }\n\n.fa-globe-americas:before {\n  content: \"\\F57D\"; }\n\n.fa-globe-asia:before {\n  content: \"\\F57E\"; }\n\n.fa-gofore:before {\n  content: \"\\F3A7\"; }\n\n.fa-golf-ball:before {\n  content: \"\\F450\"; }\n\n.fa-goodreads:before {\n  content: \"\\F3A8\"; }\n\n.fa-goodreads-g:before {\n  content: \"\\F3A9\"; }\n\n.fa-google:before {\n  content: \"\\F1A0\"; }\n\n.fa-google-drive:before {\n  content: \"\\F3AA\"; }\n\n.fa-google-play:before {\n  content: \"\\F3AB\"; }\n\n.fa-google-plus:before {\n  content: \"\\F2B3\"; }\n\n.fa-google-plus-g:before {\n  content: \"\\F0D5\"; }\n\n.fa-google-plus-square:before {\n  content: \"\\F0D4\"; }\n\n.fa-google-wallet:before {\n  content: \"\\F1EE\"; }\n\n.fa-gopuram:before {\n  content: \"\\F664\"; }\n\n.fa-graduation-cap:before {\n  content: \"\\F19D\"; }\n\n.fa-gratipay:before {\n  content: \"\\F184\"; }\n\n.fa-grav:before {\n  content: \"\\F2D6\"; }\n\n.fa-greater-than:before {\n  content: \"\\F531\"; }\n\n.fa-greater-than-equal:before {\n  content: \"\\F532\"; }\n\n.fa-grimace:before {\n  content: \"\\F57F\"; }\n\n.fa-grin:before {\n  content: \"\\F580\"; }\n\n.fa-grin-alt:before {\n  content: \"\\F581\"; }\n\n.fa-grin-beam:before {\n  content: \"\\F582\"; }\n\n.fa-grin-beam-sweat:before {\n  content: \"\\F583\"; }\n\n.fa-grin-hearts:before {\n  content: \"\\F584\"; }\n\n.fa-grin-squint:before {\n  content: \"\\F585\"; }\n\n.fa-grin-squint-tears:before {\n  content: \"\\F586\"; }\n\n.fa-grin-stars:before {\n  content: \"\\F587\"; }\n\n.fa-grin-tears:before {\n  content: \"\\F588\"; }\n\n.fa-grin-tongue:before {\n  content: \"\\F589\"; }\n\n.fa-grin-tongue-squint:before {\n  content: \"\\F58A\"; }\n\n.fa-grin-tongue-wink:before {\n  content: \"\\F58B\"; }\n\n.fa-grin-wink:before {\n  content: \"\\F58C\"; }\n\n.fa-grip-horizontal:before {\n  content: \"\\F58D\"; }\n\n.fa-grip-vertical:before {\n  content: \"\\F58E\"; }\n\n.fa-gripfire:before {\n  content: \"\\F3AC\"; }\n\n.fa-grunt:before {\n  content: \"\\F3AD\"; }\n\n.fa-gulp:before {\n  content: \"\\F3AE\"; }\n\n.fa-h-square:before {\n  content: \"\\F0FD\"; }\n\n.fa-hacker-news:before {\n  content: \"\\F1D4\"; }\n\n.fa-hacker-news-square:before {\n  content: \"\\F3AF\"; }\n\n.fa-hackerrank:before {\n  content: \"\\F5F7\"; }\n\n.fa-hamsa:before {\n  content: \"\\F665\"; }\n\n.fa-hand-holding:before {\n  content: \"\\F4BD\"; }\n\n.fa-hand-holding-heart:before {\n  content: \"\\F4BE\"; }\n\n.fa-hand-holding-usd:before {\n  content: \"\\F4C0\"; }\n\n.fa-hand-lizard:before {\n  content: \"\\F258\"; }\n\n.fa-hand-paper:before {\n  content: \"\\F256\"; }\n\n.fa-hand-peace:before {\n  content: \"\\F25B\"; }\n\n.fa-hand-point-down:before {\n  content: \"\\F0A7\"; }\n\n.fa-hand-point-left:before {\n  content: \"\\F0A5\"; }\n\n.fa-hand-point-right:before {\n  content: \"\\F0A4\"; }\n\n.fa-hand-point-up:before {\n  content: \"\\F0A6\"; }\n\n.fa-hand-pointer:before {\n  content: \"\\F25A\"; }\n\n.fa-hand-rock:before {\n  content: \"\\F255\"; }\n\n.fa-hand-scissors:before {\n  content: \"\\F257\"; }\n\n.fa-hand-spock:before {\n  content: \"\\F259\"; }\n\n.fa-hands:before {\n  content: \"\\F4C2\"; }\n\n.fa-hands-helping:before {\n  content: \"\\F4C4\"; }\n\n.fa-handshake:before {\n  content: \"\\F2B5\"; }\n\n.fa-hashtag:before {\n  content: \"\\F292\"; }\n\n.fa-haykal:before {\n  content: \"\\F666\"; }\n\n.fa-hdd:before {\n  content: \"\\F0A0\"; }\n\n.fa-heading:before {\n  content: \"\\F1DC\"; }\n\n.fa-headphones:before {\n  content: \"\\F025\"; }\n\n.fa-headphones-alt:before {\n  content: \"\\F58F\"; }\n\n.fa-headset:before {\n  content: \"\\F590\"; }\n\n.fa-heart:before {\n  content: \"\\F004\"; }\n\n.fa-heartbeat:before {\n  content: \"\\F21E\"; }\n\n.fa-helicopter:before {\n  content: \"\\F533\"; }\n\n.fa-highlighter:before {\n  content: \"\\F591\"; }\n\n.fa-hips:before {\n  content: \"\\F452\"; }\n\n.fa-hire-a-helper:before {\n  content: \"\\F3B0\"; }\n\n.fa-history:before {\n  content: \"\\F1DA\"; }\n\n.fa-hockey-puck:before {\n  content: \"\\F453\"; }\n\n.fa-home:before {\n  content: \"\\F015\"; }\n\n.fa-hooli:before {\n  content: \"\\F427\"; }\n\n.fa-hornbill:before {\n  content: \"\\F592\"; }\n\n.fa-hospital:before {\n  content: \"\\F0F8\"; }\n\n.fa-hospital-alt:before {\n  content: \"\\F47D\"; }\n\n.fa-hospital-symbol:before {\n  content: \"\\F47E\"; }\n\n.fa-hot-tub:before {\n  content: \"\\F593\"; }\n\n.fa-hotel:before {\n  content: \"\\F594\"; }\n\n.fa-hotjar:before {\n  content: \"\\F3B1\"; }\n\n.fa-hourglass:before {\n  content: \"\\F254\"; }\n\n.fa-hourglass-end:before {\n  content: \"\\F253\"; }\n\n.fa-hourglass-half:before {\n  content: \"\\F252\"; }\n\n.fa-hourglass-start:before {\n  content: \"\\F251\"; }\n\n.fa-houzz:before {\n  content: \"\\F27C\"; }\n\n.fa-html5:before {\n  content: \"\\F13B\"; }\n\n.fa-hubspot:before {\n  content: \"\\F3B2\"; }\n\n.fa-i-cursor:before {\n  content: \"\\F246\"; }\n\n.fa-id-badge:before {\n  content: \"\\F2C1\"; }\n\n.fa-id-card:before {\n  content: \"\\F2C2\"; }\n\n.fa-id-card-alt:before {\n  content: \"\\F47F\"; }\n\n.fa-image:before {\n  content: \"\\F03E\"; }\n\n.fa-images:before {\n  content: \"\\F302\"; }\n\n.fa-imdb:before {\n  content: \"\\F2D8\"; }\n\n.fa-inbox:before {\n  content: \"\\F01C\"; }\n\n.fa-indent:before {\n  content: \"\\F03C\"; }\n\n.fa-industry:before {\n  content: \"\\F275\"; }\n\n.fa-infinity:before {\n  content: \"\\F534\"; }\n\n.fa-info:before {\n  content: \"\\F129\"; }\n\n.fa-info-circle:before {\n  content: \"\\F05A\"; }\n\n.fa-instagram:before {\n  content: \"\\F16D\"; }\n\n.fa-internet-explorer:before {\n  content: \"\\F26B\"; }\n\n.fa-ioxhost:before {\n  content: \"\\F208\"; }\n\n.fa-italic:before {\n  content: \"\\F033\"; }\n\n.fa-itunes:before {\n  content: \"\\F3B4\"; }\n\n.fa-itunes-note:before {\n  content: \"\\F3B5\"; }\n\n.fa-java:before {\n  content: \"\\F4E4\"; }\n\n.fa-jedi:before {\n  content: \"\\F669\"; }\n\n.fa-jedi-order:before {\n  content: \"\\F50E\"; }\n\n.fa-jenkins:before {\n  content: \"\\F3B6\"; }\n\n.fa-joget:before {\n  content: \"\\F3B7\"; }\n\n.fa-joint:before {\n  content: \"\\F595\"; }\n\n.fa-joomla:before {\n  content: \"\\F1AA\"; }\n\n.fa-journal-whills:before {\n  content: \"\\F66A\"; }\n\n.fa-js:before {\n  content: \"\\F3B8\"; }\n\n.fa-js-square:before {\n  content: \"\\F3B9\"; }\n\n.fa-jsfiddle:before {\n  content: \"\\F1CC\"; }\n\n.fa-kaaba:before {\n  content: \"\\F66B\"; }\n\n.fa-kaggle:before {\n  content: \"\\F5FA\"; }\n\n.fa-key:before {\n  content: \"\\F084\"; }\n\n.fa-keybase:before {\n  content: \"\\F4F5\"; }\n\n.fa-keyboard:before {\n  content: \"\\F11C\"; }\n\n.fa-keycdn:before {\n  content: \"\\F3BA\"; }\n\n.fa-khanda:before {\n  content: \"\\F66D\"; }\n\n.fa-kickstarter:before {\n  content: \"\\F3BB\"; }\n\n.fa-kickstarter-k:before {\n  content: \"\\F3BC\"; }\n\n.fa-kiss:before {\n  content: \"\\F596\"; }\n\n.fa-kiss-beam:before {\n  content: \"\\F597\"; }\n\n.fa-kiss-wink-heart:before {\n  content: \"\\F598\"; }\n\n.fa-kiwi-bird:before {\n  content: \"\\F535\"; }\n\n.fa-korvue:before {\n  content: \"\\F42F\"; }\n\n.fa-landmark:before {\n  content: \"\\F66F\"; }\n\n.fa-language:before {\n  content: \"\\F1AB\"; }\n\n.fa-laptop:before {\n  content: \"\\F109\"; }\n\n.fa-laptop-code:before {\n  content: \"\\F5FC\"; }\n\n.fa-laravel:before {\n  content: \"\\F3BD\"; }\n\n.fa-lastfm:before {\n  content: \"\\F202\"; }\n\n.fa-lastfm-square:before {\n  content: \"\\F203\"; }\n\n.fa-laugh:before {\n  content: \"\\F599\"; }\n\n.fa-laugh-beam:before {\n  content: \"\\F59A\"; }\n\n.fa-laugh-squint:before {\n  content: \"\\F59B\"; }\n\n.fa-laugh-wink:before {\n  content: \"\\F59C\"; }\n\n.fa-layer-group:before {\n  content: \"\\F5FD\"; }\n\n.fa-leaf:before {\n  content: \"\\F06C\"; }\n\n.fa-leanpub:before {\n  content: \"\\F212\"; }\n\n.fa-lemon:before {\n  content: \"\\F094\"; }\n\n.fa-less:before {\n  content: \"\\F41D\"; }\n\n.fa-less-than:before {\n  content: \"\\F536\"; }\n\n.fa-less-than-equal:before {\n  content: \"\\F537\"; }\n\n.fa-level-down-alt:before {\n  content: \"\\F3BE\"; }\n\n.fa-level-up-alt:before {\n  content: \"\\F3BF\"; }\n\n.fa-life-ring:before {\n  content: \"\\F1CD\"; }\n\n.fa-lightbulb:before {\n  content: \"\\F0EB\"; }\n\n.fa-line:before {\n  content: \"\\F3C0\"; }\n\n.fa-link:before {\n  content: \"\\F0C1\"; }\n\n.fa-linkedin:before {\n  content: \"\\F08C\"; }\n\n.fa-linkedin-in:before {\n  content: \"\\F0E1\"; }\n\n.fa-linode:before {\n  content: \"\\F2B8\"; }\n\n.fa-linux:before {\n  content: \"\\F17C\"; }\n\n.fa-lira-sign:before {\n  content: \"\\F195\"; }\n\n.fa-list:before {\n  content: \"\\F03A\"; }\n\n.fa-list-alt:before {\n  content: \"\\F022\"; }\n\n.fa-list-ol:before {\n  content: \"\\F0CB\"; }\n\n.fa-list-ul:before {\n  content: \"\\F0CA\"; }\n\n.fa-location-arrow:before {\n  content: \"\\F124\"; }\n\n.fa-lock:before {\n  content: \"\\F023\"; }\n\n.fa-lock-open:before {\n  content: \"\\F3C1\"; }\n\n.fa-long-arrow-alt-down:before {\n  content: \"\\F309\"; }\n\n.fa-long-arrow-alt-left:before {\n  content: \"\\F30A\"; }\n\n.fa-long-arrow-alt-right:before {\n  content: \"\\F30B\"; }\n\n.fa-long-arrow-alt-up:before {\n  content: \"\\F30C\"; }\n\n.fa-low-vision:before {\n  content: \"\\F2A8\"; }\n\n.fa-luggage-cart:before {\n  content: \"\\F59D\"; }\n\n.fa-lyft:before {\n  content: \"\\F3C3\"; }\n\n.fa-magento:before {\n  content: \"\\F3C4\"; }\n\n.fa-magic:before {\n  content: \"\\F0D0\"; }\n\n.fa-magnet:before {\n  content: \"\\F076\"; }\n\n.fa-mail-bulk:before {\n  content: \"\\F674\"; }\n\n.fa-mailchimp:before {\n  content: \"\\F59E\"; }\n\n.fa-male:before {\n  content: \"\\F183\"; }\n\n.fa-mandalorian:before {\n  content: \"\\F50F\"; }\n\n.fa-map:before {\n  content: \"\\F279\"; }\n\n.fa-map-marked:before {\n  content: \"\\F59F\"; }\n\n.fa-map-marked-alt:before {\n  content: \"\\F5A0\"; }\n\n.fa-map-marker:before {\n  content: \"\\F041\"; }\n\n.fa-map-marker-alt:before {\n  content: \"\\F3C5\"; }\n\n.fa-map-pin:before {\n  content: \"\\F276\"; }\n\n.fa-map-signs:before {\n  content: \"\\F277\"; }\n\n.fa-markdown:before {\n  content: \"\\F60F\"; }\n\n.fa-marker:before {\n  content: \"\\F5A1\"; }\n\n.fa-mars:before {\n  content: \"\\F222\"; }\n\n.fa-mars-double:before {\n  content: \"\\F227\"; }\n\n.fa-mars-stroke:before {\n  content: \"\\F229\"; }\n\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\"; }\n\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\"; }\n\n.fa-mastodon:before {\n  content: \"\\F4F6\"; }\n\n.fa-maxcdn:before {\n  content: \"\\F136\"; }\n\n.fa-medal:before {\n  content: \"\\F5A2\"; }\n\n.fa-medapps:before {\n  content: \"\\F3C6\"; }\n\n.fa-medium:before {\n  content: \"\\F23A\"; }\n\n.fa-medium-m:before {\n  content: \"\\F3C7\"; }\n\n.fa-medkit:before {\n  content: \"\\F0FA\"; }\n\n.fa-medrt:before {\n  content: \"\\F3C8\"; }\n\n.fa-meetup:before {\n  content: \"\\F2E0\"; }\n\n.fa-megaport:before {\n  content: \"\\F5A3\"; }\n\n.fa-meh:before {\n  content: \"\\F11A\"; }\n\n.fa-meh-blank:before {\n  content: \"\\F5A4\"; }\n\n.fa-meh-rolling-eyes:before {\n  content: \"\\F5A5\"; }\n\n.fa-memory:before {\n  content: \"\\F538\"; }\n\n.fa-menorah:before {\n  content: \"\\F676\"; }\n\n.fa-mercury:before {\n  content: \"\\F223\"; }\n\n.fa-microchip:before {\n  content: \"\\F2DB\"; }\n\n.fa-microphone:before {\n  content: \"\\F130\"; }\n\n.fa-microphone-alt:before {\n  content: \"\\F3C9\"; }\n\n.fa-microphone-alt-slash:before {\n  content: \"\\F539\"; }\n\n.fa-microphone-slash:before {\n  content: \"\\F131\"; }\n\n.fa-microscope:before {\n  content: \"\\F610\"; }\n\n.fa-microsoft:before {\n  content: \"\\F3CA\"; }\n\n.fa-minus:before {\n  content: \"\\F068\"; }\n\n.fa-minus-circle:before {\n  content: \"\\F056\"; }\n\n.fa-minus-square:before {\n  content: \"\\F146\"; }\n\n.fa-mix:before {\n  content: \"\\F3CB\"; }\n\n.fa-mixcloud:before {\n  content: \"\\F289\"; }\n\n.fa-mizuni:before {\n  content: \"\\F3CC\"; }\n\n.fa-mobile:before {\n  content: \"\\F10B\"; }\n\n.fa-mobile-alt:before {\n  content: \"\\F3CD\"; }\n\n.fa-modx:before {\n  content: \"\\F285\"; }\n\n.fa-monero:before {\n  content: \"\\F3D0\"; }\n\n.fa-money-bill:before {\n  content: \"\\F0D6\"; }\n\n.fa-money-bill-alt:before {\n  content: \"\\F3D1\"; }\n\n.fa-money-bill-wave:before {\n  content: \"\\F53A\"; }\n\n.fa-money-bill-wave-alt:before {\n  content: \"\\F53B\"; }\n\n.fa-money-check:before {\n  content: \"\\F53C\"; }\n\n.fa-money-check-alt:before {\n  content: \"\\F53D\"; }\n\n.fa-monument:before {\n  content: \"\\F5A6\"; }\n\n.fa-moon:before {\n  content: \"\\F186\"; }\n\n.fa-mortar-pestle:before {\n  content: \"\\F5A7\"; }\n\n.fa-mosque:before {\n  content: \"\\F678\"; }\n\n.fa-motorcycle:before {\n  content: \"\\F21C\"; }\n\n.fa-mouse-pointer:before {\n  content: \"\\F245\"; }\n\n.fa-music:before {\n  content: \"\\F001\"; }\n\n.fa-napster:before {\n  content: \"\\F3D2\"; }\n\n.fa-neos:before {\n  content: \"\\F612\"; }\n\n.fa-neuter:before {\n  content: \"\\F22C\"; }\n\n.fa-newspaper:before {\n  content: \"\\F1EA\"; }\n\n.fa-nimblr:before {\n  content: \"\\F5A8\"; }\n\n.fa-nintendo-switch:before {\n  content: \"\\F418\"; }\n\n.fa-node:before {\n  content: \"\\F419\"; }\n\n.fa-node-js:before {\n  content: \"\\F3D3\"; }\n\n.fa-not-equal:before {\n  content: \"\\F53E\"; }\n\n.fa-notes-medical:before {\n  content: \"\\F481\"; }\n\n.fa-npm:before {\n  content: \"\\F3D4\"; }\n\n.fa-ns8:before {\n  content: \"\\F3D5\"; }\n\n.fa-nutritionix:before {\n  content: \"\\F3D6\"; }\n\n.fa-object-group:before {\n  content: \"\\F247\"; }\n\n.fa-object-ungroup:before {\n  content: \"\\F248\"; }\n\n.fa-odnoklassniki:before {\n  content: \"\\F263\"; }\n\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\"; }\n\n.fa-oil-can:before {\n  content: \"\\F613\"; }\n\n.fa-old-republic:before {\n  content: \"\\F510\"; }\n\n.fa-om:before {\n  content: \"\\F679\"; }\n\n.fa-opencart:before {\n  content: \"\\F23D\"; }\n\n.fa-openid:before {\n  content: \"\\F19B\"; }\n\n.fa-opera:before {\n  content: \"\\F26A\"; }\n\n.fa-optin-monster:before {\n  content: \"\\F23C\"; }\n\n.fa-osi:before {\n  content: \"\\F41A\"; }\n\n.fa-outdent:before {\n  content: \"\\F03B\"; }\n\n.fa-page4:before {\n  content: \"\\F3D7\"; }\n\n.fa-pagelines:before {\n  content: \"\\F18C\"; }\n\n.fa-paint-brush:before {\n  content: \"\\F1FC\"; }\n\n.fa-paint-roller:before {\n  content: \"\\F5AA\"; }\n\n.fa-palette:before {\n  content: \"\\F53F\"; }\n\n.fa-palfed:before {\n  content: \"\\F3D8\"; }\n\n.fa-pallet:before {\n  content: \"\\F482\"; }\n\n.fa-paper-plane:before {\n  content: \"\\F1D8\"; }\n\n.fa-paperclip:before {\n  content: \"\\F0C6\"; }\n\n.fa-parachute-box:before {\n  content: \"\\F4CD\"; }\n\n.fa-paragraph:before {\n  content: \"\\F1DD\"; }\n\n.fa-parking:before {\n  content: \"\\F540\"; }\n\n.fa-passport:before {\n  content: \"\\F5AB\"; }\n\n.fa-pastafarianism:before {\n  content: \"\\F67B\"; }\n\n.fa-paste:before {\n  content: \"\\F0EA\"; }\n\n.fa-patreon:before {\n  content: \"\\F3D9\"; }\n\n.fa-pause:before {\n  content: \"\\F04C\"; }\n\n.fa-pause-circle:before {\n  content: \"\\F28B\"; }\n\n.fa-paw:before {\n  content: \"\\F1B0\"; }\n\n.fa-paypal:before {\n  content: \"\\F1ED\"; }\n\n.fa-peace:before {\n  content: \"\\F67C\"; }\n\n.fa-pen:before {\n  content: \"\\F304\"; }\n\n.fa-pen-alt:before {\n  content: \"\\F305\"; }\n\n.fa-pen-fancy:before {\n  content: \"\\F5AC\"; }\n\n.fa-pen-nib:before {\n  content: \"\\F5AD\"; }\n\n.fa-pen-square:before {\n  content: \"\\F14B\"; }\n\n.fa-pencil-alt:before {\n  content: \"\\F303\"; }\n\n.fa-pencil-ruler:before {\n  content: \"\\F5AE\"; }\n\n.fa-people-carry:before {\n  content: \"\\F4CE\"; }\n\n.fa-percent:before {\n  content: \"\\F295\"; }\n\n.fa-percentage:before {\n  content: \"\\F541\"; }\n\n.fa-periscope:before {\n  content: \"\\F3DA\"; }\n\n.fa-phabricator:before {\n  content: \"\\F3DB\"; }\n\n.fa-phoenix-framework:before {\n  content: \"\\F3DC\"; }\n\n.fa-phoenix-squadron:before {\n  content: \"\\F511\"; }\n\n.fa-phone:before {\n  content: \"\\F095\"; }\n\n.fa-phone-slash:before {\n  content: \"\\F3DD\"; }\n\n.fa-phone-square:before {\n  content: \"\\F098\"; }\n\n.fa-phone-volume:before {\n  content: \"\\F2A0\"; }\n\n.fa-php:before {\n  content: \"\\F457\"; }\n\n.fa-pied-piper:before {\n  content: \"\\F2AE\"; }\n\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\"; }\n\n.fa-pied-piper-hat:before {\n  content: \"\\F4E5\"; }\n\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\"; }\n\n.fa-piggy-bank:before {\n  content: \"\\F4D3\"; }\n\n.fa-pills:before {\n  content: \"\\F484\"; }\n\n.fa-pinterest:before {\n  content: \"\\F0D2\"; }\n\n.fa-pinterest-p:before {\n  content: \"\\F231\"; }\n\n.fa-pinterest-square:before {\n  content: \"\\F0D3\"; }\n\n.fa-place-of-worship:before {\n  content: \"\\F67F\"; }\n\n.fa-plane:before {\n  content: \"\\F072\"; }\n\n.fa-plane-arrival:before {\n  content: \"\\F5AF\"; }\n\n.fa-plane-departure:before {\n  content: \"\\F5B0\"; }\n\n.fa-play:before {\n  content: \"\\F04B\"; }\n\n.fa-play-circle:before {\n  content: \"\\F144\"; }\n\n.fa-playstation:before {\n  content: \"\\F3DF\"; }\n\n.fa-plug:before {\n  content: \"\\F1E6\"; }\n\n.fa-plus:before {\n  content: \"\\F067\"; }\n\n.fa-plus-circle:before {\n  content: \"\\F055\"; }\n\n.fa-plus-square:before {\n  content: \"\\F0FE\"; }\n\n.fa-podcast:before {\n  content: \"\\F2CE\"; }\n\n.fa-poll:before {\n  content: \"\\F681\"; }\n\n.fa-poll-h:before {\n  content: \"\\F682\"; }\n\n.fa-poo:before {\n  content: \"\\F2FE\"; }\n\n.fa-poop:before {\n  content: \"\\F619\"; }\n\n.fa-portrait:before {\n  content: \"\\F3E0\"; }\n\n.fa-pound-sign:before {\n  content: \"\\F154\"; }\n\n.fa-power-off:before {\n  content: \"\\F011\"; }\n\n.fa-pray:before {\n  content: \"\\F683\"; }\n\n.fa-praying-hands:before {\n  content: \"\\F684\"; }\n\n.fa-prescription:before {\n  content: \"\\F5B1\"; }\n\n.fa-prescription-bottle:before {\n  content: \"\\F485\"; }\n\n.fa-prescription-bottle-alt:before {\n  content: \"\\F486\"; }\n\n.fa-print:before {\n  content: \"\\F02F\"; }\n\n.fa-procedures:before {\n  content: \"\\F487\"; }\n\n.fa-product-hunt:before {\n  content: \"\\F288\"; }\n\n.fa-project-diagram:before {\n  content: \"\\F542\"; }\n\n.fa-pushed:before {\n  content: \"\\F3E1\"; }\n\n.fa-puzzle-piece:before {\n  content: \"\\F12E\"; }\n\n.fa-python:before {\n  content: \"\\F3E2\"; }\n\n.fa-qq:before {\n  content: \"\\F1D6\"; }\n\n.fa-qrcode:before {\n  content: \"\\F029\"; }\n\n.fa-question:before {\n  content: \"\\F128\"; }\n\n.fa-question-circle:before {\n  content: \"\\F059\"; }\n\n.fa-quidditch:before {\n  content: \"\\F458\"; }\n\n.fa-quinscape:before {\n  content: \"\\F459\"; }\n\n.fa-quora:before {\n  content: \"\\F2C4\"; }\n\n.fa-quote-left:before {\n  content: \"\\F10D\"; }\n\n.fa-quote-right:before {\n  content: \"\\F10E\"; }\n\n.fa-quran:before {\n  content: \"\\F687\"; }\n\n.fa-r-project:before {\n  content: \"\\F4F7\"; }\n\n.fa-random:before {\n  content: \"\\F074\"; }\n\n.fa-ravelry:before {\n  content: \"\\F2D9\"; }\n\n.fa-react:before {\n  content: \"\\F41B\"; }\n\n.fa-readme:before {\n  content: \"\\F4D5\"; }\n\n.fa-rebel:before {\n  content: \"\\F1D0\"; }\n\n.fa-receipt:before {\n  content: \"\\F543\"; }\n\n.fa-recycle:before {\n  content: \"\\F1B8\"; }\n\n.fa-red-river:before {\n  content: \"\\F3E3\"; }\n\n.fa-reddit:before {\n  content: \"\\F1A1\"; }\n\n.fa-reddit-alien:before {\n  content: \"\\F281\"; }\n\n.fa-reddit-square:before {\n  content: \"\\F1A2\"; }\n\n.fa-redo:before {\n  content: \"\\F01E\"; }\n\n.fa-redo-alt:before {\n  content: \"\\F2F9\"; }\n\n.fa-registered:before {\n  content: \"\\F25D\"; }\n\n.fa-rendact:before {\n  content: \"\\F3E4\"; }\n\n.fa-renren:before {\n  content: \"\\F18B\"; }\n\n.fa-reply:before {\n  content: \"\\F3E5\"; }\n\n.fa-reply-all:before {\n  content: \"\\F122\"; }\n\n.fa-replyd:before {\n  content: \"\\F3E6\"; }\n\n.fa-researchgate:before {\n  content: \"\\F4F8\"; }\n\n.fa-resolving:before {\n  content: \"\\F3E7\"; }\n\n.fa-retweet:before {\n  content: \"\\F079\"; }\n\n.fa-rev:before {\n  content: \"\\F5B2\"; }\n\n.fa-ribbon:before {\n  content: \"\\F4D6\"; }\n\n.fa-road:before {\n  content: \"\\F018\"; }\n\n.fa-robot:before {\n  content: \"\\F544\"; }\n\n.fa-rocket:before {\n  content: \"\\F135\"; }\n\n.fa-rocketchat:before {\n  content: \"\\F3E8\"; }\n\n.fa-rockrms:before {\n  content: \"\\F3E9\"; }\n\n.fa-route:before {\n  content: \"\\F4D7\"; }\n\n.fa-rss:before {\n  content: \"\\F09E\"; }\n\n.fa-rss-square:before {\n  content: \"\\F143\"; }\n\n.fa-ruble-sign:before {\n  content: \"\\F158\"; }\n\n.fa-ruler:before {\n  content: \"\\F545\"; }\n\n.fa-ruler-combined:before {\n  content: \"\\F546\"; }\n\n.fa-ruler-horizontal:before {\n  content: \"\\F547\"; }\n\n.fa-ruler-vertical:before {\n  content: \"\\F548\"; }\n\n.fa-rupee-sign:before {\n  content: \"\\F156\"; }\n\n.fa-sad-cry:before {\n  content: \"\\F5B3\"; }\n\n.fa-sad-tear:before {\n  content: \"\\F5B4\"; }\n\n.fa-safari:before {\n  content: \"\\F267\"; }\n\n.fa-sass:before {\n  content: \"\\F41E\"; }\n\n.fa-save:before {\n  content: \"\\F0C7\"; }\n\n.fa-schlix:before {\n  content: \"\\F3EA\"; }\n\n.fa-school:before {\n  content: \"\\F549\"; }\n\n.fa-screwdriver:before {\n  content: \"\\F54A\"; }\n\n.fa-scribd:before {\n  content: \"\\F28A\"; }\n\n.fa-search:before {\n  content: \"\\F002\"; }\n\n.fa-search-dollar:before {\n  content: \"\\F688\"; }\n\n.fa-search-location:before {\n  content: \"\\F689\"; }\n\n.fa-search-minus:before {\n  content: \"\\F010\"; }\n\n.fa-search-plus:before {\n  content: \"\\F00E\"; }\n\n.fa-searchengin:before {\n  content: \"\\F3EB\"; }\n\n.fa-seedling:before {\n  content: \"\\F4D8\"; }\n\n.fa-sellcast:before {\n  content: \"\\F2DA\"; }\n\n.fa-sellsy:before {\n  content: \"\\F213\"; }\n\n.fa-server:before {\n  content: \"\\F233\"; }\n\n.fa-servicestack:before {\n  content: \"\\F3EC\"; }\n\n.fa-shapes:before {\n  content: \"\\F61F\"; }\n\n.fa-share:before {\n  content: \"\\F064\"; }\n\n.fa-share-alt:before {\n  content: \"\\F1E0\"; }\n\n.fa-share-alt-square:before {\n  content: \"\\F1E1\"; }\n\n.fa-share-square:before {\n  content: \"\\F14D\"; }\n\n.fa-shekel-sign:before {\n  content: \"\\F20B\"; }\n\n.fa-shield-alt:before {\n  content: \"\\F3ED\"; }\n\n.fa-ship:before {\n  content: \"\\F21A\"; }\n\n.fa-shipping-fast:before {\n  content: \"\\F48B\"; }\n\n.fa-shirtsinbulk:before {\n  content: \"\\F214\"; }\n\n.fa-shoe-prints:before {\n  content: \"\\F54B\"; }\n\n.fa-shopping-bag:before {\n  content: \"\\F290\"; }\n\n.fa-shopping-basket:before {\n  content: \"\\F291\"; }\n\n.fa-shopping-cart:before {\n  content: \"\\F07A\"; }\n\n.fa-shopware:before {\n  content: \"\\F5B5\"; }\n\n.fa-shower:before {\n  content: \"\\F2CC\"; }\n\n.fa-shuttle-van:before {\n  content: \"\\F5B6\"; }\n\n.fa-sign:before {\n  content: \"\\F4D9\"; }\n\n.fa-sign-in-alt:before {\n  content: \"\\F2F6\"; }\n\n.fa-sign-language:before {\n  content: \"\\F2A7\"; }\n\n.fa-sign-out-alt:before {\n  content: \"\\F2F5\"; }\n\n.fa-signal:before {\n  content: \"\\F012\"; }\n\n.fa-signature:before {\n  content: \"\\F5B7\"; }\n\n.fa-simplybuilt:before {\n  content: \"\\F215\"; }\n\n.fa-sistrix:before {\n  content: \"\\F3EE\"; }\n\n.fa-sitemap:before {\n  content: \"\\F0E8\"; }\n\n.fa-sith:before {\n  content: \"\\F512\"; }\n\n.fa-skull:before {\n  content: \"\\F54C\"; }\n\n.fa-skyatlas:before {\n  content: \"\\F216\"; }\n\n.fa-skype:before {\n  content: \"\\F17E\"; }\n\n.fa-slack:before {\n  content: \"\\F198\"; }\n\n.fa-slack-hash:before {\n  content: \"\\F3EF\"; }\n\n.fa-sliders-h:before {\n  content: \"\\F1DE\"; }\n\n.fa-slideshare:before {\n  content: \"\\F1E7\"; }\n\n.fa-smile:before {\n  content: \"\\F118\"; }\n\n.fa-smile-beam:before {\n  content: \"\\F5B8\"; }\n\n.fa-smile-wink:before {\n  content: \"\\F4DA\"; }\n\n.fa-smoking:before {\n  content: \"\\F48D\"; }\n\n.fa-smoking-ban:before {\n  content: \"\\F54D\"; }\n\n.fa-snapchat:before {\n  content: \"\\F2AB\"; }\n\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\"; }\n\n.fa-snapchat-square:before {\n  content: \"\\F2AD\"; }\n\n.fa-snowflake:before {\n  content: \"\\F2DC\"; }\n\n.fa-socks:before {\n  content: \"\\F696\"; }\n\n.fa-solar-panel:before {\n  content: \"\\F5BA\"; }\n\n.fa-sort:before {\n  content: \"\\F0DC\"; }\n\n.fa-sort-alpha-down:before {\n  content: \"\\F15D\"; }\n\n.fa-sort-alpha-up:before {\n  content: \"\\F15E\"; }\n\n.fa-sort-amount-down:before {\n  content: \"\\F160\"; }\n\n.fa-sort-amount-up:before {\n  content: \"\\F161\"; }\n\n.fa-sort-down:before {\n  content: \"\\F0DD\"; }\n\n.fa-sort-numeric-down:before {\n  content: \"\\F162\"; }\n\n.fa-sort-numeric-up:before {\n  content: \"\\F163\"; }\n\n.fa-sort-up:before {\n  content: \"\\F0DE\"; }\n\n.fa-soundcloud:before {\n  content: \"\\F1BE\"; }\n\n.fa-spa:before {\n  content: \"\\F5BB\"; }\n\n.fa-space-shuttle:before {\n  content: \"\\F197\"; }\n\n.fa-speakap:before {\n  content: \"\\F3F3\"; }\n\n.fa-spinner:before {\n  content: \"\\F110\"; }\n\n.fa-splotch:before {\n  content: \"\\F5BC\"; }\n\n.fa-spotify:before {\n  content: \"\\F1BC\"; }\n\n.fa-spray-can:before {\n  content: \"\\F5BD\"; }\n\n.fa-square:before {\n  content: \"\\F0C8\"; }\n\n.fa-square-full:before {\n  content: \"\\F45C\"; }\n\n.fa-square-root-alt:before {\n  content: \"\\F698\"; }\n\n.fa-squarespace:before {\n  content: \"\\F5BE\"; }\n\n.fa-stack-exchange:before {\n  content: \"\\F18D\"; }\n\n.fa-stack-overflow:before {\n  content: \"\\F16C\"; }\n\n.fa-stamp:before {\n  content: \"\\F5BF\"; }\n\n.fa-star:before {\n  content: \"\\F005\"; }\n\n.fa-star-and-crescent:before {\n  content: \"\\F699\"; }\n\n.fa-star-half:before {\n  content: \"\\F089\"; }\n\n.fa-star-half-alt:before {\n  content: \"\\F5C0\"; }\n\n.fa-star-of-david:before {\n  content: \"\\F69A\"; }\n\n.fa-star-of-life:before {\n  content: \"\\F621\"; }\n\n.fa-staylinked:before {\n  content: \"\\F3F5\"; }\n\n.fa-steam:before {\n  content: \"\\F1B6\"; }\n\n.fa-steam-square:before {\n  content: \"\\F1B7\"; }\n\n.fa-steam-symbol:before {\n  content: \"\\F3F6\"; }\n\n.fa-step-backward:before {\n  content: \"\\F048\"; }\n\n.fa-step-forward:before {\n  content: \"\\F051\"; }\n\n.fa-stethoscope:before {\n  content: \"\\F0F1\"; }\n\n.fa-sticker-mule:before {\n  content: \"\\F3F7\"; }\n\n.fa-sticky-note:before {\n  content: \"\\F249\"; }\n\n.fa-stop:before {\n  content: \"\\F04D\"; }\n\n.fa-stop-circle:before {\n  content: \"\\F28D\"; }\n\n.fa-stopwatch:before {\n  content: \"\\F2F2\"; }\n\n.fa-store:before {\n  content: \"\\F54E\"; }\n\n.fa-store-alt:before {\n  content: \"\\F54F\"; }\n\n.fa-strava:before {\n  content: \"\\F428\"; }\n\n.fa-stream:before {\n  content: \"\\F550\"; }\n\n.fa-street-view:before {\n  content: \"\\F21D\"; }\n\n.fa-strikethrough:before {\n  content: \"\\F0CC\"; }\n\n.fa-stripe:before {\n  content: \"\\F429\"; }\n\n.fa-stripe-s:before {\n  content: \"\\F42A\"; }\n\n.fa-stroopwafel:before {\n  content: \"\\F551\"; }\n\n.fa-studiovinari:before {\n  content: \"\\F3F8\"; }\n\n.fa-stumbleupon:before {\n  content: \"\\F1A4\"; }\n\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\"; }\n\n.fa-subscript:before {\n  content: \"\\F12C\"; }\n\n.fa-subway:before {\n  content: \"\\F239\"; }\n\n.fa-suitcase:before {\n  content: \"\\F0F2\"; }\n\n.fa-suitcase-rolling:before {\n  content: \"\\F5C1\"; }\n\n.fa-sun:before {\n  content: \"\\F185\"; }\n\n.fa-superpowers:before {\n  content: \"\\F2DD\"; }\n\n.fa-superscript:before {\n  content: \"\\F12B\"; }\n\n.fa-supple:before {\n  content: \"\\F3F9\"; }\n\n.fa-surprise:before {\n  content: \"\\F5C2\"; }\n\n.fa-swatchbook:before {\n  content: \"\\F5C3\"; }\n\n.fa-swimmer:before {\n  content: \"\\F5C4\"; }\n\n.fa-swimming-pool:before {\n  content: \"\\F5C5\"; }\n\n.fa-synagogue:before {\n  content: \"\\F69B\"; }\n\n.fa-sync:before {\n  content: \"\\F021\"; }\n\n.fa-sync-alt:before {\n  content: \"\\F2F1\"; }\n\n.fa-syringe:before {\n  content: \"\\F48E\"; }\n\n.fa-table:before {\n  content: \"\\F0CE\"; }\n\n.fa-table-tennis:before {\n  content: \"\\F45D\"; }\n\n.fa-tablet:before {\n  content: \"\\F10A\"; }\n\n.fa-tablet-alt:before {\n  content: \"\\F3FA\"; }\n\n.fa-tablets:before {\n  content: \"\\F490\"; }\n\n.fa-tachometer-alt:before {\n  content: \"\\F3FD\"; }\n\n.fa-tag:before {\n  content: \"\\F02B\"; }\n\n.fa-tags:before {\n  content: \"\\F02C\"; }\n\n.fa-tape:before {\n  content: \"\\F4DB\"; }\n\n.fa-tasks:before {\n  content: \"\\F0AE\"; }\n\n.fa-taxi:before {\n  content: \"\\F1BA\"; }\n\n.fa-teamspeak:before {\n  content: \"\\F4F9\"; }\n\n.fa-teeth:before {\n  content: \"\\F62E\"; }\n\n.fa-teeth-open:before {\n  content: \"\\F62F\"; }\n\n.fa-telegram:before {\n  content: \"\\F2C6\"; }\n\n.fa-telegram-plane:before {\n  content: \"\\F3FE\"; }\n\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\"; }\n\n.fa-terminal:before {\n  content: \"\\F120\"; }\n\n.fa-text-height:before {\n  content: \"\\F034\"; }\n\n.fa-text-width:before {\n  content: \"\\F035\"; }\n\n.fa-th:before {\n  content: \"\\F00A\"; }\n\n.fa-th-large:before {\n  content: \"\\F009\"; }\n\n.fa-th-list:before {\n  content: \"\\F00B\"; }\n\n.fa-the-red-yeti:before {\n  content: \"\\F69D\"; }\n\n.fa-theater-masks:before {\n  content: \"\\F630\"; }\n\n.fa-themeco:before {\n  content: \"\\F5C6\"; }\n\n.fa-themeisle:before {\n  content: \"\\F2B2\"; }\n\n.fa-thermometer:before {\n  content: \"\\F491\"; }\n\n.fa-thermometer-empty:before {\n  content: \"\\F2CB\"; }\n\n.fa-thermometer-full:before {\n  content: \"\\F2C7\"; }\n\n.fa-thermometer-half:before {\n  content: \"\\F2C9\"; }\n\n.fa-thermometer-quarter:before {\n  content: \"\\F2CA\"; }\n\n.fa-thermometer-three-quarters:before {\n  content: \"\\F2C8\"; }\n\n.fa-thumbs-down:before {\n  content: \"\\F165\"; }\n\n.fa-thumbs-up:before {\n  content: \"\\F164\"; }\n\n.fa-thumbtack:before {\n  content: \"\\F08D\"; }\n\n.fa-ticket-alt:before {\n  content: \"\\F3FF\"; }\n\n.fa-times:before {\n  content: \"\\F00D\"; }\n\n.fa-times-circle:before {\n  content: \"\\F057\"; }\n\n.fa-tint:before {\n  content: \"\\F043\"; }\n\n.fa-tint-slash:before {\n  content: \"\\F5C7\"; }\n\n.fa-tired:before {\n  content: \"\\F5C8\"; }\n\n.fa-toggle-off:before {\n  content: \"\\F204\"; }\n\n.fa-toggle-on:before {\n  content: \"\\F205\"; }\n\n.fa-toolbox:before {\n  content: \"\\F552\"; }\n\n.fa-tooth:before {\n  content: \"\\F5C9\"; }\n\n.fa-torah:before {\n  content: \"\\F6A0\"; }\n\n.fa-torii-gate:before {\n  content: \"\\F6A1\"; }\n\n.fa-trade-federation:before {\n  content: \"\\F513\"; }\n\n.fa-trademark:before {\n  content: \"\\F25C\"; }\n\n.fa-traffic-light:before {\n  content: \"\\F637\"; }\n\n.fa-train:before {\n  content: \"\\F238\"; }\n\n.fa-transgender:before {\n  content: \"\\F224\"; }\n\n.fa-transgender-alt:before {\n  content: \"\\F225\"; }\n\n.fa-trash:before {\n  content: \"\\F1F8\"; }\n\n.fa-trash-alt:before {\n  content: \"\\F2ED\"; }\n\n.fa-tree:before {\n  content: \"\\F1BB\"; }\n\n.fa-trello:before {\n  content: \"\\F181\"; }\n\n.fa-tripadvisor:before {\n  content: \"\\F262\"; }\n\n.fa-trophy:before {\n  content: \"\\F091\"; }\n\n.fa-truck:before {\n  content: \"\\F0D1\"; }\n\n.fa-truck-loading:before {\n  content: \"\\F4DE\"; }\n\n.fa-truck-monster:before {\n  content: \"\\F63B\"; }\n\n.fa-truck-moving:before {\n  content: \"\\F4DF\"; }\n\n.fa-truck-pickup:before {\n  content: \"\\F63C\"; }\n\n.fa-tshirt:before {\n  content: \"\\F553\"; }\n\n.fa-tty:before {\n  content: \"\\F1E4\"; }\n\n.fa-tumblr:before {\n  content: \"\\F173\"; }\n\n.fa-tumblr-square:before {\n  content: \"\\F174\"; }\n\n.fa-tv:before {\n  content: \"\\F26C\"; }\n\n.fa-twitch:before {\n  content: \"\\F1E8\"; }\n\n.fa-twitter:before {\n  content: \"\\F099\"; }\n\n.fa-twitter-square:before {\n  content: \"\\F081\"; }\n\n.fa-typo3:before {\n  content: \"\\F42B\"; }\n\n.fa-uber:before {\n  content: \"\\F402\"; }\n\n.fa-uikit:before {\n  content: \"\\F403\"; }\n\n.fa-umbrella:before {\n  content: \"\\F0E9\"; }\n\n.fa-umbrella-beach:before {\n  content: \"\\F5CA\"; }\n\n.fa-underline:before {\n  content: \"\\F0CD\"; }\n\n.fa-undo:before {\n  content: \"\\F0E2\"; }\n\n.fa-undo-alt:before {\n  content: \"\\F2EA\"; }\n\n.fa-uniregistry:before {\n  content: \"\\F404\"; }\n\n.fa-universal-access:before {\n  content: \"\\F29A\"; }\n\n.fa-university:before {\n  content: \"\\F19C\"; }\n\n.fa-unlink:before {\n  content: \"\\F127\"; }\n\n.fa-unlock:before {\n  content: \"\\F09C\"; }\n\n.fa-unlock-alt:before {\n  content: \"\\F13E\"; }\n\n.fa-untappd:before {\n  content: \"\\F405\"; }\n\n.fa-upload:before {\n  content: \"\\F093\"; }\n\n.fa-usb:before {\n  content: \"\\F287\"; }\n\n.fa-user:before {\n  content: \"\\F007\"; }\n\n.fa-user-alt:before {\n  content: \"\\F406\"; }\n\n.fa-user-alt-slash:before {\n  content: \"\\F4FA\"; }\n\n.fa-user-astronaut:before {\n  content: \"\\F4FB\"; }\n\n.fa-user-check:before {\n  content: \"\\F4FC\"; }\n\n.fa-user-circle:before {\n  content: \"\\F2BD\"; }\n\n.fa-user-clock:before {\n  content: \"\\F4FD\"; }\n\n.fa-user-cog:before {\n  content: \"\\F4FE\"; }\n\n.fa-user-edit:before {\n  content: \"\\F4FF\"; }\n\n.fa-user-friends:before {\n  content: \"\\F500\"; }\n\n.fa-user-graduate:before {\n  content: \"\\F501\"; }\n\n.fa-user-lock:before {\n  content: \"\\F502\"; }\n\n.fa-user-md:before {\n  content: \"\\F0F0\"; }\n\n.fa-user-minus:before {\n  content: \"\\F503\"; }\n\n.fa-user-ninja:before {\n  content: \"\\F504\"; }\n\n.fa-user-plus:before {\n  content: \"\\F234\"; }\n\n.fa-user-secret:before {\n  content: \"\\F21B\"; }\n\n.fa-user-shield:before {\n  content: \"\\F505\"; }\n\n.fa-user-slash:before {\n  content: \"\\F506\"; }\n\n.fa-user-tag:before {\n  content: \"\\F507\"; }\n\n.fa-user-tie:before {\n  content: \"\\F508\"; }\n\n.fa-user-times:before {\n  content: \"\\F235\"; }\n\n.fa-users:before {\n  content: \"\\F0C0\"; }\n\n.fa-users-cog:before {\n  content: \"\\F509\"; }\n\n.fa-ussunnah:before {\n  content: \"\\F407\"; }\n\n.fa-utensil-spoon:before {\n  content: \"\\F2E5\"; }\n\n.fa-utensils:before {\n  content: \"\\F2E7\"; }\n\n.fa-vaadin:before {\n  content: \"\\F408\"; }\n\n.fa-vector-square:before {\n  content: \"\\F5CB\"; }\n\n.fa-venus:before {\n  content: \"\\F221\"; }\n\n.fa-venus-double:before {\n  content: \"\\F226\"; }\n\n.fa-venus-mars:before {\n  content: \"\\F228\"; }\n\n.fa-viacoin:before {\n  content: \"\\F237\"; }\n\n.fa-viadeo:before {\n  content: \"\\F2A9\"; }\n\n.fa-viadeo-square:before {\n  content: \"\\F2AA\"; }\n\n.fa-vial:before {\n  content: \"\\F492\"; }\n\n.fa-vials:before {\n  content: \"\\F493\"; }\n\n.fa-viber:before {\n  content: \"\\F409\"; }\n\n.fa-video:before {\n  content: \"\\F03D\"; }\n\n.fa-video-slash:before {\n  content: \"\\F4E2\"; }\n\n.fa-vihara:before {\n  content: \"\\F6A7\"; }\n\n.fa-vimeo:before {\n  content: \"\\F40A\"; }\n\n.fa-vimeo-square:before {\n  content: \"\\F194\"; }\n\n.fa-vimeo-v:before {\n  content: \"\\F27D\"; }\n\n.fa-vine:before {\n  content: \"\\F1CA\"; }\n\n.fa-vk:before {\n  content: \"\\F189\"; }\n\n.fa-vnv:before {\n  content: \"\\F40B\"; }\n\n.fa-volleyball-ball:before {\n  content: \"\\F45F\"; }\n\n.fa-volume-down:before {\n  content: \"\\F027\"; }\n\n.fa-volume-off:before {\n  content: \"\\F026\"; }\n\n.fa-volume-up:before {\n  content: \"\\F028\"; }\n\n.fa-vuejs:before {\n  content: \"\\F41F\"; }\n\n.fa-walking:before {\n  content: \"\\F554\"; }\n\n.fa-wallet:before {\n  content: \"\\F555\"; }\n\n.fa-warehouse:before {\n  content: \"\\F494\"; }\n\n.fa-weebly:before {\n  content: \"\\F5CC\"; }\n\n.fa-weibo:before {\n  content: \"\\F18A\"; }\n\n.fa-weight:before {\n  content: \"\\F496\"; }\n\n.fa-weight-hanging:before {\n  content: \"\\F5CD\"; }\n\n.fa-weixin:before {\n  content: \"\\F1D7\"; }\n\n.fa-whatsapp:before {\n  content: \"\\F232\"; }\n\n.fa-whatsapp-square:before {\n  content: \"\\F40C\"; }\n\n.fa-wheelchair:before {\n  content: \"\\F193\"; }\n\n.fa-whmcs:before {\n  content: \"\\F40D\"; }\n\n.fa-wifi:before {\n  content: \"\\F1EB\"; }\n\n.fa-wikipedia-w:before {\n  content: \"\\F266\"; }\n\n.fa-window-close:before {\n  content: \"\\F410\"; }\n\n.fa-window-maximize:before {\n  content: \"\\F2D0\"; }\n\n.fa-window-minimize:before {\n  content: \"\\F2D1\"; }\n\n.fa-window-restore:before {\n  content: \"\\F2D2\"; }\n\n.fa-windows:before {\n  content: \"\\F17A\"; }\n\n.fa-wine-glass:before {\n  content: \"\\F4E3\"; }\n\n.fa-wine-glass-alt:before {\n  content: \"\\F5CE\"; }\n\n.fa-wix:before {\n  content: \"\\F5CF\"; }\n\n.fa-wolf-pack-battalion:before {\n  content: \"\\F514\"; }\n\n.fa-won-sign:before {\n  content: \"\\F159\"; }\n\n.fa-wordpress:before {\n  content: \"\\F19A\"; }\n\n.fa-wordpress-simple:before {\n  content: \"\\F411\"; }\n\n.fa-wpbeginner:before {\n  content: \"\\F297\"; }\n\n.fa-wpexplorer:before {\n  content: \"\\F2DE\"; }\n\n.fa-wpforms:before {\n  content: \"\\F298\"; }\n\n.fa-wrench:before {\n  content: \"\\F0AD\"; }\n\n.fa-x-ray:before {\n  content: \"\\F497\"; }\n\n.fa-xbox:before {\n  content: \"\\F412\"; }\n\n.fa-xing:before {\n  content: \"\\F168\"; }\n\n.fa-xing-square:before {\n  content: \"\\F169\"; }\n\n.fa-y-combinator:before {\n  content: \"\\F23B\"; }\n\n.fa-yahoo:before {\n  content: \"\\F19E\"; }\n\n.fa-yandex:before {\n  content: \"\\F413\"; }\n\n.fa-yandex-international:before {\n  content: \"\\F414\"; }\n\n.fa-yelp:before {\n  content: \"\\F1E9\"; }\n\n.fa-yen-sign:before {\n  content: \"\\F157\"; }\n\n.fa-yin-yang:before {\n  content: \"\\F6AD\"; }\n\n.fa-yoast:before {\n  content: \"\\F2B1\"; }\n\n.fa-youtube:before {\n  content: \"\\F167\"; }\n\n.fa-youtube-square:before {\n  content: \"\\F431\"; }\n\n.fa-zhihu:before {\n  content: \"\\F63F\"; }\n\n.sr-only {\n  border: 0;\n  clip: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n.sr-only-focusable:active, .sr-only-focusable:focus {\n  clip: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  position: static;\n  width: auto; }\n@font-face {\n  font-family: 'Font Awesome 5 Brands';\n  font-style: normal;\n  font-weight: normal;\n  src: url(" + escape(__webpack_require__(28)) + ");\n  src: url(" + escape(__webpack_require__(28)) + "?#iefix) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(199)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(200)) + ") format(\"woff\"), url(" + escape(__webpack_require__(201)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(202)) + "#fontawesome) format(\"svg\"); }\n\n.fab {\n  font-family: 'Font Awesome 5 Brands'; }\n@font-face {\n  font-family: 'Font Awesome 5 Free';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(29)) + ");\n  src: url(" + escape(__webpack_require__(29)) + "?#iefix) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(203)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(204)) + ") format(\"woff\"), url(" + escape(__webpack_require__(205)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(206)) + "#fontawesome) format(\"svg\"); }\n\n.far {\n  font-family: 'Font Awesome 5 Free';\n  font-weight: 400; }\n@font-face {\n  font-family: 'Font Awesome 5 Free';\n  font-style: normal;\n  font-weight: 900;\n  src: url(" + escape(__webpack_require__(30)) + ");\n  src: url(" + escape(__webpack_require__(30)) + "?#iefix) format(\"embedded-opentype\"), url(" + escape(__webpack_require__(207)) + ") format(\"woff2\"), url(" + escape(__webpack_require__(208)) + ") format(\"woff\"), url(" + escape(__webpack_require__(209)) + ") format(\"truetype\"), url(" + escape(__webpack_require__(210)) + "#fontawesome) format(\"svg\"); }\n\n.fa,\n.fas {\n  font-family: 'Font Awesome 5 Free';\n  font-weight: 900; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?48461ea4e797c9774dabb4a0440d2f56";
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?7b464e274bc331f9a765d765359635a5";
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?947b9537bc0fecc8130d48eb753495a1";
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?b5472631dbace30d549357ec325b9c62";
 
 /***/ }),
-/* 201 */
+/* 203 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?949a2b066ec37f5a384712fc7beaf2f1";
 
 /***/ }),
-/* 202 */
+/* 204 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?381af09a1366b6c2ae65eac5dd6f0588";
 
 /***/ }),
-/* 203 */
+/* 205 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?73fe7f1effbf382f499831a0a9f18626";
 
 /***/ }),
-/* 204 */
+/* 206 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?b5a61b229c9c92a6ac21f5b0e3c6e9f1";
 
 /***/ }),
-/* 205 */
+/* 207 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?14a08198ec7d1eb96d515362293fed36";
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?815694de1120d6c1e9d1f0895ee81056";
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?0079a0ab6bec4da7d6e16f2a2e87cd71";
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?38508b2e7fac045869a86a15936433f7";
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(210);
+var content = __webpack_require__(212);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -90983,7 +91085,7 @@ if(false) {
 }
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -90997,19 +91099,19 @@ exports.push([module.i, "/*!\n* Vuetify v1.2.0\n* Forged by John Leider\n* Relea
 
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(212)
+  __webpack_require__(214)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(215)
+var __vue_script__ = __webpack_require__(217)
 /* template */
-var __vue_template__ = __webpack_require__(216)
+var __vue_template__ = __webpack_require__(218)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91048,13 +91150,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(213);
+var content = __webpack_require__(215);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -91074,7 +91176,7 @@ if(false) {
 }
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -91088,7 +91190,7 @@ exports.push([module.i, "\nimg[data-v-299e239e] {\n    height: 200px !important;
 
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports) {
 
 /**
@@ -91121,7 +91223,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91295,7 +91397,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -91694,19 +91796,19 @@ if (false) {
 }
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(218)
+  __webpack_require__(220)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(220)
+var __vue_script__ = __webpack_require__(222)
 /* template */
-var __vue_template__ = __webpack_require__(221)
+var __vue_template__ = __webpack_require__(223)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91745,13 +91847,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(219);
+var content = __webpack_require__(221);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -91771,7 +91873,7 @@ if(false) {
 }
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -91785,18 +91887,11 @@ exports.push([module.i, "\n.v-expansion-panel__container[data-v-520e3a02]:hover 
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -92073,7 +92168,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -92253,10 +92348,69 @@ var render = function() {
                         ),
                         _vm._v(" "),
                         _c(
+                          "v-list-group",
+                          { attrs: { "prepend-icon": "dialpad" } },
+                          [
+                            _c(
+                              "v-list-tile",
+                              {
+                                attrs: { slot: "activator" },
+                                slot: "activator"
+                              },
+                              [_c("v-list-tile-title", [_vm._v("Orders")])],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "v-list__tile theme--light",
+                                staticStyle: { "text-decoration": "none" },
+                                attrs: { to: "/AdminOrders" }
+                              },
+                              [
+                                _c(
+                                  "v-list-tile-action",
+                                  [_c("v-icon", [_vm._v("map")])],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c("v-list-tile-title", [
+                                  _vm._v("Manage Orders")
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "v-list__tile theme--light",
+                                staticStyle: { "text-decoration": "none" },
+                                attrs: { to: "/Adminpayments" }
+                              },
+                              [
+                                _c(
+                                  "v-list-tile-action",
+                                  [_c("v-icon", [_vm._v("attach_money")])],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c("v-list-tile-title", [
+                                  _vm._v("Manage Payments")
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
                           "router-link",
                           {
                             staticClass: "v-list__tile v-list__tile--link",
-                            attrs: { to: "/AdminOrders" }
+                            attrs: { to: "/menu" }
                           },
                           [
                             _c("div", { staticClass: "v-list__tile__action" }, [
@@ -92266,7 +92420,7 @@ var render = function() {
                                   staticClass: "icon material-icons",
                                   attrs: { "aria-hidden": "true" }
                                 },
-                                [_vm._v("email")]
+                                [_vm._v("account_circle")]
                               )
                             ]),
                             _vm._v(" "),
@@ -92277,7 +92431,11 @@ var render = function() {
                                 _c(
                                   "div",
                                   { staticClass: "v-list__tile__title" },
-                                  [_vm._v("Manage Orders")]
+                                  [
+                                    _vm._v(
+                                      "\n                                    Menu\n                                "
+                                    )
+                                  ]
                                 )
                               ]
                             )
@@ -92432,15 +92590,15 @@ if (false) {
 }
 
 /***/ }),
-/* 222 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(223)
+var __vue_script__ = __webpack_require__(225)
 /* template */
-var __vue_template__ = __webpack_require__(224)
+var __vue_template__ = __webpack_require__(226)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -92479,7 +92637,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 223 */
+/* 225 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92528,7 +92686,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 224 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -92596,19 +92754,19 @@ if (false) {
 }
 
 /***/ }),
-/* 225 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(226)
+  __webpack_require__(228)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(228)
+var __vue_script__ = __webpack_require__(230)
 /* template */
-var __vue_template__ = __webpack_require__(282)
+var __vue_template__ = __webpack_require__(284)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -92647,13 +92805,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 226 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(227);
+var content = __webpack_require__(229);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -92673,7 +92831,7 @@ if(false) {
 }
 
 /***/ }),
-/* 227 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -92687,15 +92845,15 @@ exports.push([module.i, "\n.justify-center[data-v-040e2ab9] {\r\n    margin-top:
 
 
 /***/ }),
-/* 228 */
+/* 230 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_Category__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_Product__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_Order__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_Brand__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_Category__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__charts_Product__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__charts_Order__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__charts_Brand__ = __webpack_require__(283);
 //
 //
 //
@@ -92941,7 +93099,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             AllapprovedShipment: {},
             notifications: [],
             products: {},
-            orders: {},
+            orders: null,
             colorCache: {},
             AllPending: null,
             AllDelivered: null
@@ -92961,7 +93119,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getChartOrders: function getChartOrders() {
             var _this2 = this;
 
-            axios.get('/orders').then(function (response) {
+            axios.get('/countOrders').then(function (response) {
                 _this2.orders = response.data;
             }).catch(function (error) {
                 _this2.errors = error.response.data.errors;
@@ -92996,13 +93154,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }).catch(function (error) {
             _this4.errors = error.response.data.errors;
         });
-        // axios.get('/countPending')
-        //     .then((response) => {
-        //         this.AllPending = response.data
-        //     })
-        //     .catch((error) => {
-        //         this.errors = error.response.data.errors
-        //     })
+        axios.get('/countPending').then(function (response) {
+            _this4.AllPending = response.data;
+        }).catch(function (error) {
+            _this4.errors = error.response.data.errors;
+        });
 
         axios.get('/getProducts').then(function (response) {
             _this4.AllProducts = response.data;
@@ -93060,7 +93216,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 229 */
+/* 231 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93124,7 +93280,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 230 */
+/* 232 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93224,7 +93380,7 @@ var reactiveProp = {
 });
 
 /***/ }),
-/* 231 */
+/* 233 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93238,7 +93394,7 @@ var reactiveProp = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Radar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Bubble; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Scatter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_chart_js__);
 
 function generateChart(chartId, chartType) {
@@ -93337,62 +93493,62 @@ var Scatter = generateChart('scatter-chart', 'scatter');
 });
 
 /***/ }),
-/* 232 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * @namespace Chart
  */
-var Chart = __webpack_require__(233)();
+var Chart = __webpack_require__(235)();
 
-Chart.helpers = __webpack_require__(1);
+Chart.helpers = __webpack_require__(2);
 
 // @todo dispatch these helpers into appropriated helpers/helpers.* file and write unit tests!
-__webpack_require__(237)(Chart);
+__webpack_require__(239)(Chart);
 
 Chart.defaults = __webpack_require__(3);
 Chart.Element = __webpack_require__(7);
 Chart.elements = __webpack_require__(8);
-Chart.Interaction = __webpack_require__(31);
+Chart.Interaction = __webpack_require__(32);
 Chart.layouts = __webpack_require__(10);
-Chart.platform = __webpack_require__(32);
-Chart.plugins = __webpack_require__(33);
+Chart.platform = __webpack_require__(33);
+Chart.plugins = __webpack_require__(34);
 Chart.Ticks = __webpack_require__(11);
 
-__webpack_require__(248)(Chart);
-__webpack_require__(249)(Chart);
 __webpack_require__(250)(Chart);
 __webpack_require__(251)(Chart);
 __webpack_require__(252)(Chart);
 __webpack_require__(253)(Chart);
-
 __webpack_require__(254)(Chart);
 __webpack_require__(255)(Chart);
+
 __webpack_require__(256)(Chart);
 __webpack_require__(257)(Chart);
 __webpack_require__(258)(Chart);
 __webpack_require__(259)(Chart);
+__webpack_require__(260)(Chart);
+__webpack_require__(261)(Chart);
 
 // Controllers must be loaded after elements
 // See Chart.core.datasetController.dataElementType
-__webpack_require__(261)(Chart);
-__webpack_require__(262)(Chart);
 __webpack_require__(263)(Chart);
 __webpack_require__(264)(Chart);
 __webpack_require__(265)(Chart);
 __webpack_require__(266)(Chart);
 __webpack_require__(267)(Chart);
-
 __webpack_require__(268)(Chart);
 __webpack_require__(269)(Chart);
+
 __webpack_require__(270)(Chart);
 __webpack_require__(271)(Chart);
 __webpack_require__(272)(Chart);
 __webpack_require__(273)(Chart);
 __webpack_require__(274)(Chart);
+__webpack_require__(275)(Chart);
+__webpack_require__(276)(Chart);
 
 // Loading built-it plugins
-var plugins = __webpack_require__(275);
+var plugins = __webpack_require__(277);
 for (var k in plugins) {
 	if (plugins.hasOwnProperty(k)) {
 		Chart.plugins.register(plugins[k]);
@@ -93465,7 +93621,7 @@ Chart.layoutService = Chart.layouts;
 
 
 /***/ }),
-/* 233 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -93521,7 +93677,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 234 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -93778,7 +93934,7 @@ helpers.easingEffects = effects;
 
 
 /***/ }),
-/* 235 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -93999,7 +94155,7 @@ helpers.drawRoundedRectangle = function(ctx) {
 
 
 /***/ }),
-/* 236 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94102,7 +94258,7 @@ module.exports = {
 
 
 /***/ }),
-/* 237 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94110,9 +94266,9 @@ module.exports = {
 /* global document: false */
 
 
-var color = __webpack_require__(30);
+var color = __webpack_require__(31);
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 module.exports = function(Chart) {
 
@@ -94720,10 +94876,10 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 238 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var conversions = __webpack_require__(239);
+var conversions = __webpack_require__(241);
 
 var convert = function() {
    return new Converter();
@@ -94817,7 +94973,7 @@ Converter.prototype.getValues = function(space) {
 module.exports = convert;
 
 /***/ }),
-/* 239 */
+/* 241 */
 /***/ (function(module, exports) {
 
 /* MIT license */
@@ -95521,11 +95677,11 @@ for (var key in cssKeywords) {
 
 
 /***/ }),
-/* 240 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var colorNames = __webpack_require__(241);
+var colorNames = __webpack_require__(243);
 
 module.exports = {
    getRgba: getRgba,
@@ -95748,7 +95904,7 @@ for (var name in colorNames) {
 
 
 /***/ }),
-/* 241 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95907,7 +96063,7 @@ module.exports = {
 
 
 /***/ }),
-/* 242 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95915,7 +96071,7 @@ module.exports = {
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('global', {
 	elements: {
@@ -96021,7 +96177,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 243 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96029,7 +96185,7 @@ module.exports = Element.extend({
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 var globalDefaults = defaults.global;
 
@@ -96119,7 +96275,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 244 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96127,7 +96283,7 @@ module.exports = Element.extend({
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 var defaultColor = defaults.global.defaultColor;
 
@@ -96232,7 +96388,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 245 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96456,7 +96612,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 246 */
+/* 248 */
 /***/ (function(module, exports) {
 
 /**
@@ -96477,7 +96633,7 @@ module.exports = {
 
 
 /***/ }),
-/* 247 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96487,7 +96643,7 @@ module.exports = {
 
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 var EXPANDO_KEY = '$chartjs';
 var CSS_PREFIX = 'chartjs-';
@@ -96941,7 +97097,7 @@ helpers.removeEvent = removeEventListener;
 
 
 /***/ }),
-/* 248 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96950,7 +97106,7 @@ helpers.removeEvent = removeEventListener;
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('global', {
 	animation: {
@@ -97120,18 +97276,18 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 249 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
-var Interaction = __webpack_require__(31);
+var helpers = __webpack_require__(2);
+var Interaction = __webpack_require__(32);
 var layouts = __webpack_require__(10);
-var platform = __webpack_require__(32);
-var plugins = __webpack_require__(33);
+var platform = __webpack_require__(33);
+var plugins = __webpack_require__(34);
 
 module.exports = function(Chart) {
 
@@ -98074,13 +98230,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 250 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 module.exports = function(Chart) {
 
@@ -98411,14 +98567,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 251 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var layouts = __webpack_require__(10);
 
 module.exports = function(Chart) {
@@ -98464,7 +98620,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 252 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98472,7 +98628,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var Ticks = __webpack_require__(11);
 
 defaults._set('scale', {
@@ -99407,7 +99563,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 253 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -99415,7 +99571,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('global', {
 	tooltips: {
@@ -100362,13 +100518,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 254 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 /**
  * Generate a set of linear ticks
@@ -100555,7 +100711,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 255 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100695,14 +100851,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 256 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var Ticks = __webpack_require__(11);
 
 module.exports = function(Chart) {
@@ -100893,13 +101049,13 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 257 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var Ticks = __webpack_require__(11);
 
 /**
@@ -101247,14 +101403,14 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 258 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var Ticks = __webpack_require__(11);
 
 module.exports = function(Chart) {
@@ -101783,7 +101939,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 259 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101794,7 +101950,7 @@ var moment = __webpack_require__(0);
 moment = typeof moment === 'function' ? moment : window.moment;
 
 var defaults = __webpack_require__(3);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 // Integer constants are from the ES6 spec.
 var MIN_INTEGER = Number.MIN_SAFE_INTEGER || -9007199254740991;
@@ -102573,256 +102729,256 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 260 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 34,
-	"./af.js": 34,
-	"./ar": 35,
-	"./ar-dz": 36,
-	"./ar-dz.js": 36,
-	"./ar-kw": 37,
-	"./ar-kw.js": 37,
-	"./ar-ly": 38,
-	"./ar-ly.js": 38,
-	"./ar-ma": 39,
-	"./ar-ma.js": 39,
-	"./ar-sa": 40,
-	"./ar-sa.js": 40,
-	"./ar-tn": 41,
-	"./ar-tn.js": 41,
-	"./ar.js": 35,
-	"./az": 42,
-	"./az.js": 42,
-	"./be": 43,
-	"./be.js": 43,
-	"./bg": 44,
-	"./bg.js": 44,
-	"./bm": 45,
-	"./bm.js": 45,
-	"./bn": 46,
-	"./bn.js": 46,
-	"./bo": 47,
-	"./bo.js": 47,
-	"./br": 48,
-	"./br.js": 48,
-	"./bs": 49,
-	"./bs.js": 49,
-	"./ca": 50,
-	"./ca.js": 50,
-	"./cs": 51,
-	"./cs.js": 51,
-	"./cv": 52,
-	"./cv.js": 52,
-	"./cy": 53,
-	"./cy.js": 53,
-	"./da": 54,
-	"./da.js": 54,
-	"./de": 55,
-	"./de-at": 56,
-	"./de-at.js": 56,
-	"./de-ch": 57,
-	"./de-ch.js": 57,
-	"./de.js": 55,
-	"./dv": 58,
-	"./dv.js": 58,
-	"./el": 59,
-	"./el.js": 59,
-	"./en-au": 60,
-	"./en-au.js": 60,
-	"./en-ca": 61,
-	"./en-ca.js": 61,
-	"./en-gb": 62,
-	"./en-gb.js": 62,
-	"./en-ie": 63,
-	"./en-ie.js": 63,
-	"./en-il": 64,
-	"./en-il.js": 64,
-	"./en-nz": 65,
-	"./en-nz.js": 65,
-	"./eo": 66,
-	"./eo.js": 66,
-	"./es": 67,
-	"./es-do": 68,
-	"./es-do.js": 68,
-	"./es-us": 69,
-	"./es-us.js": 69,
-	"./es.js": 67,
-	"./et": 70,
-	"./et.js": 70,
-	"./eu": 71,
-	"./eu.js": 71,
-	"./fa": 72,
-	"./fa.js": 72,
-	"./fi": 73,
-	"./fi.js": 73,
-	"./fo": 74,
-	"./fo.js": 74,
-	"./fr": 75,
-	"./fr-ca": 76,
-	"./fr-ca.js": 76,
-	"./fr-ch": 77,
-	"./fr-ch.js": 77,
-	"./fr.js": 75,
-	"./fy": 78,
-	"./fy.js": 78,
-	"./gd": 79,
-	"./gd.js": 79,
-	"./gl": 80,
-	"./gl.js": 80,
-	"./gom-latn": 81,
-	"./gom-latn.js": 81,
-	"./gu": 82,
-	"./gu.js": 82,
-	"./he": 83,
-	"./he.js": 83,
-	"./hi": 84,
-	"./hi.js": 84,
-	"./hr": 85,
-	"./hr.js": 85,
-	"./hu": 86,
-	"./hu.js": 86,
-	"./hy-am": 87,
-	"./hy-am.js": 87,
-	"./id": 88,
-	"./id.js": 88,
-	"./is": 89,
-	"./is.js": 89,
-	"./it": 90,
-	"./it.js": 90,
-	"./ja": 91,
-	"./ja.js": 91,
-	"./jv": 92,
-	"./jv.js": 92,
-	"./ka": 93,
-	"./ka.js": 93,
-	"./kk": 94,
-	"./kk.js": 94,
-	"./km": 95,
-	"./km.js": 95,
-	"./kn": 96,
-	"./kn.js": 96,
-	"./ko": 97,
-	"./ko.js": 97,
-	"./ky": 98,
-	"./ky.js": 98,
-	"./lb": 99,
-	"./lb.js": 99,
-	"./lo": 100,
-	"./lo.js": 100,
-	"./lt": 101,
-	"./lt.js": 101,
-	"./lv": 102,
-	"./lv.js": 102,
-	"./me": 103,
-	"./me.js": 103,
-	"./mi": 104,
-	"./mi.js": 104,
-	"./mk": 105,
-	"./mk.js": 105,
-	"./ml": 106,
-	"./ml.js": 106,
-	"./mn": 107,
-	"./mn.js": 107,
-	"./mr": 108,
-	"./mr.js": 108,
-	"./ms": 109,
-	"./ms-my": 110,
-	"./ms-my.js": 110,
-	"./ms.js": 109,
-	"./mt": 111,
-	"./mt.js": 111,
-	"./my": 112,
-	"./my.js": 112,
-	"./nb": 113,
-	"./nb.js": 113,
-	"./ne": 114,
-	"./ne.js": 114,
-	"./nl": 115,
-	"./nl-be": 116,
-	"./nl-be.js": 116,
-	"./nl.js": 115,
-	"./nn": 117,
-	"./nn.js": 117,
-	"./pa-in": 118,
-	"./pa-in.js": 118,
-	"./pl": 119,
-	"./pl.js": 119,
-	"./pt": 120,
-	"./pt-br": 121,
-	"./pt-br.js": 121,
-	"./pt.js": 120,
-	"./ro": 122,
-	"./ro.js": 122,
-	"./ru": 123,
-	"./ru.js": 123,
-	"./sd": 124,
-	"./sd.js": 124,
-	"./se": 125,
-	"./se.js": 125,
-	"./si": 126,
-	"./si.js": 126,
-	"./sk": 127,
-	"./sk.js": 127,
-	"./sl": 128,
-	"./sl.js": 128,
-	"./sq": 129,
-	"./sq.js": 129,
-	"./sr": 130,
-	"./sr-cyrl": 131,
-	"./sr-cyrl.js": 131,
-	"./sr.js": 130,
-	"./ss": 132,
-	"./ss.js": 132,
-	"./sv": 133,
-	"./sv.js": 133,
-	"./sw": 134,
-	"./sw.js": 134,
-	"./ta": 135,
-	"./ta.js": 135,
-	"./te": 136,
-	"./te.js": 136,
-	"./tet": 137,
-	"./tet.js": 137,
-	"./tg": 138,
-	"./tg.js": 138,
-	"./th": 139,
-	"./th.js": 139,
-	"./tl-ph": 140,
-	"./tl-ph.js": 140,
-	"./tlh": 141,
-	"./tlh.js": 141,
-	"./tr": 142,
-	"./tr.js": 142,
-	"./tzl": 143,
-	"./tzl.js": 143,
-	"./tzm": 144,
-	"./tzm-latn": 145,
-	"./tzm-latn.js": 145,
-	"./tzm.js": 144,
-	"./ug-cn": 146,
-	"./ug-cn.js": 146,
-	"./uk": 147,
-	"./uk.js": 147,
-	"./ur": 148,
-	"./ur.js": 148,
-	"./uz": 149,
-	"./uz-latn": 150,
-	"./uz-latn.js": 150,
-	"./uz.js": 149,
-	"./vi": 151,
-	"./vi.js": 151,
-	"./x-pseudo": 152,
-	"./x-pseudo.js": 152,
-	"./yo": 153,
-	"./yo.js": 153,
-	"./zh-cn": 154,
-	"./zh-cn.js": 154,
-	"./zh-hk": 155,
-	"./zh-hk.js": 155,
-	"./zh-tw": 156,
-	"./zh-tw.js": 156
+	"./af": 35,
+	"./af.js": 35,
+	"./ar": 36,
+	"./ar-dz": 37,
+	"./ar-dz.js": 37,
+	"./ar-kw": 38,
+	"./ar-kw.js": 38,
+	"./ar-ly": 39,
+	"./ar-ly.js": 39,
+	"./ar-ma": 40,
+	"./ar-ma.js": 40,
+	"./ar-sa": 41,
+	"./ar-sa.js": 41,
+	"./ar-tn": 42,
+	"./ar-tn.js": 42,
+	"./ar.js": 36,
+	"./az": 43,
+	"./az.js": 43,
+	"./be": 44,
+	"./be.js": 44,
+	"./bg": 45,
+	"./bg.js": 45,
+	"./bm": 46,
+	"./bm.js": 46,
+	"./bn": 47,
+	"./bn.js": 47,
+	"./bo": 48,
+	"./bo.js": 48,
+	"./br": 49,
+	"./br.js": 49,
+	"./bs": 50,
+	"./bs.js": 50,
+	"./ca": 51,
+	"./ca.js": 51,
+	"./cs": 52,
+	"./cs.js": 52,
+	"./cv": 53,
+	"./cv.js": 53,
+	"./cy": 54,
+	"./cy.js": 54,
+	"./da": 55,
+	"./da.js": 55,
+	"./de": 56,
+	"./de-at": 57,
+	"./de-at.js": 57,
+	"./de-ch": 58,
+	"./de-ch.js": 58,
+	"./de.js": 56,
+	"./dv": 59,
+	"./dv.js": 59,
+	"./el": 60,
+	"./el.js": 60,
+	"./en-au": 61,
+	"./en-au.js": 61,
+	"./en-ca": 62,
+	"./en-ca.js": 62,
+	"./en-gb": 63,
+	"./en-gb.js": 63,
+	"./en-ie": 64,
+	"./en-ie.js": 64,
+	"./en-il": 65,
+	"./en-il.js": 65,
+	"./en-nz": 66,
+	"./en-nz.js": 66,
+	"./eo": 67,
+	"./eo.js": 67,
+	"./es": 68,
+	"./es-do": 69,
+	"./es-do.js": 69,
+	"./es-us": 70,
+	"./es-us.js": 70,
+	"./es.js": 68,
+	"./et": 71,
+	"./et.js": 71,
+	"./eu": 72,
+	"./eu.js": 72,
+	"./fa": 73,
+	"./fa.js": 73,
+	"./fi": 74,
+	"./fi.js": 74,
+	"./fo": 75,
+	"./fo.js": 75,
+	"./fr": 76,
+	"./fr-ca": 77,
+	"./fr-ca.js": 77,
+	"./fr-ch": 78,
+	"./fr-ch.js": 78,
+	"./fr.js": 76,
+	"./fy": 79,
+	"./fy.js": 79,
+	"./gd": 80,
+	"./gd.js": 80,
+	"./gl": 81,
+	"./gl.js": 81,
+	"./gom-latn": 82,
+	"./gom-latn.js": 82,
+	"./gu": 83,
+	"./gu.js": 83,
+	"./he": 84,
+	"./he.js": 84,
+	"./hi": 85,
+	"./hi.js": 85,
+	"./hr": 86,
+	"./hr.js": 86,
+	"./hu": 87,
+	"./hu.js": 87,
+	"./hy-am": 88,
+	"./hy-am.js": 88,
+	"./id": 89,
+	"./id.js": 89,
+	"./is": 90,
+	"./is.js": 90,
+	"./it": 91,
+	"./it.js": 91,
+	"./ja": 92,
+	"./ja.js": 92,
+	"./jv": 93,
+	"./jv.js": 93,
+	"./ka": 94,
+	"./ka.js": 94,
+	"./kk": 95,
+	"./kk.js": 95,
+	"./km": 96,
+	"./km.js": 96,
+	"./kn": 97,
+	"./kn.js": 97,
+	"./ko": 98,
+	"./ko.js": 98,
+	"./ky": 99,
+	"./ky.js": 99,
+	"./lb": 100,
+	"./lb.js": 100,
+	"./lo": 101,
+	"./lo.js": 101,
+	"./lt": 102,
+	"./lt.js": 102,
+	"./lv": 103,
+	"./lv.js": 103,
+	"./me": 104,
+	"./me.js": 104,
+	"./mi": 105,
+	"./mi.js": 105,
+	"./mk": 106,
+	"./mk.js": 106,
+	"./ml": 107,
+	"./ml.js": 107,
+	"./mn": 108,
+	"./mn.js": 108,
+	"./mr": 109,
+	"./mr.js": 109,
+	"./ms": 110,
+	"./ms-my": 111,
+	"./ms-my.js": 111,
+	"./ms.js": 110,
+	"./mt": 112,
+	"./mt.js": 112,
+	"./my": 113,
+	"./my.js": 113,
+	"./nb": 114,
+	"./nb.js": 114,
+	"./ne": 115,
+	"./ne.js": 115,
+	"./nl": 116,
+	"./nl-be": 117,
+	"./nl-be.js": 117,
+	"./nl.js": 116,
+	"./nn": 118,
+	"./nn.js": 118,
+	"./pa-in": 119,
+	"./pa-in.js": 119,
+	"./pl": 120,
+	"./pl.js": 120,
+	"./pt": 121,
+	"./pt-br": 122,
+	"./pt-br.js": 122,
+	"./pt.js": 121,
+	"./ro": 123,
+	"./ro.js": 123,
+	"./ru": 124,
+	"./ru.js": 124,
+	"./sd": 125,
+	"./sd.js": 125,
+	"./se": 126,
+	"./se.js": 126,
+	"./si": 127,
+	"./si.js": 127,
+	"./sk": 128,
+	"./sk.js": 128,
+	"./sl": 129,
+	"./sl.js": 129,
+	"./sq": 130,
+	"./sq.js": 130,
+	"./sr": 131,
+	"./sr-cyrl": 132,
+	"./sr-cyrl.js": 132,
+	"./sr.js": 131,
+	"./ss": 133,
+	"./ss.js": 133,
+	"./sv": 134,
+	"./sv.js": 134,
+	"./sw": 135,
+	"./sw.js": 135,
+	"./ta": 136,
+	"./ta.js": 136,
+	"./te": 137,
+	"./te.js": 137,
+	"./tet": 138,
+	"./tet.js": 138,
+	"./tg": 139,
+	"./tg.js": 139,
+	"./th": 140,
+	"./th.js": 140,
+	"./tl-ph": 141,
+	"./tl-ph.js": 141,
+	"./tlh": 142,
+	"./tlh.js": 142,
+	"./tr": 143,
+	"./tr.js": 143,
+	"./tzl": 144,
+	"./tzl.js": 144,
+	"./tzm": 145,
+	"./tzm-latn": 146,
+	"./tzm-latn.js": 146,
+	"./tzm.js": 145,
+	"./ug-cn": 147,
+	"./ug-cn.js": 147,
+	"./uk": 148,
+	"./uk.js": 148,
+	"./ur": 149,
+	"./ur.js": 149,
+	"./uz": 150,
+	"./uz-latn": 151,
+	"./uz-latn.js": 151,
+	"./uz.js": 150,
+	"./vi": 152,
+	"./vi.js": 152,
+	"./x-pseudo": 153,
+	"./x-pseudo.js": 153,
+	"./yo": 154,
+	"./yo.js": 154,
+	"./zh-cn": 155,
+	"./zh-cn.js": 155,
+	"./zh-hk": 156,
+	"./zh-hk.js": 156,
+	"./zh-tw": 157,
+	"./zh-tw.js": 157
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -102838,10 +102994,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 260;
+webpackContext.id = 262;
 
 /***/ }),
-/* 261 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102849,7 +103005,7 @@ webpackContext.id = 260;
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('bar', {
 	hover: {
@@ -103352,7 +103508,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 262 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103360,7 +103516,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('bubble', {
 	hover: {
@@ -103539,7 +103695,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 263 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103547,7 +103703,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('doughnut', {
 	animation: {
@@ -103845,7 +104001,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 264 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103853,7 +104009,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('line', {
 	showLines: true,
@@ -104185,7 +104341,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 265 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104193,7 +104349,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('polarArea', {
 	scale: {
@@ -104414,7 +104570,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 266 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104422,7 +104578,7 @@ module.exports = function(Chart) {
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('radar', {
 	scale: {
@@ -104589,7 +104745,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 267 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104638,7 +104794,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 268 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104656,7 +104812,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 269 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104673,7 +104829,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 270 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104691,7 +104847,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 271 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104709,7 +104865,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 272 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104727,7 +104883,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 273 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104745,7 +104901,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 274 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104760,20 +104916,20 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 275 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = {};
-module.exports.filler = __webpack_require__(276);
-module.exports.legend = __webpack_require__(277);
-module.exports.title = __webpack_require__(278);
+module.exports.filler = __webpack_require__(278);
+module.exports.legend = __webpack_require__(279);
+module.exports.title = __webpack_require__(280);
 
 
 /***/ }),
-/* 276 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104787,7 +104943,7 @@ module.exports.title = __webpack_require__(278);
 
 var defaults = __webpack_require__(3);
 var elements = __webpack_require__(8);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 
 defaults._set('global', {
 	plugins: {
@@ -105098,7 +105254,7 @@ module.exports = {
 
 
 /***/ }),
-/* 277 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105106,7 +105262,7 @@ module.exports = {
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var layouts = __webpack_require__(10);
 
 var noop = helpers.noop;
@@ -105681,7 +105837,7 @@ module.exports = {
 
 
 /***/ }),
-/* 278 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105689,7 +105845,7 @@ module.exports = {
 
 var defaults = __webpack_require__(3);
 var Element = __webpack_require__(7);
-var helpers = __webpack_require__(1);
+var helpers = __webpack_require__(2);
 var layouts = __webpack_require__(10);
 
 var noop = helpers.noop;
@@ -105940,7 +106096,7 @@ module.exports = {
 
 
 /***/ }),
-/* 279 */
+/* 281 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106004,7 +106160,7 @@ module.exports = {
 });
 
 /***/ }),
-/* 280 */
+/* 282 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106024,7 +106180,7 @@ module.exports = {
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/orders').then(function (response) {
+    axios.get('/getChartOrders').then(function (response) {
       // console.log(response);
       _this.label = response.data.data.lables;
       _this.rows = response.data.data.rows;
@@ -106048,7 +106204,7 @@ module.exports = {
     ref: function ref() {
       var _this2 = this;
 
-      axios.get('/orders').then(function (response) {
+      axios.get('/getChartOrders').then(function (response) {
         // console.log(response);
         _this2.label = response.data.lables;
         _this2.data = response.data.rows;
@@ -106068,7 +106224,7 @@ module.exports = {
 });
 
 /***/ }),
-/* 281 */
+/* 283 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106132,7 +106288,7 @@ module.exports = {
 });
 
 /***/ }),
-/* 282 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -106307,9 +106463,7 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("h3", { staticClass: "info-title" }, [
                                     _c("span", [
-                                      _c("b", [
-                                        _vm._v(_vm._s(_vm.orders.length))
-                                      ])
+                                      _c("b", [_vm._v(_vm._s(_vm.orders))])
                                     ])
                                   ]),
                                   _vm._v(" "),
@@ -106500,13 +106654,18 @@ var render = function() {
                                       _c("h3", { staticClass: "info-title" }, [
                                         _c("span", [
                                           _c("b", [
-                                            _vm._v(_vm._s(_vm.AllCanceled))
+                                            _vm._v(
+                                              _vm._s(
+                                                parseInt(_vm.orders) -
+                                                  parseInt(_vm.AllPending)
+                                              )
+                                            )
                                           ])
                                         ])
                                       ]),
                                       _vm._v(" "),
                                       _c("h6", { staticClass: "stats-title" }, [
-                                        _c("strong", [_vm._v("Cancelled")])
+                                        _c("strong", [_vm._v("Delivered")])
                                       ])
                                     ])
                                   ])
@@ -106573,272 +106732,23 @@ if (false) {
 }
 
 /***/ }),
-/* 283 */
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(284)
+  __webpack_require__(290)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(286)
+var __vue_script__ = __webpack_require__(292)
 /* template */
-var __vue_template__ = __webpack_require__(298)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-19999bf4"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/include/Navigation.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-19999bf4", Component.options)
-  } else {
-    hotAPI.reload("data-v-19999bf4", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 284 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(285);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(6)("5eaf9d94", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19999bf4\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navigation.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-19999bf4\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navigation.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 285 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.dropdown:hover .dropdown-menu[data-v-19999bf4] {\r\n    display: block;\n}\n.navbar .dropdown-menu[data-v-19999bf4] {\r\n    width: 250px !important;\n}\n.navbar-expand-lg[data-v-19999bf4] {\r\n    position: fixed;\r\n    background: #132f51 !important;\r\n    z-index: 1;\r\n    width: 100%;\r\n    margin-top: -25px;\r\n    padding: 10px 0px;\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 286 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_Cart__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_Cart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cart_Cart__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_Login__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_Login___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__login_Login__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    // router,
-    components: {
-        Login: __WEBPACK_IMPORTED_MODULE_1__login_Login___default.a,
-        myCart: __WEBPACK_IMPORTED_MODULE_0__cart_Cart___default.a
-    },
-    data: function data() {
-        return {
-            cartItems: [],
-            categories: [],
-            drawer: true,
-            right: null,
-            snackbar: false,
-            Scolor: '',
-            timeout: 5000,
-            message: "Success"
-        };
-    },
-
-    methods: {
-        categoryPro: function categoryPro(data) {
-            var _this = this;
-
-            // console.log(data)
-            axios.post('/filterProduct/' + data.id).then(function (response) {
-                // this.categories = response.data;
-                eventBus.$emit("filterEvent", response.data);
-            }).catch(function (error) {
-                // this.loading = false;
-                _this.errors = error.response.data.errors;
-            });
-            // router.go('')
-            // this.$router.push(`/filter/${data.id}`)
-        },
-        getCart: function getCart() {
-            var _this2 = this;
-
-            axios.get('/getCart').then(function (response) {
-                _this2.cartItems = response.data;
-                eventBus.$emit("cartEvent", response.data);
-            });
-        }
-    },
-    mounted: function mounted() {
-        var _this3 = this;
-
-        this.getCart();
-        axios.get("/categories").then(function (response) {
-            _this3.categories = response.data;
-        }).catch(function (error) {
-            // this.loading = false;
-            _this3.errors = error.response.data.errors;
-        });
-    },
-    created: function created() {
-        var _this4 = this;
-
-        eventBus.$on("cartEvent", function (data) {
-            _this4.cartItems = data;
-        });
-        eventBus.$on('alertRequest', function (data) {
-            _this4.showalert();
-        });
-
-        this.timer = window.setInterval(function () {
-            _this4.getCart();
-            // eventBus.$emit("cartEvent", response.data);
-        }, 100000);
-    }
-});
-
-/***/ }),
-/* 287 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(288)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(290)
-/* template */
-var __vue_template__ = __webpack_require__(292)
+var __vue_template__ = __webpack_require__(294)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -106877,13 +106787,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 288 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(289);
+var content = __webpack_require__(291);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -106903,7 +106813,7 @@ if(false) {
 }
 
 /***/ }),
-/* 289 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -106911,18 +106821,18 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 290 */
+/* 292 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_avatar__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_avatar__ = __webpack_require__(293);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_avatar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_avatar__);
 //
 //
@@ -106986,91 +106896,88 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    Avatar: __WEBPACK_IMPORTED_MODULE_0_vue_avatar___default.a
-  },
-  data: function data() {
-    return {
-      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
-      carts: [],
-      newCart: [],
-      cartAdd: false,
-      totalPrice: 0,
-      discount: 0,
-      coupon: ""
-    };
-  },
-  created: function created() {
-    var _this = this;
-
-    eventBus.$on("cartEvent", function (data) {
-      _this.carts = data;
-      _this.cartAdd = true;
-    });
-  },
-
-  methods: {
-    subtructCart: function subtructCart(cart) {
-      var _this2 = this;
-
-      axios.post("/subToCart/" + cart).then(function (response) {
-        eventBus.$emit("cartEvent", response.data);
-        // this.cart = response.data
-        // this.message = "added";
-        // this.snackbar = true;
-      }).catch(function (error) {
-        _this2.loading = false;
-        _this2.errors = error.response.data.errors;
-      });
+    components: {
+        Avatar: __WEBPACK_IMPORTED_MODULE_0_vue_avatar___default.a
     },
-    addToCart: function addToCart(cart) {
-      eventBus.$emit("addCartEvent", cart);
+    data: function data() {
+        return {
+            csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+            carts: [],
+            newCart: [],
+            cartAdd: false,
+            totalPrice: 0,
+            discount: 0,
+            coupon: ""
+        };
     },
-    checkout: function checkout() {},
-    cons: function cons(cart) {
-      console.log(cart);
-    }
-  },
-  computed: {
-    getSubTotal: function getSubTotal() {
-      if (this.carts.length > 0) {
-        this.totalPrice = 0;
-        for (var index = 0; index < this.carts.length; index++) {
-          var element = this.carts[index];
-          this.totalPrice = parseInt(element.price) + this.totalPrice;
+    created: function created() {
+        var _this = this;
+
+        eventBus.$on("cartEvent", function (data) {
+            _this.carts = data;
+            _this.cartAdd = true;
+        });
+    },
+
+    methods: {
+        subtructCart: function subtructCart(cart) {
+            var _this2 = this;
+
+            axios.post("/subToCart/" + cart).then(function (response) {
+                eventBus.$emit("cartEvent", response.data);
+                // this.cart = response.data
+                // this.message = "added";
+                // this.snackbar = true;
+            }).catch(function (error) {
+                _this2.loading = false;
+                _this2.errors = error.response.data.errors;
+            });
+        },
+        addToCart: function addToCart(cart) {
+            eventBus.$emit("addCartEvent", cart);
+        },
+        checkout: function checkout() {},
+        cons: function cons(cart) {
+            console.log(cart);
         }
-      }
-      return this.totalPrice;
     },
-    getTotal: function getTotal() {
-      if (this.carts.length > 0) {
-        return parseInt(this.getSubTotal) - this.discount;
-      }
-    }
-  },
-  mounted: function mounted() {
-    var _this3 = this;
+    computed: {
+        getSubTotal: function getSubTotal() {
+            if (this.carts.length > 0) {
+                this.totalPrice = 0;
+                for (var index = 0; index < this.carts.length; index++) {
+                    var element = this.carts[index];
+                    this.totalPrice = parseInt(element.price) + this.totalPrice;
+                }
+            }
+            return this.totalPrice;
+        },
+        getTotal: function getTotal() {
+            if (this.carts.length > 0) {
+                return parseInt(this.getSubTotal) - this.discount;
+            }
+        }
+    },
+    mounted: function mounted() {
+        var _this3 = this;
 
-    axios.get("/getCart").then(function (response) {
-      _this3.carts = response.data;
-    });
-  }
+        axios.get("/getCart").then(function (response) {
+            _this3.carts = response.data;
+        });
+    }
 });
 
 /***/ }),
-/* 291 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(t,n){ true?module.exports=n():"function"==typeof define&&define.amd?define([],n):"object"==typeof exports?exports.VueAvatar=n():t.VueAvatar=n()}(this,function(){return function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}var e={};return n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{configurable:!1,enumerable:!0,get:r})},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},n.p="/",n(n.s=9)}([function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n,e){t.exports=!e(3)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n){var e=t.exports={version:"2.5.1"};"number"==typeof __e&&(__e=e)},function(t,n,e){var r=e(6),o=e(7);t.exports=function(t){return r(o(t))}},function(t,n,e){var r=e(30);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.Avatar=void 0;var r=e(10),o=function(t){return t&&t.__esModule?t:{default:t}}(r);n.Avatar=o.default,n.default=o.default},function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r=e(12),o=e.n(r),i=e(41),u=e(11),a=u(o.a,i.a,!1,null,null,null);n.default=a.exports},function(t,n){t.exports=function(t,n,e,r,o,i){var u,a=t=t||{},c=typeof t.default;"object"!==c&&"function"!==c||(u=t,a=t.default);var s="function"==typeof a?a.options:a;n&&(s.render=n.render,s.staticRenderFns=n.staticRenderFns,s._compiled=!0),e&&(s.functional=!0),o&&(s._scopeId=o);var f;if(i?(f=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),r&&r.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(i)},s._ssrRegister=f):r&&(f=r),f){var l=s.functional,p=l?s.render:s.beforeCreate;l?(s._injectStyles=f,s.render=function(t,n){return f.call(n),p(t,n)}):s.beforeCreate=p?[].concat(p,f):[f]}return{esModule:u,exports:a,options:s}}},function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r=e(13),o=function(t){return t&&t.__esModule?t:{default:t}}(r);n.default={name:"avatar",props:{username:{type:String},initials:{type:String},backgroundColor:{type:String},color:{type:String},customStyle:{type:Object},inline:{type:Boolean},size:{type:Number,default:50},src:{type:String},rounded:{type:Boolean,default:!0},lighten:{type:Number,default:80}},data:function(){return{backgroundColors:["#F44336","#FF4081","#9C27B0","#673AB7","#3F51B5","#2196F3","#03A9F4","#00BCD4","#009688","#4CAF50","#8BC34A","#CDDC39","#FFC107","#FF9800","#FF5722","#795548","#9E9E9E","#607D8B"]}},mounted:function(){this.isImage||this.$emit("avatar-initials",this.username,this.userInitial)},computed:{background:function(){if(!this.isImage)return this.backgroundColor||this.randomBackgroundColor(this.username.length,this.backgroundColors)},fontColor:function(){if(!this.isImage)return this.color||this.lightenColor(this.background,this.lighten)},isImage:function(){return Boolean(this.src)},style:function(){var t={display:this.inline?"inline-flex":"flex",width:this.size+"px",height:this.size+"px",borderRadius:this.rounded?"50%":0,lineHeight:this.size+Math.floor(this.size/20)+"px",fontWeight:"bold",alignItems:"center",justifyContent:"center"},n={background:"transparent url('"+this.src+"') no-repeat scroll 0% 0% / "+this.size+"px "+this.size+"px content-box border-box"},e={backgroundColor:this.background,font:Math.floor(this.size/2.5)+"px/100px Helvetica, Arial, sans-serif",color:this.fontColor},r=this.isImage?n:e;return(0,o.default)(t,r),t},userInitial:function(){if(!this.isImage){return this.initials||this.initial(this.username)}return""}},methods:{initial:function(t){for(var n=t.split(/[ -]/),e="",r=0;r<n.length;r++)e+=n[r].charAt(0);return e.length>3&&-1!==e.search(/[A-Z]/)&&(e=e.replace(/[a-z]+/g,"")),e=e.substr(0,3).toUpperCase()},randomBackgroundColor:function(t,n){return n[t%n.length]},lightenColor:function(t,n){var e=!1;"#"===t[0]&&(t=t.slice(1),e=!0);var r=parseInt(t,16),o=(r>>16)+n;o>255?o=255:o<0&&(o=0);var i=(r>>8&255)+n;i>255?i=255:i<0&&(i=0);var u=(255&r)+n;return u>255?u=255:u<0&&(u=0),(e?"#":"")+(u|i<<8|o<<16).toString(16)}}}},function(t,n,e){t.exports={default:e(14),__esModule:!0}},function(t,n,e){e(15),t.exports=e(4).Object.assign},function(t,n,e){var r=e(16);r(r.S+r.F,"Object",{assign:e(26)})},function(t,n,e){var r=e(0),o=e(4),i=e(17),u=e(19),a=function(t,n,e){var c,s,f,l=t&a.F,p=t&a.G,d=t&a.S,h=t&a.P,v=t&a.B,y=t&a.W,g=p?o:o[n]||(o[n]={}),b=g.prototype,x=p?r:d?r[n]:(r[n]||{}).prototype;p&&(e=n);for(c in e)(s=!l&&x&&void 0!==x[c])&&c in g||(f=s?x[c]:e[c],g[c]=p&&"function"!=typeof x[c]?e[c]:v&&s?i(f,r):y&&x[c]==f?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n.prototype=t.prototype,n}(f):h&&"function"==typeof f?i(Function.call,f):f,h&&((g.virtual||(g.virtual={}))[c]=f,t&a.R&&b&&!b[c]&&u(b,c,f)))};a.F=1,a.G=2,a.S=4,a.P=8,a.B=16,a.W=32,a.U=64,a.R=128,t.exports=a},function(t,n,e){var r=e(18);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n,e){var r=e(20),o=e(25);t.exports=e(2)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(21),o=e(22),i=e(24),u=Object.defineProperty;n.f=e(2)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(1);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n,e){t.exports=!e(2)&&!e(3)(function(){return 7!=Object.defineProperty(e(23)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(1),o=e(0).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){var r=e(1);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n,e){"use strict";var r=e(27),o=e(38),i=e(39),u=e(40),a=e(6),c=Object.assign;t.exports=!c||e(3)(function(){var t={},n={},e=Symbol(),r="abcdefghijklmnopqrst";return t[e]=7,r.split("").forEach(function(t){n[t]=t}),7!=c({},t)[e]||Object.keys(c({},n)).join("")!=r})?function(t,n){for(var e=u(t),c=arguments.length,s=1,f=o.f,l=i.f;c>s;)for(var p,d=a(arguments[s++]),h=f?r(d).concat(f(d)):r(d),v=h.length,y=0;v>y;)l.call(d,p=h[y++])&&(e[p]=d[p]);return e}:c},function(t,n,e){var r=e(28),o=e(37);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(29),o=e(5),i=e(31)(!1),u=e(34)("IE_PROTO");t.exports=function(t,n){var e,a=o(t),c=0,s=[];for(e in a)e!=u&&r(a,e)&&s.push(e);for(;n.length>c;)r(a,e=n[c++])&&(~i(s,e)||s.push(e));return s}},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(5),o=e(32),i=e(33);t.exports=function(t){return function(n,e,u){var a,c=r(n),s=o(c.length),f=i(u,s);if(t&&e!=e){for(;s>f;)if((a=c[f++])!=a)return!0}else for(;s>f;f++)if((t||f in c)&&c[f]===e)return t||f||0;return!t&&-1}}},function(t,n,e){var r=e(8),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){var r=e(8),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(35)("keys"),o=e(36);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(0),o=r["__core-js_shared__"]||(r["__core-js_shared__"]={});t.exports=function(t){return o[t]||(o[t]={})}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(7);t.exports=function(t){return Object(r(t))}},function(t,n,e){"use strict";var r=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("div",{staticClass:"vue-avatar--wrapper",style:[t.style,t.customStyle]},[e("span",{directives:[{name:"show",rawName:"v-show",value:!this.isImage,expression:"!this.isImage"}]},[t._v(t._s(t.userInitial))])])},o=[],i={render:r,staticRenderFns:o};n.a=i}])});
+!function(t,n){ true?module.exports=n():"function"==typeof define&&define.amd?define([],n):"object"==typeof exports?exports.VueAvatar=n():t.VueAvatar=n()}(this,function(){return function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}var e={};return n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{configurable:!1,enumerable:!0,get:r})},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},n.p="/",n(n.s=9)}([function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n,e){t.exports=!e(3)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n){var e=t.exports={version:"2.5.1"};"number"==typeof __e&&(__e=e)},function(t,n,e){var r=e(6),o=e(7);t.exports=function(t){return r(o(t))}},function(t,n,e){var r=e(30);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.Avatar=void 0;var r=e(10),o=function(t){return t&&t.__esModule?t:{default:t}}(r);n.Avatar=o.default,n.default=o.default},function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r=e(12),o=e.n(r),i=e(41),u=e(11),s=u(o.a,i.a,!1,null,null,null);n.default=s.exports},function(t,n){t.exports=function(t,n,e,r,o,i){var u,s=t=t||{},c=typeof t.default;"object"!==c&&"function"!==c||(u=t,s=t.default);var a="function"==typeof s?s.options:s;n&&(a.render=n.render,a.staticRenderFns=n.staticRenderFns,a._compiled=!0),e&&(a.functional=!0),o&&(a._scopeId=o);var f;if(i?(f=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),r&&r.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(i)},a._ssrRegister=f):r&&(f=r),f){var l=a.functional,p=l?a.render:a.beforeCreate;l?(a._injectStyles=f,a.render=function(t,n){return f.call(n),p(t,n)}):a.beforeCreate=p?[].concat(p,f):[f]}return{esModule:u,exports:s,options:a}}},function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r=e(13),o=function(t){return t&&t.__esModule?t:{default:t}}(r);n.default={name:"avatar",props:{username:{type:String},initials:{type:String},backgroundColor:{type:String},color:{type:String},customStyle:{type:Object},inline:{type:Boolean},size:{type:Number,default:50},src:{type:String},rounded:{type:Boolean,default:!0},lighten:{type:Number,default:80}},data:function(){return{backgroundColors:["#F44336","#FF4081","#9C27B0","#673AB7","#3F51B5","#2196F3","#03A9F4","#00BCD4","#009688","#4CAF50","#8BC34A","#CDDC39","#FFC107","#FF9800","#FF5722","#795548","#9E9E9E","#607D8B"]}},mounted:function(){this.isImage||this.$emit("avatar-initials",this.username,this.userInitial)},computed:{background:function(){if(!this.isImage)return this.backgroundColor||this.randomBackgroundColor(this.username.length,this.backgroundColors)},fontColor:function(){if(!this.isImage)return this.color||this.lightenColor(this.background,this.lighten)},isImage:function(){return Boolean(this.src)},style:function(){var t={display:this.inline?"inline-flex":"flex",width:this.size+"px",height:this.size+"px",borderRadius:this.rounded?"50%":0,lineHeight:this.size+Math.floor(this.size/20)+"px",fontWeight:"bold",alignItems:"center",justifyContent:"center",textAlign:"center"},n={background:"transparent url('"+this.src+"') no-repeat scroll 0% 0% / "+this.size+"px "+this.size+"px content-box border-box"},e={backgroundColor:this.background,font:Math.floor(this.size/2.5)+"px/"+this.size+"px Helvetica, Arial, sans-serif",color:this.fontColor},r=this.isImage?n:e;return(0,o.default)(t,r),t},userInitial:function(){if(!this.isImage){return this.initials||this.initial(this.username)}return""}},methods:{initial:function(t){for(var n=t.split(/[ -]/),e="",r=0;r<n.length;r++)e+=n[r].charAt(0);return e.length>3&&-1!==e.search(/[A-Z]/)&&(e=e.replace(/[a-z]+/g,"")),e=e.substr(0,3).toUpperCase()},randomBackgroundColor:function(t,n){return n[t%n.length]},lightenColor:function(t,n){var e=!1;"#"===t[0]&&(t=t.slice(1),e=!0);var r=parseInt(t,16),o=(r>>16)+n;o>255?o=255:o<0&&(o=0);var i=(r>>8&255)+n;i>255?i=255:i<0&&(i=0);var u=(255&r)+n;return u>255?u=255:u<0&&(u=0),(e?"#":"")+(u|i<<8|o<<16).toString(16)}}}},function(t,n,e){t.exports={default:e(14),__esModule:!0}},function(t,n,e){e(15),t.exports=e(4).Object.assign},function(t,n,e){var r=e(16);r(r.S+r.F,"Object",{assign:e(26)})},function(t,n,e){var r=e(0),o=e(4),i=e(17),u=e(19),s=function(t,n,e){var c,a,f,l=t&s.F,p=t&s.G,d=t&s.S,h=t&s.P,v=t&s.B,y=t&s.W,g=p?o:o[n]||(o[n]={}),x=g.prototype,b=p?r:d?r[n]:(r[n]||{}).prototype;p&&(e=n);for(c in e)(a=!l&&b&&void 0!==b[c])&&c in g||(f=a?b[c]:e[c],g[c]=p&&"function"!=typeof b[c]?e[c]:v&&a?i(f,r):y&&b[c]==f?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n.prototype=t.prototype,n}(f):h&&"function"==typeof f?i(Function.call,f):f,h&&((g.virtual||(g.virtual={}))[c]=f,t&s.R&&x&&!x[c]&&u(x,c,f)))};s.F=1,s.G=2,s.S=4,s.P=8,s.B=16,s.W=32,s.U=64,s.R=128,t.exports=s},function(t,n,e){var r=e(18);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n,e){var r=e(20),o=e(25);t.exports=e(2)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(21),o=e(22),i=e(24),u=Object.defineProperty;n.f=e(2)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(1);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n,e){t.exports=!e(2)&&!e(3)(function(){return 7!=Object.defineProperty(e(23)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(1),o=e(0).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){var r=e(1);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n,e){"use strict";var r=e(27),o=e(38),i=e(39),u=e(40),s=e(6),c=Object.assign;t.exports=!c||e(3)(function(){var t={},n={},e=Symbol(),r="abcdefghijklmnopqrst";return t[e]=7,r.split("").forEach(function(t){n[t]=t}),7!=c({},t)[e]||Object.keys(c({},n)).join("")!=r})?function(t,n){for(var e=u(t),c=arguments.length,a=1,f=o.f,l=i.f;c>a;)for(var p,d=s(arguments[a++]),h=f?r(d).concat(f(d)):r(d),v=h.length,y=0;v>y;)l.call(d,p=h[y++])&&(e[p]=d[p]);return e}:c},function(t,n,e){var r=e(28),o=e(37);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(29),o=e(5),i=e(31)(!1),u=e(34)("IE_PROTO");t.exports=function(t,n){var e,s=o(t),c=0,a=[];for(e in s)e!=u&&r(s,e)&&a.push(e);for(;n.length>c;)r(s,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(5),o=e(32),i=e(33);t.exports=function(t){return function(n,e,u){var s,c=r(n),a=o(c.length),f=i(u,a);if(t&&e!=e){for(;a>f;)if((s=c[f++])!=s)return!0}else for(;a>f;f++)if((t||f in c)&&c[f]===e)return t||f||0;return!t&&-1}}},function(t,n,e){var r=e(8),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){var r=e(8),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(35)("keys"),o=e(36);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(0),o=r["__core-js_shared__"]||(r["__core-js_shared__"]={});t.exports=function(t){return o[t]||(o[t]={})}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(7);t.exports=function(t){return Object(r(t))}},function(t,n,e){"use strict";var r=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("div",{staticClass:"vue-avatar--wrapper",style:[t.style,t.customStyle]},[e("span",{directives:[{name:"show",rawName:"v-show",value:!this.isImage,expression:"!this.isImage"}]},[t._v(t._s(t.userInitial))])])},o=[],i={render:r,staticRenderFns:o};n.a=i}])});
 
 /***/ }),
-/* 292 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -107120,18 +107027,18 @@ var render = function() {
                         { attrs: { sm7: "", "offset-sm1": "" } },
                         [
                           _vm._v(
-                            "\n            " +
+                            "\r\n                        " +
                               _vm._s(cart.item.name) +
-                              "\n            "
+                              "\r\n                        "
                           ),
                           _c("br"),
                           _vm._v(" "),
                           _vm._v(
-                            "\n            " +
+                            "\r\n                        " +
                               _vm._s(cart.qty) +
                               " X " +
                               _vm._s(cart.item.price) +
-                              "\n            "
+                              "\r\n                        "
                           ),
                           _c("br"),
                           _vm._v(" "),
@@ -107148,9 +107055,9 @@ var render = function() {
                             [_c("i", { staticClass: "fas fa-minus" })]
                           ),
                           _vm._v(
-                            "\n            " +
+                            "\r\n                        " +
                               _vm._s(cart.qty) +
-                              "\n            "
+                              "\r\n                        "
                           ),
                           _c(
                             "v-btn",
@@ -107271,19 +107178,19 @@ if (false) {
 }
 
 /***/ }),
-/* 293 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(294)
+  __webpack_require__(296)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(296)
+var __vue_script__ = __webpack_require__(298)
 /* template */
-var __vue_template__ = __webpack_require__(297)
+var __vue_template__ = __webpack_require__(299)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -107322,13 +107229,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 294 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(295);
+var content = __webpack_require__(297);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -107348,7 +107255,7 @@ if(false) {
 }
 
 /***/ }),
-/* 295 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -107362,7 +107269,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 296 */
+/* 298 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107438,7 +107345,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 297 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -107579,338 +107486,14 @@ if (false) {
 }
 
 /***/ }),
-/* 298 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "v-app",
-        { attrs: { id: "inspire" } },
-        [
-          _c(
-            "v-navigation-drawer",
-            {
-              attrs: { right: "", temporary: "", fixed: "" },
-              model: {
-                value: _vm.right,
-                callback: function($$v) {
-                  _vm.right = $$v
-                },
-                expression: "right"
-              }
-            },
-            [_c("myCart")],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "nav",
-            { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary" },
-            [
-              _c(
-                "router-link",
-                {
-                  staticClass: "navbar-brand text-uppercase",
-                  staticStyle: { "margin-left": "20px" },
-                  attrs: { to: "/" }
-                },
-                [_c("b", [_vm._v("Healthwise Pharmacy")])]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "navbar-toggler",
-                  attrs: {
-                    type: "button",
-                    "data-toggle": "collapse",
-                    "data-target": "#navbarSupportedContent2",
-                    "aria-controls": "navbarSupportedContent2",
-                    "aria-expanded": "false",
-                    "aria-label": "Toggle navigation"
-                  }
-                },
-                [_c("span", { staticClass: "navbar-toggler-icon" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse navbar-collapse",
-                  attrs: { id: "navbarSupportedContent2" }
-                },
-                [
-                  _c(
-                    "ul",
-                    { staticClass: "navbar-nav mr-auto" },
-                    _vm._l(_vm.categories, function(category) {
-                      return _c(
-                        "li",
-                        {
-                          key: category.id,
-                          staticClass: "nav-item dropdown mega-dropdown active"
-                        },
-                        [
-                          _c(
-                            "a",
-                            {
-                              staticClass:
-                                "nav-link dropdown-toggle text-uppercase",
-                              attrs: {
-                                id: "navbarDropdownMenuLink2",
-                                "data-toggle": "dropdown",
-                                "aria-haspopup": "true",
-                                "aria-expanded": "false"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                _vm._s(category.name) +
-                                  "\r\n                            "
-                              ),
-                              _c("span", { staticClass: "sr-only" }, [
-                                _vm._v("(current)")
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "dropdown-menu mega-menu v-2 z-depth-1 white-color-dark py-5 px-3",
-                              attrs: {
-                                "aria-labelledby": "navbarDropdownMenuLink2"
-                              }
-                            },
-                            [
-                              _c("div", { staticClass: "row" }, [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "sub-menu mb-xl-0 mb-4",
-                                    staticStyle: { margin: "auto" }
-                                  },
-                                  [
-                                    _c(
-                                      "h6",
-                                      {
-                                        staticClass:
-                                          "sub-title text-uppercase font-weight-bold black-text"
-                                      },
-                                      [_vm._v(_vm._s(category.name))]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-divider"),
-                                    _vm._v(" "),
-                                    _c(
-                                      "ul",
-                                      { staticClass: "list-unstyled" },
-                                      _vm._l(category.sub_categories, function(
-                                        subCats
-                                      ) {
-                                        return _c(
-                                          "li",
-                                          { key: subCats.id },
-                                          [
-                                            _c(
-                                              "router-link",
-                                              {
-                                                staticClass: "menu-item pl-0",
-                                                attrs: { to: "/filter" }
-                                              },
-                                              [
-                                                _c(
-                                                  "a",
-                                                  {
-                                                    staticClass:
-                                                      "menu-item pl-0",
-                                                    staticStyle: {
-                                                      color: "#000"
-                                                    },
-                                                    attrs: { href: "#" }
-                                                  },
-                                                  [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fa fa-caret-right pl-1 pr-3"
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c(
-                                                      "v-btn",
-                                                      {
-                                                        attrs: {
-                                                          flat: "",
-                                                          color: "black"
-                                                        },
-                                                        on: {
-                                                          click: function(
-                                                            $event
-                                                          ) {
-                                                            _vm.categoryPro(
-                                                              subCats
-                                                            )
-                                                          }
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          _vm._s(subCats.name)
-                                                        )
-                                                      ]
-                                                    )
-                                                  ],
-                                                  1
-                                                )
-                                              ]
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      })
-                                    )
-                                  ],
-                                  1
-                                )
-                              ])
-                            ]
-                          )
-                        ]
-                      )
-                    })
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "v-btn v-btn--flat theme--dark white--text",
-                      attrs: { href: "/admin#/dashboard" }
-                    },
-                    [_vm._v("Admin")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-tooltip",
-                    { attrs: { bottom: "" } },
-                    [
-                      _c(
-                        "v-btn",
-                        {
-                          staticClass: "mx-0",
-                          attrs: { slot: "activator", icon: "" },
-                          on: {
-                            click: function($event) {
-                              $event.stopPropagation()
-                              _vm.right = !_vm.right
-                            }
-                          },
-                          slot: "activator"
-                        },
-                        [
-                          _c(
-                            "v-badge",
-                            { attrs: { color: "orange", left: "" } },
-                            [
-                              _c(
-                                "span",
-                                { attrs: { slot: "badge" }, slot: "badge" },
-                                [_vm._v(_vm._s(_vm.cartItems.length))]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-icon",
-                                { attrs: { color: "orange darken-2" } },
-                                [_vm._v("shopping_cart")]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("span", [_vm._v("Cart")])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("form", { staticClass: "form-inline" }, [
-                    _c("div", { staticClass: "md-form my-0" }, [
-                      _c("input", {
-                        staticClass: "form-control mr-sm-2",
-                        attrs: {
-                          type: "text",
-                          placeholder: "Search",
-                          "aria-label": "Search"
-                        }
-                      })
-                    ])
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("Login"),
-      _vm._v(" "),
-      _c(
-        "v-snackbar",
-        {
-          attrs: {
-            timeout: _vm.timeout,
-            bottom: "bottom",
-            color: _vm.Scolor,
-            right: "right"
-          },
-          model: {
-            value: _vm.snackbar,
-            callback: function($$v) {
-              _vm.snackbar = $$v
-            },
-            expression: "snackbar"
-          }
-        },
-        [
-          _vm._v("\r\n        " + _vm._s(_vm.message) + "\r\n        "),
-          _c("v-icon", { attrs: { dark: "", right: "" } }, [
-            _vm._v("check_circle")
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-19999bf4", module.exports)
-  }
-}
-
-/***/ }),
-/* 299 */
+/* 300 */,
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(300);
+var content = __webpack_require__(302);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -107930,7 +107513,7 @@ if(false) {
 }
 
 /***/ }),
-/* 300 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -107944,7 +107527,7 @@ exports.push([module.i, "\n.w-100[data-v-1f243698] {\r\n    height: 230px;\r\n  
 
 
 /***/ }),
-/* 301 */
+/* 303 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108231,7 +107814,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 302 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -108283,7 +107866,7 @@ var render = function() {
                               staticClass: "d-block w-100",
                               class: { selected: _vm.isSelected(index) },
                               attrs: {
-                                src: "/storage/products/" + bestS.image,
+                                src: "/healthwise/products/" + bestS.image,
                                 alt: "First slide"
                               },
                               on: {
@@ -108607,7 +108190,7 @@ var render = function() {
                               staticClass: "d-block w-100",
                               class: { selected: _vm.isSelected(index) },
                               attrs: {
-                                src: "/storage/products/" + prod.image,
+                                src: "/healthwise/products/" + prod.image,
                                 alt: "First slide"
                               },
                               on: {
@@ -108931,7 +108514,7 @@ var render = function() {
                               staticClass: "d-block w-100",
                               class: { selected: _vm.isSelected(index) },
                               attrs: {
-                                src: "/storage/products/" + item.image,
+                                src: "/healthwise/products/" + item.image,
                                 alt: "First slide"
                               },
                               on: {
@@ -109226,19 +108809,19 @@ if (false) {
 }
 
 /***/ }),
-/* 303 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(304)
+  __webpack_require__(306)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(306)
+var __vue_script__ = __webpack_require__(308)
 /* template */
-var __vue_template__ = __webpack_require__(318)
+var __vue_template__ = __webpack_require__(325)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -109277,13 +108860,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 304 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(305);
+var content = __webpack_require__(307);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -109303,7 +108886,7 @@ if(false) {
 }
 
 /***/ }),
-/* 305 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -109317,18 +108900,18 @@ exports.push([module.i, "\n.carousel-caption[data-v-1f26c2f4] {\r\n    margin-bo
 
 
 /***/ }),
-/* 306 */
+/* 308 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Show__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Show__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Show___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Show__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__filter_Filter__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__filter_Filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__filter_Filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_Product__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_Product__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_Product___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__product_Product__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Prescription__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Prescription__ = __webpack_require__(322);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Prescription___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Prescription__);
 //
 //
@@ -109506,7 +109089,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addToCart: function addToCart(cart) {
             var _this = this;
 
-            // console.log(cart)
+            console.log(cart);
+            // eventBus.$emit("loadingRequest", response.data);
             axios.post('/cart/' + cart).then(function (response) {
                 eventBus.$emit("cartEvent", response.data);
                 // this.cart = response.data
@@ -109571,23 +109155,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 307 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(308);
+var content = __webpack_require__(310);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(6)("00701392", content, false, {});
+var update = __webpack_require__(6)("78eca492", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27ef6a12\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Show.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27ef6a12\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Show.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27ef6a12\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Show.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27ef6a12\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Show.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -109597,7 +109181,7 @@ if(false) {
 }
 
 /***/ }),
-/* 308 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -109605,17 +109189,24 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.badge[data-v-27ef6a12] {\r\n    color: #000 !important;\r\n    font-size: 12px !important;\r\n    margin-left: 100px !important;\n}\nlabel[data-v-27ef6a12] {\r\n    padding: 10px 0px !important;\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 309 */
+/* 311 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -109663,14 +109254,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             dialog: false,
-            productD: []
+            productD: [],
+            form: {}
         };
     },
 
     methods: {
-        addToCart: function addToCart() {
-            eventBus.$emit("addCartEvent", this.productD.id);
+        addToCart: function addToCart(data) {
+            eventBus.$emit("addCartEvent", data);
         },
+
+        // addToCart() {
+        //     eventBus.$emit("loadingRequest", response.data);
+        //     // this.loading = true
+        //     axios.post(`/cartAdd/${this.productD.id}`, this.$data.form).
+        //     then((response) => {
+        //             this.loading = false
+        //             console.log(response);
+        //             // this.close();
+        //             // this.resetForm();
+        //             eventBus.$emit("alertRequest");
+        //             eventBus.$emit("cartEvent", response.data);
+        //             // this.$parent.brands.push(response.data)
+        //         })
+        //         .catch((error) => {
+        //             this.loading = false
+        //             this.errors = error.response.data.errors
+        //         })
+        // },
         close: function close() {
             // eventBus.$emit("closeRequest", product);
             this.dialog = false;
@@ -109687,7 +109298,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 310 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -109759,7 +109370,8 @@ var render = function() {
                             _c("img", {
                               staticStyle: { height: "300px", width: "300px" },
                               attrs: {
-                                src: "/storage/products/" + _vm.productD.image,
+                                src:
+                                  "/healthwise/products/" + _vm.productD.image,
                                 alt: ""
                               }
                             })
@@ -109772,15 +109384,57 @@ var render = function() {
                             { attrs: { sm4: "", "offset-sm1": "" } },
                             [
                               _vm._v(
-                                "\r\n                        " +
+                                "\r\n                            " +
                                   _vm._s(_vm.productD.name) +
-                                  "\r\n                        "
+                                  "\r\n                            "
                               ),
                               _c("v-divider"),
                               _vm._v(
-                                "\r\n                        " +
+                                "\r\n                            " +
                                   _vm._s(_vm.productD.description) +
-                                  "\r\n\r\n                    "
+                                  " "
+                              ),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "" } }, [
+                                _vm._v("Price: "),
+                                _c(
+                                  "span",
+                                  { staticClass: "badge pull-right" },
+                                  [_vm._v(_vm._s(_vm.productD.price))]
+                                )
+                              ]),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "" } }, [
+                                _vm._v("Quantity: "),
+                                _c(
+                                  "span",
+                                  { staticClass: "badge pull-right" },
+                                  [_vm._v(_vm._s(_vm.productD.quantity))]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm6: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      color: "blue darken-2",
+                                      label: "Quantity",
+                                      required: ""
+                                    },
+                                    model: {
+                                      value: _vm.form.quantity,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.form, "quantity", $$v)
+                                      },
+                                      expression: "form.quantity"
+                                    }
+                                  })
+                                ],
+                                1
                               )
                             ],
                             1
@@ -109808,7 +109462,7 @@ var render = function() {
                               attrs: { slot: "activator", icon: "" },
                               on: {
                                 click: function($event) {
-                                  _vm.addToCart()
+                                  _vm.addToCart(_vm.productD.id)
                                 }
                               },
                               slot: "activator"
@@ -109867,13 +109521,13 @@ if (false) {
 }
 
 /***/ }),
-/* 311 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(312);
+var content = __webpack_require__(314);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -109893,7 +109547,7 @@ if(false) {
 }
 
 /***/ }),
-/* 312 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -109907,13 +109561,15 @@ exports.push([module.i, "\n.w-100[data-v-32fa9b58] {\r\n    height: 230px;\r\n  
 
 
 /***/ }),
-/* 313 */
+/* 315 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_Show__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_Show__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_Show___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_Show__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__include_Headerpartial__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__include_Headerpartial___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__include_Headerpartial__);
 //
 //
 //
@@ -109992,11 +109648,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        myShow: __WEBPACK_IMPORTED_MODULE_0__home_Show___default.a
+        myShow: __WEBPACK_IMPORTED_MODULE_0__home_Show___default.a, Headerpartial: __WEBPACK_IMPORTED_MODULE_1__include_Headerpartial___default.a
     },
     data: function data() {
         return {
@@ -110038,7 +109696,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             // console.log(resp)
             this.nextPage = true;
-            axios.post(page + "?page=" + current_page, this.form).then(function (response) {
+            axios.post(page + '?page=' + current_page, this.form).then(function (response) {
                 _this.nextPage = false;
                 if (resp === 'featured') {
                     // alert('featered')
@@ -110098,7 +109756,164 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 314 */
+/* 316 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(317)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(319)
+/* template */
+var __vue_template__ = __webpack_require__(320)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/include/Headerpartial.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3541b152", Component.options)
+  } else {
+    hotAPI.reload("data-v-3541b152", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 317 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(318);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("3ebbbde3", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3541b152\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Headerpartial.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3541b152\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Headerpartial.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 318 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 319 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 320 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticStyle: { "margin-top": "-35px" } },
+    [
+      _c("v-app", { attrs: { id: "inspire" } }, [
+        _c("div", { attrs: { id: "headerwrapper1" } }, [
+          _c("div", { attrs: { id: "back-flower1" } }),
+          _vm._v(" "),
+          _c("div", { attrs: { id: "logotext" } }, [
+            _c("h1", [
+              _c("b", [_vm._v("Healthwise "), _c("span", [_vm._v("Pharmacy")])])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { attrs: { id: "for-flower" } })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container-fluid" })
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3541b152", module.exports)
+  }
+}
+
+/***/ }),
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -110133,6 +109948,8 @@ var render = function() {
         ],
         1
       ),
+      _vm._v(" "),
+      _c("Headerpartial"),
       _vm._v(" "),
       _c(
         "v-layout",
@@ -110204,7 +110021,8 @@ var render = function() {
                                         },
                                         attrs: {
                                           src:
-                                            "/storage/products/" + bestS.image,
+                                            "/healthwise/products/" +
+                                            bestS.image,
                                           alt: "First slide"
                                         },
                                         on: {
@@ -110536,15 +110354,15 @@ if (false) {
 }
 
 /***/ }),
-/* 315 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(316)
+var __vue_script__ = __webpack_require__(323)
 /* template */
-var __vue_template__ = __webpack_require__(317)
+var __vue_template__ = __webpack_require__(324)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -110583,7 +110401,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 316 */
+/* 323 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110766,7 +110584,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 317 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -111023,7 +110841,7 @@ if (false) {
 }
 
 /***/ }),
-/* 318 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -111092,7 +110910,8 @@ var render = function() {
                                   staticStyle: { height: "500px" },
                                   attrs: {
                                     src:
-                                      "/storage/products/" + _vm.singleP.image,
+                                      "/healthwise/products/" +
+                                      _vm.singleP.image,
                                     alt: "First slide"
                                   }
                                 }),
@@ -111189,7 +111008,7 @@ var render = function() {
                                         staticStyle: { height: "500px" },
                                         attrs: {
                                           src:
-                                            "/storage/products/" +
+                                            "/healthwise/products/" +
                                             product.image,
                                           alt: "First slide"
                                         }
@@ -111420,15 +111239,15 @@ if (false) {
 }
 
 /***/ }),
-/* 319 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(320)
+var __vue_script__ = __webpack_require__(327)
 /* template */
-var __vue_template__ = __webpack_require__(330)
+var __vue_template__ = __webpack_require__(337)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -111467,11 +111286,21 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 320 */
+/* 327 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_Show__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_Show___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__home_Show__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -111601,16 +111430,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var Create = __webpack_require__(321);
-var Edit = __webpack_require__(324);
-var myImage = __webpack_require__(327);
+var Create = __webpack_require__(328);
+var Edit = __webpack_require__(331);
+
+var myImage = __webpack_require__(334);
 // let ShowTask = require('./ShowTask');
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
         Create: Create,
         myImage: myImage,
-        Edit: Edit
+        Edit: Edit,
+        myShow: __WEBPACK_IMPORTED_MODULE_0__home_Show___default.a
     },
 
     data: function data() {
@@ -111640,9 +111471,14 @@ var myImage = __webpack_require__(327);
                 text: "Price",
                 value: "price"
             }, {
-                text: "Description",
-                value: "description"
-            }, {
+                text: "List Price",
+                value: "list_price"
+            },
+            // {
+            //     text: "Description",
+            //     value: "description"
+            // },
+            {
                 text: "Featured",
                 value: "featured",
                 sortable: false
@@ -111694,6 +111530,9 @@ var myImage = __webpack_require__(327);
                 _this2.loading = false;
                 _this2.errors = error.response.data.errors;
             });
+        },
+        view: function view(product) {
+            eventBus.$emit("viewProEvent", product);
         },
         deleteItem: function deleteItem(item) {
             var _this3 = this;
@@ -111765,15 +111604,15 @@ var myImage = __webpack_require__(327);
 });
 
 /***/ }),
-/* 321 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(322)
+var __vue_script__ = __webpack_require__(329)
 /* template */
-var __vue_template__ = __webpack_require__(323)
+var __vue_template__ = __webpack_require__(330)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -111812,11 +111651,15 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 322 */
+/* 329 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -111891,6 +111734,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var defaultForm = Object.freeze({
             name: '',
             quantity: '',
+            list_price: '',
             price: '',
             description: ''
         });
@@ -112013,7 +111857,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 323 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -112149,7 +111993,7 @@ var render = function() {
                                           _c("v-text-field", {
                                             attrs: {
                                               color: "blue darken-2",
-                                              label: "Quantity",
+                                              label: "Price",
                                               required: ""
                                             },
                                             model: {
@@ -112171,7 +112015,33 @@ var render = function() {
                                           _c("v-text-field", {
                                             attrs: {
                                               color: "blue darken-2",
-                                              label: "price",
+                                              label: "List Price",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.list_price,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.form,
+                                                  "list_price",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "form.list_price"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm6: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              color: "blue darken-2",
+                                              label: "Quantity",
                                               required: ""
                                             },
                                             model: {
@@ -112396,15 +112266,15 @@ if (false) {
 }
 
 /***/ }),
-/* 324 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(325)
+var __vue_script__ = __webpack_require__(332)
 /* template */
-var __vue_template__ = __webpack_require__(326)
+var __vue_template__ = __webpack_require__(333)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -112443,11 +112313,15 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 325 */
+/* 332 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -112598,7 +112472,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 326 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -112738,7 +112612,7 @@ var render = function() {
                                           _c("v-text-field", {
                                             attrs: {
                                               color: "blue darken-2",
-                                              label: "Quantity",
+                                              label: "Price",
                                               required: ""
                                             },
                                             model: {
@@ -112764,7 +112638,33 @@ var render = function() {
                                           _c("v-text-field", {
                                             attrs: {
                                               color: "blue darken-2",
-                                              label: "price",
+                                              label: "List Price",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.list_price,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.form,
+                                                  "list_price",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "form.list_price"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm6: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              color: "blue darken-2",
+                                              label: "Quantity",
                                               required: ""
                                             },
                                             model: {
@@ -112904,15 +112804,15 @@ if (false) {
 }
 
 /***/ }),
-/* 327 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(328)
+var __vue_script__ = __webpack_require__(335)
 /* template */
-var __vue_template__ = __webpack_require__(329)
+var __vue_template__ = __webpack_require__(336)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -112951,7 +112851,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 328 */
+/* 335 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113094,7 +112994,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 329 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -113208,7 +113108,8 @@ var render = function() {
                                           },
                                           attrs: {
                                             src:
-                                              "/storage/products/" + _vm.avatar
+                                              "/healthwise/products/" +
+                                              _vm.avatar
                                           }
                                         })
                                       ]),
@@ -113337,7 +113238,7 @@ if (false) {
 }
 
 /***/ }),
-/* 330 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -113501,7 +113402,7 @@ var render = function() {
                                       _c(
                                         "td",
                                         { staticClass: "text-xs-right" },
-                                        [_vm._v(_vm._s(props.item.description))]
+                                        [_vm._v(_vm._s(props.item.list_price))]
                                       ),
                                       _vm._v(" "),
                                       props.item.featured === "1" ||
@@ -113969,6 +113870,47 @@ var render = function() {
                                               ])
                                             ],
                                             1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-tooltip",
+                                            { attrs: { bottom: "" } },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  staticClass: "mx-0",
+                                                  attrs: {
+                                                    slot: "activator",
+                                                    icon: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.view(props.item)
+                                                    }
+                                                  },
+                                                  slot: "activator"
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: {
+                                                        small: "",
+                                                        color: "orange darken-2"
+                                                      }
+                                                    },
+                                                    [_vm._v("visibility")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("span", [
+                                                _vm._v("View Product")
+                                              ])
+                                            ],
+                                            1
                                           )
                                         ],
                                         1
@@ -114061,7 +114003,9 @@ var render = function() {
       _vm._v(" "),
       _c("Edit"),
       _vm._v(" "),
-      _c("myImage")
+      _c("myImage"),
+      _vm._v(" "),
+      _c("myShow")
     ],
     1
   )
@@ -114077,15 +114021,15 @@ if (false) {
 }
 
 /***/ }),
-/* 331 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(332)
+var __vue_script__ = __webpack_require__(339)
 /* template */
-var __vue_template__ = __webpack_require__(339)
+var __vue_template__ = __webpack_require__(346)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -114124,7 +114068,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 332 */
+/* 339 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -114187,8 +114131,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var Create = __webpack_require__(333);
-var Edit = __webpack_require__(336);
+var Create = __webpack_require__(340);
+var Edit = __webpack_require__(343);
 // let ShowTask = require('./ShowTask');
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -114266,15 +114210,15 @@ var Edit = __webpack_require__(336);
 });
 
 /***/ }),
-/* 333 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(334)
+var __vue_script__ = __webpack_require__(341)
 /* template */
-var __vue_template__ = __webpack_require__(335)
+var __vue_template__ = __webpack_require__(342)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -114313,11 +114257,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 334 */
+/* 341 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -114375,6 +114320,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             errors: {},
             defaultForm: defaultForm,
+            menuSelect: [],
+            menus: [],
             loading: false,
             disabled: true,
             form: Object.assign({}, defaultForm),
@@ -114391,7 +114338,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             this.loading = true;
-            axios.post('/categories', this.$data.form).then(function (response) {
+            axios.post('/categories', {
+                form: this.$data.form,
+                menu: this.$data.menuSelect
+            }).then(function (response) {
                 _this.loading = false;
                 console.log(response);
                 // this.close();
@@ -114411,22 +114361,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$emit('closeRequest');
         }
     },
-    computed: {}
-    // mounted() {
-    //     axios.get('/brands')
-    //         .then((response) => {
-    //             this.loader = false
-    //             this.brands = response.data
-    //         })
-    //         .catch((error) => {
-    //             this.loader = false
-    //             this.errors = error.response.data.errors
-    //         })
-    // },
+    computed: {},
+    mounted: function mounted() {
+        var _this2 = this;
+
+        axios.get('/menus').then(function (response) {
+            _this2.loader = false;
+            _this2.menus = response.data;
+        }).catch(function (error) {
+            _this2.loader = false;
+            _this2.errors = error.response.data.errors;
+        });
+    }
 });
 
 /***/ }),
-/* 335 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -114503,6 +114453,25 @@ var render = function() {
                                 "v-container",
                                 { attrs: { "grid-list-xl": "", fluid: "" } },
                                 [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.menus,
+                                      label: "Select Category",
+                                      "single-line": "",
+                                      "item-text": "name",
+                                      "item-value": "id",
+                                      "return-object": "",
+                                      "persistent-hint": ""
+                                    },
+                                    model: {
+                                      value: _vm.menuSelect,
+                                      callback: function($$v) {
+                                        _vm.menuSelect = $$v
+                                      },
+                                      expression: "menuSelect"
+                                    }
+                                  }),
+                                  _vm._v(" "),
                                   _c(
                                     "v-layout",
                                     { attrs: { wrap: "" } },
@@ -114649,15 +114618,15 @@ if (false) {
 }
 
 /***/ }),
-/* 336 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(337)
+var __vue_script__ = __webpack_require__(344)
 /* template */
-var __vue_template__ = __webpack_require__(338)
+var __vue_template__ = __webpack_require__(345)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -114696,11 +114665,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 337 */
+/* 344 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -114757,6 +114727,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
         return {
             errors: {},
+            menus: [],
+            menuSelect: [],
             defaultForm: defaultForm,
             loading: false,
             disabled: true,
@@ -114766,8 +114738,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     return (val || '').length > 0 || 'This field is required';
                 }]
             },
-            brands: [],
-            brandSelect: []
+            brands: []
         };
     },
 
@@ -114778,7 +114749,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.loading = true;
             axios.patch('/categories/' + this.category.id, {
                 form: this.category,
-                brandSelect: this.$data.brandSelect
+                menu: this.$data.menuSelect
             }).then(function (response) {
                 _this.loading = false;
                 console.log(response);
@@ -114802,6 +114773,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     computed: {},
     mounted: function mounted() {
+        var _this2 = this;
+
+        axios.get('/menus').then(function (response) {
+            _this2.loader = false;
+            _this2.menus = response.data;
+        }).catch(function (error) {
+            _this2.loader = false;
+            _this2.errors = error.response.data.errors;
+        });
         // axios.get('/brands')
         //     .then((response) => {
         //         this.loader = false
@@ -114815,7 +114795,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 338 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -114892,6 +114872,25 @@ var render = function() {
                                 "v-container",
                                 { attrs: { "grid-list-xl": "", fluid: "" } },
                                 [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.menus,
+                                      label: "Select Category",
+                                      "single-line": "",
+                                      "item-text": "name",
+                                      "item-value": "id",
+                                      "return-object": "",
+                                      "persistent-hint": ""
+                                    },
+                                    model: {
+                                      value: _vm.menuSelect,
+                                      callback: function($$v) {
+                                        _vm.menuSelect = $$v
+                                      },
+                                      expression: "menuSelect"
+                                    }
+                                  }),
+                                  _vm._v(" "),
                                   _c(
                                     "v-layout",
                                     { attrs: { wrap: "" } },
@@ -115043,7 +115042,7 @@ if (false) {
 }
 
 /***/ }),
-/* 339 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -115357,15 +115356,15 @@ if (false) {
 }
 
 /***/ }),
-/* 340 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(341)
+var __vue_script__ = __webpack_require__(348)
 /* template */
-var __vue_template__ = __webpack_require__(348)
+var __vue_template__ = __webpack_require__(355)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -115404,7 +115403,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 341 */
+/* 348 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115464,8 +115463,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var Create = __webpack_require__(342);
-var Edit = __webpack_require__(345);
+var Create = __webpack_require__(349);
+var Edit = __webpack_require__(352);
 // let ShowTask = require('./ShowTask');
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -115546,15 +115545,15 @@ var Edit = __webpack_require__(345);
 });
 
 /***/ }),
-/* 342 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(343)
+var __vue_script__ = __webpack_require__(350)
 /* template */
-var __vue_template__ = __webpack_require__(344)
+var __vue_template__ = __webpack_require__(351)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -115593,7 +115592,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 343 */
+/* 350 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115714,7 +115713,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 344 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -115963,15 +115962,15 @@ if (false) {
 }
 
 /***/ }),
-/* 345 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(346)
+var __vue_script__ = __webpack_require__(353)
 /* template */
-var __vue_template__ = __webpack_require__(347)
+var __vue_template__ = __webpack_require__(354)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -116010,7 +116009,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 346 */
+/* 353 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116156,7 +116155,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 347 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -116411,7 +116410,7 @@ if (false) {
 }
 
 /***/ }),
-/* 348 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -116720,15 +116719,15 @@ if (false) {
 }
 
 /***/ }),
-/* 349 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(350)
+var __vue_script__ = __webpack_require__(357)
 /* template */
-var __vue_template__ = __webpack_require__(357)
+var __vue_template__ = __webpack_require__(364)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -116767,7 +116766,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 350 */
+/* 357 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116831,15 +116830,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
-var Create = __webpack_require__(351);
-var Edit = __webpack_require__(354);
-// let ShowTask = require('./ShowTask');
+var Create = __webpack_require__(160);
+// let Edit = require("./Edit");
+var myView = __webpack_require__(161);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        Create: Create,
-        Edit: Edit
+        Create: Create, myView: myView
     },
 
     data: function data() {
@@ -116860,16 +116864,18 @@ var Edit = __webpack_require__(354);
                 text: "Created On",
                 value: "created_at"
             }, {
-                text: "Buyer Name",
+                text: "Client Name",
                 align: "left",
                 value: "name"
             }, {
                 text: "Product Id",
                 value: "product_id"
-            }, {
-                text: "Name",
-                value: "name"
-            }, {
+            },
+            // {
+            //     text: "Name",
+            //     value: "name"
+            // },
+            {
                 text: "Address",
                 value: "address"
             }, {
@@ -116910,6 +116916,9 @@ var Edit = __webpack_require__(354);
                 _this.loading = false;
                 _this.errors = error.response.data.errors;
             });
+        },
+        view: function view(order) {
+            eventBus.$emit("viewOrdEvent", order);
         }
     },
     mounted: function mounted() {
@@ -116919,54 +116928,7 @@ var Edit = __webpack_require__(354);
 });
 
 /***/ }),
-/* 351 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(352)
-/* template */
-var __vue_template__ = __webpack_require__(353)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/admin/orders/Create.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f2f1986a", Component.options)
-  } else {
-    hotAPI.reload("data-v-f2f1986a", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 352 */
+/* 358 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -117049,7 +117011,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             this.loading = true;
-            axios.post('/brands', {
+            axios.post('/orders', {
                 form: this.$data.form,
                 categorySelect: this.$data.categorySelect
             }).then(function (response) {
@@ -117058,7 +117020,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 // this.close();
                 // this.resetForm();
                 eventBus.$emit("alertRequest");
-                _this.$parent.brands.push(response.data);
+                _this.$parent.orders.push(response.data);
             }).catch(function (error) {
                 _this.loading = false;
                 _this.errors = error.response.data.errors;
@@ -117087,7 +117049,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 353 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -117336,54 +117298,47 @@ if (false) {
 }
 
 /***/ }),
-/* 354 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-var __vue_script__ = __webpack_require__(355)
-/* template */
-var __vue_template__ = __webpack_require__(356)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/js/components/admin/orders/Edit.vue"
+// style-loader: Adds some css to the DOM by adding a <style> tag
 
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-61dfeb99", Component.options)
-  } else {
-    hotAPI.reload("data-v-61dfeb99", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
+// load the styles
+var content = __webpack_require__(361);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("7d74a5d7", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-49a9f2b4\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./View.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-49a9f2b4\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./View.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
-module.exports = Component.exports
+/***/ }),
+/* 361 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.badge[data-v-49a9f2b4], .badge-danger[data-v-49a9f2b4], .badge-dark[data-v-49a9f2b4], .badge-default[data-v-49a9f2b4], .badge-info[data-v-49a9f2b4], .badge-primary[data-v-49a9f2b4], .badge-secondary[data-v-49a9f2b4], .badge-success[data-v-49a9f2b4], .badge-warning[data-v-49a9f2b4] {\r\n    font-size: 12px !important;\n}\r\n", ""]);
+
+// exports
 
 
 /***/ }),
-/* 355 */
+/* 362 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -117428,86 +117383,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['openAddRequest', 'brand'],
-    components: {},
     data: function data() {
-        var defaultForm = Object.freeze({
-            name: '',
-            description: ''
-        });
         return {
-            errors: {},
-            categorySelect: [],
-            defaultForm: defaultForm,
-            loading: false,
-            categories: [],
-            disabled: true,
-            form: Object.assign({}, defaultForm),
-            rules: {
-                name: [function (val) {
-                    return (val || '').length > 0 || 'This field is required';
-                }]
-            },
-            brands: [],
-            brandSelect: []
+            dialog: false,
+            carts: [],
+            order: [],
+            totalPrice: '',
+            discount: 0
         };
     },
 
     methods: {
-        save: function save() {
-            var _this = this;
-
-            this.loading = true;
-            axios.patch('/brands/' + this.brand.id, {
-                form: this.brand,
-                brandSelect: this.$data.brandSelect
-            }).then(function (response) {
-                _this.loading = false;
-                console.log(response);
-                // this.close;
-                // this.resetForm();
-                eventBus.$emit("alertRequest");
-                Object.assign(_this.$parent.brands[_this.$parent.editedIndex], _this.$parent.proEdit);
-                // this.$parent.brands.push(response.data)
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.errors = error.response.data.errors;
-            });
-        },
-        resetForm: function resetForm() {
-            this.form = Object.assign({}, this.defaultForm);
-            this.$refs.form.reset();
-        },
         close: function close() {
-            this.$emit('closeRequest');
+            // eventBus.$emit("closeRequest", product);
+            this.dialog = false;
         }
     },
-    computed: {},
-    mounted: function mounted() {
-        var _this2 = this;
+    created: function created() {
+        var _this = this;
 
-        axios.get('/categories').then(function (response) {
-            _this2.loader = false;
-            _this2.categories = response.data;
-        }).catch(function (error) {
-            _this2.loader = false;
-            _this2.errors = error.response.data.errors;
+        eventBus.$on("viewOrdEvent", function (data) {
+            _this.order = data;
+            _this.carts = data.cart;
+            _this.dialog = true;
         });
+    },
+
+
+    computed: {
+        getSubTotal: function getSubTotal() {
+            if (this.carts.length > 0) {
+                this.totalPrice = 0;
+                for (var index = 0; index < this.carts.length; index++) {
+                    var element = this.carts[index];
+                    this.totalPrice = parseInt(element.price) + this.totalPrice;
+                }
+            }
+            return this.totalPrice;
+        },
+        getTotal: function getTotal() {
+            if (this.carts.length > 0) {
+                return parseInt(this.getSubTotal) - this.discount;
+            }
+        }
     }
 });
 
 /***/ }),
-/* 356 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -117523,211 +117448,127 @@ var render = function() {
         {
           attrs: { persistent: "", "max-width": "500px" },
           model: {
-            value: _vm.openAddRequest,
+            value: _vm.dialog,
             callback: function($$v) {
-              _vm.openAddRequest = $$v
+              _vm.dialog = $$v
             },
-            expression: "openAddRequest"
+            expression: "dialog"
           }
         },
         [
-          _c(
-            "v-card",
-            [
-              _c(
-                "v-card-title",
-                { attrs: { fixed: "" } },
-                [
-                  _c("span", { staticClass: "headline" }, [
-                    _vm._v("Add Brand")
-                  ]),
-                  _vm._v(" "),
-                  _c("v-spacer"),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    { attrs: { icon: "", dark: "" }, on: { click: _vm.close } },
-                    [
-                      _c("v-icon", { attrs: { color: "black" } }, [
-                        _vm._v("close")
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-card-text",
+          _vm.dialog
+            ? _c(
+                "v-card",
                 [
                   _c(
-                    "v-container",
-                    { attrs: { "grid-list-md": "" } },
+                    "v-card-title",
+                    { attrs: { fixed: "" } },
                     [
+                      _c("v-spacer"),
+                      _vm._v(" "),
                       _c(
-                        "v-layout",
-                        { attrs: { wrap: "" } },
+                        "v-btn",
+                        {
+                          attrs: { icon: "", dark: "" },
+                          on: { click: _vm.close }
+                        },
                         [
-                          _c(
-                            "v-form",
-                            {
-                              ref: "form",
-                              on: {
-                                submit: function($event) {
-                                  $event.preventDefault()
-                                }
-                              }
-                            },
-                            [
-                              _c(
-                                "v-container",
-                                { attrs: { "grid-list-xl": "", fluid: "" } },
-                                [
-                                  _c(
-                                    "v-layout",
-                                    { attrs: { wrap: "" } },
-                                    [
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm6: "" } },
-                                        [
-                                          _c("v-select", {
-                                            attrs: {
-                                              items: _vm.categories,
-                                              label: "Select Category",
-                                              "single-line": "",
-                                              "item-text": "name",
-                                              "item-value": "id",
-                                              "return-object": "",
-                                              "persistent-hint": ""
-                                            },
-                                            model: {
-                                              value: _vm.brandSelect,
-                                              callback: function($$v) {
-                                                _vm.brandSelect = $$v
-                                              },
-                                              expression: "brandSelect"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm6: "" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              color: "blue darken-2",
-                                              label: "Brand Name",
-                                              required: ""
-                                            },
-                                            model: {
-                                              value: _vm.brand.name,
-                                              callback: function($$v) {
-                                                _vm.$set(_vm.brand, "name", $$v)
-                                              },
-                                              expression: "brand.name"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm12: "" } },
-                                        [
-                                          _c(
-                                            "v-textarea",
-                                            {
-                                              attrs: { color: "blue" },
-                                              model: {
-                                                value: _vm.brand.description,
-                                                callback: function($$v) {
-                                                  _vm.$set(
-                                                    _vm.brand,
-                                                    "description",
-                                                    $$v
-                                                  )
-                                                },
-                                                expression: "brand.description"
-                                              }
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                {
-                                                  attrs: { slot: "label" },
-                                                  slot: "label"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\r\n                                                Special Instructions "
-                                                  ),
-                                                  _c("small", [
-                                                    _vm._v("(optional)")
-                                                  ])
-                                                ]
-                                              )
-                                            ]
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { flat: "" },
-                                      on: { click: _vm.resetForm }
-                                    },
-                                    [_vm._v("reset")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { flat: "" },
-                                      on: { click: _vm.close }
-                                    },
-                                    [_vm._v("Close")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: {
-                                        disabled: _vm.loading,
-                                        loading: _vm.loading,
-                                        flat: "",
-                                        color: "primary"
-                                      },
-                                      on: { click: _vm.save }
-                                    },
-                                    [_vm._v("Submit")]
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
+                          _c("v-icon", { attrs: { color: "black" } }, [
+                            _vm._v("close")
+                          ])
                         ],
                         1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "card" },
+                    [
+                      _c("div", { staticClass: "card-header" }, [
+                        _c("ul", { staticClass: "list-group text-center" }, [
+                          _c("li", { staticClass: "list-group-item active" }, [
+                            _vm._v(_vm._s(_vm.order.buyer_id) + "'s' Orders")
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.order.cart, function(cart) {
+                        return _c(
+                          "div",
+                          { key: cart.id, staticClass: "card-body" },
+                          [
+                            _c("li", { staticClass: "list-group-item" }, [
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "badge",
+                                  staticStyle: {
+                                    float: "right",
+                                    color: "#fff",
+                                    background: "#000"
+                                  }
+                                },
+                                [_vm._v(_vm._s(cart.item.price))]
+                              ),
+                              _vm._v(
+                                "\r\n                        " +
+                                  _vm._s(cart.item.name) +
+                                  " | " +
+                                  _vm._s(cart.qty) +
+                                  "\r\n                    "
+                              )
+                            ])
+                          ]
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-footer" }, [
+                        _c("b", [
+                          _vm._v("Tax:\r\n                        "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "badge",
+                              staticStyle: {
+                                float: "right",
+                                color: "#fff",
+                                background: "#f00"
+                              }
+                            },
+                            [_vm._v("Ksh" + _vm._s(_vm.getSubTotal))]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("strong", [
+                          _vm._v("Subtotal:\r\n                        "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "badge",
+                              staticStyle: {
+                                float: "right",
+                                color: "#fff",
+                                background: "#f00"
+                              }
+                            },
+                            [_vm._v("Ksh" + _vm._s(_vm.getSubTotal))]
+                          )
+                        ])
+                      ])
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c(
+                        "v-btn",
+                        { attrs: { flat: "" }, on: { click: _vm.close } },
+                        [_vm._v("Close")]
                       )
                     ],
                     1
@@ -117735,9 +117576,7 @@ var render = function() {
                 ],
                 1
               )
-            ],
-            1
-          )
+            : _vm._e()
         ],
         1
       )
@@ -117751,12 +117590,12 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-61dfeb99", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-49a9f2b4", module.exports)
   }
 }
 
 /***/ }),
-/* 357 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -117920,12 +117759,6 @@ var render = function() {
                                       _c(
                                         "td",
                                         { staticClass: "text-xs-right" },
-                                        [_vm._v(_vm._s(props.item.name))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        { staticClass: "text-xs-right" },
                                         [_vm._v(_vm._s(props.item.address))]
                                       ),
                                       _vm._v(" "),
@@ -117973,6 +117806,45 @@ var render = function() {
                                               ),
                                               _vm._v(" "),
                                               _c("span", [_vm._v("Edit")])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-tooltip",
+                                            { attrs: { bottom: "" } },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  staticClass: "mx-0",
+                                                  attrs: {
+                                                    slot: "activator",
+                                                    icon: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.view(props.item)
+                                                    }
+                                                  },
+                                                  slot: "activator"
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: {
+                                                        small: "",
+                                                        color: "indigo darken-2"
+                                                      }
+                                                    },
+                                                    [_vm._v("visibility")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("span", [_vm._v("View Order")])
                                             ],
                                             1
                                           )
@@ -118063,10 +117935,7 @@ var render = function() {
         on: { closeRequest: _vm.close, alertRequest: _vm.showAlert }
       }),
       _vm._v(" "),
-      _c("Edit", {
-        attrs: { openAddRequest: _vm.dispEdit, order: _vm.catEdit },
-        on: { closeRequest: _vm.close, alertRequest: _vm.showAlert }
-      })
+      _c("myView")
     ],
     1
   )
@@ -118082,15 +117951,582 @@ if (false) {
 }
 
 /***/ }),
-/* 358 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(359)
+var __vue_script__ = __webpack_require__(366)
 /* template */
-var __vue_template__ = __webpack_require__(366)
+var __vue_template__ = __webpack_require__(367)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/orders/Payment.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0e9a7a47", Component.options)
+  } else {
+    hotAPI.reload("data-v-0e9a7a47", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 366 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var Create = __webpack_require__(160);
+// let Edit = require("./Edit");
+var myView = __webpack_require__(161);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        Create: Create, myView: myView
+    },
+
+    data: function data() {
+        return {
+            search: "",
+            loading: false,
+            dispAdd: false,
+            dispEdit: false,
+            dispShow: false,
+            payments: [],
+            catEdit: [],
+            loader: false,
+            snackbar: false,
+            timeout: 5000,
+            color: "",
+            message: "",
+            headers: [{
+                text: "Created On",
+                value: "created_at"
+            }, {
+                text: "Client Name",
+                align: "left",
+                value: "name"
+            }, {
+                text: "Product Id",
+                value: "product_id"
+            },
+            // {
+            //     text: "Name",
+            //     value: "name"
+            // },
+            {
+                text: "Address",
+                value: "address"
+            }, {
+                text: "Actions",
+                sortable: false
+            }]
+        };
+    },
+
+
+    methods: {
+        openAdd: function openAdd() {
+            this.dispAdd = true;
+        },
+        close: function close() {
+            this.dispAdd = this.dispShow = this.dispEdit = false;
+        },
+        showAlert: function showAlert() {
+            this.message = "Successifully Added";
+            this.snackbar = true;
+            this.color = "indigo";
+        },
+        editProduct: function editProduct(task) {
+            this.catEdit = Object.assign({}, task);
+            this.editedIndex = this.payments.indexOf(task);
+            this.dispEdit = true;
+        },
+        pay: function pay() {
+            var _this = this;
+
+            this.loading = true;
+            axios.get("/pay").then(function (response) {
+                _this.loader = false;
+                _this.loading = false;
+                _this.payments = response.data;
+            }).catch(function (error) {
+                _this.loader = false;
+                _this.loading = false;
+                _this.errors = error.response.data.errors;
+            });
+        },
+        view: function view(payment) {
+            eventBus.$emit("viewOrdEvent", payment);
+        }
+    },
+    mounted: function mounted() {
+        this.loader = true;
+        this.pay();
+    }
+});
+
+/***/ }),
+/* 367 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.loader,
+                      expression: "loader"
+                    }
+                  ],
+                  staticStyle: {
+                    "text-align": "center",
+                    width: "100%",
+                    "margin-top": "200px"
+                  }
+                },
+                [
+                  _c("v-progress-circular", {
+                    staticStyle: { margin: "1rem" },
+                    attrs: { width: 3, indeterminate: "", color: "red" }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: !_vm.loader,
+                      expression: "!loader"
+                    }
+                  ],
+                  attrs: { "justify-center": "", "align-center": "" }
+                },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { row: "", wrap: "" } },
+                    [
+                      _c(
+                        "v-card",
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _vm._v(
+                                "\r\n                            Payment\r\n                            "
+                              ),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", color: "primary" },
+                                  on: { click: _vm.openAdd }
+                                },
+                                [_vm._v("Add Payment")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tooltip",
+                                { attrs: { bottom: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "mx-0",
+                                      attrs: { slot: "activator", icon: "" },
+                                      on: { click: _vm.pay },
+                                      slot: "activator"
+                                    },
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        {
+                                          attrs: {
+                                            small: "",
+                                            color: "blue darken-2"
+                                          }
+                                        },
+                                        [_vm._v("refresh")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("span", [_vm._v("Refresh")])
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.payments,
+                                search: _vm.search,
+                                loading: _vm.loading
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(_vm._s(props.item.create_time))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.cart))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.product_id))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.address))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass:
+                                            "justify-center layout px-0"
+                                        },
+                                        [
+                                          _c(
+                                            "v-tooltip",
+                                            { attrs: { bottom: "" } },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  staticClass: "mx-0",
+                                                  attrs: {
+                                                    slot: "activator",
+                                                    icon: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.editProduct(
+                                                        props.item
+                                                      )
+                                                    }
+                                                  },
+                                                  slot: "activator"
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: {
+                                                        small: "",
+                                                        color: "blue darken-2"
+                                                      }
+                                                    },
+                                                    [_vm._v("edit")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("span", [_vm._v("Edit")])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-tooltip",
+                                            { attrs: { bottom: "" } },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  staticClass: "mx-0",
+                                                  attrs: {
+                                                    slot: "activator",
+                                                    icon: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.view(props.item)
+                                                    }
+                                                  },
+                                                  slot: "activator"
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: {
+                                                        small: "",
+                                                        color: "indigo darken-2"
+                                                      }
+                                                    },
+                                                    [_vm._v("visibility")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("span", [
+                                                _vm._v("View Payment")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c("v-progress-linear", {
+                                attrs: {
+                                  slot: "progress",
+                                  color: "blue",
+                                  indeterminate: ""
+                                },
+                                slot: "progress"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\r\n                                Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\r\n                            '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-snackbar",
+            {
+              attrs: {
+                timeout: _vm.timeout,
+                bottom: "",
+                color: _vm.color,
+                left: ""
+              },
+              model: {
+                value: _vm.snackbar,
+                callback: function($$v) {
+                  _vm.snackbar = $$v
+                },
+                expression: "snackbar"
+              }
+            },
+            [
+              _vm._v(
+                "\r\n            " + _vm._s(_vm.message) + "\r\n            "
+              ),
+              _c("v-btn", [_vm._v("close")])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("Create", {
+        attrs: { openAddRequest: _vm.dispAdd },
+        on: { closeRequest: _vm.close, alertRequest: _vm.showAlert }
+      }),
+      _vm._v(" "),
+      _c("myView")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0e9a7a47", module.exports)
+  }
+}
+
+/***/ }),
+/* 368 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(369)
+/* template */
+var __vue_template__ = __webpack_require__(376)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -118129,7 +118565,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 359 */
+/* 369 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118192,8 +118628,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var Create = __webpack_require__(360);
-var Edit = __webpack_require__(363);
+var Create = __webpack_require__(370);
+var Edit = __webpack_require__(373);
 // let ShowTask = require('./ShowTask');
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -118273,15 +118709,15 @@ var Edit = __webpack_require__(363);
 });
 
 /***/ }),
-/* 360 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(361)
+var __vue_script__ = __webpack_require__(371)
 /* template */
-var __vue_template__ = __webpack_require__(362)
+var __vue_template__ = __webpack_require__(372)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -118320,7 +118756,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 361 */
+/* 371 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118441,7 +118877,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 362 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -118690,15 +119126,15 @@ if (false) {
 }
 
 /***/ }),
-/* 363 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(364)
+var __vue_script__ = __webpack_require__(374)
 /* template */
-var __vue_template__ = __webpack_require__(365)
+var __vue_template__ = __webpack_require__(375)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -118737,7 +119173,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 364 */
+/* 374 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118861,7 +119297,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 365 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -119116,7 +119552,7 @@ if (false) {
 }
 
 /***/ }),
-/* 366 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -119430,10 +119866,1724 @@ if (false) {
 }
 
 /***/ }),
-/* 367 */
+/* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(378)
+/* template */
+var __vue_template__ = __webpack_require__(385)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/menu/Menu.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5b966e74", Component.options)
+  } else {
+    hotAPI.reload("data-v-5b966e74", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 378 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var Create = __webpack_require__(379);
+var Edit = __webpack_require__(382);
+// let ShowTask = require('./ShowTask');
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        Create: Create,
+        Edit: Edit
+    },
+
+    data: function data() {
+        return {
+            search: "",
+            loading: false,
+            dispAdd: false,
+            dispEdit: false,
+            dispShow: false,
+            menus: [],
+            catEdit: [],
+            loader: false,
+            snackbar: false,
+            timeout: 5000,
+            color: "",
+            message: "",
+            headers: [{
+                text: "Menu Name",
+                align: "left",
+                value: "name"
+            }, {
+                text: "Created On",
+                value: "created_at"
+            }, {
+                text: "Actions",
+                sortable: false
+            }]
+        };
+    },
+
+
+    methods: {
+        openAdd: function openAdd() {
+            this.dispAdd = true;
+        },
+        close: function close() {
+            this.dispAdd = this.dispShow = this.dispEdit = false;
+        },
+        showAlert: function showAlert() {
+            this.message = "Successifully Added";
+            this.snackbar = true;
+            this.color = "indigo";
+        },
+        editProduct: function editProduct(task) {
+            this.catEdit = Object.assign({}, task);
+            this.editedIndex = this.menus.indexOf(task);
+            this.dispEdit = true;
+        },
+        getMenu: function getMenu() {
+            var _this = this;
+
+            this.loader = true;
+            axios.get("/menus").then(function (response) {
+                _this.loader = false;
+                _this.menus = response.data;
+            }).catch(function (error) {
+                _this.loader = false;
+                _this.errors = error.response.data.errors;
+            });
+        }
+    },
+    mounted: function mounted() {
+        this.loader = true;
+        this.getMenu();
+    }
+});
+
+/***/ }),
+/* 379 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(380)
+/* template */
+var __vue_template__ = __webpack_require__(381)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/menu/Create.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-79cc5851", Component.options)
+  } else {
+    hotAPI.reload("data-v-79cc5851", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 380 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['openAddRequest'],
+    components: {},
+    data: function data() {
+        var defaultForm = Object.freeze({
+            name: '',
+            description: ''
+        });
+        return {
+            errors: {},
+            defaultForm: defaultForm,
+            loading: false,
+            disabled: true,
+            form: Object.assign({}, defaultForm),
+            rules: {
+                name: [function (val) {
+                    return (val || '').length > 0 || 'This field is required';
+                }]
+            }
+        };
+    },
+
+    methods: {
+        save: function save() {
+            var _this = this;
+
+            this.loading = true;
+            axios.post('/menus', this.$data.form).then(function (response) {
+                _this.loading = false;
+                console.log(response);
+                // this.close();
+                // this.resetForm();
+                eventBus.$emit("alertRequest");
+                _this.$parent.menus.push(response.data);
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.errors = error.response.data.errors;
+            });
+        },
+        resetForm: function resetForm() {
+            this.form = Object.assign({}, this.defaultForm);
+            this.$refs.form.reset();
+        },
+        close: function close() {
+            this.$emit('closeRequest');
+        }
+    },
+    computed: {}
+    // mounted() {
+    //     axios.get('/brands')
+    //         .then((response) => {
+    //             this.loader = false
+    //             this.brands = response.data
+    //         })
+    //         .catch((error) => {
+    //             this.loader = false
+    //             this.errors = error.response.data.errors
+    //         })
+    // },
+});
+
+/***/ }),
+/* 381 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-layout",
+    { attrs: { row: "", "justify-center": "" } },
+    [
+      _c(
+        "v-dialog",
+        {
+          attrs: { persistent: "", "max-width": "500px" },
+          model: {
+            value: _vm.openAddRequest,
+            callback: function($$v) {
+              _vm.openAddRequest = $$v
+            },
+            expression: "openAddRequest"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c(
+                "v-card-title",
+                { attrs: { fixed: "" } },
+                [
+                  _c("span", { staticClass: "headline" }, [_vm._v("Add Menu")]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    { attrs: { icon: "", dark: "" }, on: { click: _vm.close } },
+                    [
+                      _c("v-icon", { attrs: { color: "black" } }, [
+                        _vm._v("close")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-container",
+                    { attrs: { "grid-list-md": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { wrap: "" } },
+                        [
+                          _c(
+                            "v-form",
+                            {
+                              ref: "form",
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "v-container",
+                                { attrs: { "grid-list-xl": "", fluid: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    { attrs: { wrap: "" } },
+                                    [
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm12: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              color: "blue darken-2",
+                                              label: "Menu Name",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.name,
+                                              callback: function($$v) {
+                                                _vm.$set(_vm.form, "name", $$v)
+                                              },
+                                              expression: "form.name"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { flat: "" },
+                                      on: { click: _vm.resetForm }
+                                    },
+                                    [_vm._v("reset")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { flat: "" },
+                                      on: { click: _vm.close }
+                                    },
+                                    [_vm._v("Close")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-spacer"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        disabled: _vm.loading,
+                                        loading: _vm.loading,
+                                        flat: "",
+                                        color: "primary"
+                                      },
+                                      on: { click: _vm.save }
+                                    },
+                                    [_vm._v("Submit")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-79cc5851", module.exports)
+  }
+}
+
+/***/ }),
+/* 382 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(383)
+/* template */
+var __vue_template__ = __webpack_require__(384)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/admin/menu/Edit.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41df0cc2", Component.options)
+  } else {
+    hotAPI.reload("data-v-41df0cc2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 383 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['openAddRequest', 'menu'],
+    components: {},
+    data: function data() {
+        var defaultForm = Object.freeze({
+            name: ''
+        });
+        return {
+            errors: {},
+            defaultForm: defaultForm,
+            loading: false,
+            disabled: true,
+            form: Object.assign({}, defaultForm),
+            rules: {
+                name: [function (val) {
+                    return (val || '').length > 0 || 'This field is required';
+                }]
+            },
+            brands: [],
+            brandSelect: []
+        };
+    },
+
+    methods: {
+        save: function save() {
+            var _this = this;
+
+            this.loading = true;
+            axios.patch('/menus/' + this.menu.id, {
+                form: this.menu,
+                brandSelect: this.$data.brandSelect
+            }).then(function (response) {
+                _this.loading = false;
+                console.log(response);
+                // this.close;
+                // this.resetForm();
+                eventBus.$emit("alertRequest");
+                Object.assign(_this.$parent.menus[_this.$parent.editedIndex], _this.$parent.proEdit);
+                // this.$parent.menus.push(response.data)
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.errors = error.response.data.errors;
+            });
+        },
+        resetForm: function resetForm() {
+            this.form = Object.assign({}, this.defaultForm);
+            this.$refs.form.reset();
+        },
+        close: function close() {
+            this.$emit('closeRequest');
+        }
+    },
+    computed: {},
+    mounted: function mounted() {
+        // axios.get('/brands')
+        //     .then((response) => {
+        //         this.loader = false
+        //         this.brands = response.data
+        //     })
+        //     .catch((error) => {
+        //         this.loader = false
+        //         this.errors = error.response.data.errors
+        //     })
+    }
+});
+
+/***/ }),
+/* 384 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-layout",
+    { attrs: { row: "", "justify-center": "" } },
+    [
+      _c(
+        "v-dialog",
+        {
+          attrs: { persistent: "", "max-width": "500px" },
+          model: {
+            value: _vm.openAddRequest,
+            callback: function($$v) {
+              _vm.openAddRequest = $$v
+            },
+            expression: "openAddRequest"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c(
+                "v-card-title",
+                { attrs: { fixed: "" } },
+                [
+                  _c("span", { staticClass: "headline" }, [_vm._v("Add menu")]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    { attrs: { icon: "", dark: "" }, on: { click: _vm.close } },
+                    [
+                      _c("v-icon", { attrs: { color: "black" } }, [
+                        _vm._v("close")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-container",
+                    { attrs: { "grid-list-md": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { wrap: "" } },
+                        [
+                          _c(
+                            "v-form",
+                            {
+                              ref: "form",
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "v-container",
+                                { attrs: { "grid-list-xl": "", fluid: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    { attrs: { wrap: "" } },
+                                    [
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm12: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              color: "blue darken-2",
+                                              label: "menu Name",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.menu.name,
+                                              callback: function($$v) {
+                                                _vm.$set(_vm.menu, "name", $$v)
+                                              },
+                                              expression: "menu.name"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { flat: "" },
+                                      on: { click: _vm.resetForm }
+                                    },
+                                    [_vm._v("reset")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { flat: "" },
+                                      on: { click: _vm.close }
+                                    },
+                                    [_vm._v("Close")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-spacer"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        disabled: _vm.loading,
+                                        loading: _vm.loading,
+                                        flat: "",
+                                        color: "primary"
+                                      },
+                                      on: { click: _vm.save }
+                                    },
+                                    [_vm._v("Submit")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-41df0cc2", module.exports)
+  }
+}
+
+/***/ }),
+/* 385 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-content",
+        [
+          _c(
+            "v-container",
+            { attrs: { fluid: "", "fill-height": "" } },
+            [
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.loader,
+                      expression: "loader"
+                    }
+                  ],
+                  staticStyle: {
+                    "text-align": "center",
+                    width: "100%",
+                    "margin-top": "200px"
+                  }
+                },
+                [
+                  _c("v-progress-circular", {
+                    staticStyle: { margin: "1rem" },
+                    attrs: { width: 3, indeterminate: "", color: "red" }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-layout",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: !_vm.loader,
+                      expression: "!loader"
+                    }
+                  ],
+                  attrs: { "justify-center": "", "align-center": "" }
+                },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { row: "", wrap: "" } },
+                    [
+                      _c(
+                        "v-card",
+                        [
+                          _c(
+                            "v-card-title",
+                            [
+                              _vm._v(
+                                "\r\n                            Menu\r\n                            "
+                              ),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { flat: "", color: "primary" },
+                                  on: { click: _vm.openAdd }
+                                },
+                                [_vm._v("Add Menu")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tooltip",
+                                { attrs: { bottom: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "mx-0",
+                                      attrs: { slot: "activator", icon: "" },
+                                      on: { click: _vm.getMenu },
+                                      slot: "activator"
+                                    },
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        {
+                                          attrs: {
+                                            small: "",
+                                            color: "blue darken-2"
+                                          }
+                                        },
+                                        [_vm._v("refresh")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("span", [_vm._v("Refresh")])
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-text-field", {
+                                attrs: {
+                                  "append-icon": "search",
+                                  label: "Search",
+                                  "single-line": "",
+                                  "hide-details": ""
+                                },
+                                model: {
+                                  value: _vm.search,
+                                  callback: function($$v) {
+                                    _vm.search = $$v
+                                  },
+                                  expression: "search"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-data-table",
+                            {
+                              staticClass: "elevation-1",
+                              attrs: {
+                                headers: _vm.headers,
+                                items: _vm.menus,
+                                search: _vm.search,
+                                loading: _vm.loading
+                              },
+                              scopedSlots: _vm._u([
+                                {
+                                  key: "items",
+                                  fn: function(props) {
+                                    return [
+                                      _c("td", [
+                                        _vm._v(_vm._s(props.item.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-xs-right" },
+                                        [_vm._v(_vm._s(props.item.created_at))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass:
+                                            "justify-center layout px-0"
+                                        },
+                                        [
+                                          _c(
+                                            "v-tooltip",
+                                            { attrs: { bottom: "" } },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                {
+                                                  staticClass: "mx-0",
+                                                  attrs: {
+                                                    slot: "activator",
+                                                    icon: ""
+                                                  },
+                                                  on: {
+                                                    click: function($event) {
+                                                      _vm.editProduct(
+                                                        props.item
+                                                      )
+                                                    }
+                                                  },
+                                                  slot: "activator"
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: {
+                                                        small: "",
+                                                        color: "blue darken-2"
+                                                      }
+                                                    },
+                                                    [_vm._v("edit")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("span", [_vm._v("Edit")])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  }
+                                }
+                              ])
+                            },
+                            [
+                              _c("v-progress-linear", {
+                                attrs: {
+                                  slot: "progress",
+                                  color: "blue",
+                                  indeterminate: ""
+                                },
+                                slot: "progress"
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "v-alert",
+                                {
+                                  attrs: {
+                                    slot: "no-results",
+                                    value: true,
+                                    color: "error",
+                                    icon: "warning"
+                                  },
+                                  slot: "no-results"
+                                },
+                                [
+                                  _vm._v(
+                                    '\r\n                                Your search for "' +
+                                      _vm._s(_vm.search) +
+                                      '" found no results.\r\n                            '
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-snackbar",
+            {
+              attrs: {
+                timeout: _vm.timeout,
+                bottom: "",
+                color: _vm.color,
+                left: ""
+              },
+              model: {
+                value: _vm.snackbar,
+                callback: function($$v) {
+                  _vm.snackbar = $$v
+                },
+                expression: "snackbar"
+              }
+            },
+            [
+              _vm._v(
+                "\r\n            " + _vm._s(_vm.message) + "\r\n            "
+              ),
+              _c("v-btn", [_vm._v("close")])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("Create", {
+        attrs: { openAddRequest: _vm.dispAdd },
+        on: { closeRequest: _vm.close, alertRequest: _vm.showAlert }
+      }),
+      _vm._v(" "),
+      _c("Edit", {
+        attrs: { openAddRequest: _vm.dispEdit, menu: _vm.catEdit },
+        on: { closeRequest: _vm.close, alertRequest: _vm.showAlert }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5b966e74", module.exports)
+  }
+}
+
+/***/ }),
+/* 386 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 387 */,
+/* 388 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(389)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(391)
+/* template */
+var __vue_template__ = __webpack_require__(392)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-8e36b638"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/include/test.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8e36b638", Component.options)
+  } else {
+    hotAPI.reload("data-v-8e36b638", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 389 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(390);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("4864cee0", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8e36b638\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./test.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8e36b638\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./test.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 390 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.dropdown:hover .dropdown-menu[data-v-8e36b638] {\r\n    display: block;\n}\n.navbar .dropdown-menu[data-v-8e36b638] {\r\n    width: 400px !important;\n}\n.navbar-expand-lg[data-v-8e36b638] {\r\n    position: fixed;\r\n    background: #132f51 !important;\r\n    z-index: 1;\r\n    width: 100%;\r\n    margin-top: -25px;\r\n    padding: 10px 0px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 391 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_Cart__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_Cart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cart_Cart__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_Login__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_Login___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__login_Login__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    // router,
+    components: {
+        Login: __WEBPACK_IMPORTED_MODULE_1__login_Login___default.a,
+        myCart: __WEBPACK_IMPORTED_MODULE_0__cart_Cart___default.a
+    },
+    data: function data() {
+        return {
+            cartItems: [],
+            categories: [],
+            menus: [],
+            drawer: true,
+            right: null,
+            snackbar: false,
+            bottom: 'bottom',
+            Scolor: '',
+            timeout: 5000,
+            message: "Success"
+        };
+    },
+
+    methods: {
+        categoryPro: function categoryPro(data) {
+            var _this = this;
+
+            // console.log(data)
+            axios.post('/filterProduct/' + data.id).then(function (response) {
+                // this.categories = response.data;
+                eventBus.$emit("filterEvent", response.data);
+            }).catch(function (error) {
+                // this.loading = false;
+                _this.errors = error.response.data.errors;
+            });
+            // router.go('')
+            // this.$router.push(`/filter/${data.id}`)
+        },
+        getCart: function getCart() {
+            var _this2 = this;
+
+            axios.get('/getCart').then(function (response) {
+                _this2.cartItems = response.data;
+                eventBus.$emit("cartEvent", response.data);
+            });
+        },
+        showalert: function showalert() {
+            this.message = "success";
+            this.Scolor = "black";
+            this.snackbar = true;
+        },
+        loadingalert: function loadingalert() {
+            this.message = "Adding to cart...";
+            this.Scolor = "info";
+            this.bottom = "top";
+            this.snackbar = true;
+        }
+    },
+    mounted: function mounted() {
+        var _this3 = this;
+
+        this.getCart();
+        axios.get("/categories").then(function (response) {
+            _this3.categories = response.data;
+        }).catch(function (error) {
+            // this.loading = false;
+            _this3.errors = error.response.data.errors;
+        });
+
+        axios.get("/menus").then(function (response) {
+            _this3.menus = response.data;
+        }).catch(function (error) {
+            // this.loading = false;
+            _this3.errors = error.response.data.errors;
+        });
+    },
+    created: function created() {
+        var _this4 = this;
+
+        eventBus.$on("cartEvent", function (data) {
+            _this4.cartItems = data;
+        });
+        eventBus.$on('alertRequest', function (data) {
+            _this4.showalert();
+        });
+        eventBus.$on('loadingRequest', function (data) {
+            _this4.loadingalert();
+        });
+
+        this.timer = window.setInterval(function () {
+            _this4.getCart();
+            // eventBus.$emit("cartEvent", response.data);
+        }, 60000);
+    }
+});
+
+/***/ }),
+/* 392 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-app",
+        { attrs: { id: "inspire" } },
+        [
+          _c(
+            "v-navigation-drawer",
+            {
+              attrs: { right: "", temporary: "", fixed: "" },
+              model: {
+                value: _vm.right,
+                callback: function($$v) {
+                  _vm.right = $$v
+                },
+                expression: "right"
+              }
+            },
+            [_c("myCart")],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "nav",
+            { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "navbar-brand text-uppercase",
+                  staticStyle: { "margin-left": "20px" },
+                  attrs: { to: "/" }
+                },
+                [_c("b", [_vm._v("Healthwise Pharmacy")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "navbar-toggler",
+                  attrs: {
+                    type: "button",
+                    "data-toggle": "collapse",
+                    "data-target": "#navbarSupportedContent2",
+                    "aria-controls": "navbarSupportedContent2",
+                    "aria-expanded": "false",
+                    "aria-label": "Toggle navigation"
+                  }
+                },
+                [_c("span", { staticClass: "navbar-toggler-icon" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "collapse navbar-collapse",
+                  attrs: { id: "navbarSupportedContent2" }
+                },
+                [
+                  _c(
+                    "div",
+                    {},
+                    _vm._l(_vm.menus, function(menu) {
+                      return _c(
+                        "v-menu",
+                        {
+                          key: menu.id,
+                          attrs: {
+                            transition: "slide-y-transition",
+                            bottom: ""
+                          }
+                        },
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: {
+                                slot: "activator",
+                                color: "white",
+                                dark: "",
+                                flat: ""
+                              },
+                              slot: "activator"
+                            },
+                            [
+                              _vm._v(
+                                "\r\n                            " +
+                                  _vm._s(menu.name) +
+                                  "\r\n                        "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-layout",
+                            { attrs: { wrap: "" } },
+                            _vm._l(menu.categories, function(category) {
+                              return _c(
+                                "v-flex",
+                                {
+                                  key: category.id,
+                                  staticStyle: { background: "#fff" },
+                                  attrs: { "sm-6": "" }
+                                },
+                                [
+                                  _c(
+                                    "v-list",
+                                    {
+                                      staticStyle: { "min-width": "200px" },
+                                      attrs: { "two-line": "", subheader: "" }
+                                    },
+                                    [
+                                      _c("v-subheader", [
+                                        _vm._v(_vm._s(category.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _vm._l(category.sub_categories, function(
+                                        subcats
+                                      ) {
+                                        return _c(
+                                          "v-list-tile",
+                                          {
+                                            key: subcats.id,
+                                            on: {
+                                              click: function($event) {
+                                                _vm.categoryPro(subcats)
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _c("v-list-tile-title", [
+                                              _vm._v(_vm._s(subcats.name))
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("v-divider")
+                                          ],
+                                          1
+                                        )
+                                      })
+                                    ],
+                                    2
+                                  )
+                                ],
+                                1
+                              )
+                            })
+                          )
+                        ],
+                        1
+                      )
+                    })
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "v-btn v-btn--flat theme--dark white--text",
+                      attrs: { href: "/admin#/dashboard" }
+                    },
+                    [_vm._v("Admin")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-tooltip",
+                    { attrs: { bottom: "" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "mx-0",
+                          attrs: { slot: "activator", icon: "" },
+                          on: {
+                            click: function($event) {
+                              $event.stopPropagation()
+                              _vm.right = !_vm.right
+                            }
+                          },
+                          slot: "activator"
+                        },
+                        [
+                          _c(
+                            "v-badge",
+                            { attrs: { color: "orange", left: "" } },
+                            [
+                              _c(
+                                "span",
+                                { attrs: { slot: "badge" }, slot: "badge" },
+                                [_vm._v(_vm._s(_vm.cartItems.length))]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-icon",
+                                { attrs: { color: "orange darken-2" } },
+                                [_vm._v("shopping_cart")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("Cart")])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("form", { staticClass: "form-inline" }, [
+                    _c("div", { staticClass: "md-form my-0" }, [
+                      _c("input", {
+                        staticClass: "form-control mr-sm-2",
+                        attrs: {
+                          type: "text",
+                          placeholder: "Search",
+                          "aria-label": "Search"
+                        }
+                      })
+                    ])
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("Login"),
+      _vm._v(" "),
+      _c(
+        "v-snackbar",
+        {
+          attrs: {
+            timeout: _vm.timeout,
+            bottom: _vm.bottom,
+            color: _vm.Scolor,
+            right: "right"
+          },
+          model: {
+            value: _vm.snackbar,
+            callback: function($$v) {
+              _vm.snackbar = $$v
+            },
+            expression: "snackbar"
+          }
+        },
+        [
+          _vm._v("\r\n        " + _vm._s(_vm.message) + "\r\n        "),
+          _c("v-icon", { attrs: { dark: "", right: "" } }, [
+            _vm._v("check_circle")
+          ])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8e36b638", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

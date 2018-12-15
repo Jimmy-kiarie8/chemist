@@ -34,8 +34,9 @@ class CategoryController extends Controller
         // return $request->all();
         $category = new Category;
         $category->user_id = Auth::id();
-        $category->name = $request->name;
-        $category->description = $request->description;
+        $category->menu_id = $request->menu['id'];
+        $category->name = $request->form['name'];
+        $category->description = $request->form['description'];
         $category->save();
         return $category;
     }
@@ -51,8 +52,9 @@ class CategoryController extends Controller
     {
         // return $request->all();
         $category = Category::find($id);
-        $category->name = $request->name;
-        $category->description = $request->description;
+        $category->menu_id = $request->menu['id'];
+        $category->name = $request->form['name'];
+        $category->description = $request->form['description'];
         $category->save();
         return $category;
     }

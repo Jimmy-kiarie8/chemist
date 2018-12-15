@@ -29,17 +29,20 @@ Vue.use(VueRouter)
 let exampleComponent = require('./components/ExampleComponent.vue');
 
 let myHeader = require('./components/include/Header.vue');
+// let myHeaderpartial = require('./components/include/Headerpartial.vue');
 let myFooter = require('./components/include/Footer.vue');
 let myDash = require('./components/Dashboard.vue');
-let myNav = require('./components/include/Navigation.vue');
+let myNav = require('./components/include/test.vue');
 let myProduct = require('./components/product/Product.vue');
 let myHome = require('./components/home/Home.vue');
 let myPro = require('./components/admin/products/Products.vue');
 let myCategory = require('./components/admin/category/Category.vue');
 let mySubCat = require('./components/admin/subcategory/SubCat.vue');
 let myOrders = require('./components/admin/orders/Orders.vue');
+let myPayment = require('./components/admin/orders/Payment.vue');
 let myFilter = require('./components/filter/Filter.vue');
 let myPrescription = require('./components/admin/prescription/Prescription.vue');
+let myMenu = require('./components/admin/menu/Menu.vue');
 
 
 const routes = [
@@ -54,6 +57,8 @@ const routes = [
     { path: '/AdminSubCat', component: mySubCat },
     { path: '/AdminOrders', component: myOrders },
     { path: '/prescriptions', component: myPrescription },
+    { path: '/menu', component: myMenu },
+    { path: '/Adminpayments', component: myPayment },
 ]
 const router = new VueRouter({
     // mode: 'history',
@@ -63,7 +68,7 @@ const app = new Vue({
     el: '#app',
     router,
     components: {
-        myProduct, myNav, myHome, exampleComponent, myPro, myPrescription, myHeader, myFooter
+        myProduct, myNav, myHome, exampleComponent, myPro, myPrescription, myHeader, myFooter, myMenu,
+        myPayment// myHeaderpartial
     },
 });
- 

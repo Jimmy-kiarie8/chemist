@@ -11,7 +11,7 @@
                     <div class="carousel-inner" id="container">
                         <div class="carousel-item active">
                             <div class="image-container">
-                                <img class="d-block w-100" :src="'/storage/products/'+singleP.image" alt="First slide" style="height: 500px;">
+                                <img class="d-block w-100" :src="'/healthwise/products/'+singleP.image" alt="First slide" style="height: 500px;">
                                 <!-- <img class="d-block w-100" src="storage/products/product1.jpg" alt="First slide"> -->
                                 <div class="after"></div>
                                 <div class="carousel-caption d-none d-md-block">
@@ -25,7 +25,7 @@
                         </div>
                         <div class="carousel-item" v-for="product in headerPro" :key="product.id">
                             <div class="image-container">
-                                <img class="d-block w-100" :src="'/storage/products/'+product.image" alt="First slide" style="height: 500px;">
+                                <img class="d-block w-100" :src="'/healthwise/products/'+product.image" alt="First slide" style="height: 500px;">
                                 <!-- <img class="d-block w-100" src="storage/products/product2.jpg" alt="First slide"> -->
                                 <div class="after"></div>
                                 <div class="carousel-caption d-none d-md-block">
@@ -172,7 +172,8 @@ export default {
     methods: {
 
         addToCart(cart) {
-            // console.log(cart)
+            console.log(cart)
+            // eventBus.$emit("loadingRequest", response.data);
             axios
                 .post(`/cart/${cart}`)
                 .then(response => {

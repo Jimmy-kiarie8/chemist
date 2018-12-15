@@ -71,7 +71,7 @@ export default {
     methods: {
         save() {
             this.loading = true
-            axios.post('/brands', {
+            axios.post('/orders', {
                 form: this.$data.form,
                 categorySelect: this.$data.categorySelect
             }).
@@ -81,7 +81,7 @@ export default {
                     // this.close();
                     // this.resetForm();
                     eventBus.$emit("alertRequest");
-                    this.$parent.brands.push(response.data)
+                    this.$parent.orders.push(response.data)
                 })
                 .catch((error) => {
                     this.loading = false

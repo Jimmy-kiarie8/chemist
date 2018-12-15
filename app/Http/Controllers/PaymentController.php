@@ -19,6 +19,11 @@ use App\Order;
 
 class PaymentController extends Controller
 {
+    public function __construct()
+    {
+
+    }
+
     public function create(Request $request)
     {
         $apiContext = new \PayPal\Rest\ApiContext(
@@ -29,27 +34,58 @@ class PaymentController extends Controller
         );
         $payer = new Payer();
         $payer->setPaymentMethod("paypal");
-        $item1 = new Item();
-        $item1->setName('Ground Coffee 40 oz')
-            ->setCurrency('USD')
-            ->setQuantity(1)
-            ->setSku("123123") // Similar to `item_number` in Classic API
-            ->setPrice(7.5);
-        $item2 = new Item();
-        $item2->setName('Granola bars')
-            ->setCurrency('USD')
-            ->setQuantity(5)
-            ->setSku("321321") // Similar to `item_number` in Classic API
-            ->setPrice(2);
+        // $item1 = new Item();
+        // $item1->setName('Ground Coffee 40 oz')
+        //     ->setCurrency('USD')
+        //     ->setQuantity(1)
+        //     ->setSku("123123") // Similar to `item_number` in Classic API
+        //     ->setPrice(7.5);
+        // $item2 = new Item();
+        // $item2->setName('Granola bars')
+        //     ->setCurrency('USD')
+        //     ->setQuantity(5)
+        //     ->setSku("321321") // Similar to `item_number` in Classic API
+        //     ->setPrice(2);
+        $items = [];
+        $total = 0;
+        $tax = 0;
+        $shipment = 0;
+        $qty = 0;
+        $price = 0;
+        foreach ($this->getCart() as $cart) {
+            $name = $cart['item']['name'];
+            $total = $total + ($cart['item']['price'] * $cart['qty']);
+            $item = new Item();
+            // dd($cart['item']['price']);
+            // dd($cart['qty']);
+            $qty = $cart['qty'];
+            $price = $cart['item']['price'];
+            $items[] = $item->setName($name)
+                ->setCurrency('USD')
+                ->setQuantity($qty)
+                ->setSku("123123") // Similar to `item_number` in Classic API
+                ->setPrice($price);
+
+
+        }
+        // dd($qty);
+        // dd($price);
+
+        $tax = $total * 16 / 100;
+        $shipment = $total * 1 / 100;
+        $subtotal = $total - $tax - $shipment;
+        // dd($total + $tax + $shipment);
+
         $itemList = new ItemList();
-        $itemList->setItems(array($item1, $item2));
+        $itemList->setItems($items);
+        // $itemList->setItems(array($item1, $item2));
         $details = new Details();
-        $details->setShipping(1.2)
-            ->setTax(1.3)
-            ->setSubtotal(17.50);
+        $details->setShipping($shipment)
+            ->setTax($tax)
+            ->setSubtotal($total);
         $amount = new Amount();
         $amount->setCurrency("USD")
-            ->setTotal(20)
+            ->setTotal($total + $tax + $shipment)
             ->setDetails($details);
         $transaction = new Transaction();
         $transaction->setAmount($amount)
@@ -66,16 +102,8 @@ class PaymentController extends Controller
             ->setRedirectUrls($redirectUrls)
             ->setTransactions(array($transaction));
         // $request = clone $payment;
-
-        // try {
         $payment->create($apiContext);
-        // } catch (Exception $ex) {
-        //     ResultPrinter::printError("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", null, $request, $ex);
-        //     exit(1);
-        // }
         return redirect($payment->getApprovalLink());
-        // ResultPrinter::printResult("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", "<a href='$approvalUrl' >$approvalUrl</a>", $request, $payment);
-
         // return $payment;
     }
 
@@ -88,6 +116,17 @@ class PaymentController extends Controller
                 'EOCGee6_vyg1J6n1S-fKPykBnfEL_IHP_yDa2DMyfCwpmSmoqUOgqSwl2tiT6YRyy-CvLENIVS0N4nB-'      // ClientSecret
             )
         );
+
+        $total = 0;
+        $tax = 0;
+        $shipment = 0;
+        foreach ($this->getCart() as $cart) {
+            $total = $total + ($cart['item']['price'] * $cart['qty']);
+        }
+        $tax = $total * 16 / 100;
+        $shipment = $total * 1 / 100;
+        $subtotal = $total - $tax - $shipment;
+
         $paymentId = $request->paymentId;
         // dd($paymentId);
         $payment = Payment::get($paymentId, $apiContext);
@@ -97,50 +136,47 @@ class PaymentController extends Controller
         $amount = new Amount();
         $details = new Details();
 
-        $details->setShipping(1.2)
-            ->setTax(1.3)
-            ->setSubtotal(17.50);
+        $details->setShipping($shipment)
+            ->setTax($tax)
+            ->setSubtotal($total);
 
         $amount->setCurrency('USD');
-        $amount->setTotal(20);
+        $amount->setTotal($total + $tax + $shipment);
         $amount->setDetails($details);
         $transaction->setAmount($amount);
         $execution->addTransaction($transaction);
         $result = $payment->execute($execution, $apiContext);
 
         // Create Orders
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        $cart = $cart->getCart($oldCart);
+
         $order = new Order;
         $order->buyer_id = Auth::id();
         $order->product_id = $payment->id;
         $order->address = 'Nairobi';
         $order->name = Auth::user()->name;
-        $order->cart = 'cart';
-        $order->paypal = 'test';
+        $order->cart = serialize($this->getCart());
+        $order->paypal = serialize($payment);
         // $orderSave = Auth::user()->orders()->save();
         $order->save();
-        // if ($orderSave) {
-        //     $request->session()->forget('cart');
-        // }
-        return $order;
+        if ($order->save()) {
+            $request->session()->forget('cart');
+        }
+		// Notification::send($user, new OrderNotification($order));
+        return redirect('/');
+        // return $order;
         // return $payment;  
         // return $request('paymentId');
     }
 
-    public function items()
+    public function getCart()
     {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        // return $cart->getCart();
-        foreach ($cart as $cartItem) {
-            $item1 = new Item();
-            $item1->setName($cart->item['name'])
-                ->setCurrency('USD')
-                ->setQuantity($cart->qty)
-                ->setSku("123123") // Similar to `item_number` in Classic API
-                ->setPrice($cart->price);
-        }
+        $carts = new Cart($oldCart);
+        $carts = $carts->getCart($oldCart);
+        $newCart = [];
+        // foreach ($carts as $cart) {
+        //     $newCart = $cart->item;
+        // }
+        return $carts;
     }
 }

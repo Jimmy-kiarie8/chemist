@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img src="{{ asset('storage/app/public' . str_replace('public','','')) }}" alt="{{ $ad->name }}" class="img-responsive img-thumbnail" height="200" width="200">You are logged in!
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti doloremque, blanditiis, saepe aspernatur qui delectus, iste numquam corporis unde ex eveniet nesciunt quae cumque fuga animi. Labore dolores laudantium placeat.
                 </div>
             </div>
         </div>

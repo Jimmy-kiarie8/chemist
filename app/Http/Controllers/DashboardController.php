@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
-
+use App\Order;
 class DashboardController extends Controller
 {
     public function getChartData()
@@ -242,12 +242,11 @@ class DashboardController extends Controller
 
     public function countPending()
     {
-        // return Shipment::count();
-        // return Shipment::where('status', '!=', 'Delivered')->where('status', '!=', 'Cancelled')->count();
+        return Order::where('delivered', 0)->count();
     }
 
     public function countOrders()
     {
-        // return Shipment::count();
+        return Order::count();
     }
 }

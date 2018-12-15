@@ -4,6 +4,7 @@
         <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
     </div>
     <!-- <img src="storage/cover/land.jpg" alt="" style="height: 200px;"> -->
+    <Headerpartial></Headerpartial>
     <v-layout wrap class="container" v-show="!loader">
         <!-- <v-flex sm3>
         <mySidebar></mySidebar>
@@ -20,7 +21,7 @@
                             <v-divider></v-divider>
                             <v-card-text>
                                 <div class="image-container">
-                                    <img class="d-block w-100" :src="'/storage/products/'+bestS.image" alt="First slide"
+                                    <img class="d-block w-100" :src="'/healthwise/products/'+bestS.image" alt="First slide"
                     :class="{'selected': isSelected(index)}" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
 
                                     <!-- <div class="after">This is some content</div> -->
@@ -78,9 +79,10 @@
 
 <script>
 import myShow from '../home/Show'
+import Headerpartial from '../include/Headerpartial'
 export default {
     components: {
-        myShow
+        myShow, Headerpartial
     },
     data() {
         return {

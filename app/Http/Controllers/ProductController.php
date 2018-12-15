@@ -64,6 +64,7 @@ class ProductController extends Controller
         $product->subcategory_id = $request->subCatSelect['id'];
         $product->name = $request->form['name'];
         $product->price = $request->form['price'];
+        $product->list_price = $request->form['list_price'];
         $product->description = $request->form['description'];
         $product->quantity = $request->form['quantity'];
         $product->user_id = Auth::id();
@@ -85,6 +86,7 @@ class ProductController extends Controller
         $product->subcategory_id = $request->subCatSelect['id'];
         $product->name = $request->form['name'];
         $product->price = $request->form['price'];
+        $product->list_price = $request->form['list_price'];
         $product->description = $request->form['description'];
         $product->quantity = $request->form['quantity'];
         $product->save();

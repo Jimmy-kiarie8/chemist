@@ -9,37 +9,28 @@
                 <v-layout row wrap>
                     <v-card>
                         <v-card-title>
-                            Order
-                            <v-btn @click="openAdd" flat color="primary">Add Order</v-btn>
+                            Menu
+                            <v-btn @click="openAdd" flat color="primary">Add Menu</v-btn>
                             <!-- <v-spacer></v-spacer> -->
                             <v-tooltip bottom>
-                                <v-btn slot="activator" icon class="mx-0" @click="getOrders">
+                                <v-btn slot="activator" icon class="mx-0" @click="getMenu">
                                     <v-icon small color="blue darken-2">refresh</v-icon>
                                 </v-btn>
                                 <span>Refresh</span>
                             </v-tooltip>
                             <v-text-field v-model="search" append-icon="search" label="Search" single-line hide-details></v-text-field>
                         </v-card-title>
-                        <v-data-table :headers="headers" :items="orders" class="elevation-1" :search="search" :loading="loading">
+                        <v-data-table :headers="headers" :items="menus" class="elevation-1" :search="search" :loading="loading">
                             <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
                             <template slot="items" slot-scope="props">
-                                <td>{{ props.item.created_at }}</td>
-                                <td class="text-xs-right">{{ props.item.buyer_id }}</td>
-                                <td class="text-xs-right">{{ props.item.product_id }}</td>
-                                <!-- <td class="text-xs-right">{{ props.item.name }}</td> -->
-                                <td class="text-xs-right">{{ props.item.address }}</td>
+                                <td>{{ props.item.name }}</td>
+                                <td class="text-xs-right">{{ props.item.created_at }}</td>
                                 <td class="justify-center layout px-0">
                                     <v-tooltip bottom>
                                         <v-btn slot="activator" icon class="mx-0" @click="editProduct(props.item)">
                                             <v-icon small color="blue darken-2">edit</v-icon>
                                         </v-btn>
                                         <span>Edit</span>
-                                    </v-tooltip>
-                                    <v-tooltip bottom>
-                                        <v-btn slot="activator" icon class="mx-0" @click="view(props.item)">
-                                            <v-icon small color="indigo darken-2">visibility</v-icon>
-                                        </v-btn>
-                                        <span>View Order</span>
                                     </v-tooltip>
                                 </td>
                             </template>
@@ -57,20 +48,21 @@
         </v-snackbar>
     </v-content>
     <Create @closeRequest="close" :openAddRequest="dispAdd" @alertRequest="showAlert"></Create>
-    <!-- <Edit @closeRequest="close" :openAddRequest="dispEdit" @alertRequest="showAlert" :order="catEdit"></Edit> -->
-    <myView></myView>
+    <Edit @closeRequest="close" :openAddRequest="dispEdit" @alertRequest="showAlert" :menu="catEdit"></Edit>
+    <!-- <ShowTask @closeRequest="close" :openAddRequest="dispShow" @alertRequest="showAlert" :task="catEdit"></ShowTask> -->
 
 </div>
 </template>
 
 <script>
 let Create = require("./Create");
-// let Edit = require("./Edit");
-let myView = require('./View');
+let Edit = require("./Edit");
+// let ShowTask = require('./ShowTask');
 
 export default {
     components: {
-        Create, myView
+        Create,
+        Edit
     },
 
     data() {
@@ -80,34 +72,21 @@ export default {
             dispAdd: false,
             dispEdit: false,
             dispShow: false,
-            orders: [],
+            menus: [],
             catEdit: [],
             loader: false,
             snackbar: false,
             timeout: 5000,
             color: "",
             message: "",
-            headers: [
-                {
-                    text: "Created On",
-                    value: "created_at"
-                },
-                {
-                    text: "Client Name",
+            headers: [{
+                    text: "Menu Name",
                     align: "left",
                     value: "name"
                 },
                 {
-                    text: "Product Id",
-                    value: "product_id"
-                },
-                // {
-                //     text: "Name",
-                //     value: "name"
-                // },
-                {
-                    text: "Address",
-                    value: "address"
+                    text: "Created On",
+                    value: "created_at"
                 },
                 {
                     text: "Actions",
@@ -132,30 +111,26 @@ export default {
 
         editProduct(task) {
             this.catEdit = Object.assign({}, task);
-            this.editedIndex = this.orders.indexOf(task);
+            this.editedIndex = this.menus.indexOf(task);
             this.dispEdit = true;
         },
-        getOrders() {
-            this.loading = true;
-            axios.get("/orders")
+        getMenu() {
+            this.loader = true;
+            axios
+                .get("/menus")
                 .then(response => {
                     this.loader = false;
-                    this.loading = false;
-                    this.orders = response.data;
+                    this.menus = response.data;
                 })
                 .catch(error => {
                     this.loader = false;
-                    this.loading = false;
                     this.errors = error.response.data.errors;
                 });
-        },
-        view(order) {
-            eventBus.$emit("viewOrdEvent", order);
-        },
+        }
     },
     mounted() {
         this.loader = true;
-        this.getOrders();
+        this.getMenu();
     }
 };
 </script>

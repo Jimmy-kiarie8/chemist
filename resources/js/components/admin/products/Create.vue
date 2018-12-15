@@ -23,11 +23,15 @@
                                         <!-- <small class="has-text-danger" v-if="errors.charges">{{ errors.charges[0] }}</small> -->
                                     </v-flex>
                                     <v-flex xs12 sm6>
-                                        <v-text-field v-model="form.price" color="blue darken-2" label="Quantity" required></v-text-field>
+                                        <v-text-field v-model="form.price" color="blue darken-2" label="Price" required></v-text-field>
                                         <!-- <small class="has-text-danger" v-if="errors.charges">{{ errors.charges[0] }}</small> -->
                                     </v-flex>
                                     <v-flex xs12 sm6>
-                                        <v-text-field v-model="form.quantity" color="blue darken-2" label="price" required></v-text-field>
+                                        <v-text-field v-model="form.list_price" color="blue darken-2" label="List Price" required></v-text-field>
+                                        <!-- <small class="has-text-danger" v-if="errors.charges">{{ errors.charges[0] }}</small> -->
+                                    </v-flex>
+                                    <v-flex xs12 sm6>
+                                        <v-text-field v-model="form.quantity" color="blue darken-2" label="Quantity" required></v-text-field>
                                         <!-- <small class="has-text-danger" v-if="errors.charges">{{ errors.charges[0] }}</small> -->
                                     </v-flex>
                                     <v-flex xs12 sm12>
@@ -72,6 +76,7 @@ export default {
         const defaultForm = Object.freeze({
             name: '',
             quantity: '',
+            list_price: '',
             price: '',
             description: '',
         })

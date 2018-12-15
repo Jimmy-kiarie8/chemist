@@ -13,21 +13,28 @@
             <v-card-text>
                 <v-layout wrap>
                     <v-flex sm6>
-                        <img :src="'/storage/products/'+productD.image" alt="" style="height: 300px; width: 300px;">
+                        <img :src="'/healthwise/products/'+productD.image" alt="" style="height: 300px; width: 300px;">
                     </v-flex>
-                    <v-divider vertical></v-divider>
-                    <v-flex sm4 offset-sm1>
-                        {{ productD.name }}
-                        <v-divider></v-divider>
-                        {{ productD.description }}
+                        <v-divider vertical></v-divider>
+                        <v-flex sm4 offset-sm1>
+                            {{ productD.name }}
+                            <v-divider></v-divider>
+                            {{ productD.description }} <br>                                                                                 
 
-                    </v-flex>
+                            <label for="">Price: <span class="badge pull-right">{{ productD.price }}</span></label><br>
+                            <label for="">Quantity: <span class="badge pull-right">{{ productD.quantity }}</span></label>
+
+                            <v-flex xs12 sm6>
+                                <v-text-field v-model="form.quantity" color="blue darken-2" label="Quantity" required></v-text-field>
+                                <!-- <small class="has-text-danger" v-if="errors.quantity">{{ errors.quantity[0] }}</small> -->
+                            </v-flex>
+                        </v-flex>
                 </v-layout>
             </v-card-text>
             <v-divider></v-divider>
             <v-card-actions>
                 <v-tooltip bottom>
-                    <v-btn icon class="mx-0" @click="addToCart()" slot="activator">
+                    <v-btn icon class="mx-0" @click="addToCart(productD.id)" slot="activator">
                         <v-icon color="orange darken-2">shopping_cart</v-icon>
                     </v-btn>
                     <span>Add To Cart</span>
@@ -46,12 +53,31 @@ export default {
         return {
             dialog: false,
             productD: [],
+            form: {},
         }
     },
     methods: {
-        addToCart() {
-            eventBus.$emit("addCartEvent", this.productD.id);
+        addToCart(data) {
+            eventBus.$emit("addCartEvent", data);
         },
+        // addToCart() {
+        //     eventBus.$emit("loadingRequest", response.data);
+        //     // this.loading = true
+        //     axios.post(`/cartAdd/${this.productD.id}`, this.$data.form).
+        //     then((response) => {
+        //             this.loading = false
+        //             console.log(response);
+        //             // this.close();
+        //             // this.resetForm();
+        //             eventBus.$emit("alertRequest");
+        //             eventBus.$emit("cartEvent", response.data);
+        //             // this.$parent.brands.push(response.data)
+        //         })
+        //         .catch((error) => {
+        //             this.loading = false
+        //             this.errors = error.response.data.errors
+        //         })
+        // },
         close() {
             // eventBus.$emit("closeRequest", product);
             this.dialog = false
@@ -66,6 +92,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.badge {
+    color: #000 !important;
+    font-size: 12px !important;
+    margin-left: 100px !important;
+}
+label {
+    padding: 10px 0px !important;
+}
 </style>

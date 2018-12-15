@@ -10,7 +10,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
-    // use HasRoles;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -33,5 +33,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function orders()
     {
         return $this->hasMany('App\Order', 'buyer_id');
+    }
+    
+    /**
+     * Get all user permissions.
+     *
+     * @return bool
+     */
+    public function getAllPermissionsAttribute()
+    {
+        return $this->getAllPermissions();
     }
 }

@@ -52,25 +52,34 @@
                             </div>
                         </router-link>
 
-                        <router-link to="/AdminOrders" class="v-list__tile v-list__tile--link">
-                            <div class="v-list__tile__action">
-                                <i aria-hidden="true" class="icon material-icons">email</i>
-                            </div>
-                            <div class="v-list__tile__content">
-                                <div class="v-list__tile__title">Manage Orders</div>
-                            </div>
-                        </router-link>
+                        <v-list-group prepend-icon="dialpad">
+                            <v-list-tile slot="activator">
+                                <v-list-tile-title>Orders</v-list-tile-title>
+                            </v-list-tile>
+                            <router-link to="/AdminOrders" class="v-list__tile theme--light" style="text-decoration: none">
+                                <v-list-tile-action>
+                                    <v-icon>map</v-icon>
+                                </v-list-tile-action>
+                                <v-list-tile-title>Manage Orders</v-list-tile-title>
+                            </router-link>
+                            <router-link to="/Adminpayments" class="v-list__tile theme--light" style="text-decoration: none">
+                                <v-list-tile-action>
+                                    <v-icon>attach_money</v-icon>
+                                </v-list-tile-action>
+                                <v-list-tile-title>Manage Payments</v-list-tile-title>
+                            </router-link>
+                        </v-list-group>
 
-                        <!--    <router-link to="/profile" class="v-list__tile v-list__tile--link">
+                       <router-link to="/menu" class="v-list__tile v-list__tile--link">
                             <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">account_circle</i></div>
                             <div class="v-list__tile__content">
                                 <div class="v-list__tile__title">
-                                    Your Profile
+                                    Menu
                                 </div>
                             </div>
                         </router-link>
                         
-                        <router-link to="/print" class="v-list__tile v-list__tile--link" v-if="user.can['prin']">
+                         <!--    <router-link to="/print" class="v-list__tile v-list__tile--link" v-if="user.can['prin']">
                             <div class="v-list__tile__action"><i aria-hidden="true" class="icon material-icons">print</i></div>
                             <div class="v-list__tile__content">
                                 <div class="v-list__tile__title">
@@ -153,23 +162,7 @@
                             </router-link>
                         </v-list-group>
 
-                        <v-list-group prepend-icon="settings" v-for="roleQ in user.roles" :key="roleQ.id" v-if="roleQ.name === 'Admin'">
-                            <v-list-tile slot="activator">
-                                <v-list-tile-title>App Settings</v-list-tile-title>
-                            </v-list-tile>
-                            <router-link to="/towns" class="v-list__tile theme--light" style="text-decoration: none">
-                                <v-list-tile-action>
-                                    <v-icon>map</v-icon>
-                                </v-list-tile-action>
-                                <v-list-tile-title>Towns</v-list-tile-title>
-                            </router-link>
-                            <router-link to="/statuses" class="v-list__tile theme--light" style="text-decoration: none">
-                                <v-list-tile-action>
-                                    <v-icon>dialpad</v-icon>
-                                </v-list-tile-action>
-                                <v-list-tile-title>Status</v-list-tile-title>
-                            </router-link>
-                        </v-list-group>
+                        
 
                         <v-list-group prepend-icon="attach_money" v-if="user.can['view finance']">
                             <v-list-tile slot="activator">
@@ -243,7 +236,7 @@ export default {
             color: "#132f51",
             dialog: false,
             drawer: true,
-            right: null,
+            right: null, 
             snackbar: false,
             timeout: 5000,
             Scolor: '',

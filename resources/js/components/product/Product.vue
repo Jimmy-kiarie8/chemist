@@ -11,7 +11,7 @@
                 <v-card>
                     <v-card-title id="container">
                         <div class="image-container">
-                            <img class="d-block w-100" :src="'/storage/products/'+bestS.image" alt="First slide"
+                            <img class="d-block w-100" :src="'/healthwise/products/'+bestS.image" alt="First slide"
                     :class="{'selected': isSelected(index)}" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
 
                             <!-- <div class="after">This is some content</div> -->
@@ -67,7 +67,7 @@
                 <v-card>
                     <v-card-title id="container">
                         <div class="image-container">
-                            <img class="d-block w-100" :src="'/storage/products/'+prod.image" alt="First slide"
+                            <img class="d-block w-100" :src="'/healthwise/products/'+prod.image" alt="First slide"
                     :class="{'selected': isSelected(index)}" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
 
                             <!-- <div class="after">This is some content</div> -->
@@ -123,7 +123,7 @@
                 <v-card>
                     <v-card-title id="container">
                         <div class="image-container">
-                            <img class="d-block w-100" :src="'/storage/products/'+item.image" alt="First slide"
+                            <img class="d-block w-100" :src="'/healthwise/products/'+item.image" alt="First slide"
                     :class="{'selected': isSelected(index)}" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
 
                             <!-- <div class="after">This is some content</div> -->

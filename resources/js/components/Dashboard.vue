@@ -57,7 +57,7 @@
                                             <div class="icon icon-danger">
                                                 <v-icon color="red">call_split</v-icon>
                                             </div>
-                                            <h3 class="info-title"><span><b>{{ orders.length }}</b></span></h3>
+                                            <h3 class="info-title"><span><b>{{ orders }}</b></span></h3>
                                             <h6 class="stats-title"><strong> Orders</strong></h6>
                                         </div>
                                     </div>
@@ -147,8 +147,8 @@
                                             <div class="icon icon-info">
                                                 <v-icon color="info">block</v-icon>
                                             </div>
-                                            <h3 class="info-title"><span><b>{{ AllCanceled }}</b></span></h3>
-                                            <h6 class="stats-title"><strong>Cancelled</strong></h6>
+                                            <h3 class="info-title"><span><b>{{ parseInt(orders) - parseInt(AllPending) }}</b></span></h3>
+                                            <h6 class="stats-title"><strong>Delivered</strong></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -243,7 +243,7 @@ export default {
             AllapprovedShipment: {},
             notifications: [],
             products: {},
-            orders: {},
+            orders: null,
             colorCache: {},
             AllPending: null,
             AllDelivered: null
@@ -260,7 +260,7 @@ export default {
                 })
         },
         getChartOrders() {
-            axios.get('/orders')
+            axios.get('/countOrders')
                 .then((response) => {
                     this.orders = response.data
                 })
@@ -300,13 +300,13 @@ export default {
             .catch((error) => {
                 this.errors = error.response.data.errors
             })
-        // axios.get('/countPending')
-        //     .then((response) => {
-        //         this.AllPending = response.data
-        //     })
-        //     .catch((error) => {
-        //         this.errors = error.response.data.errors
-        //     })
+        axios.get('/countPending')
+            .then((response) => {
+                this.AllPending = response.data
+            })
+            .catch((error) => {
+                this.errors = error.response.data.errors
+            })
 
         axios.get('/getProducts')
             .then((response) => {

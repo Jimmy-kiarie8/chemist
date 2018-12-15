@@ -3,7 +3,7 @@
     <v-dialog v-model="openAddRequest" persistent max-width="500px">
         <v-card>
             <v-card-title fixed>
-                <span class="headline">Add Category</span>
+                <span class="headline">Add Menu</span>
                 <v-spacer></v-spacer>
                 <v-btn icon dark @click="close">
                     <v-icon color="black">close</v-icon>
@@ -14,19 +14,12 @@
                     <v-layout wrap>
                         <v-form ref="form" @submit.prevent>
                             <v-container grid-list-xl fluid>
-                                <v-select :items="menus" v-model="menuSelect" label="Select Category" single-line item-text="name" item-value="id" return-object persistent-hint></v-select>
                                 <v-layout wrap>
                                     <v-flex xs12 sm12>
-                                        <v-text-field v-model="form.name" color="blue darken-2" label="Category Name" required></v-text-field>
+                                        <v-text-field v-model="form.name" color="blue darken-2" label="Menu Name" required></v-text-field>
                                         <!-- <small class="has-text-danger" v-if="errors.charges">{{ errors.charges[0] }}</small> -->
                                     </v-flex>
-                                    <v-flex xs12 sm12>
-                                        <v-textarea v-model="form.description" color="blue">
-                                            <div slot="label">
-                                                Special Instructions <small>(optional)</small>
-                                            </div>
-                                        </v-textarea>
-                                    </v-flex>
+                                    
                                 </v-layout>
                             </v-container>
                             <v-card-actions>
@@ -56,8 +49,6 @@ export default {
         return {
             errors: {},
             defaultForm,
-            menuSelect: [],
-            menus: [],
             loading: false,
             disabled: true,
             form: Object.assign({}, defaultForm),
@@ -69,17 +60,14 @@ export default {
     methods: {
         save() {
             this.loading = true
-            axios.post('/categories', {
-                    form: this.$data.form,
-                    menu: this.$data.menuSelect,
-                })
-                .then((response) => {
+            axios.post('/menus', this.$data.form).
+            then((response) => {
                     this.loading = false
                     console.log(response);
                     // this.close();
                     // this.resetForm();
                     eventBus.$emit("alertRequest");
-                    this.$parent.categories.push(response.data)
+                    this.$parent.menus.push(response.data)
                 })
                 .catch((error) => {
                     this.loading = false
@@ -95,16 +83,16 @@ export default {
         },
     },
     computed: {},
-    mounted() {
-        axios.get('/menus')
-            .then((response) => {
-                this.loader = false
-                this.menus = response.data
-            })
-            .catch((error) => {
-                this.loader = false
-                this.errors = error.response.data.errors
-            })
-    },
+    // mounted() {
+    //     axios.get('/brands')
+    //         .then((response) => {
+    //             this.loader = false
+    //             this.brands = response.data
+    //         })
+    //         .catch((error) => {
+    //             this.loader = false
+    //             this.errors = error.response.data.errors
+    //         })
+    // },
 }
 </script>

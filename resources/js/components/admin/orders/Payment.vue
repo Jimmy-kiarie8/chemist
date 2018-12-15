@@ -9,22 +9,22 @@
                 <v-layout row wrap>
                     <v-card>
                         <v-card-title>
-                            Order
-                            <v-btn @click="openAdd" flat color="primary">Add Order</v-btn>
+                            Payment
+                            <v-btn @click="openAdd" flat color="primary">Add Payment</v-btn>
                             <!-- <v-spacer></v-spacer> -->
                             <v-tooltip bottom>
-                                <v-btn slot="activator" icon class="mx-0" @click="getOrders">
+                                <v-btn slot="activator" icon class="mx-0" @click="pay">
                                     <v-icon small color="blue darken-2">refresh</v-icon>
                                 </v-btn>
                                 <span>Refresh</span>
                             </v-tooltip>
                             <v-text-field v-model="search" append-icon="search" label="Search" single-line hide-details></v-text-field>
                         </v-card-title>
-                        <v-data-table :headers="headers" :items="orders" class="elevation-1" :search="search" :loading="loading">
+                        <v-data-table :headers="headers" :items="payments" class="elevation-1" :search="search" :loading="loading">
                             <v-progress-linear slot="progress" color="blue" indeterminate></v-progress-linear>
                             <template slot="items" slot-scope="props">
-                                <td>{{ props.item.created_at }}</td>
-                                <td class="text-xs-right">{{ props.item.buyer_id }}</td>
+                                <td>{{ props.item.create_time }}</td>
+                                <td class="text-xs-right">{{ props.item.cart }}</td>
                                 <td class="text-xs-right">{{ props.item.product_id }}</td>
                                 <!-- <td class="text-xs-right">{{ props.item.name }}</td> -->
                                 <td class="text-xs-right">{{ props.item.address }}</td>
@@ -39,7 +39,7 @@
                                         <v-btn slot="activator" icon class="mx-0" @click="view(props.item)">
                                             <v-icon small color="indigo darken-2">visibility</v-icon>
                                         </v-btn>
-                                        <span>View Order</span>
+                                        <span>View Payment</span>
                                     </v-tooltip>
                                 </td>
                             </template>
@@ -57,7 +57,7 @@
         </v-snackbar>
     </v-content>
     <Create @closeRequest="close" :openAddRequest="dispAdd" @alertRequest="showAlert"></Create>
-    <!-- <Edit @closeRequest="close" :openAddRequest="dispEdit" @alertRequest="showAlert" :order="catEdit"></Edit> -->
+    <!-- <Edit @closeRequest="close" :openAddRequest="dispEdit" @alertRequest="showAlert" :payment="catEdit"></Edit> -->
     <myView></myView>
 
 </div>
@@ -80,7 +80,7 @@ export default {
             dispAdd: false,
             dispEdit: false,
             dispShow: false,
-            orders: [],
+            payments: [],
             catEdit: [],
             loader: false,
             snackbar: false,
@@ -132,16 +132,16 @@ export default {
 
         editProduct(task) {
             this.catEdit = Object.assign({}, task);
-            this.editedIndex = this.orders.indexOf(task);
+            this.editedIndex = this.payments.indexOf(task);
             this.dispEdit = true;
         },
-        getOrders() {
+        pay() {
             this.loading = true;
-            axios.get("/orders")
+            axios.get("/pay")
                 .then(response => {
                     this.loader = false;
                     this.loading = false;
-                    this.orders = response.data;
+                    this.payments = response.data;
                 })
                 .catch(error => {
                     this.loader = false;
@@ -149,13 +149,13 @@ export default {
                     this.errors = error.response.data.errors;
                 });
         },
-        view(order) {
-            eventBus.$emit("viewOrdEvent", order);
+        view(payment) {
+            eventBus.$emit("viewOrdEvent", payment);
         },
     },
     mounted() {
         this.loader = true;
-        this.getOrders();
+        this.pay();
     }
 };
 </script>

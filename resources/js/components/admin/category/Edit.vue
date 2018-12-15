@@ -14,6 +14,7 @@
                     <v-layout wrap>
                         <v-form ref="form" @submit.prevent>
                             <v-container grid-list-xl fluid>
+                                <v-select :items="menus" v-model="menuSelect" label="Select Category" single-line item-text="name" item-value="id" return-object persistent-hint></v-select>
                                 <v-layout wrap>
                                     <v-flex xs12 sm12>
                                         <v-text-field v-model="category.name" color="blue darken-2" label="category Name" required></v-text-field>
@@ -54,6 +55,8 @@ export default {
         })
         return {
             errors: {},
+            menus: [],
+            menuSelect: [],
             defaultForm,
             loading: false,
             disabled: true,
@@ -62,7 +65,6 @@ export default {
                 name: [val => (val || '').length > 0 || 'This field is required']
             },
             brands: [],
-            brandSelect: [],
         }
     },
     methods: {
@@ -70,7 +72,7 @@ export default {
             this.loading = true
             axios.patch(`/categories/${this.category.id}`, {
                 form: this.category,
-                brandSelect: this.$data.brandSelect
+                menu: this.$data.menuSelect
             }).
             then((response) => {
                     this.loading = false
@@ -96,6 +98,15 @@ export default {
     },
     computed: {},
     mounted() {
+        axios.get('/menus')
+            .then((response) => {
+                this.loader = false
+                this.menus = response.data
+            })
+            .catch((error) => {
+                this.loader = false
+                this.errors = error.response.data.errors
+            })
         // axios.get('/brands')
         //     .then((response) => {
         //         this.loader = false

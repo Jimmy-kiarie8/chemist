@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Category;
+use App\menu;
 
-class CategoryTableSeeder extends Seeder
+class MenuTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,9 @@ class CategoryTableSeeder extends Seeder
         $faker = \Faker\Factory::create();
         $faker->addProvider(new Bezhanov\Faker\Provider\Science($faker));
         foreach (range(1, 4) as $index) {
-            Category::create([
+            menu::create([
                 'user_id' => $faker->numberBetween($min = 1, $max = 10),
-                'menu_id' => $faker->numberBetween($min = 1, $max = 4),
                 'name' => $faker->chemicalElement,
-                'description' => $faker->realText(),
             ]);
         }
     }

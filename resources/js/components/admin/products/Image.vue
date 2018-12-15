@@ -18,7 +18,7 @@
                                     <v-divider></v-divider>
                                     <v-card-text>
                                         <img :src="avatar" style="width: 100%; height: 200px;" v-show="actualImage">
-                                        <img :src="'/storage/products/'+avatar" style="width: 100%; height: 200px;" v-show="!actualImage">
+                                        <img :src="'/healthwise/products/'+avatar" style="width: 100%; height: 200px;" v-show="!actualImage">
                                     </v-card-text>
                                         <v-card-actions>
                                             <v-btn color="red" darken-1 raised @click="onPickFile" style="color: #fff;">Update Image</v-btn>

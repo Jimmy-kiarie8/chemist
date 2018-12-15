@@ -26,7 +26,8 @@
                                 <td>{{ props.item.name }}</td>
                                 <td class="text-xs-right">{{ props.item.quantity }}</td>
                                 <td class="text-xs-right">{{ props.item.price }}</td>
-                                <td class="text-xs-right">{{ props.item.description }}</td>
+                                <td class="text-xs-right">{{ props.item.list_price }}</td>
+                                <!-- <td class="text-xs-right">{{ props.item.description }}</td> -->
                                 <!-- Featured -->
                                 <td class="text-xs-right" v-if="props.item.featured === '1' || props.item.featured === 1">
                                     <v-tooltip bottom>
@@ -101,6 +102,12 @@
                                         </v-btn>
                                         <span>Update image</span>
                                     </v-tooltip>
+                                    <v-tooltip bottom>
+                                        <v-btn slot="activator" icon class="mx-0" @click="view(props.item)">
+                                            <v-icon small color="orange darken-2">visibility</v-icon>
+                                        </v-btn>
+                                        <span>View Product</span>
+                                    </v-tooltip>
                                 </td>
                             </template>
                             <v-alert slot="no-results" :value="true" color="error" icon="warning">
@@ -121,6 +128,7 @@
     <Edit></Edit>
     <!-- <Edit @closeRequest="close" :openAddRequest="dispEdit" @alertRequest="showAlert" :product="proEdit"></Edit> -->
     <myImage></myImage>
+    <myShow></myShow>
     <!-- <ShowTask @closeRequest="close" :openAddRequest="dispShow" @alertRequest="showAlert" :task="proEdit"></ShowTask> -->
 
 </div>
@@ -129,6 +137,7 @@
 <script>
 let Create = require("./Create");
 let Edit = require("./Edit");
+import myShow from '../../home/Show'
 let myImage = require("./Image");
 // let ShowTask = require('./ShowTask');
 
@@ -136,7 +145,8 @@ export default {
     components: {
         Create,
         myImage,
-        Edit
+        Edit,
+        myShow
     },
 
     data() {
@@ -169,9 +179,13 @@ export default {
                     value: "price"
                 },
                 {
-                    text: "Description",
-                    value: "description"
+                    text: "List Price",
+                    value: "list_price"
                 },
+                // {
+                //     text: "Description",
+                //     value: "description"
+                // },
                 {
                     text: "Featured",
                     value: "featured",
@@ -229,7 +243,9 @@ export default {
                     this.errors = error.response.data.errors;
                 });
         },
-
+        view(product) {
+            eventBus.$emit("viewProEvent", product);
+        },
 
         deleteItem(item) {
             if (confirm('Are you sure you want to delete this item?')) {

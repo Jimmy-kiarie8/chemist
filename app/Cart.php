@@ -39,6 +39,28 @@ class Cart
         $this->totalQty++;
         // return $storedItem;
     }
+    
+
+    public function cartAdd($item, $id, $quatity)
+    {
+        // dd($quatity);
+        if (array_key_exists($id, $this->items)) {
+            $storedItem = $this->items[$id];
+            // var_dump($storedItem);die();
+        } else {
+            $storedItem = ['qty' => 0, 'price' => $item->price, 'item' => $item];
+        }
+
+        $storedItem['qty']+=$quatity;
+        // dd($storedItem['qty']);
+         
+        // var_dump($storedItem['qty']);die;
+        $storedItem['price'] = $item->price * $storedItem['qty'];
+        $this->items[$id] = $storedItem;
+        $this->totalPrice += $item->price;
+        $this->totalQty++;
+        // return $storedItem;
+    }
 
     public function subtruct($item, $id)
     {
