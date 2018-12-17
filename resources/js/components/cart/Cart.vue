@@ -87,10 +87,12 @@ export default {
     },
     methods: {
         subtructCart(cart) {
+            eventBus.$emit("loadingRequest");
             axios
                 .post(`/subToCart/${cart}`)
                 .then(response => {
                     eventBus.$emit("cartEvent", response.data);
+                    eventBus.$emit("alertRequest");
                     // this.cart = response.data
                     // this.message = "added";
                     // this.snackbar = true;

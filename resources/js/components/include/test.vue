@@ -22,15 +22,16 @@
                         <v-btn slot="activator" color="white" dark flat>
                             {{ menu.name }}
                         </v-btn>
-                        <v-layout wrap>
-                            <v-flex sm-6 v-for="category in menu.categories" :key="category.id" style="background: #fff;">
+                        <v-layout wrap style="background: #fff;">
+                            <v-flex sm-6 v-for="category in menu.categories" :key="category.id">
                                 <v-list two-line subheader style="min-width: 200px;">
-                                    <v-subheader>{{ category.name }}</v-subheader>
-                                    <v-list-tile v-for="subcats in category.sub_categories" :key="subcats.id" @click="categoryPro(subcats)">
-                                        <v-list-tile-title>{{ subcats.name }}</v-list-tile-title>
-                                        <!-- <v-list-tile-sub-title  v-for="subcats in category.sub_categories" :key="subcats.id">{{ subcats.name }}</v-list-tile-sub-title> -->
-                                        <v-divider></v-divider>
-                                    </v-list-tile>
+                                    <v-subheader>
+                                        <h3>{{ category.name }}</h3>
+                                    </v-subheader>
+                                    <ul class="list-group">
+                                        <li class="list-group-item" v-for="subcats in category.sub_categories" :key="subcats.id" @click="categoryPro(subcats)">Cras justo odio</li>
+                                    </ul>
+                                   
                                 </v-list>
                             </v-flex>
                         </v-layout>
@@ -61,7 +62,7 @@
         </nav>
     </v-app>
     <Login></Login>
-    <v-snackbar :timeout="timeout" :bottom="bottom" :color="Scolor" right="right" v-model="snackbar">
+    <v-snackbar :timeout="timeout" :bottom="y === 'bottom'" :color="Scolor" :left="x === 'left'" v-model="snackbar">
         {{ message }}
         <v-icon dark right>check_circle</v-icon>
     </v-snackbar>
@@ -86,7 +87,9 @@ export default {
             drawer: true,
             right: null,
             snackbar: false,
-            bottom: 'bottom',
+            y: 'bottom',
+            x: 'left',
+            Allusers: [],
             Scolor: '',
             timeout: 5000,
             message: "Success"
@@ -122,9 +125,10 @@ export default {
         },
 
         loadingalert() {
-            this.message = "Adding to cart...";
-            this.Scolor = "info";
-            this.bottom = "top";
+            this.message = "Loading...";
+            this.Scolor = "black";
+            this.y = "top";
+            this.x = "right";
             this.snackbar = true;
         }
     },
@@ -185,4 +189,14 @@ export default {
     margin-top: -25px;
     padding: 10px 0px;
 }
+
+/* #subcat {
+    color: inherit;
+    text-decoration: none;
+    border-radius: 30px !important;
+    margin: 8px 0 !important;
+    width: 100% !important;
+    height: 50px;
+    text-align: center;
+} */
 </style>

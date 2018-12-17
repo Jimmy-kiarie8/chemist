@@ -13,20 +13,20 @@
             <v-card-text>
                 <v-layout wrap>
                     <v-flex sm6>
-                        <img :src="'/healthwise/products/'+productD.image" alt="" style="height: 300px; width: 300px;">
+                        <img :src="'/storage/products/'+productD.image" alt="" style="height: 300px; width: 300px;">
                     </v-flex>
                         <v-divider vertical></v-divider>
                         <v-flex sm4 offset-sm1>
                             {{ productD.name }}
                             <v-divider></v-divider>
-                            {{ productD.description }} <br>                                                                                 
+                            {{ productD.description }} <br>
 
                             <label for="">Price: <span class="badge pull-right">{{ productD.price }}</span></label><br>
                             <label for="">Quantity: <span class="badge pull-right">{{ productD.quantity }}</span></label>
 
-                            <v-flex xs12 sm6>
+                            <v-flex xs12 sm12>
                                 <v-text-field v-model="form.quantity" color="blue darken-2" label="Quantity" required></v-text-field>
-                                <!-- <small class="has-text-danger" v-if="errors.quantity">{{ errors.quantity[0] }}</small> -->
+                                <small class="has-text-danger" v-if="showError">Amount entered is more than available</small>
                             </v-flex>
                         </v-flex>
                 </v-layout>
@@ -54,30 +54,36 @@ export default {
             dialog: false,
             productD: [],
             form: {},
+            showError: false,
         }
     },
     methods: {
-        addToCart(data) {
-            eventBus.$emit("addCartEvent", data);
-        },
-        // addToCart() {
-        //     eventBus.$emit("loadingRequest", response.data);
-        //     // this.loading = true
-        //     axios.post(`/cartAdd/${this.productD.id}`, this.$data.form).
-        //     then((response) => {
-        //             this.loading = false
-        //             console.log(response);
-        //             // this.close();
-        //             // this.resetForm();
-        //             eventBus.$emit("alertRequest");
-        //             eventBus.$emit("cartEvent", response.data);
-        //             // this.$parent.brands.push(response.data)
-        //         })
-        //         .catch((error) => {
-        //             this.loading = false
-        //             this.errors = error.response.data.errors
-        //         })
+        // addToCart(data) {
+        //     eventBus.$emit("addCartEvent", data);
         // },
+        addToCart() {
+            if (this.form.quantity > this.productD.quantity) {
+                this.showError = true
+            } else {
+                eventBus.$emit("loadingRequest");
+                this.showError = false
+                axios.post(`/cartAdd/${this.productD.id}`, this.$data.form).
+                then((response) => {
+                        this.loading = false
+                        console.log(response);
+                        // this.close();
+                        // this.resetForm();
+                        eventBus.$emit("alertRequest");
+                        eventBus.$emit("cartEvent", response.data);
+                        // this.$parent.brands.push(response.data)
+                    })
+                    .catch((error) => {
+                        this.loading = false
+                        this.errors = error.response.data.errors
+                    })
+            }
+            // this.loading = true
+        },
         close() {
             // eventBus.$emit("closeRequest", product);
             this.dialog = false
@@ -98,6 +104,7 @@ export default {
     font-size: 12px !important;
     margin-left: 100px !important;
 }
+
 label {
     padding: 10px 0px !important;
 }

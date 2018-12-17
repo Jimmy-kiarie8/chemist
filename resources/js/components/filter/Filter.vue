@@ -1,88 +1,99 @@
 <template>
-<v-app>
-    <div v-show="loader" style="text-align: center; width: 100%; margin-top: 200px;">
-        <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
-    </div>
-    <!-- <img src="storage/cover/land.jpg" alt="" style="height: 200px;"> -->
-    <Headerpartial></Headerpartial>
-    <v-layout wrap class="container" v-show="!loader">
-        <!-- <v-flex sm3>
+<div>
+
+    <v-app>
+        <div>
+            <!-- <img src="storage/cover/land.jpg" alt="" style="height: 200px;"> -->
+            <Headerpartial></Headerpartial>
+            <v-layout wrap class="container-fluid">
+                <!-- <v-flex sm3>
         <mySidebar></mySidebar>
     </v-flex> -->
-        <!-- <h1 class="text-center">{{ category.name }}</h1><br> -->
-        <!-- <v-divider></v-divider> -->
-        <v-flex sm12 v-if="products.data.length >= 1">
-            <v-layout wrap>
-                <v-flex sm3 v-for="(bestS, index) in products.data" :key="index" :ref="`bestS_${index}`" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
-                    <v-card>
-                        <v-card-title id="container">
-                            <h4 class="text-center">{{ bestS.name }}</h4><br>
-                        </v-card-title>
-                            <v-divider></v-divider>
-                            <v-card-text>
-                                <div class="image-container">
-                                    <img class="d-block w-100" :src="'/healthwise/products/'+bestS.image" alt="First slide"
-                    :class="{'selected': isSelected(index)}" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
-
-                                    <!-- <div class="after">This is some content</div> -->
-                                    <div class="caption after text-center" :class="{'selected': isSelected(index)}">
-                                        <!-- <v-btn color="primary" flat style="margin: auto;" @click="view(bestS)">view bestS</v-btn>  -->
-                                        <div id="tooltip">
-                                            <v-tooltip bottom class="" data-wow-delay="0.4s">
-                                                <v-btn icon class="mx-0" slot="activator" @click="view(bestS)" style="margin-top: 100px;">
-                                                    <v-icon color="info darken-2" small>visibility</v-icon>
-                                                </v-btn>
-                                                <span>view bestS</span>
-                                            </v-tooltip>
-                                            <v-tooltip bottom class="" data-wow-delay="0.8s">
-                                                <v-btn icon class="mx-0" slot="activator" @click="wishList(bestS)" style="margin-top: 100px;">
-                                                    <v-icon color="success darken-2" small>favorite</v-icon>
-                                                </v-btn>
-                                                <span>Wish list</span>
-                                            </v-tooltip>
-                                            <v-tooltip bottom class="" data-wow-delay="1.2s">
-                                                <v-btn icon class="mx-0" slot="activator" @click="addToCart(bestS.id)" style="margin-top: 100px;">
-                                                    <v-icon color="orange darken-2" small>shopping_cart</v-icon>
-                                                </v-btn>
-                                                <span>Add To Cart</span>
-                                            </v-tooltip>
-                                        </div>
-                                    </div>
-                                </div>
-                            </v-card-text>
-                            <v-divider></v-divider>
-                            <v-card-text>
-                                <h4 class="text-center">{{ bestS.name }}</h4>
-                                <!-- <v-divider></v-divider> -->
-                                <p class="text-center">KSH {{ bestS.price }}</p>
-                            </v-card-text>
-                    </v-card>
+                <!-- <h1 class="text-center">{{ category.name }}</h1><br> -->
+                <!-- <v-divider></v-divider> -->
+                <v-flex sm3>
+                    <mySideBar></mySideBar>
                 </v-flex>
-                <div v-show="nextPage" style="text-align: center; width: 100%;">
+                <div v-show="loader" style="text-align: center; width: 100%; margin-top: -200px;">
                     <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
                 </div>
-                <div class="text-xs-center" style="margin: auto; width: 100%;">
-                    <v-pagination v-model="products.current_page" :length="products.last_page" total-visible="4" @input="next(products.path, products.current_page, 'bestSell')" circle></v-pagination>
-                </div>
-                <v-snackbar :timeout="timeout" top="top" :color="color" right="right" v-model="snackbar">
-                    {{ message }}
-                    <v-icon dark right>check_circle</v-icon>
-                </v-snackbar>
+                <v-flex sm8>
+                    <v-layout wrap v-show="!loader" v-if="products.data.length >= 1">
+                        <v-flex sm3 v-for="(bestS, index) in products.data" :key="index" :ref="`bestS_${index}`" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
+                            <v-card>
+                                <v-card-title id="container">
+                                    <h4 class="text-center">{{ bestS.name }}</h4><br>
+                        </v-card-title>
+                                    <v-divider></v-divider>
+                                    <v-card-text>
+                                        <div class="image-container">
+                                            <img class="d-block w-100" :src="'/storage/products/'+bestS.image" alt="First slide"
+                    :class="{'selected': isSelected(index)}" @mouseover="hoverCard(index)" @mouseout="hoverCard(-1)">
+
+                                            <!-- <div class="after">This is some content</div> -->
+                                            <div class="caption after text-center" :class="{'selected': isSelected(index)}">
+                                                <!-- <v-btn color="primary" flat style="margin: auto;" @click="view(bestS)">view bestS</v-btn>  -->
+                                                <div id="tooltip">
+                                                    <v-tooltip bottom class="" data-wow-delay="0.4s">
+                                                        <v-btn icon class="mx-0" slot="activator" @click="view(bestS)" style="margin-top: 100px;">
+                                                            <v-icon color="info darken-2" small>visibility</v-icon>
+                                                        </v-btn>
+                                                        <span>view bestS</span>
+                                                    </v-tooltip>
+                                                    <v-tooltip bottom class="" data-wow-delay="0.8s">
+                                                        <v-btn icon class="mx-0" slot="activator" @click="wishList(bestS)" style="margin-top: 100px;">
+                                                            <v-icon color="success darken-2" small>favorite</v-icon>
+                                                        </v-btn>
+                                                        <span>Wish list</span>
+                                                    </v-tooltip>
+                                                    <v-tooltip bottom class="" data-wow-delay="1.2s">
+                                                        <v-btn icon class="mx-0" slot="activator" @click="addToCart(bestS.id)" style="margin-top: 100px;">
+                                                            <v-icon color="orange darken-2" small>shopping_cart</v-icon>
+                                                        </v-btn>
+                                                        <span>Add To Cart</span>
+                                                    </v-tooltip>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </v-card-text>
+                                    <v-divider></v-divider>
+                                    <v-card-text>
+                                        <h4 class="text-center">{{ bestS.name }}</h4>
+                                        <!-- <v-divider></v-divider> -->
+                                        <p class="text-center">KSH {{ bestS.price }}</p>
+                                    </v-card-text>
+                            </v-card>
+                        </v-flex>
+                        <div v-show="nextPage" style="text-align: center; width: 100%;">
+                            <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
+                        </div>
+                        <div class="text-xs-center" style="margin: auto; width: 100%;">
+                            <v-pagination v-model="products.current_page" :length="products.last_page" total-visible="4" @input="next(products.path, products.current_page, 'bestSell')" circle></v-pagination>
+                        </div>
+                        <v-snackbar :timeout="timeout" top="top" :color="color" right="right" v-model="snackbar">
+                            {{ message }}
+                            <v-icon dark right>check_circle</v-icon>
+                        </v-snackbar>
+                    </v-layout>
+                    <p class="text-center" v-else>No items in this Category</p>
+                    <v-divider></v-divider>
+                </v-flex>
+                <myShow></myShow>
             </v-layout>
-            <v-divider></v-divider>
-        </v-flex>
-        <p class="text-center" v-else>No items in this Category</p>
-        <myShow></myShow>
-    </v-layout>
-</v-app>
+        </div>
+    </v-app>
+</div>
 </template>
 
 <script>
 import myShow from '../home/Show'
 import Headerpartial from '../include/Headerpartial'
+import mySideBar from './Sidebar'
 export default {
     components: {
-        myShow, Headerpartial
+        myShow,
+        mySideBar,
+        Headerpartial
     },
     data() {
         return {
@@ -156,33 +167,52 @@ export default {
             axios
                 .get("/products")
                 .then(response => {
+                    this.loader = false
                     this.products = response.data;
                 })
                 .catch(error => {
                     this.loading = false;
                     this.errors = error.response.data.errors;
                 });
-        }
-    },
-    mounted() {
-        // this.loader = true
-        // console.log(this.$route.query)
-        // this.products = this.$route.query.products
-        this.loader = false
+        },
+
+        getSideFilter(data) {
+            axios.post("/filterItems", data)
+                .then(response => {
+                    this.loader = false;
+                    this.products = response.data
+                })
+                .catch(error => {
+                    this.loader = false;
+                    this.errors = error.response.data.errors;
+                });
+        },
+
+        getFilter(data) {
+            this.loader = true
+            axios.post(`/filterProduct/${data}`)
+                .then(response => {
+                    this.loader = false
+                    this.products = response.data
+                    // this.categories = response.data;
+                })
+                .catch(error => {
+                    this.loader = false
+                    // this.loading = false;
+                    this.errors = error.response.data.errors;
+                });
+        },
     },
 
     created() {
-        this.loader = true
         eventBus.$on("filterEvent", data => {
-            // console.log(this.$route.query)
-            // this.category = data
-            this.products = data
-            this.loader = false
+            this.getFilter(data)
+        });
+
+        eventBus.$on("sideBarEvent", data => {
+            this.getSideFilter(data)
         });
     },
-    // beforeUpdate() {
-    //     alert('update')
-    // },
 
 };
 </script>

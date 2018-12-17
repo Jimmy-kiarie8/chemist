@@ -100,7 +100,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', 'HomeController@admin')->name('admin');
 
     Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/filterItem', 'FilterController@filterItem')->name('filterItem');
+    Route::post('/filterItems', 'FilterController@filterItems')->name('filterItems');
 
     Route::get('/pay', 'OrderController@pay')->name('pay');
 
