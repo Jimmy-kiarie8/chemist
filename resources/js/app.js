@@ -14,7 +14,9 @@ import Vuetify from 'vuetify'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 import 'vuetify/dist/vuetify.min.css'
+import VueCarousel from 'vue-carousel';
 
+Vue.use(VueCarousel);
 Vue.use(Vuetify)
 Vue.use(VueRouter)
 /**
@@ -43,6 +45,8 @@ let myPayment = require('./components/admin/orders/Payment.vue');
 let myFilter = require('./components/filter/Filter.vue');
 let myPrescription = require('./components/admin/prescription/Prescription.vue');
 let myMenu = require('./components/admin/menu/Menu.vue');
+let myShow = require('./components/home/Show.vue');
+let myslider = require('./components/product/Sliders1.vue');
 
 
 const routes = [
@@ -58,6 +62,7 @@ const routes = [
     { path: '/AdminOrders', component: myOrders },
     { path: '/prescriptions', component: myPrescription },
     { path: '/menu', component: myMenu },
+    { path: '/slider', component: myslider },
     { path: '/Adminpayments', component: myPayment },
 ]
 const router = new VueRouter({
@@ -69,6 +74,7 @@ const app = new Vue({
     router,
     components: {
         myProduct, myNav, myHome, exampleComponent, myPro, myPrescription, myHeader, myFooter, myMenu,
-        myPayment// myHeaderpartial
+        myPayment, myShow, myslider
+        // myHeaderpartial
     },
 });

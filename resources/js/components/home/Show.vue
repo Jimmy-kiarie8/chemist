@@ -1,7 +1,7 @@
 <template>
 <v-layout row justify-center>
     <v-dialog v-model="dialog" persistent max-width="1000px">
-        <v-card v-if="dialog">
+        <v-card v-if="dialogT">
             <v-card-title>
                 <h1 class="headline" style="margin-left: 43%;">{{ productD.name }}</h1>
                 <v-spacer></v-spacer>
@@ -51,6 +51,7 @@
 export default {
     data() {
         return {
+            dialogT: false,
             dialog: false,
             productD: [],
             form: {},
@@ -93,6 +94,7 @@ export default {
         eventBus.$on("viewProEvent", data => {
             this.productD = data;
             this.dialog = true;
+            this.dialogT = true;
         });
     }
 }
