@@ -66,7 +66,6 @@
             </v-layout>
             <myProduct></myProduct>
         </v-app>
-        <my-Show></my-Show>
         <myFilter v-show=filter></myFilter>
         <Prescription></Prescription>
     </div>
@@ -76,7 +75,7 @@
 <script>
 // import myShow from './Show'
 import myFilter from '../filter/Filter'
-import myProduct from '../product/Product'
+import myProduct from '../product/Sliders'
 import Prescription from './Prescription'
 export default {
     components: {

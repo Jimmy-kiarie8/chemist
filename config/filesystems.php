@@ -57,7 +57,7 @@ return [
 
         'uploads' => [
             'driver' => 'local',
-            'root' => 'healthwise', 
+            'root' => 'healthwise',
         ],
 
         's3' => [

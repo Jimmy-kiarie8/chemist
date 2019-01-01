@@ -46,7 +46,7 @@ let myFilter = require('./components/filter/Filter.vue');
 let myPrescription = require('./components/admin/prescription/Prescription.vue');
 let myMenu = require('./components/admin/menu/Menu.vue');
 let myShow = require('./components/home/Show.vue');
-let myslider = require('./components/product/Sliders1.vue');
+let myslider = require('./components/product/Sliders.vue');
 
 
 const routes = [

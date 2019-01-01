@@ -128,7 +128,7 @@
     <Edit></Edit>
     <!-- <Edit @closeRequest="close" :openAddRequest="dispEdit" @alertRequest="showAlert" :product="proEdit"></Edit> -->
     <myImage></myImage>
-    <myShow></myShow>
+    <!-- <myShow></myShow> -->
     <!-- <ShowTask @closeRequest="close" :openAddRequest="dispShow" @alertRequest="showAlert" :task="proEdit"></ShowTask> -->
 
 </div>
@@ -137,7 +137,7 @@
 <script>
 let Create = require("./Create");
 let Edit = require("./Edit");
-import myShow from '../../home/Show'
+// import myShow from '../../home/Show'
 let myImage = require("./Image");
 // let ShowTask = require('./ShowTask');
 
@@ -146,7 +146,7 @@ export default {
         Create,
         myImage,
         Edit,
-        myShow
+        // myShow
     },
 
     data() {

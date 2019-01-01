@@ -56,7 +56,7 @@
             </form> -->
         </v-toolbar>
     </v-app>
-    <Login></Login>
+    <Show></Show>
     <v-snackbar :timeout="timeout" :bottom="y === 'bottom'" :color="Scolor" :left="x === 'left'" v-model="snackbar">
         {{ message }}
         <v-icon dark right>check_circle</v-icon>
@@ -67,11 +67,11 @@
 
 <script>
 import myCart from '../cart/Cart'
-import Login from '../login/Login'
+import Show from '../home/Show'
 export default {
     // router,
     components: {
-        Login,
+        Show,
         myCart
     },
     data() {

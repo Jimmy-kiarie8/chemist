@@ -111,17 +111,17 @@ class ProductController extends Controller
 
     public function featured()
     {
-        return Product::where('featured', 1)->paginate(4);
+        return Product::where('featured', 1)->get();
     }
 
     public function bestSell()
     {
-        return Product::where('best_sell', 1)->paginate(4);
+        return Product::where('best_sell', 1)->get();
     }
 
     public function newProduct()
     {
-        return Product::where('new_product', 1)->paginate(4);
+        return Product::where('new_product', 1)->get();
     }
 
     public function StatusItem(Request $request, $id)

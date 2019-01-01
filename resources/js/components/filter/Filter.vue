@@ -78,7 +78,6 @@
                     <p class="text-center" v-else>No items in this Category</p>
                     <v-divider></v-divider>
                 </v-flex>
-                <myShow></myShow>
             </v-layout>
         </div>
     </v-app>
@@ -86,12 +85,10 @@
 </template>
 
 <script>
-import myShow from '../home/Show'
 import Headerpartial from '../include/Headerpartial'
 import mySideBar from './Sidebar'
 export default {
     components: {
-        myShow,
         mySideBar,
         Headerpartial
     },
