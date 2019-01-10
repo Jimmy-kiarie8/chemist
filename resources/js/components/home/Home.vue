@@ -3,67 +3,70 @@
     <div v-show="loader" style="text-align: center; width: 100%; margin-top: 200px;">
         <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
     </div>
-    <div v-show="!loader">
+    <div v-show="!loader" id="container">
         <v-app v-show="!filter">
-            <v-layout wrap class="container">
-                <v-flex sm9 md9>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" v-for="(item, index) in headerPro" :key="index" :data-slide-to="parseInt(index)+parseInt(1)"></li>
-                        </ol>
-                        <div class="carousel-inner" id="container">
-                            <div class="carousel-item active">
-                                <div class="image-container">
-                                    <img class="d-block w-100" :src="'/storage/products/'+singleP.image" alt="First slide" style="height: 500px;">
-                                    <!-- <img class="d-block w-100" src="storage/products/product1.jpg" alt="First slide"> -->
-                                    <div class="after"></div>
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h1 class="wow fadeInUp" data-wow-delay="0.8s"><strong>{{ singleP.name }}</strong></h1>
-                                        <v-divider></v-divider>
-                                        <p class="wow fadeInUp" data-wow-delay="1.2s"><b>{{ singleP.description }}</b></p>
-                                        <p class="wow fadeInUp" data-wow-delay="1.6s">For only {{ singleP.price }}</p>
-                                        <v-btn @click="view(singleP)" raised color="primary" data-wow-delay="2.0s">See Item</v-btn>
+            <div class="after"></div>
+            <div id="backImage">
+                <v-layout wrap class="container">
+                    <v-flex sm9 md9>
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" v-for="(item, index) in headerPro" :key="index" :data-slide-to="parseInt(index)+parseInt(1)"></li>
+                            </ol>
+                            <div class="carousel-inner" id="container">
+                                <div class="carousel-item active">
+                                    <div class="image-container">
+                                        <img class="d-block w-100" :src="'/storage/products/'+singleP.image" alt="First slide" style="height: 500px;">
+                                        <!-- <img class="d-block w-100" src="storage/products/product1.jpg" alt="First slide"> -->
+                                        <div class="after"></div>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1 class="wow fadeInUp" data-wow-delay="0.8s"><strong>{{ singleP.name }}</strong></h1>
+                                            <v-divider></v-divider>
+                                            <p class="wow fadeInUp" data-wow-delay="1.2s"><b>{{ singleP.description }}</b></p>
+                                            <p class="wow fadeInUp" data-wow-delay="1.6s">For only {{ singleP.price }}</p>
+                                            <v-btn @click="view(singleP)" raised color="primary" data-wow-delay="2.0s">See Item</v-btn>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" v-for="product in headerPro" :key="product.id">
+                                    <div class="image-container">
+                                        <img class="d-block w-100" :src="'/storage/products/'+product.image" alt="First slide" style="height: 500px;">
+                                        <!-- <img class="d-block w-100" src="storage/products/product2.jpg" alt="First slide"> -->
+                                        <div class="after"></div>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1 class="wow fadeInUp" data-wow-delay="0.8s"><strong>{{ product.name }}</strong></h1>
+                                            <v-divider></v-divider>
+                                            <p class="wow fadeInUp" data-wow-delay="1.2s"><b>{{ product.description }}</b></p>
+                                            <p class="wow fadeInUp" data-wow-delay="1.6s">For only {{ product.price }}</p>
+                                            <v-btn @click="view(product)" raised color="info" class="wow flipInY" data-wow-delay="2.0s">See Item</v-btn>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" v-for="product in headerPro" :key="product.id">
-                                <div class="image-container">
-                                    <img class="d-block w-100" :src="'/storage/products/'+product.image" alt="First slide" style="height: 500px;">
-                                    <!-- <img class="d-block w-100" src="storage/products/product2.jpg" alt="First slide"> -->
-                                    <div class="after"></div>
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h1 class="wow fadeInUp" data-wow-delay="0.8s"><strong>{{ product.name }}</strong></h1>
-                                        <v-divider></v-divider>
-                                        <p class="wow fadeInUp" data-wow-delay="1.2s"><b>{{ product.description }}</b></p>
-                                        <p class="wow fadeInUp" data-wow-delay="1.6s">For only {{ product.price }}</p>
-                                        <v-btn @click="view(product)" raised color="info" class="wow flipInY" data-wow-delay="2.0s">See Item</v-btn>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-                    </div>
-                </v-flex>
-                <v-flex sm2 md2 offset-md1 offset-sm1>
-                    <v-layout wrap style="margin-top: 150px;">
-                        <v-flex xs12 sm12>
-                            <v-btn round @click="prescription" color="success">Upload Prescription</v-btn>
-                        </v-flex>
-                        <v-divider></v-divider>
-                        <v-flex xs12 sm12 style="margin-top: 20px;">
-                            <v-btn round @click="authenticate" color="error">Authenticate Product</v-btn>
-                        </v-flex>
-                    </v-layout>
-                </v-flex>
-            </v-layout>
+                        </div>
+                    </v-flex>
+                    <v-flex sm2 md2 offset-md1 offset-sm1>
+                        <v-layout wrap style="margin-top: 150px;">
+                            <v-flex xs12 sm12>
+                                <v-btn round @click="prescription" color="success">Upload Prescription</v-btn>
+                            </v-flex>
+                            <v-divider></v-divider>
+                            <v-flex xs12 sm12 style="margin-top: 20px;">
+                                <v-btn round @click="authenticate" color="error">Authenticate Product</v-btn>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                </v-layout>
+            </div>
             <myProduct></myProduct>
         </v-app>
         <myFilter v-show=filter></myFilter>
@@ -175,7 +178,7 @@ export default {
         eventBus.$on("filterEvent", data => {
             this.filter = true
         });
-        
+
         eventBus.$on("unfilterEvent", data => {
             this.filter = false
         });
@@ -229,5 +232,11 @@ export default {
 .image-container:hover .after {
     display: block;
     background: rgba(0, 0, 0, 0.45);
+}
+
+#backImage {
+    background: url(/storage/cover/pixel.jpeg);
+    background-position: center;
+    /* background-repeat: no-repeat;  */
 }
 </style>
