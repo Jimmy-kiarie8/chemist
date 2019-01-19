@@ -22,6 +22,7 @@ class CreateOrdersTable extends Migration
             $table->string('name')->nullable();
             $table->boolean('delivered')->default(0);
             $table->text('paypal')->nullable();
+			$table->softDeletes();
             $table->timestamps();
         });
     }

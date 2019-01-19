@@ -51,7 +51,7 @@
                 <v-spacer></v-spacer>
                 <!-- <v-btn flat color="success" @click="checkout">Checkout</v-btn> -->
                 <form action="/createpayment" method="post">
-                    <input type="hidden" name="_token" :value="csrf">
+                    <!-- <input type="hidden" name="_token" :value="csrf"> -->
                     <v-btn color="Success" flat type="submit">Checkout</v-btn>
                 </form>
             </v-card-actions>
@@ -68,9 +68,9 @@ export default {
     },
     data() {
         return {
-            csrf: document
-                .querySelector('meta[name="csrf-token"]')
-                .getAttribute("content"),
+            // csrf: document
+            //     .querySelector('meta[name="csrf-token"]')
+            //     .getAttribute("content"),
             carts: [],
             newCart: [],
             cartAdd: false,

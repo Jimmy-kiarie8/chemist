@@ -1,0 +1,7 @@
+.application--wrap {
+    min-height: 0vh !important;
+}
+
+body, html {
+    overflow-x: visible !important;
+}

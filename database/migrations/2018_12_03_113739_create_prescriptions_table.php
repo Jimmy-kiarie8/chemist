@@ -18,6 +18,7 @@ class CreatePrescriptionsTable extends Migration
             $table->integer('user_id')->nullable();
             $table->text('description')->nullable();
             $table->string('image')->nullable();
+			$table->softDeletes();
             $table->timestamps();
         });
     }

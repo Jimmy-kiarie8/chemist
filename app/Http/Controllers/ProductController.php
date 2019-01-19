@@ -20,7 +20,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         // dd($request->session()->get('cart'));
-        return $products = Product::paginate(4);
+        return $products = Product::paginate(12);
         // return view('products.index', compact('products'));
     }
 

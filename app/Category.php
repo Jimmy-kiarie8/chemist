@@ -19,4 +19,10 @@ class Category extends Model
     {
         return $this->belongsTo('App\Menu', 'menu_id');
     }
+
+    
+    public function products()
+    {
+        return $this->belongsTo('App\Product', 'category_id');
+    }
 }

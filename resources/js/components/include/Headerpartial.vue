@@ -1,25 +1,23 @@
 <template>
-<div style="margin-top: -35px;">
-    <v-app id="inspire">
-        <div id="headerwrapper1">
-            <div id="back-flower1"></div>
-            <div id="logotext">
-                <h1><b>Healthwise <span>Pharmacy</span></b></h1>
-            </div>
-            <div id="for-flower"></div>
-        </div>
-        <!--headerwrapper End-->
-        <div class="container-fluid"></div>
-    </v-app>
-</div>
+<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="">
+    <h2 class="l-text2 t-center" style="color: #000;">
+        Healthwise <span style="color: rgba(2, 234, 0, 0.58);">Pharmacy</span>
+    </h2>
+    <p class="m-text13 t-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </p>
+</section>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 
-<style>
-
+<style scoped>
+.bg-title-page{ 
+    background-image: url(/storage/img/8.jpg) !important;
+    background-attachment: fixed !important;
+}
 </style>

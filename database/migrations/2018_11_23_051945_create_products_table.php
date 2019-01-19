@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->integer('user_id');
             $table->integer('brand_id');
             $table->integer('subCategory_id');
+            $table->integer('category_id');
             $table->string('name');
             $table->integer('quantity');
             $table->integer('price');
@@ -27,6 +28,7 @@ class CreateProductsTable extends Migration
             $table->boolean('new_product')->default(0);
             $table->text('description')->nullable();
             $table->string('image')->nullable();
+			$table->softDeletes();
             $table->timestamps();
         });
     }

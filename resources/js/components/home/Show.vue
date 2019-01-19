@@ -25,8 +25,8 @@
                             <label for="">Quantity: <span class="badge pull-right">{{ productD.quantity }}</span></label>
 
                             <v-flex xs12 sm12>
-                                <v-text-field v-model="form.quantity" color="blue darken-2" label="Quantity" required></v-text-field>
-                                <small class="has-text-danger" v-if="showError">Amount entered is more than available</small>
+                                <v-text-field v-model="form.quantity" color="blue darken-2" label="Quantity" required type="number"></v-text-field>
+                                <small class="has-text-danger" v-if="showError">{{ error_msg }}</small>
                             </v-flex>
                         </v-flex>
                 </v-layout>
@@ -54,7 +54,10 @@ export default {
             dialogT: false,
             dialog: false,
             productD: [],
-            form: {},
+            form: {
+                quantity: 1
+            },
+            error_msg: '',
             showError: false,
         }
     },
@@ -65,7 +68,12 @@ export default {
         addToCart() {
             if (this.form.quantity > this.productD.quantity) {
                 this.showError = true
-            } else {
+                this.error_msg = 'Amount entered is more than available'
+            } else if(this.form.quantity < 1) {
+                this.showError = true
+                this.error_msg = 'Quantity must be greater than 1'
+            }     
+            else {
                 eventBus.$emit("loadingRequest");
                 this.showError = false
                 axios.post(`/cartAdd/${this.productD.id}`, this.$data.form).
@@ -88,6 +96,7 @@ export default {
         close() {
             // eventBus.$emit("closeRequest", product);
             this.dialog = false
+            this.dialogT = false
         }
     },
     created() {

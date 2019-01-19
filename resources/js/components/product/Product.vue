@@ -146,7 +146,7 @@
                                         <v-btn icon class="mx-0" slot="activator" @click="addToCart(item.id)" style="margin-top: 100px;">
                                             <v-icon color="orange darken-2" small>shopping_cart</v-icon>
                                         </v-btn>
-                                        <span>Add To Cart</span>
+                                        <span style="margin-top: -100px;">Add To Cart</span>
                                     </v-tooltip>
                                 </div>
                             </div>

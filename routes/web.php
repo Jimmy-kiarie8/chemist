@@ -63,6 +63,7 @@ Route::get('/bestSell', 'ProductController@bestSell')->name('bestSell');
 Route::get('/newProduct', 'ProductController@newProduct')->name('newProduct');
 
 Route::post('/filterProduct/{id}', 'FilterController@filterProduct')->name('filterProduct');
+Route::post('/FilterShop', 'FilterController@FilterShop')->name('FilterShop');
 Route::post('/filterItem', 'FilterController@filterItem')->name('filterItem');
 
 Route::post('/preImg/{id}', 'PrescriptionController@preImg')->name('preImg');
@@ -93,7 +94,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('execute-payment', 'PaymentController@execute')->name('execute');
     Route::post('createpayment', 'PaymentController@create')->name('create');
     Route::resource('orders', 'OrderController');
-    Route::resource('subcategories', 'SupCategoryController');
+    Route::resource('orders', 'OrderController');
+    Route::resource('aboutus', 'AboutController');
 
     Route::post('/StatusItem/{id}', 'ProductController@StatusItem')->name('StatusItem');
 
@@ -121,5 +123,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('countDelivered', 'DashboardController@countDelivered')->name('countDelivered');
     Route::get('countPending', 'DashboardController@countPending')->name('countPending');
     Route::get('countOrders', 'DashboardController@countOrders')->name('countOrders');
+
+    // About us
+    
 });
 // });

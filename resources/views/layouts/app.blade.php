@@ -10,6 +10,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <link rel="icon" type="image/png" href="/storage/icons/favicon.png" />
     <!-- Scripts -->
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -24,6 +25,8 @@
     <link href="{{ asset('mdBootstrap/css/mdb.css') }}" rel="stylesheet">
     <link href="{{ asset('mdBootstrap/css/mdb.lite.min.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('template/css/style.css') }}" rel="stylesheet"> --}}
+
+
 </head>
 
 <body>
@@ -33,26 +36,9 @@
         </main>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/wow.js') }}"></script>
+    {{-- <script src="{{ asset('js/wow.js') }}"></script> --}}
     <script src="{{ asset('mdBootstrap/js/mdb.min.js') }}" defer></script>
 
-    <script>
-        new WOW().init();
-    </script>
-    {{--
-    <script src="{{ asset('template/js/jquery.js') }}" defer></script>
-    <script src="{{ asset('template/js/popper.js') }}" defer></script>
-    <script src="{{ asset('template/js/classy.js') }}" defer></script>
-    <script src="{{ asset('template/js/active.js') }}" defer></script>
-    <script src="{{ asset('template/js/plugins.js') }}" defer></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', 'UA-23581568-13');
-    </script> --}}
 
 </body>
 
