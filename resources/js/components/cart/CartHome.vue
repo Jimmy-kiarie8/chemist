@@ -178,6 +178,7 @@ export default {
   methods: {
     getCart() {
       axios.get("/getCart").then(response => {
+          eventBus.$emit("StoprogEvent");
         this.carts = response.data;
         this.loader = false;
         eventBus.$emit("cartEvent", response.data);
@@ -192,7 +193,7 @@ export default {
         .then(response => {
           eventBus.$emit("StoprogEvent");
           eventBus.$emit("cartEvent", response.data);
-          eventBus.$emit("alertRequest");
+          eventBus.$emit("alertRequest", 'Cart Reduced');
           this.carts = response.data;
           // this.message = "added";
           // this.snackbar = true;

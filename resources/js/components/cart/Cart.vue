@@ -92,7 +92,7 @@ export default {
                 .post(`/subToCart/${cart}`)
                 .then(response => {
                     eventBus.$emit("cartEvent", response.data);
-                    eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Cart Reduced');
                     // this.cart = response.data
                     // this.message = "added";
                     // this.snackbar = true;

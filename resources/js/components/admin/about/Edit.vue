@@ -75,7 +75,7 @@ export default {
                     console.log(response);
                     // this.close;
                     // this.resetForm();
-                    eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Updated');
                     Object.assign(this.$parent.aboutus[this.$parent.editedIndex], this.$parent.proEdit)
                     // this.$parent.aboutus.push(response.data)
                 })

@@ -95,8 +95,7 @@ export default {
                     this.loading = false
                     console.log(response);
                     // this.resetForm();
-                    eventBus.$emit("alertRequest");
-                    // eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Updated');
                     Object.assign(this.$parent.products[this.$parent.editedIndex], this.$parent.proEdit)
                     this.close();
                     // this.$parent.products.push(response.data)

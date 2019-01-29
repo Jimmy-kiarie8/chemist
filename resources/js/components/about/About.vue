@@ -40,5 +40,13 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+.hov-img-zoom img {
+    width: 100%;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    height: 90vh;
+}
 </style>

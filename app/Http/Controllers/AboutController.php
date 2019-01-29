@@ -27,9 +27,6 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         // return $request->all();
-
-
-
         $about = About::updateOrCreate(
             ['about_us' => $request->about_us],
             ['user_id' => Auth::id()]

@@ -35,6 +35,7 @@ Route::get('testS', function () {
     return $response;
 });
 Route::resource('products', 'ProductController');
+Route::resource('wish', 'WishController');
 Route::resource('prescriptions', 'PrescriptionController');
 
 Route::get('/chemist', 'HomeController@chemist')->name('chemistHome')->middleware('verified');
@@ -125,6 +126,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('countOrders', 'DashboardController@countOrders')->name('countOrders');
 
     // About us
-    
+
 });
 // });

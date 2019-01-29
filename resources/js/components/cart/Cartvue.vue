@@ -9,7 +9,6 @@
 
           <div class="header-cart-item-txt">
             <a href="#" class="header-cart-item-name">{{ cart.item.name }}</a>
-            
             <span class="header-cart-item-info">{{ cart.qty }} X {{ cart.item.price }}</span>
           </div>
         </li>
@@ -71,7 +70,7 @@ export default {
         .post(`/subToCart/${cart}`)
         .then(response => {
           eventBus.$emit("cartEvent", response.data);
-          eventBus.$emit("alertRequest");
+          eventBus.$emit("alertRequest", 'Cart Reduced');
           // this.cart = response.data
           // this.message = "added";
           // this.snackbar = true;

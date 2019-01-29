@@ -1,5 +1,5 @@
 <template>
-<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="">
+<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m">
     <h2 class="l-text2 t-center" style="color: #000;">
         Healthwise <span style="color: rgba(2, 234, 0, 0.58);">Pharmacy</span>
     </h2>

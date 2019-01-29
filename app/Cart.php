@@ -37,7 +37,7 @@ class Cart
         $this->items[$id] = $storedItem;
         $this->totalPrice += $item->price;
         $this->totalQty++;
-        // return $storedItem;
+        // dd($this->items);
     }
     
 

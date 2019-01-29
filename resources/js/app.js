@@ -11,6 +11,7 @@ window.Vue = require('vue');
 window.eventBus = new Vue()
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
+import VueScrollTo from 'vue-scrollto'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 // import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 import 'vuetify/dist/vuetify.min.css'
@@ -19,6 +20,20 @@ import VueCarousel from 'vue-carousel';
 Vue.use(VueCarousel);
 Vue.use(Vuetify)
 Vue.use(VueRouter)
+Vue.use(VueScrollTo, {
+    container: "body",
+    duration: 500,
+    easing: "ease",
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+})
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -43,6 +58,7 @@ let myShop = require('./components/Shop/Shop.vue');
 let myCartHome = require('./components/cart/CartHome.vue');
 let myAbout = require('./components/about/About.vue');
 let myFilter = require('./components/filter/Filter.vue');
+let mywishList = require('./components/wish/Wish.vue');
 // let myProduct = require('./components/Homepage/Product/Product.vue');
 
 // Admin
@@ -67,6 +83,7 @@ const routes = [
     { path: '/menu', component: myMenu },
     { path: '/products', component: myProduct },
     { path: '/shop', component: myShop },
+    { path: '/wishList', component: mywishList },
     { path: '/cartHome', component: myCartHome },
 
     { path: '/about', component: myAbout },
@@ -90,7 +107,7 @@ const app = new Vue({
     components: {
         myProduct, myNav, myHome, myPro, myPrescription, myHeader, myFooter, myMenu,
         myPayment, myShow, myslider, myDash, myCategory, myOrders, myShop, myCartHome, 
-        myAdminAbout,myAbout,
+        myAdminAbout,myAbout,mywishList,
         // myHeaderpartial,
          
     },

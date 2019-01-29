@@ -26,7 +26,7 @@
                                     <span>view product</span>
                                 </v-tooltip>
                                 <v-tooltip bottom class="" data-wow-delay="0.8s">
-                                    <v-btn icon class="mx-0" slot="activator" @click="wishList(props.item)" style="margin-top: 100px;">
+                                    <v-btn icon class="mx-0" slot="activator" @click="wishList(props.item.id)" style="margin-top: 100px;">
                                         <v-icon color="success darken-2" small>favorite</v-icon>
                                     </v-btn>
                                     <span>Wish list</span>
@@ -68,10 +68,14 @@ export default {
         view(product) {
             eventBus.$emit("viewProEvent", product);
         },
-        
+
         addToCart(cart) {
             eventBus.$emit("addCartEvent", cart);
         },
+        wishList(item) {
+            eventBus.$emit("WishListEvent", item);
+        },
+
     },
     mounted() {
         axios.get('/bestSell')

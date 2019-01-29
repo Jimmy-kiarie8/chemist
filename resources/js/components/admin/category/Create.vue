@@ -78,7 +78,7 @@ export default {
                     console.log(response);
                     // this.close();
                     // this.resetForm();
-                    eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Created');
                     this.$parent.categories.push(response.data)
                 })
                 .catch((error) => {

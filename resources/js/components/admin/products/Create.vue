@@ -162,8 +162,7 @@ export default {
                     // console.log(response);
                     // this.resetForm();
                     this.upload(response.data)
-                    eventBus.$emit("alertRequest");
-                    // eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Created');
                     this.$parent.products.push(response.data)
                     this.close();
                 })

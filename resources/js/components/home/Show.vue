@@ -82,7 +82,7 @@ export default {
                         console.log(response);
                         // this.close();
                         // this.resetForm();
-                        eventBus.$emit("alertRequest");
+                        eventBus.$emit("alertRequest", 'Cart Added');
                         eventBus.$emit("cartEvent", response.data);
                         // this.$parent.brands.push(response.data)
                     })

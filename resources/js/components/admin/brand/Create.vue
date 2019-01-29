@@ -80,7 +80,7 @@ export default {
                     console.log(response);
                     // this.close();
                     // this.resetForm();
-                    eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Created');
                     this.$parent.brands.push(response.data)
                 })
                 .catch((error) => {

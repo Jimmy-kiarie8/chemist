@@ -16,6 +16,7 @@ class CartController extends Controller
         // dd($oldCart);
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
+        // dd($cart);
         $cartA = [];
         foreach ($cart->items as $itemsC) {
             $cartA[] = $itemsC;

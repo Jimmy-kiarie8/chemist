@@ -217,10 +217,23 @@
                     <img :src="'/storage/products/'+product.image" alt="IMG-PRODUCT">
 
                     <div class="block2-overlay trans-0-4">
-                      <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                      </a>
+                      <!-- <span class="block2-btn-addwishlist hov-pointer trans-0-4">
+                        <i class="icon-wishlist icon_heart_alt" aria-hidden="true" @click.native="addToWish(product.id)"></i>
+                        <i class="icon-wishlist icon_heart dis-none" aria-hidden="true" @click.native="addToWish(product.id)"></i>
+                      </span> -->
+                      <v-tooltip bottom style="margin-left: 90%;" v-if="product.wish_list === 1">
+                          <v-btn icon class="mx-0 block2-btn-addwishlist hov-pointer trans-0-4" slot="activator" @click="addToWish(product.id)" style="margin-top: -20px;">
+                              <v-icon color="pink darken-2" large>favorite</v-icon>
+                          </v-btn>
+                          <span>Wish list</span>
+                      </v-tooltip>
+
+                      <v-tooltip bottom style="margin-left: 90%;" v-else>
+                          <v-btn icon class="mx-0 block2-btn-addwishlist hov-pointer trans-0-4" slot="activator" @click="addToWish(product.id)" style="margin-top: -20px;">
+                              <v-icon color="white darken-2" large>favorite</v-icon>
+                          </v-btn>
+                          <span>Wish list</span>
+                      </v-tooltip>
 
                       <div class="block2-btn-addcart w-size1 trans-0-4">
                         <!-- Button -->
@@ -233,10 +246,22 @@
                     <img :src="'/storage/products/'+product.image" alt="IMG-PRODUCT">
 
                     <div class="block2-overlay trans-0-4">
-                      <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                      <!-- <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
                         <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
                         <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                      </a>
+                      </a> -->
+                      <v-tooltip bottom style="margin-left: 90%;" v-if="product.wish_list === 1">
+                          <v-btn icon class="mx-0 block2-btn-addwishlist hov-pointer trans-0-4" slot="activator" @click="addToWish(product.id)" style="margin-top: -20px;">
+                              <v-icon color="pink darken-2" large>favorite</v-icon>
+                          </v-btn>
+                          <span>Wish list</span>
+                      </v-tooltip>
+                      <v-tooltip bottom style="margin-left: 90%;" v-else>
+                          <v-btn icon class="mx-0 block2-btn-addwishlist hov-pointer trans-0-4" slot="activator" @click="addToWish(product.id)" style="margin-top: -20px;">
+                              <v-icon color="white darken-2" large>favorite</v-icon>
+                          </v-btn>
+                          <span>Wish list</span>
+                      </v-tooltip>
 
                       <div class="block2-btn-addcart w-size1 trans-0-4">
                         <!-- Button -->
@@ -323,7 +348,8 @@ export default {
         state: "All"
       },
       loader: false,
-      cat_id: null
+      wish: [],
+      cat_id: null,
     };
   },
   methods: {
@@ -397,7 +423,37 @@ export default {
           this.loader = false;
           this.errors = error.response.data.errors;
         });
-    }
+    },
+    getWish() {
+      eventBus.$emit("progressEvent");
+      axios.get("/wish").then(response => {
+          eventBus.$emit("StoprogEvent");
+        this.wish = response.data;
+      })
+        .catch(error => {
+          eventBus.$emit("StoprogEvent");
+          this.errors = error.response.data.errors;
+        });
+    },
+    addToWish(item) {
+      eventBus.$emit("WishListEvent", item);
+      // eventBus.$emit("progressEvent");
+      // // eventBus.$emit("loadingRequest");
+      // axios
+      //   .patch(`/wish/${item}`)
+      //   .then(response => {
+      //     eventBus.$emit("alertRequest", 'Added To Wishlist');
+      //     eventBus.$emit("StoprogEvent");
+      //     this.FilterShop()
+      //     // this.message = "added";
+      //     // this.snackbar = true;
+      //   })
+      //   .catch(error => {
+      //     eventBus.$emit("StoprogEvent");
+      //     this.errors = error.response.data.errors;
+      //   });
+
+    },
   },
   mounted() {
     this.loader = true;
@@ -408,7 +464,12 @@ export default {
   beforeRouteLeave (to, from, next) {
     // eventBus.$emit("progressEvent");
     next();
-  }
+  },
+  created() {
+    eventBus.$on("RefWishEvent", data => {
+      this.FilterShop()
+    });
+  },
 };
 </script>
 

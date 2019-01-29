@@ -567,8 +567,11 @@ iframe {
 
 .topbar-social-item {
   font-size: 18px;
-  color: #888888;
-  padding: 10px;
+  color: #f8fafc;
+  padding: 5px;
+  background: #000;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
 /* ------------------------------------ */
@@ -2222,11 +2225,13 @@ li.sale-noti > a {
 .tab01 .nav-link.active {
     color: #333333;
     border-bottom: 1px solid #6a6a6a;
+    padding: 10px;
 }
 
 .tab01 .nav-link:hover {
     color: #333333;
     border-bottom: 1px solid #6a6a6a;
+    padding: 10px;
 }
 
 @media (max-width: 480px) {

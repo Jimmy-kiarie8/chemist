@@ -69,7 +69,7 @@ export default {
                     console.log(response);
                     // this.close;
                     // this.resetForm();
-                    eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Updated');
                     Object.assign(this.$parent.menus[this.$parent.editedIndex], this.$parent.proEdit)
                     // this.$parent.menus.push(response.data)
                 })

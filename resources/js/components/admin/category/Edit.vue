@@ -79,7 +79,7 @@ export default {
                     console.log(response);
                     // this.close;
                     // this.resetForm();
-                    eventBus.$emit("alertRequest");
+                    eventBus.$emit("alertRequest", 'Successifully Updated');
                     Object.assign(this.$parent.categories[this.$parent.editedIndex], this.$parent.proEdit)
                     // this.$parent.categories.push(response.data)
                 })

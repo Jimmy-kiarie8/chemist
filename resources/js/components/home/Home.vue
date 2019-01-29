@@ -1,15 +1,19 @@
 <template>
-  <div class="container-fluid" id="contain">
+  <div id="contain">
     <div v-show="loader" style="text-align: center; width: 100%; margin-top: 200px;">
       <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
     </div>
-    <div v-show="!loader" id="container">
+    <div v-show="!loader" id="container" style="margin-top: -105px;">
       <div class="after"></div>
       <div id="backImage">
-        <v-layout wrap class="container">
-          <v-flex sm9 md9>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
+        <v-layout wrap>
+          <v-flex sm12 md12>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <!-- <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li
                   data-target="#carouselExampleIndicators"
@@ -17,7 +21,7 @@
                   :key="index"
                   :data-slide-to="parseInt(index)+parseInt(1)"
                 ></li>
-              </ol>
+              </ol> -->
               <div class="carousel-inner" id="container">
                 <div class="carousel-item active">
                   <div class="image-container">
@@ -25,7 +29,7 @@
                       class="d-block w-100"
                       :src="'/storage/products/'+singleP.image"
                       alt="First slide"
-                      style="height: 500px;"
+                      style="height: 100vh;"
                     >
                     <!-- <img class="d-block w-100" src="storage/products/product1.jpg" alt="First slide"> -->
                     <div class="after"></div>
@@ -57,7 +61,7 @@
                       class="d-block w-100"
                       :src="'/storage/products/'+product.image"
                       alt="First slide"
-                      style="height: 500px;"
+                      style="height: 100vh;"
                     >
                     <!-- <img class="d-block w-100" src="storage/products/product2.jpg" alt="First slide"> -->
                     <div class="after"></div>
@@ -103,9 +107,25 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
+              <!-- <v-btn
+                raised
+                v-scroll-to="'#carousel'"
+                style="margin-left: 45%; margin-top: -100px;"
+              >Scroll</v-btn>-->
+              <div style="margin-top: -100px; margin-left: 50vw;">
+                <v-btn
+                  icon
+                  class="mx-0"
+                  slot="activator"
+                  v-scroll-to="'#carousel'"
+                  raised
+                >
+                  <v-icon color="white darken-2" large>keyboard_arrow_down</v-icon>
+                </v-btn>
+              </div>
             </div>
           </v-flex>
-          <v-flex sm2 md2 offset-md1 offset-sm1>
+          <!-- <v-flex sm2 md2 offset-md1 offset-sm1>
             <v-layout wrap style="margin-top: 150px;">
               <v-flex xs12 sm12>
                 <v-btn round @click="prescription" color="success">Upload Prescription</v-btn>
@@ -115,13 +135,15 @@
                 <v-btn round @click="authenticate" color="error">Authenticate Product</v-btn>
               </v-flex>
             </v-layout>
-          </v-flex>
+          </v-flex>-->
         </v-layout>
       </div>
-      <myProduct></myProduct>
-      <myFilter v-show="filter"></myFilter>
-      <Prescription></Prescription>
-      <Show></Show>
+      <div id="carousel">
+        <myProduct></myProduct>
+        <myFilter v-show="filter"></myFilter>
+        <Prescription></Prescription>
+        <Show></Show>
+      </div>
     </div>
   </div>
 </template>
@@ -164,7 +186,7 @@ export default {
     //       eventBus.$emit("cartEvent", response.data);
     //       // this.cart = response.data
     //       // this.message = "added";
-    //       eventBus.$emit("alertRequest");
+    //       eventBus.$emit("alertRequest", 'Cart Added');
     //       // this.snackbar = true;
     //     })
     //     .catch(error => {
@@ -239,15 +261,15 @@ export default {
       this.filter = false;
     });
   },
-  beforeRouteLeave  (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     // eventBus.$emit('progressEvent');
-    next()
+    next();
   },
-  
+
   updated() {
     // alert('updated')
     // eventBus.$emit("StoprogEvent");
-  },
+  }
 };
 </script>
 
@@ -277,7 +299,7 @@ export default {
 
 .image-container {
   position: relative;
-  height: 500px;
+  height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.45);
 }
@@ -286,21 +308,75 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  height: 500px;
+  height: 100vh;
   width: 100%;
   display: block;
   color: #fff;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(30, 43, 111, 0.58);
 }
 
-.image-container:hover .after {
+/* .image-container:hover .after {
   display: block;
   background: rgba(0, 0, 0, 0.45);
-}
+} */
 
 #backImage {
   /* background: url(/storage/cover/pixel.jpeg); */
   background-position: center;
+  background-attachment: fixed;
   /* background-repeat: no-repeat;  */
+}
+
+.carousel-control-prev {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 200;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.carousel-control-next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  padding: 10px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 200;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
 </style>
