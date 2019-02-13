@@ -123,8 +123,11 @@ export default {
             };
             this.imagePlaced = true;
             let form = new FormData();
+            let img_arr = [];
             form.append("image", image);
-            this.file = form;
+            this.file = form; 
+            this.img_arr = form.push("image", image);
+            console.log(img_arr);
             console.log(e.target.files);
         },
 

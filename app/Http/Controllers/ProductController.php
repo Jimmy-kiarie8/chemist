@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use App\Cart;
-use Illuminate\Support\Facades\Auth;
 use App\Product;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -28,26 +26,28 @@ class ProductController extends Controller
     {
         // $id = 50;
         $upload = Product::find($request->id);
-        if ($request->hasFile('image')) {
-            // $imagename = time() . $request->image->getClientOriginalName();
-            // $request->image->storeAs('public/test', $imagename);
-            $img = $request->image;
-            // $image_path = ;
+        foreach ($variable as $key => $value) {
+            if ($request->hasFile('image')) {
+                // $imagename = time() . $request->image->getClientOriginalName();
+                // $request->image->storeAs('public/test', $imagename);
+                $img = $request->image;
+                // $image_path = ;
 
-            if (File::exists('storage/products/' . $upload->image)) {
-                $image_path = 'storage/products/' . $upload->image;
+                if (File::exists('storage/products/' . $upload->image)) {
+                    $image_path = 'storage/products/' . $upload->image;
 
-                File::delete($image_path);
-                // return $image_path;
+                    File::delete($image_path);
+                    // return $image_path;
+                }
+                // $imagename =  Storage::disk('uploads')->put('products', $img);
+                $imagename = Storage::disk('public')->put('products', $img);
             }
-            // $imagename =  Storage::disk('uploads')->put('products', $img);
-            $imagename = Storage::disk('public')->put('products', $img);
+            $imgArr = explode('/', $imagename);
+            $image_name = $imgArr[1];
+            $upload->image = $image_name;
+            // $upload->image = '/healthwise/products/'.$image_name;
+            $upload->save();
         }
-        $imgArr = explode('/', $imagename);
-        $image_name = $imgArr[1];
-        $upload->image = $image_name;
-        // $upload->image = '/healthwise/products/'.$image_name;
-        $upload->save();
         return $upload;
     }
 
@@ -126,7 +126,7 @@ class ProductController extends Controller
 
     public function StatusItem(Request $request, $id)
     {
-        // return $request->all();  
+        // return $request->all();
         $status = $request->status;
         $data = $request->data;
         $product = Product::find($id);
